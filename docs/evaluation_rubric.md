@@ -31,19 +31,19 @@ Evaluation should:
 
 Answer correctness is evaluated against the human-validated reference answer.
 
-### Score 2 — Correct
+### Score 2 â€” Correct
 
 The response answers the task correctly and contains no material factual error.
 
 Minor differences in wording are allowed.
 
-### Score 1 — Partially correct
+### Score 1 â€” Partially correct
 
 The response contains the core of the correct answer but is materially
 incomplete, imprecise, or contains a limited error that does not fully reverse
 the main conclusion.
 
-### Score 0 — Incorrect
+### Score 0 â€” Incorrect
 
 The response:
 
@@ -214,16 +214,21 @@ Expected measurements include:
 
 Timing boundaries must be defined consistently before the full benchmark.
 
-## 11. Human evaluation procedure
+## 11. Benchmark human adjudication
 
 Some benchmark outcomes may require human judgment, particularly:
+
+This benchmark adjudication is separate from the semi-structured interview
+study. It is part of benchmark scoring and should not be described as the
+qualitative interview component.
+
 
 - partial correctness;
 - grounding;
 - ambiguous evidence;
 - conflict resolution.
 
-Where human evaluation is required:
+Where human adjudication of benchmark outputs is required:
 
 1. use the frozen reference answer and evidence;
 2. apply this rubric consistently across all conditions;

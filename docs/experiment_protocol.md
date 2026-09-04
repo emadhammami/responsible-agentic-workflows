@@ -2,7 +2,7 @@
 
 **Project:** Responsible Agentic Workflows
 **Study:** USN Master's Thesis
-**Protocol version:** 0.3
+**Protocol version:** 0.4
 **Status:** Working protocol
 
 ## 1. Study objective
@@ -11,24 +11,35 @@ This study investigates how selected guardrails affect the performance,
 reliability, resource efficiency, and runtime behavior of LLM-based agentic
 workflows for document-based knowledge work.
 
-The technical component is evaluated as a **technical benchmark**. A later
-semi-structured interview study provides the qualitative component of the
-mixed-methods design.
+The technical system is evaluated through a **technical benchmark**.
+
+Although many benchmark measurements are numerical, the thesis does not label
+the benchmark as the quantitative component of the research design. Accuracy,
+task success, grounding, reliability, resource use, model calls, and latency
+are reported as **benchmark measurements and benchmark results**.
+
+The semi-structured interview study is used to collect the qualitative and,
+where structured rating items are included, quantitative empirical interview
+data. Open-ended responses provide qualitative data for thematic analysis.
+Structured rating items may provide descriptive quantitative interview data.
+
+The technical benchmark findings and the interview findings will subsequently
+be considered together when discussing responsible organizational adoption.
 
 ## 2. Research questions
 
-### RQ1 â€” Technical benchmark
+### RQ1 Ã¢â‚¬â€ Technical benchmark
 
 How do selected guardrails affect the performance, reliability, and resource
 efficiency of LLM-based agentic workflows in document-based knowledge work?
 
-### RQ2 â€” Human and organizational evaluation
+### RQ2 Ã¢â‚¬â€ Human and organizational evaluation
 
 How do users and relevant stakeholders perceive the usefulness,
 trustworthiness, risks, and adoption implications of guardrailed LLM-based
 agentic workflows?
 
-### RQ3 â€” Integration
+### RQ3 Ã¢â‚¬â€ Integration
 
 How can technical benchmark results and stakeholder perceptions be combined
 to identify conditions for responsible organizational adoption of LLM-based
@@ -38,18 +49,18 @@ agentic workflows?
 
 Three system conditions are planned.
 
-### B0 â€” External reference baseline
+### B0 Ã¢â‚¬â€ External reference baseline
 
 The external reference baseline follows the official **LangChain 2-step RAG**
 architecture. Retrieval is performed before answer generation. Concrete package
 versions and shared retrieval/model settings will be frozen before the full
 benchmark.
 
-### B1 â€” Matched agentic baseline
+### B1 Ã¢â‚¬â€ Matched agentic baseline
 
 The thesis workflow with the selected guardrails disabled.
 
-### G1 â€” Guardrailed agentic workflow
+### G1 Ã¢â‚¬â€ Guardrailed agentic workflow
 
 The same core workflow as B1 with the selected guardrails enabled.
 
@@ -183,7 +194,7 @@ Restricted documents must not be committed to the public repository.
 
 ## 11. Decisions still open
 
-Protocol version 0.3 intentionally does not yet freeze:
+Protocol version 0.4 intentionally does not yet freeze:
 
 - exact LangChain package version and B0 implementation parameters;
 - exact LLM/model version;
