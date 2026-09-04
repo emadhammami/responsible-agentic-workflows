@@ -26,7 +26,7 @@
   "properties": {
     "schema_version": {
       "type": "string",
-      "const": "0.1"
+      "const": "0.2"
     },
     "run_id": {
       "type": "string",
@@ -149,15 +149,43 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "queries",
+        "calls"
+      ],
+      "properties": {
+        "calls": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/retrievalCall"
+          }
+        }
+      }
+    },
+    "retrievalCall": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sequence",
+        "query",
+        "top_k",
+        "latency_ms",
         "retrieved_chunks"
       ],
       "properties": {
-        "queries": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
+        "sequence": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "query": {
+          "type": "string",
+          "minLength": 1
+        },
+        "top_k": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "latency_ms": {
+          "type": "number",
+          "minimum": 0
         },
         "retrieved_chunks": {
           "type": "array",

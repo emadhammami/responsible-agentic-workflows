@@ -1,6 +1,6 @@
 # Benchmark Run Record
 
-**Schema version:** 0.1
+**Schema version:** 0.2
 **Status:** Working definition
 
 ## Purpose
@@ -54,14 +54,28 @@ The allowed benchmark conditions are:
 
 ## Retrieval trace
 
-The run record preserves retrieval provenance, including:
+Retrieval is recorded per retrieval call rather than as one flattened list.
 
-- search/retrieval queries;
-- document IDs;
-- chunk IDs;
+Each retrieval call records:
+
+- call sequence;
+- query;
+- requested top-k;
+- retrieval latency;
+- retrieved document IDs;
+- retrieved chunk IDs;
 - page and section where available;
 - retrieval rank;
 - retrieval score where the backend provides one.
+
+This structure preserves the relationship between each query and the evidence
+returned for that query.
+
+It is required because B1 and G1 may perform multiple retrieval calls during
+planning, verification, revision, or recovery.
+
+The aggregate `retrieval_calls` field in resource usage records the total number
+of retrieval calls for the run.
 
 Restricted source text should not be copied into public run artifacts unless
 publication permission exists.
