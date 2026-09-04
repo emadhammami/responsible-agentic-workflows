@@ -1,8 +1,8 @@
-﻿# Experiment Protocol
+# Experiment Protocol
 
 **Project:** Responsible Agentic Workflows
 **Study:** USN Master's Thesis
-**Protocol version:** 0.1
+**Protocol version:** 0.2
 **Status:** Working protocol
 
 ## 1. Study objective
@@ -40,8 +40,10 @@ Three system conditions are planned.
 
 ### B0 — External reference baseline
 
-An established open-source RAG or agentic implementation. The exact baseline
-will be selected separately using documented criteria.
+The external reference baseline follows the official **LangChain 2-step RAG**
+architecture. Retrieval is performed before answer generation. Concrete package
+versions and shared retrieval/model settings will be frozen before the full
+benchmark.
 
 ### B1 — Matched agentic baseline
 
@@ -181,9 +183,9 @@ Restricted documents must not be committed to the public repository.
 
 ## 11. Decisions still open
 
-Protocol version 0.1 intentionally does not yet freeze:
+Protocol version 0.2 intentionally does not yet freeze:
 
-- exact B0 implementation;
+- exact LangChain package version and B0 implementation parameters;
 - exact LLM/model version;
 - embedding model;
 - vector store;
