@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/emadhammami/responsible-agentic-workflows/benchmark/schema/task.schema.json",
+  "title": "Responsible Agentic Workflows Benchmark Task",
+  "description": "Schema for one human-validated benchmark task in the document-based knowledge-work benchmark.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "task_id",
+    "question",
+    "task_type",
+    "reference_answer",
+    "reference_evidence",
+    "validation_status"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "0.1"
+    },
+    "task_id": {
+      "type": "string",
+      "pattern": "^T[0-9]{3,}$",
+      "description": "Stable benchmark task identifier, for example T001."
+    },
+    "question": {
+      "type": "string",
+      "minLength": 1
+    },
+    "task_type": {
+      "type": "string",
+      "enum": [
+        "direct_retrieval",
+        "within_document_reasoning",
+        "cross_document_reasoning",
+        "insufficient_evidence",
+        "conflicting_document_reasoning"
+      ]
+    },
+    "required_documents": {
+      "type": "array",
+      "description": "Documents expected to contain information needed for the reference answer. May be empty for insufficient-evidence tasks.",
+      "items": {
+        "type": "string",
+        "pattern": "^DOC[0-9]{3,}$"
+      },
+      "uniqueItems": true,
+      "default": []
+    },
+    "reference_answer": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Human-validated expected answer or expected abstention behavior."
+    },
+    "reference_evidence": {
+      "type": "array",
+      "description": "Human-validated evidence locations supporting the reference answer. May be empty when the task is explicitly an insufficient-evidence case.",
+      "items": {
+        "$ref": "#/$defs/evidence"
+      }
+    },
+    "difficulty": {
+      "type": ["string", "null"],
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        null
+      ],
+      "default": null
+    },
+    "notes": {
+      "type": ["string", "null"],
+      "default": null
+    },
+    "validation_status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "human_verified",
+        "frozen"
+      ]
+    }
+  },
+  "$defs": {
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "document_id"
+      ],
+      "properties": {
+        "document_id": {
+          "type": "string",
+          "pattern": "^DOC[0-9]{3,}$"
+        },
+        "page": {
+          "type": ["integer", "null"],
+          "minimum": 1,
+          "default": null
+        },
+        "section": {
+          "type": ["string", "null"],
+          "default": null
+        },
+        "chunk_id": {
+          "type": ["string", "null"],
+          "default": null
+        }
+      }
+    }
+  }
+}
