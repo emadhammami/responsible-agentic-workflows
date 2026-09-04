@@ -2,7 +2,7 @@
 
 **Project:** Responsible Agentic Workflows
 **Study:** USN Master's Thesis
-**Protocol version:** 0.2
+**Protocol version:** 0.3
 **Status:** Working protocol
 
 ## 1. Study objective
@@ -17,18 +17,18 @@ mixed-methods design.
 
 ## 2. Research questions
 
-### RQ1 — Technical benchmark
+### RQ1 â€” Technical benchmark
 
 How do selected guardrails affect the performance, reliability, and resource
 efficiency of LLM-based agentic workflows in document-based knowledge work?
 
-### RQ2 — Human and organizational evaluation
+### RQ2 â€” Human and organizational evaluation
 
 How do users and relevant stakeholders perceive the usefulness,
 trustworthiness, risks, and adoption implications of guardrailed LLM-based
 agentic workflows?
 
-### RQ3 — Integration
+### RQ3 â€” Integration
 
 How can technical benchmark results and stakeholder perceptions be combined
 to identify conditions for responsible organizational adoption of LLM-based
@@ -38,18 +38,18 @@ agentic workflows?
 
 Three system conditions are planned.
 
-### B0 — External reference baseline
+### B0 â€” External reference baseline
 
 The external reference baseline follows the official **LangChain 2-step RAG**
 architecture. Retrieval is performed before answer generation. Concrete package
 versions and shared retrieval/model settings will be frozen before the full
 benchmark.
 
-### B1 — Matched agentic baseline
+### B1 â€” Matched agentic baseline
 
 The thesis workflow with the selected guardrails disabled.
 
-### G1 — Guardrailed agentic workflow
+### G1 â€” Guardrailed agentic workflow
 
 The same core workflow as B1 with the selected guardrails enabled.
 
@@ -183,7 +183,7 @@ Restricted documents must not be committed to the public repository.
 
 ## 11. Decisions still open
 
-Protocol version 0.2 intentionally does not yet freeze:
+Protocol version 0.3 intentionally does not yet freeze:
 
 - exact LangChain package version and B0 implementation parameters;
 - exact LLM/model version;
@@ -197,5 +197,8 @@ Protocol version 0.2 intentionally does not yet freeze:
 - repetition count;
 - statistical tests;
 - automatic/human evaluation implementation.
+
+The scoring definitions for correctness, grounding, evidence, abstention, and
+workflow outcomes are defined in docs/evaluation_rubric.md.
 
 These decisions will be documented and frozen before the full benchmark.
