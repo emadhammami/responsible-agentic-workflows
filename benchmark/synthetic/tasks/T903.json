@@ -1,0 +1,31 @@
+{
+  "schema_version": "0.1",
+  "task_id": "T903",
+  "question": "An external collaborator needs temporary privileged project access while travelling internationally. Which approvals are required by the available policies?",
+  "task_type": "cross_document_reasoning",
+  "required_documents": ["DOC901", "DOC903"],
+  "reference_answer": "For ordinary international travel, the collaborator needs department-head approval for the travel. For project access, project-owner approval is required, and temporary privileged access additionally requires system-owner approval. Multi-factor authentication must also be enabled before the account becomes active.",
+  "reference_evidence": [
+    {
+      "document_id": "DOC901",
+      "page": null,
+      "section": "International travel",
+      "chunk_id": null
+    },
+    {
+      "document_id": "DOC903",
+      "page": null,
+      "section": "External collaborators",
+      "chunk_id": null
+    },
+    {
+      "document_id": "DOC903",
+      "page": null,
+      "section": "Privileged access",
+      "chunk_id": null
+    }
+  ],
+  "difficulty": "high",
+  "notes": "Synthetic engineering task requiring evidence from two documents.",
+  "validation_status": "human_verified"
+}

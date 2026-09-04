@@ -1,0 +1,12 @@
+{
+  "schema_version": "0.1",
+  "task_id": "T904",
+  "question": "What is the maximum reimbursable nightly hotel rate?",
+  "task_type": "insufficient_evidence",
+  "required_documents": [],
+  "reference_answer": "The available documents do not specify a maximum reimbursable nightly hotel rate.",
+  "reference_evidence": [],
+  "difficulty": "medium",
+  "notes": "Synthetic abstention task. No document in the synthetic corpus defines a hotel-rate limit.",
+  "validation_status": "human_verified"
+}

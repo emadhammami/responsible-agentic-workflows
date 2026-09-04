@@ -1,0 +1,19 @@
+{
+  "schema_version": "0.1",
+  "task_id": "T905",
+  "question": "How long must expense receipts be retained?",
+  "task_type": "direct_retrieval",
+  "required_documents": ["DOC902"],
+  "reference_answer": "Expense receipts and supporting documentation must be retained for five years after the end of the financial year in which the expense was recorded.",
+  "reference_evidence": [
+    {
+      "document_id": "DOC902",
+      "page": null,
+      "section": "Expense records",
+      "chunk_id": null
+    }
+  ],
+  "difficulty": "low",
+  "notes": "Synthetic engineering task.",
+  "validation_status": "human_verified"
+}

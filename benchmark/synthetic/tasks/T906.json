@@ -1,0 +1,25 @@
+{
+  "schema_version": "0.1",
+  "task_id": "T906",
+  "question": "A suspected security incident affects project data. Who must be notified and within what time limits?",
+  "task_type": "within_document_reasoning",
+  "required_documents": ["DOC904"],
+  "reference_answer": "The security team must be notified within one hour of discovery, and the project manager must be informed within four hours of discovery because project data is affected.",
+  "reference_evidence": [
+    {
+      "document_id": "DOC904",
+      "page": null,
+      "section": "Initial notification",
+      "chunk_id": null
+    },
+    {
+      "document_id": "DOC904",
+      "page": null,
+      "section": "Project notification",
+      "chunk_id": null
+    }
+  ],
+  "difficulty": "medium",
+  "notes": "Synthetic engineering task.",
+  "validation_status": "human_verified"
+}

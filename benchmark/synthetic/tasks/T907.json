@@ -1,0 +1,31 @@
+{
+  "schema_version": "0.1",
+  "task_id": "T907",
+  "question": "What approval is required before booking international travel to a destination classified as high risk?",
+  "task_type": "conflicting_document_reasoning",
+  "required_documents": ["DOC901", "DOC905"],
+  "reference_answer": "High-risk international travel requires approval from both the employee's department head and the security officer before booking. DOC905 takes precedence over the ordinary DOC901 requirement for high-risk destinations.",
+  "reference_evidence": [
+    {
+      "document_id": "DOC901",
+      "page": null,
+      "section": "International travel",
+      "chunk_id": null
+    },
+    {
+      "document_id": "DOC905",
+      "page": null,
+      "section": "High-risk destinations",
+      "chunk_id": null
+    },
+    {
+      "document_id": "DOC905",
+      "page": null,
+      "section": "Relationship to general travel policy",
+      "chunk_id": null
+    }
+  ],
+  "difficulty": "high",
+  "notes": "Synthetic task testing precedence between a general policy and a later addendum.",
+  "validation_status": "human_verified"
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": "0.1",
+  "task_id": "T901",
+  "question": "Who must approve ordinary international business travel before it is booked?",
+  "task_type": "direct_retrieval",
+  "required_documents": ["DOC901"],
+  "reference_answer": "The employee's department head must approve ordinary international business travel before booking.",
+  "reference_evidence": [
+    {
+      "document_id": "DOC901",
+      "page": null,
+      "section": "International travel",
+      "chunk_id": null
+    }
+  ],
+  "difficulty": "low",
+  "notes": "Synthetic engineering task.",
+  "validation_status": "human_verified"
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": "0.1",
+  "task_id": "T902",
+  "question": "What must happen before an external collaborator receives access, and how often must that access be reviewed?",
+  "task_type": "within_document_reasoning",
+  "required_documents": ["DOC903"],
+  "reference_answer": "The project owner must approve the access, multi-factor authentication must be enabled before the account becomes active, and the access must be reviewed at least once every three months.",
+  "reference_evidence": [
+    {
+      "document_id": "DOC903",
+      "page": null,
+      "section": "External collaborators",
+      "chunk_id": null
+    },
+    {
+      "document_id": "DOC903",
+      "page": null,
+      "section": "Access review",
+      "chunk_id": null
+    }
+  ],
+  "difficulty": "medium",
+  "notes": "Synthetic engineering task.",
+  "validation_status": "human_verified"
+}
