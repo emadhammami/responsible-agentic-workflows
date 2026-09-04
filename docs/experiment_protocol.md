@@ -28,18 +28,18 @@ be considered together when discussing responsible organizational adoption.
 
 ## 2. Research questions
 
-### RQ1 Ã¢â‚¬â€ Technical benchmark
+### RQ1 - Technical benchmark
 
 How do selected guardrails affect the performance, reliability, and resource
 efficiency of LLM-based agentic workflows in document-based knowledge work?
 
-### RQ2 Ã¢â‚¬â€ Human and organizational evaluation
+### RQ2 - Human and organizational evaluation
 
 How do users and relevant stakeholders perceive the usefulness,
 trustworthiness, risks, and adoption implications of guardrailed LLM-based
 agentic workflows?
 
-### RQ3 Ã¢â‚¬â€ Integration
+### RQ3 - Integration
 
 How can technical benchmark results and stakeholder perceptions be combined
 to identify conditions for responsible organizational adoption of LLM-based
@@ -49,18 +49,18 @@ agentic workflows?
 
 Three system conditions are planned.
 
-### B0 Ã¢â‚¬â€ External reference baseline
+### B0 - External reference baseline
 
 The external reference baseline follows the official **LangChain 2-step RAG**
 architecture. Retrieval is performed before answer generation. Concrete package
 versions and shared retrieval/model settings will be frozen before the full
 benchmark.
 
-### B1 Ã¢â‚¬â€ Matched agentic baseline
+### B1 - Matched agentic baseline
 
 The thesis workflow with the selected guardrails disabled.
 
-### G1 Ã¢â‚¬â€ Guardrailed agentic workflow
+### G1 - Guardrailed agentic workflow
 
 The same core workflow as B1 with the selected guardrails enabled.
 

@@ -31,19 +31,19 @@ Evaluation should:
 
 Answer correctness is evaluated against the human-validated reference answer.
 
-### Score 2 â€” Correct
+### Score 2 - Correct
 
 The response answers the task correctly and contains no material factual error.
 
 Minor differences in wording are allowed.
 
-### Score 1 â€” Partially correct
+### Score 1 - Partially correct
 
 The response contains the core of the correct answer but is materially
 incomplete, imprecise, or contains a limited error that does not fully reverse
 the main conclusion.
 
-### Score 0 â€” Incorrect
+### Score 0 - Incorrect
 
 The response:
 
@@ -221,7 +221,6 @@ Some benchmark outcomes may require human judgment, particularly:
 This benchmark adjudication is separate from the semi-structured interview
 study. It is part of benchmark scoring and should not be described as the
 qualitative interview component.
-
 
 - partial correctness;
 - grounding;
