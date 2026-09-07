@@ -7,7 +7,9 @@ name = "responsible-agentic-workflows"
 version = "0.1.0"
 description = "Research software for benchmarking responsible LLM-based agentic workflows in document-based knowledge work."
 requires-python = ">=3.13,<3.15"
-dependencies = []
+dependencies = [
+    "jsonschema==4.26.0"
+]
 
 [project.optional-dependencies]
 dev = [
