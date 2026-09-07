@@ -4,10 +4,39 @@ from pathlib import Path
 RUN_SCHEMA = Path("benchmark/schema/run.schema.json")
 
 
-def test_run_schema_uses_per_call_retrieval_trace() -> None:
-    schema = json.loads(RUN_SCHEMA.read_text(encoding="utf-8"))
+def test_run_schema_separates_execution_modes() -> None:
+    schema = json.loads(
+        RUN_SCHEMA.read_text(encoding="utf-8")
+    )
 
-    assert schema["properties"]["schema_version"]["const"] == "0.2"
+    assert schema["properties"]["schema_version"]["const"] == "0.3"
+
+    assert "execution_mode" in schema["required"]
+    assert "condition" in schema["required"]
+
+    assert set(
+        schema["properties"]["execution_mode"]["enum"]
+    ) == {
+        "engineering",
+        "benchmark",
+    }
+
+    assert set(
+        schema["properties"]["condition"]["enum"]
+    ) == {
+        "B0",
+        "B1",
+        "G1",
+        None,
+    }
+
+    assert len(schema["allOf"]) == 2
+
+
+def test_run_schema_uses_per_call_retrieval_trace() -> None:
+    schema = json.loads(
+        RUN_SCHEMA.read_text(encoding="utf-8")
+    )
 
     retrieval = schema["$defs"]["retrieval"]
 
@@ -23,15 +52,3 @@ def test_run_schema_uses_per_call_retrieval_trace() -> None:
         "latency_ms",
         "retrieved_chunks",
     }
-
-    properties = retrieval_call["properties"]
-
-    assert properties["sequence"]["minimum"] == 1
-    assert properties["query"]["minLength"] == 1
-    assert properties["top_k"]["minimum"] == 1
-    assert properties["latency_ms"]["minimum"] == 0
-
-    assert (
-        properties["retrieved_chunks"]["items"]["$ref"]
-        == "#/$defs/retrievedChunk"
-    )

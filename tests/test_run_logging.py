@@ -47,13 +47,12 @@ def _configuration(
 def _recorder(
     retriever: LexicalRetriever,
 ) -> RunRecorder:
-    # B1 is used here only as schema-valid unit-test fixture data.
-    # This is not a scientific benchmark execution.
     return RunRecorder(
         run_id="unit-run-001",
         experiment_id="unit-test",
         task_id="T901",
-        condition="B1",
+        execution_mode="engineering",
+        condition=None,
         code_revision="abcdef1",
         configuration=_configuration(retriever),
     )
@@ -220,7 +219,8 @@ def test_retrieval_config_mismatch_is_rejected() -> None:
         run_id="unit-run-002",
         experiment_id="unit-test",
         task_id="T901",
-        condition="B1",
+        execution_mode="engineering",
+        condition=None,
         code_revision="abcdef1",
         configuration=bad_configuration,
     )
@@ -293,7 +293,8 @@ def test_backend_retrieval_failure_is_recorded_and_valid() -> None:
         run_id="unit-run-failure-001",
         experiment_id="unit-test",
         task_id="T901",
-        condition="B1",
+        execution_mode="engineering",
+        condition=None,
         code_revision="abcdef1",
         configuration=configuration,
     )

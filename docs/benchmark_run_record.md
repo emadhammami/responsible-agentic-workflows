@@ -1,11 +1,16 @@
-# Benchmark Run Record
+# Execution Run Record
 
-**Schema version:** 0.2
+**Schema version:** 0.3
 **Status:** Working definition
 
 ## Purpose
 
-Every execution of B0, B1, or G1 produces a structured raw run record.
+The same structured raw execution format is used for engineering validation and
+thesis benchmark runs.
+
+The `execution_mode` field separates the two purposes explicitly. Engineering
+runs are not assigned a B0, B1, or G1 condition and are excluded from thesis
+benchmark analysis.
 
 The run record captures what happened during system execution before benchmark
 scoring is applied.
@@ -32,7 +37,8 @@ Every run records:
 - experiment ID;
 - run ID;
 - benchmark task ID;
-- system condition;
+- execution mode;
+- system condition where applicable;
 - Git revision;
 - configuration identifiers;
 - start and finish timestamps.
@@ -43,6 +49,15 @@ Retries inside a workflow belong to the same run when they are part of the
 defined workflow behavior.
 
 A complete restart of a benchmark task is a new run and receives a new run ID.
+
+## Execution modes
+
+Two execution modes are defined:
+
+- `engineering` - software validation only; `condition` must be null;
+- `benchmark` - thesis benchmark execution; `condition` must be B0, B1, or G1.
+
+Engineering runs are excluded from thesis benchmark analysis.
 
 ## System conditions
 

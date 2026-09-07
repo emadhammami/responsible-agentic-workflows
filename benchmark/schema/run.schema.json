@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/emadhammami/responsible-agentic-workflows/benchmark/schema/run.schema.json",
-  "title": "Responsible Agentic Workflows Benchmark Run",
-  "description": "Schema for one raw execution record produced by B0, B1, or G1. Reference answers and benchmark evaluation scores are intentionally excluded.",
+  "title": "Responsible Agentic Workflows Execution Run",
+  "description": "Schema for one raw engineering or benchmark execution record. Reference answers and benchmark evaluation scores are intentionally excluded.",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -10,6 +10,7 @@
     "run_id",
     "experiment_id",
     "task_id",
+    "execution_mode",
     "condition",
     "started_at",
     "finished_at",
@@ -26,7 +27,7 @@
   "properties": {
     "schema_version": {
       "type": "string",
-      "const": "0.2"
+      "const": "0.3"
     },
     "run_id": {
       "type": "string",
@@ -40,12 +41,20 @@
       "type": "string",
       "pattern": "^T[0-9]{3,}$"
     },
-    "condition": {
+    "execution_mode": {
       "type": "string",
+      "enum": [
+        "engineering",
+        "benchmark"
+      ]
+    },
+    "condition": {
+      "type": ["string", "null"],
       "enum": [
         "B0",
         "B1",
-        "G1"
+        "G1",
+        null
       ]
     },
     "started_at": {
@@ -99,6 +108,44 @@
       }
     }
   },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "execution_mode": {
+            "const": "benchmark"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "condition": {
+            "enum": [
+              "B0",
+              "B1",
+              "G1"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "execution_mode": {
+            "const": "engineering"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "condition": {
+            "type": "null"
+          }
+        }
+      }
+    }
+  ],
   "$defs": {
     "configuration": {
       "type": "object",

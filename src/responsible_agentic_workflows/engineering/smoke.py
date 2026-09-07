@@ -52,8 +52,7 @@ def run_retrieval_smoke(
     """Execute one retrieval-only engineering run.
 
     This run validates the execution pipeline and is not a thesis benchmark
-    result. B1 is used only because the raw-run schema permits the three
-    benchmark condition identifiers B0, B1, and G1.
+    result. Engineering runs are explicitly separated from B0, B1, and G1.
     """
 
     runtime_task = load_runtime_task(SYNTHETIC_TASK)
@@ -84,7 +83,8 @@ def run_retrieval_smoke(
         run_id=run_id,
         experiment_id="engineering-smoke",
         task_id=runtime_task.task_id,
-        condition="B1",
+        execution_mode="engineering",
+        condition=None,
         code_revision=code_revision,
         configuration=configuration,
     )

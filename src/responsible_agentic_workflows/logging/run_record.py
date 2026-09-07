@@ -1,4 +1,4 @@
-"""Raw benchmark run recording and schema validation."""
+"""Raw execution run recording and schema validation."""
 
 import json
 from copy import deepcopy
@@ -13,6 +13,7 @@ from jsonschema import Draft202012Validator, FormatChecker
 from responsible_agentic_workflows.retrieval import RetrievedChunk
 
 Condition = Literal["B0", "B1", "G1"]
+ExecutionMode = Literal["engineering", "benchmark"]
 
 RunStatus = Literal[
     "completed",
@@ -75,7 +76,8 @@ class RunRecorder:
         run_id: str,
         experiment_id: str,
         task_id: str,
-        condition: Condition,
+        execution_mode: ExecutionMode,
+        condition: Condition | None,
         code_revision: str,
         configuration: RunConfiguration,
     ) -> None:
@@ -85,8 +87,20 @@ class RunRecorder:
         if not experiment_id:
             raise ValueError("experiment_id must not be empty")
 
-        if condition not in {"B0", "B1", "G1"}:
-            raise ValueError(f"Unsupported condition: {condition}")
+        if execution_mode not in {"engineering", "benchmark"}:
+            raise ValueError(
+                f"Unsupported execution mode: {execution_mode}"
+            )
+
+        if execution_mode == "benchmark":
+            if condition not in {"B0", "B1", "G1"}:
+                raise ValueError(
+                    "Benchmark runs require condition B0, B1, or G1"
+                )
+        elif condition is not None:
+            raise ValueError(
+                "Engineering runs require condition=None"
+            )
 
         if len(code_revision) < 7:
             raise ValueError("code_revision must contain at least 7 characters")
@@ -94,6 +108,7 @@ class RunRecorder:
         self.run_id = run_id
         self.experiment_id = experiment_id
         self.task_id = task_id
+        self.execution_mode = execution_mode
         self.condition = condition
         self.code_revision = code_revision
         self.configuration = configuration
@@ -217,10 +232,11 @@ class RunRecorder:
         )
 
         return {
-            "schema_version": "0.2",
+            "schema_version": "0.3",
             "run_id": self.run_id,
             "experiment_id": self.experiment_id,
             "task_id": self.task_id,
+            "execution_mode": self.execution_mode,
             "condition": self.condition,
             "started_at": self._started_at,
             "finished_at": _utc_now(),
