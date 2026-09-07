@@ -1,6 +1,6 @@
 # Execution Run Record
 
-**Schema version:** 0.3
+**Schema version:** 0.4
 **Status:** Working definition
 
 ## Purpose
@@ -94,6 +94,27 @@ of retrieval calls for the run.
 
 Restricted source text should not be copied into public run artifacts unless
 publication permission exists.
+
+## Model-call trace
+
+Language model calls are recorded individually.
+
+Each model-call record includes:
+
+- call sequence;
+- completion or failure status;
+- measured call latency;
+- provider-reported input and output tokens when available;
+- total reported tokens;
+- finish reason when available;
+- provider response identifier when available.
+
+Prompt content and generated response text are not duplicated in the model-call
+trace. This keeps resource instrumentation separate from workflow content and
+reduces unnecessary replication of document-derived text.
+
+Aggregate token counts, model-call count, and model latency are derived from the
+recorded calls rather than supplied independently.
 
 ## Resource measurements
 

@@ -34,6 +34,7 @@ def _configuration(
     return RunConfiguration(
         model_provider="engineering-test",
         model_name="no-model",
+        model_config_id="engineering-no-model-v0.1",
         model_version=None,
         temperature=None,
         max_output_tokens=None,
@@ -210,6 +211,7 @@ def test_retrieval_config_mismatch_is_rejected() -> None:
     bad_configuration = RunConfiguration(
         model_provider="engineering-test",
         model_name="no-model",
+        model_config_id="engineering-no-model-v0.1",
         temperature=None,
         prompt_version="engineering-test-v0.1",
         retrieval_config_id="wrong-retriever",
@@ -284,6 +286,7 @@ def test_backend_retrieval_failure_is_recorded_and_valid() -> None:
     configuration = RunConfiguration(
         model_provider="engineering-test",
         model_name="no-model",
+        model_config_id="engineering-no-model-v0.1",
         temperature=None,
         prompt_version="engineering-test-v0.1",
         retrieval_config_id=retriever.config_id,

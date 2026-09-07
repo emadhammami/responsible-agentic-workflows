@@ -27,7 +27,7 @@ def test_engineering_smoke_creates_valid_run(
 
     validate_run_record(record)
 
-    assert record["schema_version"] == "0.3"
+    assert record["schema_version"] == "0.4"
     assert record["run_id"] == "engineering-smoke-test"
     assert record["experiment_id"] == "engineering-smoke"
     assert record["task_id"] == "T901"

@@ -70,6 +70,7 @@ def run_retrieval_smoke(
     configuration = RunConfiguration(
         model_provider="engineering-test",
         model_name="no-model",
+        model_config_id="engineering-no-model-v0.1",
         model_version=None,
         temperature=None,
         max_output_tokens=None,

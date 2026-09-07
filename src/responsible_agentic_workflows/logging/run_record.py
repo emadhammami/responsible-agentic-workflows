@@ -10,6 +10,7 @@ from typing import Literal
 
 from jsonschema import Draft202012Validator, FormatChecker
 
+from responsible_agentic_workflows.modeling import TokenUsage
 from responsible_agentic_workflows.retrieval import RetrievedChunk
 
 Condition = Literal["B0", "B1", "G1"]
@@ -43,6 +44,7 @@ class RunConfiguration:
 
     model_provider: str
     model_name: str
+    model_config_id: str
     temperature: float | None
     prompt_version: str
     retrieval_config_id: str
@@ -57,6 +59,7 @@ class RunConfiguration:
         return {
             "model_provider": self.model_provider,
             "model_name": self.model_name,
+            "model_config_id": self.model_config_id,
             "model_version": self.model_version,
             "temperature": self.temperature,
             "max_output_tokens": self.max_output_tokens,
@@ -117,6 +120,7 @@ class RunRecorder:
         self._started_ns = perf_counter_ns()
 
         self._retrieval_calls: list[dict[str, object]] = []
+        self._model_calls: list[dict[str, object]] = []
         self._events: list[dict[str, object]] = []
         self._errors: list[dict[str, object]] = []
 
@@ -167,6 +171,56 @@ class RunRecorder:
             }
         )
 
+    @property
+    def model_call_count(self) -> int:
+        """Return the number of model-call attempts recorded so far."""
+
+        return len(self._model_calls)
+
+    def record_model_call(
+        self,
+        *,
+        status: Literal["completed", "failed"],
+        latency_ms: float,
+        usage: TokenUsage | None,
+        finish_reason: str | None,
+        provider_response_id: str | None,
+    ) -> None:
+        """Record one model-call attempt and its resource measurements."""
+
+        if status not in {"completed", "failed"}:
+            raise ValueError(f"Unsupported model-call status: {status}")
+
+        if latency_ms < 0:
+            raise ValueError("latency_ms must not be negative")
+
+        if status == "completed" and usage is None:
+            raise ValueError(
+                "Completed model calls require token usage"
+            )
+
+        if usage is None:
+            input_tokens = None
+            output_tokens = None
+            total_tokens = None
+        else:
+            input_tokens = usage.input_tokens
+            output_tokens = usage.output_tokens
+            total_tokens = usage.total_tokens
+
+        self._model_calls.append(
+            {
+                "sequence": len(self._model_calls) + 1,
+                "status": status,
+                "latency_ms": latency_ms,
+                "input_tokens": input_tokens,
+                "output_tokens": output_tokens,
+                "total_tokens": total_tokens,
+                "finish_reason": finish_reason,
+                "provider_response_id": provider_response_id,
+            }
+        )
+
     def record_error(
         self,
         *,
@@ -199,19 +253,12 @@ class RunRecorder:
         answer: str | None,
         abstained: bool,
         cited_chunk_ids: tuple[str, ...] = (),
-        input_tokens: int = 0,
-        output_tokens: int = 0,
-        llm_calls: int = 0,
         tool_calls: int = 0,
         retries: int = 0,
-        llm_ms: float | None = None,
     ) -> dict[str, object]:
         """Build one complete raw run record."""
 
         counters = {
-            "input_tokens": input_tokens,
-            "output_tokens": output_tokens,
-            "llm_calls": llm_calls,
             "tool_calls": tool_calls,
             "retries": retries,
         }
@@ -219,9 +266,6 @@ class RunRecorder:
         for name, value in counters.items():
             if value < 0:
                 raise ValueError(f"{name} must not be negative")
-
-        if llm_ms is not None and llm_ms < 0:
-            raise ValueError("llm_ms must not be negative")
 
         if len(cited_chunk_ids) != len(set(cited_chunk_ids)):
             raise ValueError("cited_chunk_ids contains duplicates")
@@ -231,8 +275,25 @@ class RunRecorder:
             for call in self._retrieval_calls
         )
 
+        llm_ms = sum(
+            float(call["latency_ms"])
+            for call in self._model_calls
+        )
+
+        input_tokens = sum(
+            int(call["input_tokens"])
+            for call in self._model_calls
+            if call["input_tokens"] is not None
+        )
+
+        output_tokens = sum(
+            int(call["output_tokens"])
+            for call in self._model_calls
+            if call["output_tokens"] is not None
+        )
+
         return {
-            "schema_version": "0.3",
+            "schema_version": "0.4",
             "run_id": self.run_id,
             "experiment_id": self.experiment_id,
             "task_id": self.task_id,
@@ -246,11 +307,14 @@ class RunRecorder:
             "retrieval": {
                 "calls": deepcopy(self._retrieval_calls),
             },
+            "model": {
+                "calls": deepcopy(self._model_calls),
+            },
             "usage": {
                 "input_tokens": input_tokens,
                 "output_tokens": output_tokens,
                 "total_tokens": input_tokens + output_tokens,
-                "llm_calls": llm_calls,
+                "llm_calls": len(self._model_calls),
                 "retrieval_calls": len(self._retrieval_calls),
                 "tool_calls": tool_calls,
                 "retries": retries,

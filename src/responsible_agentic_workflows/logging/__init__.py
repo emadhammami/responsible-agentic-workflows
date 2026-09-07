@@ -1,5 +1,6 @@
 """Raw execution logging utilities."""
 
+from .model import LoggedLanguageModel
 from .retrieval import LoggedRetriever
 from .run_record import (
     RunConfiguration,
@@ -9,6 +10,7 @@ from .run_record import (
 )
 
 __all__ = [
+    "LoggedLanguageModel",
     "LoggedRetriever",
     "RunConfiguration",
     "RunRecorder",

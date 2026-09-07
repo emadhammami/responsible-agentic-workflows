@@ -11,6 +11,7 @@ def _configuration() -> RunConfiguration:
     return RunConfiguration(
         model_provider="engineering-test",
         model_name="no-model",
+        model_config_id="engineering-no-model-v0.1",
         temperature=None,
         prompt_version="test-v0.1",
         retrieval_config_id="test-retriever-v0.1",
