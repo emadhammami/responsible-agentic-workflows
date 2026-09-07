@@ -1,0 +1,250 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/emadhammami/responsible-agentic-workflows/benchmark/config/benchmark_config.schema.json",
+  "title": "Responsible Agentic Workflows Benchmark Configuration",
+  "description": "Machine-readable configuration contract for one comparable benchmark setup.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "config_id",
+    "status",
+    "model",
+    "retrieval",
+    "prompts",
+    "workflows",
+    "resource_limits",
+    "execution"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "0.1"
+    },
+    "config_id": {
+      "type": "string",
+      "pattern": "^benchmark-config-[a-z0-9][a-z0-9._-]*$"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "working",
+        "frozen"
+      ]
+    },
+    "model": {
+      "$ref": "#/$defs/model"
+    },
+    "retrieval": {
+      "$ref": "#/$defs/retrieval"
+    },
+    "prompts": {
+      "$ref": "#/$defs/prompts"
+    },
+    "workflows": {
+      "$ref": "#/$defs/workflows"
+    },
+    "resource_limits": {
+      "$ref": "#/$defs/resource_limits"
+    },
+    "execution": {
+      "$ref": "#/$defs/execution"
+    }
+  },
+  "$defs": {
+    "model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "provider",
+        "model_name",
+        "model_config_id",
+        "model_version",
+        "temperature",
+        "max_output_tokens"
+      ],
+      "properties": {
+        "provider": {
+          "type": "string",
+          "minLength": 1
+        },
+        "model_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "model_config_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "model_version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "temperature": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "max_output_tokens": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        }
+      }
+    },
+    "retrieval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "retrieval_config_id",
+        "backend",
+        "embedding_model",
+        "vector_store",
+        "chunking_config_id",
+        "top_k"
+      ],
+      "properties": {
+        "retrieval_config_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "backend": {
+          "type": "string",
+          "minLength": 1
+        },
+        "embedding_model": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "vector_store": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "chunking_config_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "top_k": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "prompts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "b0_prompt_version",
+        "b1_prompt_version",
+        "g1_prompt_version"
+      ],
+      "properties": {
+        "b0_prompt_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "b1_prompt_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "g1_prompt_version": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "workflows": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "b0_config_id",
+        "b1_config_id",
+        "g1_config_id"
+      ],
+      "properties": {
+        "b0_config_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "b1_config_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "g1_config_id": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "resource_limits": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "max_total_tokens_per_run",
+        "max_llm_calls_per_run",
+        "max_retrieval_calls_per_run",
+        "max_retries_per_run"
+      ],
+      "properties": {
+        "max_total_tokens_per_run": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "max_llm_calls_per_run": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "max_retrieval_calls_per_run": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "max_retries_per_run": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        }
+      }
+    },
+    "execution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repetitions",
+        "random_seed"
+      ],
+      "properties": {
+        "repetitions": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "random_seed": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      }
+    }
+  }
+}

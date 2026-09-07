@@ -213,3 +213,8 @@ The scoring definitions for correctness, grounding, evidence, abstention, and
 workflow outcomes are defined in docs/evaluation_rubric.md.
 
 These decisions will be documented and frozen before the full benchmark.
+
+The selected values will be represented in a machine-readable benchmark
+configuration conforming to `benchmark/config/benchmark_config.schema.json`.
+Final benchmark execution will require a configuration whose status is
+explicitly `frozen`.
