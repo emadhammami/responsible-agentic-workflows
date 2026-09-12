@@ -1,0 +1,119 @@
+{
+  "schema_version": "0.1",
+  "evidence_type": "engineering_generation_model_q4_retest",
+  "started_at_utc": "2026-09-12T17:48:14.691344+00:00",
+  "finished_at_utc": "2026-09-12T17:48:16.448974+00:00",
+  "scientific_benchmark_result": false,
+  "benchmark_tasks_used": false,
+  "original_failed_attempt_sha256": "f1d4017f220341c8342a99712bdce921639117de5fcfc27468b7cab995a1b2d8",
+  "fixture_amendment_sha256": "219f31fddb107220da43081e52bcc96e8915d97d76d266c0d6945e12c5f704d3",
+  "candidate": {
+    "provider": "ollama",
+    "ollama_version": "0.34.0",
+    "model": "qwen3.8-27b-48k:latest",
+    "tag_digest": "a68eeb5701b0a627f513a134f7ec029477a04b66a4605b32e27917ac93bd67a3",
+    "base_blob": "sha256-f5f1dd8920d417aac2718b0bda3403da274301efdd6760b4f0f4b864ff2ad57d",
+    "num_ctx": 49152,
+    "temperature": 0,
+    "seed": 20260912,
+    "num_predict": 1024,
+    "thinking": false
+  },
+  "retest_scope": {
+    "fixture": "Q4-v2",
+    "repetitions": 2,
+    "q1_q3_rerun": false
+  },
+  "results": [
+    {
+      "repetition": 1,
+      "transport_pass": true,
+      "functional_pass": true,
+      "json_parse_pass": true,
+      "exact_schema_pass": true,
+      "expected_values_pass": true,
+      "thinking_disabled_pass": true,
+      "response_content": "{\n  \"project\": \"Pine\",\n  \"tier\": \"B\",\n  \"review_months\": 18\n}",
+      "parsed_response": {
+        "project": "Pine",
+        "tier": "B",
+        "review_months": 18
+      },
+      "separate_thinking_trace_nonempty": false,
+      "done": true,
+      "done_reason": "stop",
+      "prompt_eval_count": 122,
+      "eval_count": 30,
+      "total_duration_ns": 1132534360,
+      "prompt_eval_duration_ns": 372761000,
+      "eval_duration_ns": 361109000,
+      "wall_seconds": 1.13321
+    },
+    {
+      "repetition": 2,
+      "transport_pass": true,
+      "functional_pass": true,
+      "json_parse_pass": true,
+      "exact_schema_pass": true,
+      "expected_values_pass": true,
+      "thinking_disabled_pass": true,
+      "response_content": "{\n  \"project\": \"Pine\",\n  \"tier\": \"B\",\n  \"review_months\": 18\n}",
+      "parsed_response": {
+        "project": "Pine",
+        "tier": "B",
+        "review_months": 18
+      },
+      "separate_thinking_trace_nonempty": false,
+      "done": true,
+      "done_reason": "stop",
+      "prompt_eval_count": 122,
+      "eval_count": 30,
+      "total_duration_ns": 541240798,
+      "prompt_eval_duration_ns": 164894000,
+      "eval_duration_ns": 368003000,
+      "wall_seconds": 0.543545
+    }
+  ],
+  "q4_retest_pass": true,
+  "q5_reconfirmed": true,
+  "q6_reconfirmed": true,
+  "local_execution": {
+    "model_identity_pass": true,
+    "context_49152_pass": true,
+    "gpu_placement_recorded": true,
+    "full_gpu": true,
+    "size_bytes": 17483620678,
+    "size_vram_bytes": 17483620678,
+    "loaded_model": {
+      "name": "qwen3.8-27b-48k:latest",
+      "model": "qwen3.8-27b-48k:latest",
+      "size": 17483620678,
+      "digest": "a68eeb5701b0a627f513a134f7ec029477a04b66a4605b32e27917ac93bd67a3",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen35",
+        "families": [
+          "qwen35"
+        ],
+        "parameter_size": "27.3B",
+        "quantization_level": "Q4_K_M"
+      },
+      "expires_at": "2026-09-12T19:58:16.36639869+02:00",
+      "size_vram": 17483620678,
+      "context_length": 49152
+    },
+    "ollama_ps": "NAME                      ID              SIZE     PROCESSOR    CONTEXT    UNTIL              \nqwen3.8-27b-48k:latest    a68eeb5701b0    17 GB    100% GPU     49152      9 minutes from now",
+    "gpu_snapshot": "NVIDIA GeForce RTX 5090 Laptop GPU, 24463, 21715, 616.92"
+  },
+  "final_combined_gates": {
+    "Q1_grounded_extraction": true,
+    "Q2_insufficient_evidence": true,
+    "Q3_cross_document_synthesis": true,
+    "Q4_structured_output_retest": true,
+    "Q5_thinking_disabled": true,
+    "Q6_local_execution_identity": true
+  },
+  "candidate_eligible_for_freeze": true,
+  "model_frozen": false
+}
