@@ -515,3 +515,375 @@ def materialize_embedding_artifacts(
             shutil.rmtree(staging)
 
         raise
+
+
+def load_embedding_artifacts(
+    *,
+    chunk_directory: Path,
+    retrieval_config_path: Path,
+    artifact_directory: Path,
+) -> tuple[
+    tuple[DocumentChunk, ...],
+    np.ndarray,
+    dict[str, object],
+]:
+    """Load and verify a materialized dense embedding artifact."""
+
+    matrix_path = (
+        artifact_directory
+        / "embeddings.npy"
+    )
+    chunk_ids_path = (
+        artifact_directory
+        / "chunk_ids.json"
+    )
+    metadata_path = (
+        artifact_directory
+        / "metadata.json"
+    )
+
+    for path in (
+        matrix_path,
+        chunk_ids_path,
+        metadata_path,
+        retrieval_config_path,
+        chunk_directory / "index.json",
+    ):
+        if not path.is_file():
+            raise FileNotFoundError(path)
+
+    retrieval_config = _load_json(
+        retrieval_config_path
+    )
+    metadata = _load_json(
+        metadata_path
+    )
+    chunk_ids_payload = _load_json(
+        chunk_ids_path
+    )
+    chunks, chunk_index = load_ordered_chunks(
+        chunk_directory
+    )
+
+    config_status = retrieval_config.get(
+        "status"
+    )
+
+    if config_status not in {
+        "working",
+        "frozen",
+    }:
+        raise ValueError(
+            "Retrieval configuration status "
+            "must be working or frozen"
+        )
+
+    artifact_status = metadata.get(
+        "status"
+    )
+
+    if artifact_status not in {
+        "working",
+        "frozen",
+    }:
+        raise ValueError(
+            "Embedding artifact status "
+            "must be working or frozen"
+        )
+
+    retrieval_config_id = (
+        retrieval_config.get(
+            "retrieval_config_id"
+        )
+    )
+
+    chunking_config_id = (
+        retrieval_config.get(
+            "chunking_config_id"
+        )
+    )
+
+    if (
+        metadata.get(
+            "retrieval_config_id"
+        )
+        != retrieval_config_id
+    ):
+        raise ValueError(
+            "Embedding artifact retrieval "
+            "configuration ID mismatch"
+        )
+
+    if (
+        metadata.get(
+            "chunking_config_id"
+        )
+        != chunking_config_id
+    ):
+        raise ValueError(
+            "Embedding artifact chunking "
+            "configuration ID mismatch"
+        )
+
+    if (
+        chunk_index.get(
+            "chunking_config_id"
+        )
+        != chunking_config_id
+    ):
+        raise ValueError(
+            "Chunk index and retrieval "
+            "configuration mismatch"
+        )
+
+    embedding_config = (
+        retrieval_config.get(
+            "embedding"
+        )
+    )
+
+    if not isinstance(
+        embedding_config,
+        dict,
+    ):
+        raise ValueError(
+            "Embedding configuration is missing"
+        )
+
+    expected_embedding_metadata = {
+        "embedding_model": (
+            embedding_config.get(
+                "model_tag"
+            )
+        ),
+        "embedding_model_digest": (
+            embedding_config.get(
+                "model_digest"
+            )
+        ),
+        "embedding_provider": (
+            embedding_config.get(
+                "provider"
+            )
+        ),
+        "embedding_provider_version": (
+            embedding_config.get(
+                "provider_version"
+            )
+        ),
+        "truncate": (
+            embedding_config.get(
+                "truncate"
+            )
+        ),
+    }
+
+    for key, expected_value in (
+        expected_embedding_metadata.items()
+    ):
+        if metadata.get(key) != expected_value:
+            raise ValueError(
+                f"Embedding artifact metadata "
+                f"mismatch: {key}"
+            )
+
+    expected_dimensions = (
+        embedding_config.get(
+            "output_dimensions"
+        )
+    )
+
+    if not isinstance(
+        expected_dimensions,
+        int,
+    ) or expected_dimensions < 1:
+        raise ValueError(
+            "Embedding output dimensions "
+            "must be a positive integer"
+        )
+
+    if (
+        metadata.get("dimensions")
+        != expected_dimensions
+    ):
+        raise ValueError(
+            "Embedding artifact dimensionality "
+            "mismatch"
+        )
+
+    expected_chunk_ids = [
+        chunk.chunk_id
+        for chunk in chunks
+    ]
+
+    saved_chunk_ids = (
+        chunk_ids_payload.get(
+            "chunk_ids"
+        )
+    )
+
+    if not isinstance(
+        saved_chunk_ids,
+        list,
+    ):
+        raise ValueError(
+            "Chunk-ID artifact must contain "
+            "a chunk_ids list"
+        )
+
+    if (
+        chunk_ids_payload.get(
+            "retrieval_config_id"
+        )
+        != retrieval_config_id
+    ):
+        raise ValueError(
+            "Chunk-ID artifact retrieval "
+            "configuration ID mismatch"
+        )
+
+    if (
+        chunk_ids_payload.get(
+            "chunking_config_id"
+        )
+        != chunking_config_id
+    ):
+        raise ValueError(
+            "Chunk-ID artifact chunking "
+            "configuration ID mismatch"
+        )
+
+    if (
+        chunk_ids_payload.get(
+            "chunk_count"
+        )
+        != len(chunks)
+    ):
+        raise ValueError(
+            "Chunk-ID artifact count mismatch"
+        )
+
+    if saved_chunk_ids != expected_chunk_ids:
+        raise ValueError(
+            "Chunk-ID artifact ordering "
+            "does not match source chunks"
+        )
+
+    if (
+        metadata.get("chunk_count")
+        != len(chunks)
+    ):
+        raise ValueError(
+            "Embedding artifact chunk count "
+            "mismatch"
+        )
+
+    documents = chunk_index.get(
+        "documents"
+    )
+
+    if not isinstance(
+        documents,
+        list,
+    ):
+        raise ValueError(
+            "Chunk index documents must be a list"
+        )
+
+    if (
+        metadata.get(
+            "source_chunk_artifact_count"
+        )
+        != len(documents)
+    ):
+        raise ValueError(
+            "Source chunk artifact count "
+            "mismatch"
+        )
+
+    expected_hashes = {
+        "retrieval_config_sha256": (
+            _sha256(
+                retrieval_config_path
+            )
+        ),
+        "source_chunk_index_sha256": (
+            _sha256(
+                chunk_directory
+                / "index.json"
+            )
+        ),
+        "source_chunk_artifacts_sha256": (
+            _chunk_artifacts_sha256(
+                chunk_directory=(
+                    chunk_directory
+                ),
+                chunk_index=chunk_index,
+            )
+        ),
+        "embeddings_sha256": (
+            _sha256(matrix_path)
+        ),
+        "chunk_ids_sha256": (
+            _sha256(chunk_ids_path)
+        ),
+    }
+
+    for key, expected_hash in (
+        expected_hashes.items()
+    ):
+        if (
+            metadata.get(key)
+            != expected_hash
+        ):
+            raise ValueError(
+                f"Embedding artifact hash "
+                f"mismatch: {key}"
+            )
+
+    matrix = np.load(
+        matrix_path,
+        mmap_mode="r",
+        allow_pickle=False,
+    )
+
+    expected_shape = (
+        len(chunks),
+        expected_dimensions,
+    )
+
+    if matrix.shape != expected_shape:
+        raise ValueError(
+            "Embedding matrix shape mismatch"
+        )
+
+    if matrix.dtype != np.float32:
+        raise ValueError(
+            "Embedding matrix dtype "
+            "must be float32"
+        )
+
+    if not np.isfinite(
+        matrix
+    ).all():
+        raise ValueError(
+            "Embedding matrix contains "
+            "non-finite values"
+        )
+
+    norms = np.linalg.norm(
+        matrix,
+        axis=1,
+    )
+
+    if np.any(norms == 0):
+        raise ValueError(
+            "Embedding matrix contains "
+            "zero-norm vectors"
+        )
+
+    return (
+        chunks,
+        matrix,
+        metadata,
+    )
