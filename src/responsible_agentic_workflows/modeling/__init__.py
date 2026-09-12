@@ -8,6 +8,7 @@ from .contracts import (
     ModelResponse,
     TokenUsage,
 )
+from .ollama import OllamaChatModel
 
 __all__ = [
     "LanguageModel",
@@ -15,5 +16,6 @@ __all__ = [
     "ModelMessage",
     "ModelRequest",
     "ModelResponse",
+    "OllamaChatModel",
     "TokenUsage",
 ]
