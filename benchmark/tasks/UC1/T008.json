@@ -7,7 +7,7 @@
     "DOC001",
     "DOC003"
   ],
-  "reference_answer": "The Biodiversity Strategy calls for at least 30% of EU land to be protected and for at least one third of protected areas, representing 10% of EU land, to be strictly protected, including all remaining primary and old-growth forests. The Forest Strategy carries this ambition into forest policy by requiring strict protection of primary and old-growth forests and by calling for their definition, mapping, monitoring, and protection regime, together with guidance and implementation measures intended to prevent deterioration and strengthen forest protection and restoration.",
+  "reference_answer": "The Biodiversity Strategy calls for at least 30% of EU land to be protected and for at least one third of protected areas, representing 10% of EU land, to be strictly protected, including all remaining primary and old-growth forests. The Forest Strategy carries this ambition into forest policy by calling for strict protection of primary and old-growth forests and by calling for their definition, mapping, monitoring, and protection regime, together with guidance and implementation measures intended to prevent deterioration and strengthen forest protection and restoration.",
   "reference_evidence": [
     {
       "document_id": "DOC003",
@@ -35,6 +35,6 @@
     }
   ],
   "difficulty": "high",
-  "notes": "Draft benchmark task requiring synthesis across the Biodiversity Strategy and Forest Strategy. Human verification is required before freeze.",
-  "validation_status": "draft"
+  "notes": "Draft benchmark task requiring synthesis across the Biodiversity Strategy and Forest Strategy. Human verified on 2026-09-12; task remains unfrozen pending final validation.",
+  "validation_status": "human_verified"
 }
