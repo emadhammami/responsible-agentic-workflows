@@ -1,0 +1,8 @@
+{
+  "schema_version": "0.1",
+  "document_id": "DOC008",
+  "use_case_id": "UC1",
+  "decision": "accepted",
+  "source_sha256": "90d9430316f5c017cf9f486003790051a267f1669ae815e0c90752b4cfd6365b",
+  "rationale": "Meets UC1 inclusion criteria and passed provenance, PDF integrity, English-language, text extraction, document identity, and content quality review."
+}

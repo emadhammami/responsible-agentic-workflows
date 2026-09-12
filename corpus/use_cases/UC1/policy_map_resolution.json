@@ -1,0 +1,232 @@
+{
+  "schema_version": "0.1",
+  "source_inventory": "policy_map_inventory.json",
+  "source_entry_count": 18,
+  "status": "working",
+  "resolutions": [
+    {
+      "map_id": "PM001",
+      "resolution_type": "existing",
+      "canonical_sources": [
+        {
+          "title": "New EU Forest Strategy for 2030",
+          "reference": "COM(2021) 572 final",
+          "existing_document_id": "DOC001"
+        }
+      ]
+    },
+    {
+      "map_id": "PM002",
+      "resolution_type": "download",
+      "canonical_sources": [
+        {
+          "title": "EU Forest Action Plan",
+          "reference": "COM(2006) 302 final",
+          "celex": "52006DC0302",
+          "target_filename": "DOC016_eu_forest_action_plan_2007_2011.pdf"
+        }
+      ]
+    },
+    {
+      "map_id": "PM003",
+      "resolution_type": "download",
+      "canonical_sources": [
+        {
+          "title": "EU Timber Regulation",
+          "reference": "Regulation (EU) No 995/2010",
+          "celex": "32010R0995",
+          "target_filename": "DOC017_eu_timber_regulation_995_2010.pdf"
+        }
+      ]
+    },
+    {
+      "map_id": "PM004",
+      "resolution_type": "existing",
+      "canonical_sources": [
+        {
+          "title": "EU Biodiversity Strategy for 2030",
+          "reference": "COM(2020) 380 final",
+          "existing_document_id": "DOC003"
+        }
+      ]
+    },
+    {
+      "map_id": "PM005",
+      "resolution_type": "one_to_many",
+      "canonical_sources": [
+        {
+          "title": "Birds Directive",
+          "reference": "Directive 2009/147/EC",
+          "celex": "32009L0147",
+          "target_filename": "DOC018_eu_birds_directive_2009_147.pdf"
+        },
+        {
+          "title": "Habitats Directive",
+          "reference": "Council Directive 92/43/EEC",
+          "celex": "31992L0043",
+          "target_filename": "DOC019_eu_habitats_directive_92_43.pdf"
+        }
+      ]
+    },
+    {
+      "map_id": "PM006",
+      "resolution_type": "download",
+      "canonical_sources": [
+        {
+          "title": "8th Environment Action Programme",
+          "reference": "Decision (EU) 2022/591",
+          "celex": "32022D0591",
+          "target_filename": "DOC020_eu_8th_environment_action_programme.pdf"
+        }
+      ]
+    },
+    {
+      "map_id": "PM007",
+      "resolution_type": "download",
+      "canonical_sources": [
+        {
+          "title": "European Climate Law",
+          "reference": "Regulation (EU) 2021/1119",
+          "celex": "32021R1119",
+          "target_filename": "DOC021_european_climate_law_2021_1119.pdf"
+        }
+      ]
+    },
+    {
+      "map_id": "PM008",
+      "resolution_type": "existing",
+      "canonical_sources": [
+        {
+          "title": "LULUCF Regulation",
+          "reference": "Regulation (EU) 2018/841",
+          "existing_document_id": "DOC006"
+        }
+      ],
+      "related_document_ids": [
+        "DOC007"
+      ]
+    },
+    {
+      "map_id": "PM009",
+      "resolution_type": "download",
+      "canonical_sources": [
+        {
+          "title": "EU Strategy on Adaptation to Climate Change",
+          "reference": "COM(2021) 82 final",
+          "celex": "52021DC0082",
+          "target_filename": "DOC022_eu_adaptation_strategy_2021.pdf"
+        }
+      ]
+    },
+    {
+      "map_id": "PM010",
+      "resolution_type": "download",
+      "canonical_sources": [
+        {
+          "title": "Renewable Energy Directive III",
+          "reference": "Directive (EU) 2023/2413",
+          "celex": "32023L2413",
+          "target_filename": "DOC023_red_iii_2023_2413.pdf"
+        }
+      ]
+    },
+    {
+      "map_id": "PM011",
+      "resolution_type": "one_to_many",
+      "canonical_sources": [
+        {
+          "title": "REPowerEU Plan",
+          "reference": "COM(2022) 230 final",
+          "celex": "52022DC0230",
+          "target_filename": "DOC024_repowereu_plan_2022.pdf",
+          "direct_pdf_url": "https://eur-lex.europa.eu/resource.html?uri=cellar:fc930f14-d7ae-11ec-a95f-01aa75ed71a1.0001.02/DOC_1&format=PDF"
+        },
+        {
+          "title": "REPowerEU Plan - Annexes 1 to 3",
+          "reference": "COM(2022) 230 final - Annexes 1 to 3",
+          "celex": "52022DC0230",
+          "target_filename": "DOC031_repowereu_plan_annexes_2022.pdf",
+          "direct_pdf_url": "https://eur-lex.europa.eu/resource.html?uri=cellar:fc930f14-d7ae-11ec-a95f-01aa75ed71a1.0001.02/DOC_2&format=PDF"
+        }
+      ]
+    },
+    {
+      "map_id": "PM012",
+      "resolution_type": "download",
+      "canonical_sources": [
+        {
+          "title": "CAP Strategic Plans Regulation",
+          "reference": "Regulation (EU) 2021/2115",
+          "celex": "32021R2115",
+          "target_filename": "DOC025_cap_strategic_plans_2021_2115.pdf"
+        }
+      ]
+    },
+    {
+      "map_id": "PM013",
+      "resolution_type": "download",
+      "canonical_sources": [
+        {
+          "title": "CAP Horizontal Regulation",
+          "reference": "Regulation (EU) 2021/2116",
+          "celex": "32021R2116",
+          "target_filename": "DOC026_cap_horizontal_2021_2116.pdf"
+        }
+      ]
+    },
+    {
+      "map_id": "PM014",
+      "resolution_type": "download",
+      "canonical_sources": [
+        {
+          "title": "EU Taxonomy Regulation",
+          "reference": "Regulation (EU) 2020/852",
+          "celex": "32020R0852",
+          "target_filename": "DOC027_eu_taxonomy_2020_852.pdf"
+        }
+      ]
+    },
+    {
+      "map_id": "PM015",
+      "resolution_type": "download",
+      "canonical_sources": [
+        {
+          "title": "A sustainable Bioeconomy for Europe",
+          "reference": "COM(2018) 673 final",
+          "celex": "52018DC0673",
+          "target_filename": "DOC028_eu_bioeconomy_strategy_2018.pdf"
+        }
+      ]
+    },
+    {
+      "map_id": "PM016",
+      "resolution_type": "download",
+      "canonical_sources": [
+        {
+          "title": "Horizon Europe Framework Programme",
+          "reference": "Regulation (EU) 2021/695",
+          "celex": "32021R0695",
+          "target_filename": "DOC029_horizon_europe_2021_695.pdf"
+        }
+      ]
+    },
+    {
+      "map_id": "PM017",
+      "resolution_type": "exclude_before_intake",
+      "canonical_sources": [],
+      "reason": "The Policy Map entry refers to COST Actions as an umbrella research-network and funding mechanism rather than a single stable policy document. It therefore does not satisfy the UC1 stable-document inclusion criterion."
+    },
+    {
+      "map_id": "PM018",
+      "resolution_type": "download",
+      "canonical_sources": [
+        {
+          "title": "Innovation Fund implementing framework",
+          "reference": "Commission Delegated Regulation (EU) 2019/856",
+          "celex": "32019R0856",
+          "target_filename": "DOC030_eu_innovation_fund_2019_856.pdf"
+        }
+      ]
+    }
+  ]
+}

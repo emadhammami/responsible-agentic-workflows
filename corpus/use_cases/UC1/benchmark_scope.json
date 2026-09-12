@@ -1,0 +1,116 @@
+{
+  "schema_version": "0.1",
+  "use_case_id": "UC1",
+  "status": "working",
+  "benchmark_scope_rule": "All accepted UC1 documents are included in benchmark retrieval. The corpus combines canonical documents resolving the OptFor-EU Policy Map with additional authoritative forest-policy documents that satisfied the predefined UC1 inclusion criteria.",
+  "benchmark_active_document_ids": [
+    "DOC001",
+    "DOC002",
+    "DOC003",
+    "DOC004",
+    "DOC005",
+    "DOC006",
+    "DOC007",
+    "DOC008",
+    "DOC009",
+    "DOC010",
+    "DOC012",
+    "DOC013",
+    "DOC014",
+    "DOC015",
+    "DOC016",
+    "DOC017",
+    "DOC018",
+    "DOC019",
+    "DOC020",
+    "DOC021",
+    "DOC022",
+    "DOC023",
+    "DOC024",
+    "DOC025",
+    "DOC026",
+    "DOC027",
+    "DOC028",
+    "DOC029",
+    "DOC030",
+    "DOC031"
+  ],
+  "source_groups": {
+    "policy_map_core_document_ids": [
+      "DOC001",
+      "DOC003",
+      "DOC006",
+      "DOC016",
+      "DOC017",
+      "DOC018",
+      "DOC019",
+      "DOC020",
+      "DOC021",
+      "DOC022",
+      "DOC023",
+      "DOC024",
+      "DOC025",
+      "DOC026",
+      "DOC027",
+      "DOC028",
+      "DOC029",
+      "DOC030",
+      "DOC031"
+    ],
+    "additional_authoritative_document_ids": [
+      "DOC002",
+      "DOC004",
+      "DOC005",
+      "DOC007",
+      "DOC008",
+      "DOC009",
+      "DOC010",
+      "DOC012",
+      "DOC013",
+      "DOC014",
+      "DOC015"
+    ]
+  },
+  "manifest_excluded_document_ids": [
+    "DOC011"
+  ],
+  "policy_map": {
+    "total_entries": 18,
+    "included_entry_ids": [
+      "PM001",
+      "PM002",
+      "PM003",
+      "PM004",
+      "PM005",
+      "PM006",
+      "PM007",
+      "PM008",
+      "PM009",
+      "PM010",
+      "PM011",
+      "PM012",
+      "PM013",
+      "PM014",
+      "PM015",
+      "PM016",
+      "PM018"
+    ],
+    "excluded_before_intake_entry_ids": [
+      "PM017"
+    ],
+    "core_document_count": 19
+  },
+  "controls": {
+    "all_accepted_documents_retrieval_active": true,
+    "selection_based_on_benchmark_performance": false,
+    "corpus_frozen": false
+  },
+  "notes": [
+    "The 19 Policy Map core documents provide an externally defined canonical policy source set.",
+    "The 11 additional authoritative documents were collected and accepted under the UC1 inclusion criteria before benchmark execution and are also retrieval-active.",
+    "DOC011 remains excluded under the documented review decision.",
+    "PM017 COST Actions remains excluded before intake because it does not resolve to one stable policy document.",
+    "No document may be added or removed based on benchmark performance.",
+    "The corpus remains working until real-document ingestion and provenance validation are complete."
+  ]
+}

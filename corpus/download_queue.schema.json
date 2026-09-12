@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Corpus PDF Download Queue",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "use_case_id",
+    "documents"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "0.1"
+    },
+    "use_case_id": {
+      "type": "string",
+      "pattern": "^UC[1-9][0-9]*$"
+    },
+    "documents": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/document"
+      }
+    }
+  },
+  "$defs": {
+    "document": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "title",
+        "pdf_url",
+        "target_filename"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "pdf_url": {
+          "type": "string",
+          "pattern": "^https://"
+        },
+        "target_filename": {
+          "type": "string",
+          "pattern": "^[^/\\\\]+\\.pdf$"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "schema_version": "0.1",
+  "document_id": "DOC020",
+  "use_case_id": "UC1",
+  "decision": "accepted",
+  "source_sha256": "c0cb870aa03a37bbc1438e656a1cda2ad2d690dc75ae0a58671fba6d3b459e73",
+  "rationale": "Accepted as a canonical official document resolving OptFor-EU Policy Map entry PM006. Source integrity, document identity, English-language extraction, and document quality checks passed."
+}

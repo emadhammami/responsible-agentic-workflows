@@ -1,0 +1,18 @@
+{
+  "schema_version": "0.1",
+  "document_id": "DOC012",
+  "use_case_id": "UC1",
+  "source_sha256": "b256a5aa6fe60e5f76e07a4425baa47d765b7b9ca7bf8916bd396a894ed1bb9b",
+  "document_status": "candidate",
+  "quality_status": "pass",
+  "metrics": {
+    "pages": 236,
+    "file_size_bytes": 14562105,
+    "characters": 1193157,
+    "words": 138440,
+    "lines": 13255,
+    "nonempty_lines": 11632,
+    "encrypted": false
+  },
+  "issues": []
+}

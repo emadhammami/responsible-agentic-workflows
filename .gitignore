@@ -13,3 +13,9 @@ build/
 *.egg-info/
 .pytest-tmp/
 artifacts/engineering/*.json
+
+# Real thesis corpus documents
+corpus/use_cases/*/raw/*
+corpus/use_cases/*/processed/*
+!corpus/use_cases/*/raw/.gitkeep
+!corpus/use_cases/*/processed/.gitkeep

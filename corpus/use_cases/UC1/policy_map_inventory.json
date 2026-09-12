@@ -1,0 +1,208 @@
+{
+  "schema_version": "0.1",
+  "source_name": "OptFor-EU Policy Map",
+  "source_url": "https://optforeu.eu/policy-map/",
+  "status": "resolved",
+  "entry_count": 18,
+  "entries": [
+    {
+      "map_id": "PM001",
+      "domain": "forest-focused policy",
+      "title": "EU Forest Strategy for 2030",
+      "source_url": "https://environment.ec.europa.eu/strategy/forest-strategy_en",
+      "corpus_match": "resolved",
+      "corpus_document_ids": [
+        "DOC001"
+      ],
+      "resolution_status": "included"
+    },
+    {
+      "map_id": "PM002",
+      "domain": "forest-focused policy",
+      "title": "Forest Action Plan 2007-2011",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52006DC0302",
+      "corpus_match": "resolved",
+      "corpus_document_ids": [
+        "DOC016"
+      ],
+      "resolution_status": "included"
+    },
+    {
+      "map_id": "PM003",
+      "domain": "forest-focused policy",
+      "title": "EU Timber Regulation (EUTR)",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R0995",
+      "corpus_match": "resolved",
+      "corpus_document_ids": [
+        "DOC017"
+      ],
+      "resolution_status": "included"
+    },
+    {
+      "map_id": "PM004",
+      "domain": "environmental policy",
+      "title": "EU Biodiversity Strategy for 2030",
+      "source_url": "https://environment.ec.europa.eu/strategy/biodiversity-strategy-2030_en",
+      "corpus_match": "resolved",
+      "corpus_document_ids": [
+        "DOC003"
+      ],
+      "resolution_status": "included"
+    },
+    {
+      "map_id": "PM005",
+      "domain": "environmental policy",
+      "title": "Natura 2000 Directives",
+      "source_url": "https://environment.ec.europa.eu/topics/nature-and-biodiversity/natura-2000_en",
+      "corpus_match": "resolved",
+      "corpus_document_ids": [
+        "DOC018",
+        "DOC019"
+      ],
+      "resolution_status": "included"
+    },
+    {
+      "map_id": "PM006",
+      "domain": "environmental policy",
+      "title": "8th Environment Action Programme",
+      "source_url": "https://environment.ec.europa.eu/strategy/environment-action-programme-2030_en",
+      "corpus_match": "resolved",
+      "corpus_document_ids": [
+        "DOC020"
+      ],
+      "resolution_status": "included"
+    },
+    {
+      "map_id": "PM007",
+      "domain": "climate policy",
+      "title": "European Climate Law",
+      "source_url": "https://climate.ec.europa.eu/eu-action/european-climate-law_en",
+      "corpus_match": "resolved",
+      "corpus_document_ids": [
+        "DOC021"
+      ],
+      "resolution_status": "included"
+    },
+    {
+      "map_id": "PM008",
+      "domain": "climate policy",
+      "title": "LULUCF Regulation",
+      "source_url": "https://climate.ec.europa.eu/eu-action/land-use-sector_en",
+      "corpus_match": "resolved",
+      "corpus_document_ids": [
+        "DOC006"
+      ],
+      "resolution_status": "included"
+    },
+    {
+      "map_id": "PM009",
+      "domain": "climate policy",
+      "title": "EU Adaptation Strategy",
+      "source_url": "https://climate.ec.europa.eu/eu-action/adaptation-climate-change/eu-adaptation-strategy_en",
+      "corpus_match": "resolved",
+      "corpus_document_ids": [
+        "DOC022"
+      ],
+      "resolution_status": "included"
+    },
+    {
+      "map_id": "PM010",
+      "domain": "energy policy",
+      "title": "Renewable Energy Directive (RED III)",
+      "source_url": "https://energy.ec.europa.eu/topics/renewable-energy/renewable-energy-directive-targets-and-rules_en",
+      "corpus_match": "resolved",
+      "corpus_document_ids": [
+        "DOC023"
+      ],
+      "resolution_status": "included"
+    },
+    {
+      "map_id": "PM011",
+      "domain": "energy policy",
+      "title": "REPowerEU Plan",
+      "source_url": "https://commission.europa.eu/strategy-and-policy/priorities-2019-2024/european-green-deal/repowereu-affordable-secure-and-sustainable-energy-europe_en",
+      "corpus_match": "resolved",
+      "corpus_document_ids": [
+        "DOC024",
+        "DOC031"
+      ],
+      "resolution_status": "included"
+    },
+    {
+      "map_id": "PM012",
+      "domain": "agricultural policy",
+      "title": "CAP Strategic Plan Regulation (2021)",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2115",
+      "corpus_match": "resolved",
+      "corpus_document_ids": [
+        "DOC025"
+      ],
+      "resolution_status": "included"
+    },
+    {
+      "map_id": "PM013",
+      "domain": "agricultural policy",
+      "title": "CAP Horizontal Regulation (2021)",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2116",
+      "corpus_match": "resolved",
+      "corpus_document_ids": [
+        "DOC026"
+      ],
+      "resolution_status": "included"
+    },
+    {
+      "map_id": "PM014",
+      "domain": "value-chain policy",
+      "title": "EU Taxonomy Regulation (2020)",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852",
+      "corpus_match": "resolved",
+      "corpus_document_ids": [
+        "DOC027"
+      ],
+      "resolution_status": "included"
+    },
+    {
+      "map_id": "PM015",
+      "domain": "value-chain policy",
+      "title": "EU Bioeconomy Strategy",
+      "source_url": "https://research-and-innovation.ec.europa.eu/research-area/environment/bioeconomy/bioeconomy-strategy_en",
+      "corpus_match": "resolved",
+      "corpus_document_ids": [
+        "DOC028"
+      ],
+      "resolution_status": "included"
+    },
+    {
+      "map_id": "PM016",
+      "domain": "forest research and development policy",
+      "title": "Horizon Europe Programme (2021-2027)",
+      "source_url": "https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en",
+      "corpus_match": "resolved",
+      "corpus_document_ids": [
+        "DOC029"
+      ],
+      "resolution_status": "included"
+    },
+    {
+      "map_id": "PM017",
+      "domain": "forest research and development policy",
+      "title": "COST Actions",
+      "source_url": "https://www.cost.eu/",
+      "corpus_match": "excluded",
+      "corpus_document_ids": [],
+      "resolution_status": "excluded_before_intake",
+      "exclusion_reason": "COST Actions is an umbrella research-network and funding mechanism rather than a single stable policy document, so it does not satisfy the UC1 stable-document inclusion criterion."
+    },
+    {
+      "map_id": "PM018",
+      "domain": "forest research and development policy",
+      "title": "EU Innovation Fund",
+      "source_url": "https://climate.ec.europa.eu/eu-action/eu-funding-climate-action/innovation-fund_en",
+      "corpus_match": "resolved",
+      "corpus_document_ids": [
+        "DOC030"
+      ],
+      "resolution_status": "included"
+    }
+  ]
+}

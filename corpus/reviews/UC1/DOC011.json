@@ -1,0 +1,8 @@
+{
+  "schema_version": "0.1",
+  "document_id": "DOC011",
+  "use_case_id": "UC1",
+  "decision": "excluded",
+  "source_sha256": "bf303607b9cedac4f2ae2b762ca88897b520aab2376472b1acbfdf9f10292077",
+  "rationale": "Excluded after relevance review because the document is primarily a cross-sectoral climate-adaptation policy. Forest content is present but comparatively limited and mainly concerns climate impacts and forest-fire risk rather than substantive forest policy or forest-management requirements."
+}
