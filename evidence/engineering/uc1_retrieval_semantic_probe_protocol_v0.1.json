@@ -1,0 +1,75 @@
+{
+  "schema_version": "0.1",
+  "protocol_id": "UC1-SEMANTIC-RETRIEVAL-PROBES-v0.1",
+  "status": "frozen_before_execution",
+  "purpose": "Final engineering semantic retrieval gate for the working UC1 embedding configuration.",
+  "scope": "Engineering model selection only. This is not a benchmark result.",
+  "design": {
+    "probe_count": 8,
+    "top_k": 10,
+    "repeats_per_probe": 3,
+    "query_style": "Semantic policy-purpose paraphrases without canonical document titles, legal references, CELEX identifiers, or document IDs.",
+    "expected_target": "Rank of the first retrieved chunk belonging to the pre-specified expected document.",
+    "identity_diagnostic_results_used_to_select_targets": false,
+    "benchmark_questions_used": false,
+    "benchmark_gold_used": false,
+    "benchmark_answers_used": false
+  },
+  "engineering_acceptance_gate": {
+    "note": "These are pre-specified engineering sufficiency criteria, not thesis outcome metrics.",
+    "minimum_probes_expected_document_top10_all_repeats": 7,
+    "minimum_probes_expected_document_top5_all_repeats": 6,
+    "minimum_probes_expected_document_top3_all_repeats": 4,
+    "minimum_probes_stable_top1_document_across_repeats": 7
+  },
+  "probes": [
+    {
+      "probe_id": "SEM01",
+      "policy_map_id": "PM001",
+      "expected_document_id": "DOC001",
+      "query": "EU policy for improving forest resilience, biodiversity and sustainable forest management toward 2030."
+    },
+    {
+      "probe_id": "SEM02",
+      "policy_map_id": "PM004",
+      "expected_document_id": "DOC003",
+      "query": "EU policy for protecting and restoring biodiversity and ecosystems by 2030."
+    },
+    {
+      "probe_id": "SEM03",
+      "policy_map_id": "PM008",
+      "expected_document_id": "DOC006",
+      "query": "EU rules governing greenhouse gas emissions and removals from land use, land-use change and forestry."
+    },
+    {
+      "probe_id": "SEM04",
+      "policy_map_id": "PM002",
+      "expected_document_id": "DOC016",
+      "query": "EU framework for coordinated forest policy actions and sustainable forest management during the earlier forest action planning period."
+    },
+    {
+      "probe_id": "SEM05",
+      "policy_map_id": "PM006",
+      "expected_document_id": "DOC020",
+      "query": "EU environmental policy framework setting long-term priority objectives for environmental action through 2030."
+    },
+    {
+      "probe_id": "SEM06",
+      "policy_map_id": "PM009",
+      "expected_document_id": "DOC022",
+      "query": "EU policy for strengthening resilience and preparedness for the impacts of climate change."
+    },
+    {
+      "probe_id": "SEM07",
+      "policy_map_id": "PM012",
+      "expected_document_id": "DOC025",
+      "query": "EU rules establishing how Member States design and implement strategic plans under the Common Agricultural Policy."
+    },
+    {
+      "probe_id": "SEM08",
+      "policy_map_id": "PM015",
+      "expected_document_id": "DOC028",
+      "query": "EU strategy for developing a sustainable circular bio-based economy using renewable biological resources."
+    }
+  ]
+}
