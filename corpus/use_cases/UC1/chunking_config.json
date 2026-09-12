@@ -2,7 +2,7 @@
   "schema_version": "0.1",
   "config_id": "UC1-PAGE-W450-O75-v0.1",
   "use_case_id": "UC1",
-  "status": "working",
+  "status": "frozen",
   "strategy": "page_aware_word_windows",
   "max_words": 450,
   "overlap_words": 75,
@@ -31,5 +31,5 @@
     "It produced the fewest chunks under 100 words among the evaluated candidates.",
     "Chunks remain bounded by physical PDF pages to preserve page-level provenance."
   ],
-  "frozen": false
+  "frozen": true
 }

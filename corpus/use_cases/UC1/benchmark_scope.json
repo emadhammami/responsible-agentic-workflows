@@ -1,7 +1,7 @@
 {
   "schema_version": "0.1",
   "use_case_id": "UC1",
-  "status": "working",
+  "status": "frozen",
   "benchmark_scope_rule": "All accepted UC1 documents are included in benchmark retrieval. The corpus combines canonical documents resolving the OptFor-EU Policy Map with additional authoritative forest-policy documents that satisfied the predefined UC1 inclusion criteria.",
   "benchmark_active_document_ids": [
     "DOC001",
@@ -103,7 +103,7 @@
   "controls": {
     "all_accepted_documents_retrieval_active": true,
     "selection_based_on_benchmark_performance": false,
-    "corpus_frozen": false
+    "corpus_frozen": true
   },
   "notes": [
     "The 19 Policy Map core documents provide an externally defined canonical policy source set.",

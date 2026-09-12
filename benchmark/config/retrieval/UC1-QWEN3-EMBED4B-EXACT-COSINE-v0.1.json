@@ -1,7 +1,7 @@
 {
   "schema_version": "0.1",
   "retrieval_config_id": "UC1-QWEN3-EMBED4B-EXACT-COSINE-v0.1",
-  "status": "working",
+  "status": "frozen",
   "backend": "dense-exact-cosine",
   "chunking_config_id": "UC1-PAGE-W450-O75-v0.1",
   "embedding": {
