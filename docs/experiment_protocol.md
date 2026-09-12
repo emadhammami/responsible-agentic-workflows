@@ -217,7 +217,7 @@ Restricted documents must not be committed to the public repository.
 
 ## 11. Decisions still open
 
-Protocol version 0.4 intentionally does not yet freeze:
+Protocol version 0.5 intentionally does not yet freeze:
 
 - exact LangChain package version and B0 implementation parameters;
 - exact LLM/model version;
