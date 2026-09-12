@@ -1,0 +1,79 @@
+{
+  "schema_version": "0.1",
+  "protocol_id": "UC1-METADATA-IDENTITY-PROBES-v0.1",
+  "status": "frozen_before_execution",
+  "purpose": "Engineering-only identity retrieval diagnostic for the working UC1 dense retrieval configuration.",
+  "source_basis": "Queries and expected document identities are derived only from pre-existing canonical title and reference metadata in corpus/use_cases/UC1/policy_map_resolution.json.",
+  "benchmark_separation": {
+    "benchmark_questions_used": false,
+    "benchmark_gold_used": false,
+    "benchmark_answers_used": false,
+    "raw_document_text_used_to_design_queries": false,
+    "retrieval_results_used_to_design_queries": false
+  },
+  "interpretation": "This protocol tests real-corpus retrieval identity and execution integrity. It is not by itself an embedding-model acceptance test.",
+  "execution": {
+    "top_k": 10,
+    "repeats_per_probe": 3,
+    "ranking_unit": "chunk",
+    "expected_document_measure": "rank of the first retrieved chunk belonging to the expected document"
+  },
+  "probes": [
+    {
+      "probe_id": "ID01",
+      "canonical_title": "EU Timber Regulation",
+      "reference": "Regulation (EU) No 995/2010",
+      "expected_document_id": "DOC017",
+      "query": "EU Timber Regulation. Regulation (EU) No 995/2010."
+    },
+    {
+      "probe_id": "ID02",
+      "canonical_title": "Birds Directive",
+      "reference": "Directive 2009/147/EC",
+      "expected_document_id": "DOC018",
+      "query": "Birds Directive. Directive 2009/147/EC."
+    },
+    {
+      "probe_id": "ID03",
+      "canonical_title": "Habitats Directive",
+      "reference": "Council Directive 92/43/EEC",
+      "expected_document_id": "DOC019",
+      "query": "Habitats Directive. Council Directive 92/43/EEC."
+    },
+    {
+      "probe_id": "ID04",
+      "canonical_title": "European Climate Law",
+      "reference": "Regulation (EU) 2021/1119",
+      "expected_document_id": "DOC021",
+      "query": "European Climate Law. Regulation (EU) 2021/1119."
+    },
+    {
+      "probe_id": "ID05",
+      "canonical_title": "Renewable Energy Directive III",
+      "reference": "Directive (EU) 2023/2413",
+      "expected_document_id": "DOC023",
+      "query": "Renewable Energy Directive III. Directive (EU) 2023/2413."
+    },
+    {
+      "probe_id": "ID06",
+      "canonical_title": "EU Taxonomy Regulation",
+      "reference": "Regulation (EU) 2020/852",
+      "expected_document_id": "DOC027",
+      "query": "EU Taxonomy Regulation. Regulation (EU) 2020/852."
+    },
+    {
+      "probe_id": "ID07",
+      "canonical_title": "Horizon Europe Framework Programme",
+      "reference": "Regulation (EU) 2021/695",
+      "expected_document_id": "DOC029",
+      "query": "Horizon Europe Framework Programme. Regulation (EU) 2021/695."
+    },
+    {
+      "probe_id": "ID08",
+      "canonical_title": "Innovation Fund implementing framework",
+      "reference": "Commission Delegated Regulation (EU) 2019/856",
+      "expected_document_id": "DOC030",
+      "query": "Innovation Fund implementing framework. Commission Delegated Regulation (EU) 2019/856."
+    }
+  ]
+}
