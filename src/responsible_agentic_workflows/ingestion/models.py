@@ -18,6 +18,30 @@ class DocumentChunk:
 
 
 @dataclass(frozen=True, slots=True)
+class DocumentPage:
+    """One extracted PDF page with stable source provenance."""
+
+    document_id: str
+    page_id: str
+    title: str
+    page_number: int
+    text: str
+    source_path: str
+    source_sha256: str
+
+
+@dataclass(frozen=True, slots=True)
+class ExtractedPdfDocument:
+    """A PDF source represented as ordered extracted pages."""
+
+    document_id: str
+    title: str
+    source_path: str
+    source_sha256: str
+    pages: tuple[DocumentPage, ...]
+
+
+@dataclass(frozen=True, slots=True)
 class ParsedDocument:
     """A parsed source document and its ordered chunks."""
 

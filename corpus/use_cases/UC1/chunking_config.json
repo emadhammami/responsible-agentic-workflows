@@ -1,0 +1,35 @@
+{
+  "schema_version": "0.1",
+  "config_id": "UC1-PAGE-W450-O75-v0.1",
+  "use_case_id": "UC1",
+  "status": "working",
+  "strategy": "page_aware_word_windows",
+  "max_words": 450,
+  "overlap_words": 75,
+  "cross_page_boundaries": false,
+  "empty_pages_generate_chunks": false,
+  "selection_basis": {
+    "selection_based_on_benchmark_performance": false,
+    "comparative_candidates": [
+      "W250_O40",
+      "W300_O50",
+      "W350_O50",
+      "W400_O60",
+      "W450_O75"
+    ],
+    "selected_candidate": "W450_O75",
+    "observed_total_chunks": 2853,
+    "observed_overlap_overhead_percent": 9.89,
+    "observed_chunks_under_100_words": 175,
+    "observed_split_pages": 1084,
+    "observed_max_chunks_per_page": 3
+  },
+  "rationale": [
+    "The configuration was selected before benchmark execution.",
+    "It produced the lowest corpus fragmentation among the evaluated candidates.",
+    "It produced the lowest overlap overhead among the evaluated candidates.",
+    "It produced the fewest chunks under 100 words among the evaluated candidates.",
+    "Chunks remain bounded by physical PDF pages to preserve page-level provenance."
+  ],
+  "frozen": false
+}
