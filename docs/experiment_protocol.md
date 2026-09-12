@@ -2,7 +2,7 @@
 
 **Project:** Responsible Agentic Workflows
 **Study:** USN Master's Thesis
-**Protocol version:** 0.4
+**Protocol version:** 0.5
 **Status:** Working protocol
 
 ## 1. Study objective
@@ -120,6 +120,17 @@ The expected task categories are:
 Final questions, reference answers, and reference evidence must be
 human-verified.
 
+The primary benchmark task-set design is frozen separately in
+`benchmark/task_set_plan.json`.
+
+The primary benchmark contains 30 tasks across three use cases, with 10 tasks
+per use case. Each use case contains 3 direct-retrieval, 3 within-document
+reasoning, 2 cross-document reasoning, and 2 insufficient-evidence tasks.
+
+Conflicting-document reasoning remains supported by the task schema but is not
+a required category in the balanced primary benchmark because a genuine
+document conflict cannot be assumed across all three use cases.
+
 ## 7. Benchmark dimensions
 
 ### Task performance
@@ -163,8 +174,12 @@ The primary experimental unit is one benchmark task.
 
 The same task should be evaluated across comparable system conditions.
 
-Repeated runs may be used to characterize stochastic variability, but repeated
-runs of the same task will not be treated as independent tasks.
+Each task-condition combination will be executed three times to characterize
+run-to-run variability. Repeated runs of the same task are repetitions and will
+not be treated as independent tasks.
+
+With 30 primary benchmark tasks, three system conditions (B0, B1, and G1), and
+three repetitions, the planned primary benchmark contains 270 runs.
 
 ## 9. Research integrity rules
 
@@ -183,11 +198,19 @@ Before the full benchmark:
 
 ## 10. Document corpus
 
-The study is expected to begin with approximately 20 real policy/project
-documents and may expand toward approximately 60 documents.
+The primary benchmark is planned across three real document-based use cases:
+UC1, UC2, and UC3.
 
-The architecture must support corpus expansion without requiring a change in
-the experimental design.
+UC1 uses the frozen OptFor-EU forest-policy corpus. UC2 and UC3 will be selected
+and documented as distinct real organizational or knowledge-work contexts
+before their benchmark tasks are frozen.
+
+The overall corpus is expected to contain approximately 60 real documents,
+subject to documented source availability and inclusion criteria. Corpus size
+will not be adjusted in response to benchmark performance.
+
+The architecture must support the three use cases without changing the core
+B0, B1, and G1 comparison.
 
 Publication rights for the real documents will be assessed separately.
 Restricted documents must not be committed to the public repository.
@@ -204,8 +227,8 @@ Protocol version 0.4 intentionally does not yet freeze:
 - retrieval top-k;
 - prompt templates;
 - resource limits;
-- final benchmark size;
-- repetition count;
+- final benchmark task questions, reference answers, and evidence;
+- UC2 and UC3 corpus selection and retrieval artifacts;
 - statistical tests;
 - automatic/human evaluation implementation.
 

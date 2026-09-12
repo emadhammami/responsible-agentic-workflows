@@ -1,0 +1,64 @@
+{
+  "schema_version": "0.1",
+  "plan_id": "PRIMARY-BENCHMARK-TASK-SET-v0.1",
+  "status": "frozen_design_before_task_authoring",
+  "purpose": "Pre-specify the size, use-case balance, task-type balance, and repetition count for the primary technical benchmark before final benchmark tasks are authored.",
+  "primary_benchmark": {
+    "use_case_count": 3,
+    "use_case_ids": [
+      "UC1",
+      "UC2",
+      "UC3"
+    ],
+    "tasks_per_use_case": 10,
+    "total_tasks": 30,
+    "conditions": [
+      "B0",
+      "B1",
+      "G1"
+    ],
+    "repetitions_per_task_condition": 3,
+    "planned_primary_runs": 270
+  },
+  "task_type_allocation_per_use_case": {
+    "direct_retrieval": 3,
+    "within_document_reasoning": 3,
+    "cross_document_reasoning": 2,
+    "insufficient_evidence": 2,
+    "conflicting_document_reasoning": 0
+  },
+  "aggregate_task_type_allocation": {
+    "direct_retrieval": 9,
+    "within_document_reasoning": 9,
+    "cross_document_reasoning": 6,
+    "insufficient_evidence": 6,
+    "conflicting_document_reasoning": 0
+  },
+  "conflicting_document_reasoning_policy": "Not required in the balanced primary benchmark because a genuine document conflict cannot be assumed across all three use cases. Any later inclusion would require a documented pre-benchmark amendment rather than post-result substitution.",
+  "authoring_controls": {
+    "reference_answers_human_verified": true,
+    "reference_evidence_human_verified": true,
+    "runtime_access_to_reference_answers": false,
+    "runtime_access_to_reference_evidence_labels": false,
+    "task_selection_based_on_benchmark_results": false,
+    "task_removal_based_on_benchmark_results": false,
+    "benchmark_execution_before_task_freeze": false,
+    "identity_lookup_only_questions_allowed_as_primary_tasks": false
+  },
+  "task_type_rules": {
+    "direct_retrieval": "Answerable from localized evidence in one required document without material multi-step synthesis.",
+    "within_document_reasoning": "Requires synthesis or reasoning across information within one required document.",
+    "cross_document_reasoning": "Requires material evidence from at least two required documents.",
+    "insufficient_evidence": "The frozen corpus does not contain sufficient evidence for a justified substantive answer; correct behavior is abstention.",
+    "conflicting_document_reasoning": "Reserved by the task schema but not allocated a required slot in the balanced primary benchmark."
+  },
+  "freeze_boundary": {
+    "design_frozen": true,
+    "task_questions_frozen": false,
+    "reference_answers_frozen": false,
+    "reference_evidence_frozen": false,
+    "UC1_retrieval_foundation_frozen": true,
+    "UC2_retrieval_foundation_frozen": false,
+    "UC3_retrieval_foundation_frozen": false
+  }
+}
