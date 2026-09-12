@@ -1,0 +1,58 @@
+{
+  "schema_version": "0.1",
+  "model_config_id": "OLLAMA-QWEN38-27B-48K-v0.1",
+  "status": "frozen",
+  "freeze_scope": "generation_model_identity_and_fixed_behavior",
+  "provider": "ollama",
+  "provider_version": "0.34.0",
+  "model_name": "qwen3.8-27b-48k:latest",
+  "tag_digest": "a68eeb5701b0a627f513a134f7ec029477a04b66a4605b32e27917ac93bd67a3",
+  "base_model_blob": "sha256-f5f1dd8920d417aac2718b0bda3403da274301efdd6760b4f0f4b864ff2ad57d",
+  "model_family": "qwen35",
+  "parameter_size": "27.3B",
+  "quantization": "Q4_K_M",
+  "model_reported_native_context": 262144,
+  "configured_context": 49152,
+  "fixed_generation_behavior": {
+    "temperature": 0,
+    "seed": 20260912,
+    "thinking": false
+  },
+  "qualification_only_parameters": {
+    "num_predict": 1024
+  },
+  "open_benchmark_parameters": [
+    "max_output_tokens",
+    "resource_limits"
+  ],
+  "applies_to_conditions": [
+    "B0",
+    "B1",
+    "G1"
+  ],
+  "qualification_evidence": {
+    "protocol": "docs/generation_model_qualification.md",
+    "initial_attempt": {
+      "path": "evidence/engineering/generation_model_qualification_2026-09-12.json",
+      "sha256": "f1d4017f220341c8342a99712bdce921639117de5fcfc27468b7cab995a1b2d8",
+      "overall_pass": false
+    },
+    "q4_fixture_amendment": {
+      "path": "evidence/engineering/generation_model_qualification_q4_fixture_amendment_2026-09-12.md",
+      "sha256": "219f31fddb107220da43081e52bcc96e8915d97d76d266c0d6945e12c5f704d3"
+    },
+    "q4_retest": {
+      "path": "evidence/engineering/generation_model_qualification_q4_retest_2026-09-12.json",
+      "sha256": "92ed3d2a7f9f8358a88eabbbf3f0803ad0ee9de65111befaf1c0cca150791e9b",
+      "candidate_eligible_for_freeze": true
+    }
+  },
+  "controls": {
+    "same_model_identity_for_b0_b1_g1": true,
+    "benchmark_tasks_used_for_model_selection": false,
+    "scientific_benchmark_result_used_for_selection": false,
+    "thinking_mode_comparison_used_for_selection": false,
+    "post_benchmark_performance_driven_model_change_allowed": false
+  },
+  "notes": "The 1024-token num_predict value was used only for engineering qualification and is not frozen as the final benchmark output limit. Final output-token and workflow resource limits will be frozen in the benchmark configuration before benchmark execution."
+}

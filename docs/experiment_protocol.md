@@ -2,7 +2,7 @@
 
 **Project:** Responsible Agentic Workflows
 **Study:** USN Master's Thesis
-**Protocol version:** 0.5
+**Protocol version:** 0.6
 **Status:** Working protocol
 
 ## 1. Study objective
@@ -87,7 +87,22 @@ necessarily changes a component:
 - logging;
 - evaluation procedure.
 
+
 Any unavoidable differences must be documented.
+
+### Frozen generation model identity
+
+The generation model identity and fixed request-level behavior are frozen in
+`benchmark/config/model/OLLAMA-QWEN38-27B-48K-v0.1.json`.
+
+The frozen configuration uses local Ollama 0.34.0 with
+`qwen3.8-27b-48k:latest`, a 49,152-token context, temperature 0, seed
+20260912, and model-internal thinking disabled. The same model identity is
+used for B0, B1, and G1.
+
+The engineering qualification output limit is not the final benchmark output
+limit. Final maximum output tokens and workflow resource limits remain open
+until the benchmark configuration is frozen.
 
 ## 5. Guardrail families
 
@@ -217,15 +232,15 @@ Restricted documents must not be committed to the public repository.
 
 ## 11. Decisions still open
 
-Protocol version 0.5 intentionally does not yet freeze:
+Protocol version 0.6 intentionally does not yet freeze:
 
 - exact LangChain package version and B0 implementation parameters;
-- exact LLM/model version;
 - embedding model;
 - vector store;
 - chunking strategy;
 - retrieval top-k;
 - prompt templates;
+- final per-call maximum output tokens;
 - resource limits;
 - final benchmark task questions, reference answers, and evidence;
 - UC2 and UC3 corpus selection and retrieval artifacts;
