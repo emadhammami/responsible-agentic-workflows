@@ -1,0 +1,87 @@
+{
+  "code_revision": "2859f7ce6899f9143997ad72ababc55ee02eb1c0",
+  "condition": null,
+  "configuration": {
+    "max_output_tokens": 128,
+    "model_config_id": "OLLAMA-QWEN38-27B-48K-v0.1",
+    "model_name": "qwen3.8-27b-48k:latest",
+    "model_provider": "ollama",
+    "model_version": "a68eeb5701b0a627f513a134f7ec029477a04b66a4605b32e27917ac93bd67a3",
+    "prompt_version": "b0-engineering-v0.1",
+    "random_seed": 20260912,
+    "retrieval_config_id": "engineering-synthetic-retriever-v0.1",
+    "temperature": 0,
+    "workflow_config_id": "b0-two-step-rag-v0.1"
+  },
+  "errors": [],
+  "events": [],
+  "execution_mode": "engineering",
+  "experiment_id": "engineering-b0-realmodel-smoke",
+  "final_output": {
+    "abstained": false,
+    "answer": "According to the retrieved context, international business travel must be approved by the employee's department head before the travel is booked.",
+    "cited_chunk_ids": []
+  },
+  "finished_at": "2026-09-12T20:32:32.346486Z",
+  "model": {
+    "calls": [
+      {
+        "finish_reason": "stop",
+        "input_tokens": 166,
+        "latency_ms": 1201.736001,
+        "output_tokens": 25,
+        "provider_response_id": null,
+        "sequence": 1,
+        "status": "completed",
+        "total_tokens": 191
+      }
+    ]
+  },
+  "retrieval": {
+    "calls": [
+      {
+        "latency_ms": 0.002467,
+        "query": "Who must approve international business travel before it is booked?",
+        "retrieved_chunks": [
+          {
+            "chunk_id": "SYN-DOC-001-C001",
+            "document_id": "DOC990",
+            "page": 1,
+            "rank": 1,
+            "retrieval_score": 0.99,
+            "section": "International travel"
+          },
+          {
+            "chunk_id": "SYN-DOC-001-C002",
+            "document_id": "DOC990",
+            "page": 2,
+            "rank": 2,
+            "retrieval_score": 0.87,
+            "section": "Expenses"
+          }
+        ],
+        "sequence": 1,
+        "top_k": 2
+      }
+    ]
+  },
+  "run_id": "engineering-b0-realmodel-smoke-001",
+  "schema_version": "0.4",
+  "started_at": "2026-09-12T20:32:31.136501Z",
+  "status": "completed",
+  "task_id": "T990",
+  "timing": {
+    "end_to_end_ms": 1210.009119,
+    "llm_ms": 1201.736001,
+    "retrieval_ms": 0.002467
+  },
+  "usage": {
+    "input_tokens": 166,
+    "llm_calls": 1,
+    "output_tokens": 25,
+    "retries": 0,
+    "retrieval_calls": 1,
+    "tool_calls": 0,
+    "total_tokens": 191
+  }
+}
