@@ -1,0 +1,152 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/emadhammami/responsible-agentic-workflows/benchmark/config/retrieval_config.schema.json",
+  "title": "Retrieval Configuration",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "retrieval_config_id",
+    "status",
+    "backend",
+    "chunking_config_id",
+    "embedding",
+    "index"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.1"
+    },
+    "retrieval_config_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "enum": [
+        "working",
+        "frozen"
+      ]
+    },
+    "backend": {
+      "type": "string",
+      "minLength": 1
+    },
+    "chunking_config_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "embedding": {
+      "$ref": "#/$defs/embedding"
+    },
+    "index": {
+      "$ref": "#/$defs/index"
+    }
+  },
+  "$defs": {
+    "embedding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "provider",
+        "model_name",
+        "model_tag",
+        "model_digest",
+        "provider_version",
+        "output_dimensions",
+        "normalized",
+        "truncate",
+        "query_instruction",
+        "document_instruction"
+      ],
+      "properties": {
+        "provider": {
+          "type": "string",
+          "minLength": 1
+        },
+        "model_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "model_tag": {
+          "type": "string",
+          "minLength": 1
+        },
+        "model_digest": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "provider_version": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "output_dimensions": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "normalized": {
+          "type": "boolean"
+        },
+        "truncate": {
+          "type": "boolean"
+        },
+        "query_instruction": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "document_instruction": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "index": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "backend",
+        "backend_version",
+        "index_type",
+        "distance_metric",
+        "dtype"
+      ],
+      "properties": {
+        "backend": {
+          "type": "string",
+          "minLength": 1
+        },
+        "backend_version": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "index_type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "distance_metric": {
+          "type": "string",
+          "minLength": 1
+        },
+        "dtype": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}
