@@ -35,6 +35,6 @@
     }
   ],
   "difficulty": "high",
-  "notes": "Draft benchmark task requiring synthesis across the Biodiversity Strategy and Forest Strategy. Human verified on 2026-09-12; task remains unfrozen pending final validation.",
-  "validation_status": "human_verified"
+  "notes": "Benchmark task requiring synthesis across the Biodiversity Strategy and Forest Strategy. Human verified on 2026-09-12 and frozen on 2026-09-12 after final validation.",
+  "validation_status": "frozen"
 }

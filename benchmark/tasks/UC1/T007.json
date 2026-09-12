@@ -29,6 +29,6 @@
     }
   ],
   "difficulty": "high",
-  "notes": "Draft benchmark task requiring comparison of the original and amended LULUCF frameworks. Human verified on 2026-09-12; task remains unfrozen pending final validation.",
-  "validation_status": "human_verified"
+  "notes": "Benchmark task requiring comparison of the original and amended LULUCF frameworks. Human verified on 2026-09-12 and frozen on 2026-09-12 after final validation.",
+  "validation_status": "frozen"
 }
