@@ -543,3 +543,54 @@ def test_source_chunk_hash_tracks_chunk_content(
     ]
 
     assert first_hash != second_hash
+
+
+def test_chunk_artifact_hash_uses_canonical_delimiters(
+    tmp_path: Path,
+) -> None:
+    from responsible_agentic_workflows.retrieval.materialize import (
+        _chunk_artifacts_sha256,
+    )
+
+    chunk_directory, _ = _write_fixture(
+        tmp_path
+    )
+
+    chunk_index = json.loads(
+        (
+            chunk_directory
+            / "index.json"
+        ).read_text(
+            encoding="utf-8"
+        )
+    )
+
+    item = chunk_index["documents"][0]
+    artifact_file = item["artifact_file"]
+
+    artifact_path = (
+        chunk_directory
+        / artifact_file
+    )
+
+    artifact_sha = hashlib.sha256(
+        artifact_path.read_bytes()
+    ).hexdigest()
+
+    canonical_record = (
+        artifact_file.encode("utf-8")
+        + b"\x00"
+        + artifact_sha.encode("ascii")
+        + b"\n"
+    )
+
+    expected = hashlib.sha256(
+        canonical_record
+    ).hexdigest()
+
+    actual = _chunk_artifacts_sha256(
+        chunk_directory=chunk_directory,
+        chunk_index=chunk_index,
+    )
+
+    assert actual == expected

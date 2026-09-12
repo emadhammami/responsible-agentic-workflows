@@ -74,13 +74,14 @@ def _chunk_artifacts_sha256(
         digest.update(
             artifact_file.encode("utf-8")
         )
-        digest.update(b"\\0")
+        # Canonical record: UTF-8 filename, NUL, ASCII SHA256, LF.
+        digest.update(b"\x00")
         digest.update(
             _sha256(
                 artifact_path
             ).encode("ascii")
         )
-        digest.update(b"\\n")
+        digest.update(b"\n")
 
     return digest.hexdigest()
 
