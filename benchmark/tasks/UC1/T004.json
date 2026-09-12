@@ -1,0 +1,27 @@
+{
+  "schema_version": "0.1",
+  "task_id": "T004",
+  "question": "How does the New EU Forest Strategy for 2030 combine forest protection and forest management measures to improve resilience and biodiversity?",
+  "task_type": "within_document_reasoning",
+  "required_documents": [
+    "DOC001"
+  ],
+  "reference_answer": "The Strategy combines stronger forest protection and restoration with sustainable forest management, monitoring, and planning intended to create resilient forest ecosystems. It also calls for strict protection of primary and old-growth forests, additional indicators and thresholds for sustainable forest management, guidance for closer-to-nature forestry, biodiversity-friendly afforestation and reforestation, and knowledge exchange on climate adaptation and resilience.",
+  "reference_evidence": [
+    {
+      "document_id": "DOC001",
+      "page": 4,
+      "section": null,
+      "chunk_id": "DOC001-P0004-C001"
+    },
+    {
+      "document_id": "DOC001",
+      "page": 19,
+      "section": null,
+      "chunk_id": "DOC001-P0019-C002"
+    }
+  ],
+  "difficulty": "medium",
+  "notes": "Draft benchmark task requiring synthesis across multiple parts of one document. Human verification is required before freeze.",
+  "validation_status": "draft"
+}

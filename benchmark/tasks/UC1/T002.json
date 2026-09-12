@@ -1,0 +1,21 @@
+{
+  "schema_version": "0.1",
+  "task_id": "T002",
+  "question": "What must an operator do before placing a relevant product on the EU market or exporting it after due diligence concludes that the product complies with Article 3?",
+  "task_type": "direct_retrieval",
+  "required_documents": [
+    "DOC005"
+  ],
+  "reference_answer": "Before placing the product on the market or exporting it, the operator must make a due diligence statement available to the competent authorities through the information system. The statement must contain the required information and declare that due diligence was exercised and that no or only a negligible risk was found.",
+  "reference_evidence": [
+    {
+      "document_id": "DOC005",
+      "page": 18,
+      "section": null,
+      "chunk_id": "DOC005-P0018-C001"
+    }
+  ],
+  "difficulty": "low",
+  "notes": "Draft benchmark task. Human verification of the question, reference answer, and evidence is required before freeze.",
+  "validation_status": "draft"
+}

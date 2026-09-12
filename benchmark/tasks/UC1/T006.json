@@ -1,0 +1,33 @@
+{
+  "schema_version": "0.1",
+  "task_id": "T006",
+  "question": "How are CAP eco-schemes designed to add environmental and climate ambition beyond baseline conditionality, and how may participating farmers be paid?",
+  "task_type": "within_document_reasoning",
+  "required_documents": [
+    "DOC025"
+  ],
+  "reference_answer": "Eco-schemes are voluntary schemes for farmers that support practices beneficial to the climate, environment, animal welfare, or antimicrobial-resistance objectives. Their commitments must go beyond relevant statutory management requirements, GAEC standards, and other applicable minimum or mandatory requirements. Support is provided as an annual payment for eligible hectares, either as a payment additional to basic income support or as compensation for all or part of the additional costs and income foregone from the commitments, with transaction costs also potentially covered.",
+  "reference_evidence": [
+    {
+      "document_id": "DOC025",
+      "page": 11,
+      "section": null,
+      "chunk_id": "DOC025-P0011-C001"
+    },
+    {
+      "document_id": "DOC025",
+      "page": 41,
+      "section": null,
+      "chunk_id": "DOC025-P0041-C001"
+    },
+    {
+      "document_id": "DOC025",
+      "page": 42,
+      "section": null,
+      "chunk_id": "DOC025-P0042-C001"
+    }
+  ],
+  "difficulty": "medium",
+  "notes": "Draft benchmark task requiring synthesis across multiple parts of one document. Human verification is required before freeze.",
+  "validation_status": "draft"
+}

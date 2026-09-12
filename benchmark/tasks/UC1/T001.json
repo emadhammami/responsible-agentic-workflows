@@ -1,0 +1,21 @@
+{
+  "schema_version": "0.1",
+  "task_id": "T001",
+  "question": "For marine habitat types in Annex II groups 1 to 6 that do not occur in an area, what staged coverage of the additional surface needed to reach the favourable reference area must restoration measures achieve by 2030, 2040, and 2050?",
+  "task_type": "direct_retrieval",
+  "required_documents": [
+    "DOC004"
+  ],
+  "reference_answer": "The restoration measures must cover at least 30% of the additional surface needed to reach the favourable reference area by 2030, at least 60% by 2040, and 100% by 2050, subject to the Regulation's stated derogation mechanism.",
+  "reference_evidence": [
+    {
+      "document_id": "DOC004",
+      "page": 23,
+      "section": null,
+      "chunk_id": "DOC004-P0023-C002"
+    }
+  ],
+  "difficulty": "low",
+  "notes": "Draft benchmark task. Human verification of the question, reference answer, and evidence is required before freeze.",
+  "validation_status": "draft"
+}

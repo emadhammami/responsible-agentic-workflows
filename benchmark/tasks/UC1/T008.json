@@ -1,0 +1,40 @@
+{
+  "schema_version": "0.1",
+  "task_id": "T008",
+  "question": "How does the New EU Forest Strategy for 2030 translate the EU Biodiversity Strategy's protection ambition for primary and old-growth forests into forest-policy actions?",
+  "task_type": "cross_document_reasoning",
+  "required_documents": [
+    "DOC001",
+    "DOC003"
+  ],
+  "reference_answer": "The Biodiversity Strategy calls for at least 30% of EU land to be protected and for at least one third of protected areas, representing 10% of EU land, to be strictly protected, including all remaining primary and old-growth forests. The Forest Strategy carries this ambition into forest policy by requiring strict protection of primary and old-growth forests and by calling for their definition, mapping, monitoring, and protection regime, together with guidance and implementation measures intended to prevent deterioration and strengthen forest protection and restoration.",
+  "reference_evidence": [
+    {
+      "document_id": "DOC003",
+      "page": 5,
+      "section": null,
+      "chunk_id": "DOC003-P0005-C001"
+    },
+    {
+      "document_id": "DOC001",
+      "page": 12,
+      "section": null,
+      "chunk_id": "DOC001-P0012-C001"
+    },
+    {
+      "document_id": "DOC001",
+      "page": 12,
+      "section": null,
+      "chunk_id": "DOC001-P0012-C002"
+    },
+    {
+      "document_id": "DOC001",
+      "page": 19,
+      "section": null,
+      "chunk_id": "DOC001-P0019-C002"
+    }
+  ],
+  "difficulty": "high",
+  "notes": "Draft benchmark task requiring synthesis across the Biodiversity Strategy and Forest Strategy. Human verification is required before freeze.",
+  "validation_status": "draft"
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": "0.1",
+  "task_id": "T003",
+  "question": "How many interlinked thematic priority objectives does the 8th Environment Action Programme establish for the period up to 31 December 2030?",
+  "task_type": "direct_retrieval",
+  "required_documents": [
+    "DOC020"
+  ],
+  "reference_answer": "The 8th Environment Action Programme establishes six interlinked thematic priority objectives for the period up to 31 December 2030.",
+  "reference_evidence": [
+    {
+      "document_id": "DOC020",
+      "page": 9,
+      "section": null,
+      "chunk_id": "DOC020-P0009-C001"
+    }
+  ],
+  "difficulty": "low",
+  "notes": "Draft benchmark task. Human verification of the question, reference answer, and evidence is required before freeze.",
+  "validation_status": "draft"
+}

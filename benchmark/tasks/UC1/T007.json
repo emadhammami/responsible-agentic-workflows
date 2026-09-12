@@ -1,0 +1,34 @@
+{
+  "schema_version": "0.1",
+  "task_id": "T007",
+  "question": "How did the 2023 amendment increase the LULUCF ambition for 2026-2030 compared with the commitment in the 2018 framework?",
+  "task_type": "cross_document_reasoning",
+  "required_documents": [
+    "DOC006",
+    "DOC007"
+  ],
+  "reference_answer": "The 2018 framework required each Member State to ensure that accounted LULUCF emissions did not exceed removals for 2021-2025 and 2026-2030. The 2023 amendment introduced a more explicitly quantified target and budget framework for 2026-2030 and tied it to a Union target of 310 million tonnes of CO2-equivalent net removals in 2030, together with updated flexibilities and a land-use mechanism for compliance with Member State targets or budgets.",
+  "reference_evidence": [
+    {
+      "document_id": "DOC006",
+      "page": 8,
+      "section": null,
+      "chunk_id": "DOC006-P0008-C002"
+    },
+    {
+      "document_id": "DOC007",
+      "page": 12,
+      "section": null,
+      "chunk_id": "DOC007-P0012-C001"
+    },
+    {
+      "document_id": "DOC007",
+      "page": 14,
+      "section": null,
+      "chunk_id": "DOC007-P0014-C002"
+    }
+  ],
+  "difficulty": "high",
+  "notes": "Draft benchmark task requiring comparison of the original and amended LULUCF frameworks. Human verification is required before freeze.",
+  "validation_status": "draft"
+}

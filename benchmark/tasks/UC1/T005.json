@@ -1,0 +1,27 @@
+{
+  "schema_version": "0.1",
+  "task_id": "T005",
+  "question": "Why does Norway's Climate Action Plan argue that forest mitigation must include both near-term and long-term measures, and which existing measures are highlighted for increasing forest removals?",
+  "task_type": "within_document_reasoning",
+  "required_documents": [
+    "DOC010"
+  ],
+  "reference_answer": "The Plan explains that forests at high northerly latitudes grow slowly, so relatively few measures can produce measurable effects by 2030, while measures started now can have important effects from 2030 to 2050. It also notes that net forest removals have been declining and are expected to continue declining without stronger measures. Existing measures highlighted for increasing removals include grants for higher planting densities after harvesting, forest tree breeding, and targeted forest fertilisation. Scaling up forest mitigation measures is expected to help reverse the declining trend in removals.",
+  "reference_evidence": [
+    {
+      "document_id": "DOC010",
+      "page": 155,
+      "section": null,
+      "chunk_id": "DOC010-P0155-C001"
+    },
+    {
+      "document_id": "DOC010",
+      "page": 162,
+      "section": null,
+      "chunk_id": "DOC010-P0162-C001"
+    }
+  ],
+  "difficulty": "medium",
+  "notes": "Draft benchmark task requiring synthesis across multiple parts of one document. Human verification is required before freeze.",
+  "validation_status": "draft"
+}
