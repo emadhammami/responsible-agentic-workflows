@@ -148,10 +148,14 @@ The provisional B1 policy is:
 3. generate an initial draft;
 4. always run the shared critic once;
 5. if the critic accepts the draft, finalize it;
-6. if the critic rejects the draft, perform one bounded recovery cycle;
-7. the recovery cycle may re-retrieve evidence and revise the answer;
-8. run the shared critic on the revised answer;
-9. finalize according to the fixed baseline rule.
+6. if the critic rejects the draft, select one bounded shared recovery path
+   according to the pre-specified fixed mapping;
+7. the fixed mapping selects REVISE_ONLY when the evidence is sufficient and
+   no unresolved conflict remains, and RERETRIEVE_REVISE otherwise;
+8. the selected path revises the answer, with additional retrieval only for
+   RERETRIEVE_REVISE;
+9. run the shared critic on the revised answer;
+10. finalize according to the shared post-recovery rule.
 
 B1 does not use remaining token allowance, remaining model calls, remaining
 retrieval calls, or a resource-value decision to choose whether recovery should
@@ -183,6 +187,12 @@ Candidate actions are:
 
 Finalize the current answer when the available evidence and critic result
 satisfy the pre-specified release criteria.
+
+### REVISE_ONLY
+
+Revise the current candidate using already-available evidence when evidence is
+sufficient but the answer itself does not satisfy the shared release criterion.
+No additional retrieval is performed.
 
 ### RERETRIEVE_REVISE
 
@@ -461,6 +471,8 @@ frozen:
 - evidence-state representation;
 - B1 fixed recovery rule;
 - G1 ERGR decision rule;
+- G1 path-specific resource reserve rules for the `REVISE_ONLY` and
+  `RERETRIEVE_REVISE` recovery paths;
 - recovery limit;
 - abstention rule;
 - resource-stop rule;

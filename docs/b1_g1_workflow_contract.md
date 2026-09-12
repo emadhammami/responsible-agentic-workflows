@@ -55,18 +55,42 @@ The working common graph is:
     CRITIC
       |
       v
-    RECOVERY_POLICY
-      |
-      +-------------------- ACCEPT --------------------+
-      |                                                |
-      +--------------- RERETRIEVE_REVISE --------------+
-      |                                                |
-      +------------------- ABSTAIN --------------------+
-      |                                                |
-      +---------------- RESOURCE_STOP -----------------+
-                                                       |
-                                                       v
-                                                    TERMINAL
+     RECOVERY_POLICY
+       |
+       +-------------------- ACCEPT ---------------------+
+       |                                                 |
+       +------------------ REVISE_ONLY ------------------+
+       |                                                 |
+       +--------------- RERETRIEVE_REVISE ---------------+
+       |                                                 |
+       +------------------- ABSTAIN ----------------------+
+       |                                                 |
+       +----------------- RESOURCE_STOP ------------------+
+                                                          |
+                                                          v
+                                                       TERMINAL
+
+For `REVISE_ONLY`, the shared recovery path is:
+
+     RECOVERY_POLICY
+       |
+       v
+     REVISE
+       |
+       v
+     CRITIC
+       |
+       v
+     POST_RECOVERY_FINALIZE
+       |
+       +---------- ACCEPT
+       |
+       +---------- ABSTAIN
+       |
+       +---------- RESOURCE_STOP
+       |
+       v
+     TERMINAL
 
 For `RERETRIEVE_REVISE`, the shared recovery path is:
 
@@ -249,6 +273,7 @@ It should report assessment information, not choose the workflow action.
 
 The critic must therefore not directly output:
 
+- `REVISE_ONLY`;
 - `RERETRIEVE_REVISE`;
 - `RESOURCE_STOP`;
 - a B1/G1-specific action;
@@ -343,6 +368,7 @@ Conceptually, the policy receives:
 It returns one action:
 
 - `ACCEPT`;
+- `REVISE_ONLY`;
 - `RERETRIEVE_REVISE`;
 - `ABSTAIN`;
 - `RESOURCE_STOP`.
@@ -365,11 +391,23 @@ Return:
 
 ### Otherwise
 
-If the common hard execution guard permits the configured recovery cycle:
+B1 selects among the shared recovery paths using a fixed mapping from the shared
+critic state, without any resource-value reasoning.
 
-Return:
+The working mapping is:
 
-`RERETRIEVE_REVISE`
+1. If `evidence_sufficiency` is `SUFFICIENT` and no unresolved conflicting
+   evidence is present, select `REVISE_ONLY`.
+2. Otherwise select `RERETRIEVE_REVISE`.
+
+The selected path is then subject to the common hard execution guard:
+
+- For `RERETRIEVE_REVISE`, the guard must permit both a recovery retrieval call
+  and a revision call.
+- For `REVISE_ONLY`, the guard must permit a revision call.
+
+If the hard guard does not permit the required calls for the selected path, the
+policy returns `RESOURCE_STOP` instead of initiating that path.
 
 B1 does not select recovery according to:
 
@@ -379,8 +417,8 @@ B1 does not select recovery according to:
 - remaining retrieval allowance beyond hard feasibility;
 - resource-efficiency optimization.
 
-B1 therefore follows the same bounded recovery response for every non-supported
-initial draft.
+B1 therefore follows the same bounded recovery response mapping for every
+non-supported initial draft.
 
 After the single recovery cycle, B1 uses the shared post-recovery finalization
 rule.
@@ -397,35 +435,40 @@ Return:
 
 `ACCEPT`
 
-### If `release_ok` is false and the evidence state satisfies the frozen
-insufficient-evidence rule
+### Otherwise
 
-Return:
+G1 first applies a frozen recovery-worthiness rule to the shared critic state.
 
-`ABSTAIN`
+The recovery-worthiness rule determines whether the current state is
+recoverable at all, and if so, which shared recovery path is appropriate.
 
-only when the pre-specified G1 policy determines that the current evidence gap
-does not justify another bounded retrieval/revision action.
+Working structure:
 
-`INSUFFICIENT` evidence does not automatically imply abstention. A gap may still
-be treated as recoverable under the frozen G1 policy.
+1. If the rule selects no further recovery, return `ABSTAIN`.
+2. If the rule selects `REVISE_ONLY`, check the path-specific hard-feasibility
+   requirement and the frozen path-specific resource reserve for `REVISE_ONLY`.
+   If both are satisfied, return `REVISE_ONLY`; otherwise return
+   `RESOURCE_STOP`.
+3. If the rule selects `RERETRIEVE_REVISE`, check the path-specific
+   hard-feasibility requirement and the frozen path-specific resource reserve
+   for `RERETRIEVE_REVISE`.
+   If both are satisfied, return `RERETRIEVE_REVISE`; otherwise return
+   `RESOURCE_STOP`.
 
-### If recovery is evidence-justified and the frozen recovery resource reserve
-is available
+The path-specific hard-feasibility requirements are defined by the common hard
+execution guard:
 
-Return:
+- `REVISE_ONLY` requires that the guard can permit the revision model call.
+- `RERETRIEVE_REVISE` requires that the guard can additionally permit one
+  recovery retrieval call.
 
-`RERETRIEVE_REVISE`
+The reserve rules are path-specific and are part of the treatment. The reserve
+for `REVISE_ONLY` must not be conflated with the reserve for
+`RERETRIEVE_REVISE`, and neither reserve may include the initial draft cost,
+which has already been paid.
 
-### If recovery would otherwise be justified but the required resource reserve
-is not available
-
-Return:
-
-`RESOURCE_STOP`
-
-The exact evidence criterion, resource reserve, and decision thresholds remain
-open and must be specified before G1 is frozen.
+The exact recovery-worthiness rule, the two path-specific reserve rules, and
+all decision thresholds remain open and must be specified before G1 is frozen.
 
 They may be selected from engineering evidence and prior literature.
 
@@ -460,6 +503,12 @@ recovery decision.
 ## 15. Recovery implementation
 
 The recovery implementation is shared by B1 and G1.
+
+When `REVISE_ONLY` is selected:
+
+1. revise the current answer using the currently available evidence and the
+   shared critic result;
+2. invoke the same critic again.
 
 When `RERETRIEVE_REVISE` is selected:
 
@@ -598,8 +647,9 @@ information must remain reconstructable.
 | Initial retrieval | shared | shared | yes |
 | Draft generator | shared | shared | yes |
 | Critic | shared | shared | yes |
-| Recovery retrieval | shared | shared | yes |
+| Recovery retrieval capability | shared | shared | yes |
 | Revision implementation | shared | shared | yes |
+| Recovery path capability set (REVISE_ONLY, RERETRIEVE_REVISE) | shared | shared | yes |
 | Maximum recovery cycles | same | same | yes |
 | Initial resource limits | same | same | yes |
 | Hard execution guard | shared | shared | yes |
@@ -627,7 +677,12 @@ Before real benchmark execution, synthetic tests should demonstrate that:
 11. all policy decisions are reconstructable from recorded events;
 12. resource stops remain distinct from abstentions;
 13. failed executions are preserved;
-14. no benchmark task content is required by workflow unit tests.
+14. no benchmark task content is required by workflow unit tests;
+15. both conditions have access to the same shared recovery path set
+    (REVISE_ONLY and RERETRIEVE_REVISE), and both can select either path when
+    the policy indicates that path;
+16. the shared post-recovery finalization node is reached after both shared
+    recovery paths.
 
 ## 23. Engineering-test boundary
 
@@ -656,7 +711,8 @@ This contract intentionally does not yet freeze:
 - critic structured-output schema;
 - exact evidence sufficiency criterion;
 - exact G1 recovery-worthiness criterion;
-- exact resource reserve rule;
+- exact G1 path-specific resource reserve rules for `REVISE_ONLY` and
+  `RERETRIEVE_REVISE`;
 - maximum model calls;
 - maximum retrieval calls;
 - retry limits;
