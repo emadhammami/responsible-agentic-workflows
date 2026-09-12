@@ -9,6 +9,7 @@ description = "Research software for benchmarking responsible LLM-based agentic 
 requires-python = ">=3.13,<3.15"
 dependencies = [
     "jsonschema==4.26.0",
+    "langchain==1.4.0",
     "numpy==2.5.3"
 ]
 
