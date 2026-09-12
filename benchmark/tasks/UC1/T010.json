@@ -1,0 +1,12 @@
+{
+  "schema_version": "0.1",
+  "task_id": "T010",
+  "question": "As of 31 December 2025, what percentage of EU land was actually under strict legal protection?",
+  "task_type": "insufficient_evidence",
+  "required_documents": [],
+  "reference_answer": "The frozen UC1 corpus does not provide sufficient evidence to determine the percentage of EU land that was actually under strict legal protection as of 31 December 2025. A substantive numerical answer should therefore not be given.",
+  "reference_evidence": [],
+  "difficulty": "medium",
+  "notes": "Draft insufficient-evidence task. The frozen corpus contains an earlier strict-protection baseline and a 2030 protection target but no explicit actual percentage for 31 December 2025. Human verification is required before freeze.",
+  "validation_status": "draft"
+}
