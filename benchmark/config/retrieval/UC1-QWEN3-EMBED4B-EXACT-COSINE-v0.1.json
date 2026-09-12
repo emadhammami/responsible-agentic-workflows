@@ -1,0 +1,26 @@
+{
+  "schema_version": "0.1",
+  "retrieval_config_id": "UC1-QWEN3-EMBED4B-EXACT-COSINE-v0.1",
+  "status": "working",
+  "backend": "dense-exact-cosine",
+  "chunking_config_id": "UC1-PAGE-W450-O75-v0.1",
+  "embedding": {
+    "provider": "ollama",
+    "model_name": "qwen3-embedding",
+    "model_tag": "qwen3-embedding:4b-q4_K_M",
+    "model_digest": "df5bd2e3c74cd8d069d21dc038f1b359fcdc9458fce1c99bd43c9eb1518ff907",
+    "provider_version": "0.34.0",
+    "output_dimensions": 2560,
+    "normalized": true,
+    "truncate": false,
+    "query_instruction": "Given a policy question, retrieve relevant passages that answer the question",
+    "document_instruction": null
+  },
+  "index": {
+    "backend": "numpy",
+    "backend_version": "2.5.3",
+    "index_type": "flat-exact",
+    "distance_metric": "cosine",
+    "dtype": "float32"
+  }
+}
