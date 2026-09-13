@@ -1,6 +1,6 @@
 # Proposed Technical Contribution
 
-**Status:** Revised draft after targeted literature review
+**Status:** Design frozen; B1 policy implemented, G1 policy implemented, shared workflow execution semantics frozen, LangGraph workflow implementation pending
 **Contribution type:** Controlled empirical systems contribution
 **Algorithmic novelty:** Not claimed
 **Benchmark started:** No
@@ -8,7 +8,7 @@
 ## 1. Purpose
 
 This document specifies the intended technical contribution and the primary
-B1-vs-G1 treatment before either workflow is implemented.
+B1-vs-G1 treatment.
 
 The specification is informed by the targeted literature review in
 `docs/literature_novelty_review.md`.
@@ -141,7 +141,7 @@ capabilities as G1.
 
 Its control behavior is fixed rather than resource-adaptive.
 
-The provisional B1 policy is:
+The B1 policy is:
 
 1. plan the task;
 2. perform initial retrieval;
@@ -541,13 +541,16 @@ At this checkpoint:
 - the B1 fixed recovery policy is implemented;
 - the shared structured critic is implemented;
 - the common hard-recovery feasibility calculation is implemented;
-- the G1 recovery-worthiness rule is frozen for implementation;
-- the G1 path-specific completion-reserve rule is frozen for implementation;
-- G1 policy code has not yet been implemented;
-- the common workflow graph and recovery execution have not yet been
-  implemented;
+- the G1 recovery-worthiness rule is frozen and implemented;
+- the G1 path-specific completion-reserve rule is frozen and implemented;
+- the G1 policy code is implemented;
+- the shared workflow execution semantics (recovery-cycle bound, resource
+  snapshot, dual feasibility, execution guard, recovery query, evidence
+  merge, revision call, model-call counts, terminal output) are frozen in
+  `docs/b1_g1_runtime_contract.md` §29;
+- the common workflow graph and recovery execution are not yet implemented;
 - the scientific benchmark has not started.
 
-The next implementation step is the deterministic G1 policy using the frozen
-structured decision rule, shared hard-feasibility result, and path-specific
-completion reserve.
+The next implementation step is the common shared nodes and assembling the
+single LangGraph workflow over the already-implemented B1/G1 decision logic,
+shared hard-feasibility result, and path-specific completion reserve.

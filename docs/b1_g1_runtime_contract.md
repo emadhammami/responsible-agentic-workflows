@@ -1,6 +1,6 @@
 # B1/G1 Runtime Control Contracts
 
-**Status:** Working specification; G1 decision logic frozen for implementation
+**Status:** Frozen; G1 decision logic, critic contract, and resource-feasibility implementation committed
 **Primary comparison:** B1 vs G1
 **Primary treatment:** Recovery decision policy
 **Benchmark started:** No
@@ -20,8 +20,7 @@ It specifies:
 - policy actions and reason codes;
 - the logging contract required to reconstruct decisions.
 
-It does not yet freeze the exact G1 recovery-worthiness rule, resource reserve
-rule, or numerical resource limits.
+It does not yet freeze numerical resource limit values.
 
 Those decisions must be resolved before scientific benchmark execution.
 
@@ -69,7 +68,7 @@ or equivalent typed structures.
 
 ### 3.1 Support status
 
-`support_status` uses exactly these working values:
+`support_status` uses exactly these values:
 
 - `SUPPORTED`;
 - `PARTIAL_SUPPORT`;
@@ -80,7 +79,7 @@ evidence available to the workflow.
 
 ### 3.2 Evidence sufficiency
 
-`evidence_sufficiency` uses exactly these working values:
+`evidence_sufficiency` uses exactly these values:
 
 - `SUFFICIENT`;
 - `INSUFFICIENT`.
@@ -105,7 +104,7 @@ It is not itself a policy action.
 
 `gap_types` provides categorical evidence-state information.
 
-The working vocabulary is:
+The vocabulary is:
 
 - `DRAFT_GROUNDING`;
 - `MISSING_EVIDENCE`;
@@ -114,7 +113,7 @@ The working vocabulary is:
 
 An empty tuple means that the critic identified no material gap.
 
-The vocabulary must be frozen before benchmark execution.
+The vocabulary is frozen.
 
 New categories must not be introduced in response to benchmark performance.
 
@@ -364,7 +363,8 @@ The G1 Evidence- and Resource-Gated Recovery policy uses only the restricted
 `CriticControlState`, the shared hard-feasibility result, and the common
 resource snapshot and limits.
 
-The pre-recovery decision order is frozen for implementation as follows.
+The pre-recovery decision order is frozen and implemented in
+`src/responsible_agentic_workflows/workflow/g1_policy.py` as follows.
 
 ### 12.1 Release first
 
@@ -594,17 +594,17 @@ reconstruct the action.
 
 ## 16. Reason-code vocabulary
 
-Working common reason codes are:
+Common reason codes are:
 
 - `RELEASE_OK`;
 - `HARD_LIMIT_BLOCKED`.
 
-Working B1-specific reason codes are:
+B1-specific reason codes are:
 
 - `B1_FIXED_REVISE_ONLY`;
 - `B1_FIXED_RERETRIEVE_REVISE`.
 
-Working G1-specific reason codes are:
+G1-specific reason codes are:
 
 - `G1_RECOVERY_NOT_WORTHWHILE`;
 - `G1_REVISE_ONLY`;
@@ -618,7 +618,8 @@ These names describe why the pre-recovery action was selected.
 
 They are not scientific outcome labels.
 
-The vocabulary must be frozen before benchmark execution.
+The vocabulary is frozen and matches the reason codes implemented in
+`control.py`.
 
 ## 17. B1 fixed-policy decision rule
 
@@ -666,7 +667,9 @@ change the B1 action.
 
 ## 18. G1 decision-rule skeleton
 
-The G1 rule remains pre-specified structurally but not yet numerically frozen.
+The G1 rule is frozen and implemented.
+
+Numerical resource-limit values are not yet frozen.
 
 Conceptually:
 
@@ -692,6 +695,20 @@ where `selected_path` is one of:
 The recovery-worthiness rule and the path-specific reserve rules determine
 which of the two shared recovery paths, if any, is selected.
 
+The G1 recovery-worthiness rule is frozen in `g1_policy.py`:
+
+- `unresolved_conflict` is true → `ABSTAIN`
+- `evidence_sufficiency` is `SUFFICIENT` → `REVISE_ONLY`
+- gap types include `MISSING_EVIDENCE` or `INCOMPLETE_EVIDENCE` →
+  `RERETRIEVE_REVISE`
+- otherwise → `ABSTAIN`
+
+The path-specific reserve rules are frozen in `g1_policy.py`:
+
+- `REVISE_ONLY` requires 2 LLM calls and 1 retry
+- `RERETRIEVE_REVISE` requires 2 LLM calls, 1 retrieval call, and 1 retry
+- `None` limit means disabled (no lower bound)
+
 The corresponding reason classes are:
 
     ACCEPT
@@ -710,26 +727,18 @@ The corresponding reason classes are:
     RERETRIEVE_REVISE
       -> G1_RERETRIEVE_REVISE
 
-The exact recovery-worthiness rule remains open.
-
-The two path-specific reserve rules remain open.
-
-Both must be frozen before scientific benchmark execution.
-
 ## 19. Recovery-worthiness constraints
 
-The future G1 recovery-worthiness function must be deterministic.
+The G1 recovery-worthiness function in `g1_policy.py` is deterministic.
 
-It may use only fields explicitly frozen as policy inputs.
-
-At the current design boundary, eligible evidence-state inputs are limited to:
+It uses only the fields frozen as policy inputs:
 
 - support status;
 - evidence sufficiency;
 - unresolved-conflict flag;
 - categorical gap types.
 
-The policy must not infer additional hidden signals from free text.
+The policy does not infer additional hidden signals from free text.
 
 If a confidence score or other continuous critic signal is later proposed, its
 definition, calibration procedure, and threshold must be specified before it
@@ -905,24 +914,40 @@ than the policy implementation.
 
 The following remain deliberately open:
 
-- final critic prompt;
-- final critic structured-output representation;
-- whether diagnostic explanation is required;
-- final gap-type vocabulary;
-- exact G1 recovery-worthiness rule;
-- exact G1 path-specific reserve rules for `REVISE_ONLY` and
-  `RERETRIEVE_REVISE`;
+- final critic prompt wording and prompt-version identifier;
+- whether diagnostic explanation is required in the prompt;
 - numerical LLM-call limit;
 - numerical retrieval-call limit;
 - numerical retry limit;
 - numerical total-token ceiling;
 - timeout;
 - per-call output-token limit;
-- exact policy identifiers;
-- exact workflow event identifiers.
+- workflow configuration identifiers;
+- UC2/UC3 corpus preparation.
 
-These must be resolved using engineering validation, methodological reasoning,
-and prior literature before the scientific benchmark.
+The following are already frozen and therefore are not open:
+
+- the critic structured-output schema and release predicate;
+- the gap-type vocabulary, recovery-action vocabulary, and recovery-path
+  vocabulary (see `src/responsible_agentic_workflows/workflow/control.py`);
+- the exact G1 recovery-worthiness rule and the G1 path-specific reserve
+  rules (implemented in `g1_policy.py`);
+- the exact B1 fixed-policy decision rule (implemented in `b1_policy.py`);
+- the shared hard execution guard and its blocked-limit vocabulary
+  (five `BlockedLimit` values: `LLM_CALL_LIMIT`, `RETRIEVAL_CALL_LIMIT`,
+  `RETRY_LIMIT`, `TOKEN_LIMIT`, `TIMEOUT_LIMIT`; the first four are
+  evaluated by `calculate_hard_recovery_feasibility`, `TIMEOUT_LIMIT` is
+  reserved and not yet evaluated);
+- the terminal `RunStatus` vocabulary (five literals);
+- the workflow event names;
+- the workflow-state gold boundary;
+- policy-time resource accounting (`retries_used = recovery_iteration`);
+- `MAX_RECOVERY_CYCLES = 1` (a structural freeze, distinct from the
+  separate numeric `ResourceLimits.max_retries` value, which is still open).
+
+These remaining open decisions must be resolved using engineering
+validation, methodological reasoning, and prior literature before the
+scientific benchmark.
 
 They must not be selected from primary benchmark performance.
 
@@ -930,30 +955,279 @@ They must not be selected from primary benchmark performance.
 
 The intended sequence is:
 
-1. review this runtime contract;
-2. implement typed critic, resource, and policy interfaces;
-3. implement public structured event recording;
-4. test the interfaces using synthetic deterministic inputs;
-5. specify critic prompt and structured parser;
-6. specify G1 recovery-worthiness rule;
-7. specify G1 resource-reserve rule;
+1. review this runtime contract; (done)
+2. implement typed critic, resource, and policy interfaces; (done)
+3. implement public structured event recording; (done)
+4. test the interfaces using synthetic deterministic inputs; (done)
+5. specify critic prompt and structured parser; (done)
+6. specify G1 recovery-worthiness rule; (done)
+7. specify G1 resource-reserve rule; (done)
 8. freeze resource limits and output limits;
 9. implement the common graph and shared nodes;
 10. run synthetic real-model engineering validation;
 11. freeze the full B1/G1 workflow configuration;
 12. only then permit scientific benchmark execution.
 
-## 29. Current boundary
+## 29. Frozen execution semantics (shared, condition-identical)
+
+The rules below are frozen normative requirements. They bind B1 and G1
+identically. The LangGraph code that will implement them is not yet written;
+none of these rules are an open decision.
+
+### 29.1 Recovery-cycle bound
+
+- `MAX_RECOVERY_CYCLES = 1` per run.
+- `recovery_iteration` starts at `0` and may move to `1` at most once per
+  run.
+- The recovery policy is invoked exactly once per run, at
+  `RECOVERY_POLICY`. It is never re-invoked after `POST_RECOVERY_FINALIZE`.
+- `retries_used = recovery_iteration` is the policy-time accounting
+  identity: the single recovery cycle consumes exactly one retry slot.
+- `MAX_RECOVERY_CYCLES` is a workflow-configuration freeze. It is not the
+  same quantity as `ResourceLimits.max_retries` (which remains an open
+  numerical limit) and is not a count of model retries.
+
+### 29.2 Resource snapshot (frozen field set)
+
+The `ResourceSnapshot` consumed by the policy and the hard feasibility
+calculator has exactly the following fields, in this order:
+
+- `llm_calls_used`;
+- `retrieval_calls_used`;
+- `retries_used`;
+- `input_tokens_used`;
+- `output_tokens_used`;
+- `total_tokens_used`.
+
+- Every snapshot value must be derived from recorded execution activity
+  using the same source of truth that produces the final benchmark usage
+  measurement (see §7).
+- The six fields are defined by these equations, applied to the recorded
+  call/event stream up to the decision point:
+  - `llm_calls_used` = number of recorded LLM call attempts (each model
+    call the runtime issued, regardless of whether it succeeded);
+  - `retrieval_calls_used` = number of recorded retrieval call attempts;
+  - `retries_used` = `recovery_iteration` (0 before recovery, 1 after
+    `BEGIN_RECOVERY`);
+  - `input_tokens_used` = sum of `input_tokens` over recorded LLM calls;
+  - `output_tokens_used` = sum of `output_tokens` over recorded LLM calls;
+  - `total_tokens_used` = `input_tokens_used` + `output_tokens_used`.
+- `retrieval_calls_used` counts every retrieval attempt, including those
+  that completed and those that failed at the transport/tool level. A failed
+  retrieval still consumes the retrieval-call slot; it is not refunded. The
+  recorder's retrieval-call accounting is not being modified in this pass;
+  the requirement is that workflow-level `retrieval_calls_used` reflects the
+  attempted calls.
+- A schema-valid failing retrieval attempt (query non-empty, `top_k >= 1`) is
+  recorded through `record_retrieval(..., results=())` so that it contributes
+  one count to `retrieval_calls_used`; the accompanying failure is reported
+  through a separate error record. Invalid parameter invocations (empty
+  query or `top_k < 1`) do not produce a retrieval-call record and are not
+  counted.
+- Unlike the model-call record (which carries an explicit `status` of
+  `completed` or `failed`), the retrieval-call record does **not** carry a
+  status field. The retrieval-call record identifies an attempted call and
+  its ranked results; it is not stamped `completed` or `failed`.
+- A snapshot is immutable once constructed for a decision. There is no
+  second, mutable snapshot in the workflow state.
+
+### 29.3 Pre-policy dual feasibility (frozen)
+
+- Before the recovery policy is invoked, the runtime must compute
+  `calculate_hard_recovery_feasibility` for **both** shared paths in the
+  same pass, using the same `ResourceSnapshot` and the same
+  `ResourceLimits`:
+  - `HardRecoveryFeasibility(recovery_path=REVISE_ONLY, ...)`, and
+  - `HardRecoveryFeasibility(recovery_path=RERETRIEVE_REVISE, ...)`.
+- Both results are supplied to the policy via `RecoveryPolicyContext.
+  hard_recovery_feasibility`.
+- The policy must consume the supplied entries. It must not recompute
+  feasibility from the snapshot and limits. Missing entries for the
+  selected path are malformed context and must raise, not be silently
+  converted to a policy outcome (mirroring §12.6 for G1).
+
+### 29.4 Execution-level guard (frozen)
+
+The execution-level guard is a distinct mechanism from
+`calculate_hard_recovery_feasibility`. Feasibility is a policy-time
+deterministic computation; the guard is a pre-call enforcement applied in
+the workflow runtime.
+
+- Before any model call node is invoked (draft, revision, or critic), the
+  runtime must check:
+  - remaining `max_llm_calls` (if configured);
+  - remaining `max_total_tokens` (if configured), using only the recorded
+    `total_tokens_used`, with no estimation of future token consumption.
+- Before any retrieval node is invoked (initial or recovery retrieval),
+  the runtime must check remaining `max_retrieval_calls` (if configured).
+- Before `BEGIN_RECOVERY` is entered, the runtime must check remaining
+  `max_retries` (if configured) against `retries_used + 1`, and confirm
+  `recovery_iteration < MAX_RECOVERY_CYCLES`.
+- `TIMEOUT_LIMIT` is an execution-level guard only. It is not part of the
+  G1 policy input, is not evaluated by
+  `calculate_hard_recovery_feasibility`, and its numerical `timeout_ms`
+  value remains open.
+- When a guard blocks a call or a transition:
+  - the blocked external call is not performed;
+  - the run terminates with `RunStatus = resource_stopped`;
+  - the applicable `BlockedLimit` value is preserved verbatim in the
+    recorded event payload;
+  - the termination is **not** converted to `ABSTAIN`, **not** converted to
+    `failed`, and **not** re-decided by the policy.
+- All five `BlockedLimit` values appear in the runtime guard vocabulary;
+  `calculate_hard_recovery_feasibility` evaluates the first four
+  (`LLM_CALL_LIMIT`, `RETRIEVAL_CALL_LIMIT`, `RETRY_LIMIT`,
+  `TOKEN_LIMIT`), consistent with §11.
+
+### 29.5 Recovery query algorithm (frozen)
+
+When the selected path is `RERETRIEVE_REVISE`, the recovery retrieval
+query is constructed deterministically from `CriticResult.evidence_gaps` and
+the original `question`, with zero LLM calls, by the exact algorithm below:
+
+- If `evidence_gaps` is empty:
+  - `recovery_query = question`
+- Otherwise (for the non-empty gap list `gaps = [g1, g2, ...]` in the order
+  the critic reported them):
+  - `recovery_query =
+      question
+      + "\n\n"
+      + "Evidence gaps:"
+      + "\n"
+      + "- " + g1
+      + "\n"
+      + "- " + g2
+      + ...` (one `- <gap>` line per gap, in reported order)
+
+The literal strings `Evidence gaps:` (the section header) and the `- `
+per-gap bullet, plus the blank-line (`\n\n`) separator, are part of the
+frozen format and must appear verbatim. `question` is always included
+unchanged and is never mutated.
+
+No other inputs are permitted. Specifically, the following are forbidden
+inputs to the recovery query:
+
+- benchmark gold information (reference answer, reference evidence,
+  adjudication labels, correctness scores);
+- the shared critic's `support_status` free text, `evidence_sufficiency`
+  free text, `unresolved_conflict` explanation, or `evidence_gaps`
+  structured explanation, other than the `evidence_gaps` items themselves;
+- the policy identity, the condition identity (`B1`/`G1`), the
+  `RecoveryReasonCode`, or the benchmark outcome;
+- another LLM call (the query must not be produced by a model);
+- the initial retrieval query text (which must not be mutated or
+  concatenated into the recovery query).
+
+### 29.6 Evidence merge (frozen)
+
+The evidence-merge step has two frozen cases:
+
+- For `REVISE_ONLY`, the evidence context is unchanged. `MERGE_EVIDENCE`
+  is skipped; the recovery-retrieved set is empty.
+- For `RERETRIEVE_REVISE`, `MERGE_EVIDENCE` produces a new evidence
+  context from the current evidence context and the recovery-retrieved
+  chunks as follows:
+  1. retain the current evidence-context ordering unchanged;
+  2. iterate the recovery-retrieved chunks in their reported rank order
+     (rank 1 first);
+  3. for each recovery chunk, if its `chunk_id` is not already present in
+     the current evidence context, append it at the end;
+  4. if its `chunk_id` is already present, skip it. The first occurrence
+     (the current-context copy) wins.
+
+Forbidden merge behaviors:
+
+- score fusion between current and recovery chunks;
+- reranking of existing chunks;
+- reordering of the current context;
+- duplicate `chunk_id` retention;
+- any condition-specific (`B1`/`G1`) branch.
+
+### 29.7 Revision call (frozen)
+
+The revision model call is exactly one per recovery cycle, regardless of
+path.
+
+- `REVISE_ONLY`: 1 revision call.
+- `RERETRIEVE_REVISE`: 1 revision call (following the 1 recovery
+  retrieval call).
+
+Frozen revision inputs:
+
+- the original `question`;
+- the shared plan information;
+- the merged evidence context with provenance;
+- the current draft / current answer candidate;
+- the **full `CriticResult` diagnostics** that motivated the recovery,
+  namely:
+  - `unsupported_claims` (list, if non-empty);
+  - `incomplete_support` (list, if non-empty);
+  - `evidence_gaps` (list, if non-empty);
+  - `explanation` (the critic's free-text explanation);
+  - and the control fields `support_status`, `evidence_sufficiency`,
+    `unresolved_conflict`, `gap_types`.
+
+Forbidden in revision inputs:
+
+- benchmark gold information;
+- a condition-identity branch (`B1`/`G1`);
+- the recovery reason code;
+- the policy's internal selection state beyond the structured fields
+  above.
+
+After the revision call, `POST_RECOVERY_CRITIC` invokes the identical
+`StructuredCritic` implementation used at `INITIAL_CRITIC` (one call),
+then `POST_RECOVERY_FINALIZE` applies the shared §20 rule and terminates
+the run.
+
+### 29.8 Model-call counts (frozen)
+
+Across a completed run, the model call counts are:
+
+- `REVISE_ONLY` path: PLAN (1, if planner is a model call), DRAFT (1),
+  INITIAL_CRITIC (1), REVISE (1), POST_RECOVERY_CRITIC (1).
+- `RERETRIEVE_REVISE` path: PLAN (1, if planner is a model call), DRAFT (1),
+  INITIAL_CRITIC (1), RECOVERY_RETRIEVE (0 — retrieval is not an LLM call),
+  REVISE (1), POST_RECOVERY_CRITIC (1).
+- Initial path (no recovery): PLAN (1, if planner is a model call), DRAFT (1),
+  INITIAL_CRITIC (1).
+
+The exact planner model-call status (whether the plan is one LLM call or
+is produced by a non-LLM component) is an open decision; every other count
+in this list is frozen.
+
+### 29.9 Terminal output (frozen)
+
+The terminal output mapping is the same as workflow §17 and applies
+identically to B1 and G1:
+
+| `RunStatus` | `final_output.answer` | `final_output.abstained` |
+| --- | --- | --- |
+| `completed` (ABSTAIN before recovery) | `None` | `true` |
+| `completed` (ACCEPT before recovery) | released initial draft | `false` |
+| `completed_after_recovery` (ACCEPT after recovery) | released post-revision candidate | `false` |
+| `completed_after_recovery` (ABSTAIN after recovery) | `None` | `true` |
+| `resource_stopped` | `None` | `false` |
+| `tool_error` | `None` | `false` |
+| `failed` | `None` | `false` |
+
+- An unreleased candidate is never written to
+  `final_output.answer`, regardless of the `RunStatus`.
+- `cited_chunk_ids` in `final_output` remains empty until the
+  citation-generation design is frozen.
+
+These rules are normative body text, not summary bullets.
+
+## 30. Current boundary
 
 At this checkpoint:
 
 - contribution positioning is recorded;
 - the common B1/G1 architecture is recorded;
-- critic semantics are specified at the contract level;
-- resource accounting semantics are specified at the contract level;
-- the policy interface is specified at the contract level;
-- exact G1 thresholds and resource limits are not frozen;
-- B1 implementation has not started;
-- G1 implementation has not started;
+- critic semantics are specified at the contract level and implemented;
+- resource accounting semantics are specified at the contract level and the hard feasibility calculator is implemented;
+- the policy interface is specified at the contract level and both B1 and G1 policies are implemented;
+- exact G1 thresholds and numerical resource limits are not frozen;
+- the common shared graph and shared nodes are not implemented;
 - scientific benchmark runs remain zero;
 - benchmark execution has not started.

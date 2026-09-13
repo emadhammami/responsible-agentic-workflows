@@ -1,14 +1,13 @@
 # B1/G1 Common Workflow Contract
 
-**Status:** Pre-implementation working specification
+**Status:** Design frozen; B1 policy implemented, G1 policy implemented, shared workflow execution semantics frozen, LangGraph workflow implementation pending
 **Primary comparison:** B1 vs G1
 **Primary treatment:** Recovery decision policy
 **Benchmark started:** No
 
 ## 1. Purpose
 
-This document specifies the common B1/G1 agentic workflow before either
-condition is implemented.
+This document specifies the common B1/G1 agentic workflow.
 
 The purpose is to isolate the primary treatment as narrowly as possible.
 
@@ -36,91 +35,54 @@ The comparison is not:
 Both conditions receive the same core agentic capabilities and the same
 initial externally imposed resource limits.
 
-## 3. Shared graph
+## 3. Shared graph (frozen routing)
 
-The working common graph is:
+The shared common graph is frozen. It consists of exactly the following
+named nodes and edges. B1 and G1 use this identical graph; the only
+condition-specific element is the recovery policy object injected into
+`RECOVERY_POLICY`.
 
     START
-      |
-      v
-    PLAN
-      |
-      v
-    INITIAL_RETRIEVE
-      |
-      v
-    DRAFT
-      |
-      v
-    CRITIC
-      |
-      v
-     RECOVERY_POLICY
-       |
-       +-------------------- ACCEPT ---------------------+
-       |                                                 |
-       +------------------ REVISE_ONLY ------------------+
-       |                                                 |
-       +--------------- RERETRIEVE_REVISE ---------------+
-       |                                                 |
-       +------------------- ABSTAIN ----------------------+
-       |                                                 |
-       +----------------- RESOURCE_STOP ------------------+
-                                                          |
-                                                          v
-                                                       TERMINAL
+      -> PLAN
+      -> INITIAL_RETRIEVE
+      -> DRAFT
+      -> INITIAL_CRITIC
+      -> RECOVERY_POLICY
+           -> FINALIZE_ACCEPT        -> END
+           -> FINALIZE_ABSTAIN       -> END
+           -> FINALIZE_RESOURCE_STOP -> END
+           -> BEGIN_RECOVERY
+                -> REVISE            (path: REVISE_ONLY)
+                -> RECOVERY_RETRIEVE (path: RERETRIEVE_REVISE only)
+                     -> MERGE_EVIDENCE
+                          -> REVISE
+                -> POST_RECOVERY_CRITIC
+                     -> POST_RECOVERY_FINALIZE
+                          -> END
 
-For `REVISE_ONLY`, the shared recovery path is:
+Edge semantics:
 
-     RECOVERY_POLICY
-       |
-       v
-     REVISE
-       |
-       v
-     CRITIC
-       |
-       v
-     POST_RECOVERY_FINALIZE
-       |
-       +---------- ACCEPT
-       |
-       +---------- ABSTAIN
-       |
-       +---------- RESOURCE_STOP
-       |
-       v
-     TERMINAL
+- `START`, `PLAN`, `INITIAL_RETRIEVE`, `DRAFT`, `INITIAL_CRITIC`, and
+  `RECOVERY_POLICY` are sequential; every run traverses them exactly once.
+- `RECOVERY_POLICY` selects exactly one outgoing branch:
+  - `ACCEPT` routes to `FINALIZE_ACCEPT`;
+  - `ABSTAIN` routes to `FINALIZE_ABSTAIN`;
+  - `RESOURCE_STOP` routes to `FINALIZE_RESOURCE_STOP`;
+  - `REVISE_ONLY` and `RERETRIEVE_REVISE` both route to `BEGIN_RECOVERY`.
+- `BEGIN_RECOVERY` emits the `recovery_started` event, then:
+  - for `REVISE_ONLY`, routes directly to `REVISE`;
+  - for `RERETRIEVE_REVISE`, routes to `RECOVERY_RETRIEVE`, then
+    `MERGE_EVIDENCE`, then `REVISE`.
+- `REVISE` routes to `POST_RECOVERY_CRITIC`; the two are unconditional.
+- `POST_RECOVERY_FINALIZE` is terminal. The workflow never returns to
+  `RECOVERY_POLICY` and never invokes a second recovery cycle.
+- `END` is the single terminal node.
 
-For `RERETRIEVE_REVISE`, the shared recovery path is:
-
-    RECOVERY_POLICY
-      |
-      v
-    RECOVERY_RETRIEVE
-      |
-      v
-    REVISE
-      |
-      v
-    CRITIC
-      |
-      v
-    POST_RECOVERY_FINALIZE
-      |
-      +---------- ACCEPT
-      |
-      +---------- ABSTAIN
-      |
-      +---------- RESOURCE_STOP
-      |
-      v
-    TERMINAL
-
-The current primary design allows at most one recovery cycle.
-
-This one-cycle limit is provisional until the full workflow configuration is
-frozen.
+At the `RECOVERY_POLICY` node, the policy may issue at most one recovery
+action per run. The workflow-level configuration `MAX_RECOVERY_CYCLES` is
+frozen at `1`; after `POST_RECOVERY_FINALIZE` the run terminates unconditionally.
+The LangGraph code implementing this graph is not yet written; the routing
+above is the frozen specification it must implement.
 
 ## 4. One graph, injected policy
 
@@ -143,75 +105,93 @@ conditions.
 
 This architecture makes the treatment difference explicit and auditable.
 
-## 5. Shared workflow state
+## 5. Shared workflow state (frozen)
 
-The workflow state should contain only runtime information needed for execution,
-control, and logging.
+The workflow state contains exactly the following 18 conceptual fields, and no
+others. This is the authoritative field list; prose elsewhere in this
+document must agree with it.
 
-A conceptual state contract is:
-
-### Task identity
-
-- task ID;
-- question;
-- execution mode;
-- benchmark condition when applicable.
-
-### Planning state
-
-- structured plan;
-- retrieval query or queries;
-- answer requirements or subgoals where used.
-
-### Evidence state
-
-- initially retrieved chunks;
-- recovery-retrieved chunks;
-- currently available evidence;
-- provenance for every retrieved chunk.
-
-### Generation state
-
-- current draft;
-- revision count;
-- current answer candidate.
-
-### Critic state
-
-- latest critic assessment;
-- unsupported or incompletely supported claims;
-- contradiction indicators;
-- evidence sufficiency assessment;
-- critic iteration.
-
-### Recovery state
-
-- recovery iteration;
-- latest policy action;
-- policy reason code;
-- whether recovery was attempted;
-- whether recovery completed.
-
-### Resource state
-
-- model calls used;
-- retrieval or tool calls used;
-- retries used;
-- input tokens used;
-- output tokens used;
-- total tokens used;
-- corresponding configured limits where applicable.
-
-### Final state
-
-- final answer;
-- abstained flag;
-- terminal outcome;
-- cited chunk IDs if explicit citation generation is later enabled.
+| # | Field | Notes |
+| --- | --- | --- |
+| 1 | `task_id` | task identity |
+| 2 | `question` | original task question |
+| 3 | `execution_mode` | `engineering` or `benchmark` (no other values) |
+| 4 | `condition_metadata` | benchmark condition label; **logging and correlation only** |
+| 5 | `plan` | shared plan structure |
+| 6 | `initial_retrieval` | chunks + provenance from `INITIAL_RETRIEVE` |
+| 7 | `recovery_retrieval` | chunks + provenance from `RECOVERY_RETRIEVE` (empty before recovery) |
+| 8 | `merged_evidence` | current evidence context after `MERGE_EVIDENCE` (equals `initial_retrieval` content ordering pre-recovery) |
+| 9 | `current_answer_candidate` | latest draft or post-revision candidate |
+| 10 | `latest_CriticResult` | full structured critic assessment (all fields, including diagnostics) |
+| 11 | `latest_CriticControlState` | the five control-relevant fields the release predicate and policy consume |
+| 12 | `critic_iteration` | identifies the critic assessment/iteration associated with the latest `CriticResult` and the associated `policy_decision` log; no independent numeric convention is frozen in this pass |
+| 13 | `recovery_iteration` | `0` until `BEGIN_RECOVERY`; `1` after |
+| 14 | `latest_RecoveryDecision` | `RecoveryDecision` (action + reason code) from `RECOVERY_POLICY` (unset before that node) |
+| 15 | `ResourceLimits` | immutable configured limits |
+| 16 | `terminal_status` | terminal `RunStatus` |
+| 17 | `final_answer` | released answer, or unset |
+| 18 | `abstained_flag` | `true` exactly when the run's terminal decision is `ABSTAIN` |
 
 The workflow state must never contain benchmark reference answers, reference
 evidence, adjudication labels, benchmark correctness scores, or other gold
 information.
+
+### State boundary (frozen)
+
+- The 18-field table above is the complete workflow-state contract. Any field
+  not in that table is forbidden in the state.
+- Field-ownership clarifications (none of these add fields to the state):
+  - `query` and `subgoals` are not separate state fields; they are conceptual
+    contents of `plan`.
+  - Chunk and provenance data live inside the retrieval and evidence fields
+    (`initial_retrieval`, `recovery_retrieval`, `merged_evidence`); they are
+    not separate state fields.
+  - `unsupported_claims`, `incomplete_support`, `evidence_gaps`, and
+    `explanation` are field-level details of `latest_CriticResult`, not
+    separate state fields.
+  - `support_status`, `evidence_sufficiency`, `unresolved_conflict`, and
+    `gap_types` are field-level details of `latest_CriticControlState` (or its
+    source `CriticResult`), not separate state fields.
+  - `action` and `reason_code` are field-level details of
+    `latest_RecoveryDecision`, not separate state fields.
+  - `ResourceSnapshot` is not a mutable state field. It is constructed from
+    the run recorder (model-call, retrieval-call, and token accounting) and
+    passed read-only to the policy and hard execution guard at decision time.
+  - `cited_chunk_ids` is not part of the frozen state in the current contract.
+- Forbidden specific fields: `revision_count`, `recovery_attempted`,
+  `recovery_completed`, and any independent mutable resource counters. Call
+  counters and token counters live in the run recorder; the workflow reads
+  them only as immutable `ResourceSnapshot` instances at decision time and
+  never holds separate mutable counters.
+- The following are forbidden in the workflow state:
+  - benchmark reference answers;
+  - benchmark reference evidence;
+  - human adjudication labels;
+  - benchmark correctness or scoring information;
+  - any label derived from benchmark gold.
+
+### Condition metadata (frozen, logging and correlation only)
+
+The `condition_metadata` field (field 4) holds the benchmark condition label
+(`B1` or `G1`) and exists **for logging and experiment correlation only**.
+
+It is not a permissible behavioral input to any component, including:
+
+- the planner;
+- retrieval (initial or recovery);
+- draft generation;
+- `StructuredCritic`;
+- revision;
+- recovery retrieval;
+- evidence merge;
+- the hard execution guard;
+- `B1FixedRecoveryPolicy`;
+- `G1ERGRPolicy`.
+
+The only mechanism by which the two conditions can behave differently at
+runtime is the injected recovery-policy object: `B1FixedRecoveryPolicy` for
+B1 runs and `G1ERGRPolicy` for G1 runs. The scientific treatment difference
+is the policy object, not the condition label.
 
 ## 6. Planner contract
 
@@ -279,17 +259,16 @@ The critic must therefore not directly output:
 - a B1/G1-specific action;
 - a resource-allocation decision.
 
-A provisional critic result should separate answer support from evidence
-sufficiency.
+The critic result separates answer support from evidence sufficiency.
 
 The conceptual fields are:
 
 ### Answer-support status
 
 `support_status` describes whether the current answer candidate is supported by
-the evidence currently available to the workflow.
+ the evidence currently available to the workflow.
 
-Working values are:
+The values are:
 
 - `SUPPORTED`;
 - `PARTIAL_SUPPORT`;
@@ -298,9 +277,9 @@ Working values are:
 ### Evidence sufficiency
 
 `evidence_sufficiency` describes whether the currently available evidence is
-adequate to support a defensible answer to the task.
+ adequate to support a defensible answer to the task.
 
-Working values are:
+The values are:
 
 - `SUFFICIENT`;
 - `INSUFFICIENT`.
@@ -309,11 +288,11 @@ Working values are:
 
 The critic should also expose:
 
-- `conflicting_evidence`, as a boolean or equivalent structured field;
+- `unresolved_conflict`, as a boolean;
 - identified unsupported claims;
 - identified incomplete support;
 - evidence gaps;
-- optional structured explanation required for auditing.
+- structured explanation required for auditing.
 
 Answer support and evidence sufficiency are intentionally separate.
 
@@ -329,8 +308,7 @@ Conceptually, `release_ok` is true only when:
 - `evidence_sufficiency` is `SUFFICIENT`;
 - no unresolved conflicting evidence is present.
 
-The exact critic schema and release predicate must be frozen before the
-scientific benchmark.
+The exact critic schema and release predicate are frozen.
 
 The same release predicate must be used by B1 and G1. The recovery policy must
 not redefine what counts as an acceptable supported answer.
@@ -467,12 +445,12 @@ for `REVISE_ONLY` must not be conflated with the reserve for
 `RERETRIEVE_REVISE`, and neither reserve may include the initial draft cost,
 which has already been paid.
 
-The exact recovery-worthiness rule, the two path-specific reserve rules, and
-all decision thresholds remain open and must be specified before G1 is frozen.
+The recovery-worthiness rule and the two path-specific reserve rules are
+frozen and implemented in `src/responsible_agentic_workflows/workflow/g1_policy.py`.
 
-They may be selected from engineering evidence and prior literature.
-
-They must not be selected from primary benchmark outcomes.
+They were selected from engineering evidence and prior literature, not from
+primary benchmark outcomes, and they will not be re-derived from benchmark
+results.
 
 ## 14. Shared hard execution guard
 
@@ -512,8 +490,10 @@ When `REVISE_ONLY` is selected:
 
 When `RERETRIEVE_REVISE` is selected:
 
-1. construct a recovery retrieval query from the task, current evidence, and
-   critic-identified evidence gap;
+1. construct the recovery retrieval query using the exact frozen algorithm in
+   the runtime contract (built only from the original `question` and, when
+   non-empty, the current critic result's `evidence_gaps`; `current evidence`
+   is not an input to query construction);
 2. perform bounded recovery retrieval;
 3. combine the permitted evidence according to the frozen context policy;
 4. revise the current answer;
@@ -525,7 +505,7 @@ The number of permitted recovery cycles is the same for B1 and G1.
 
 ## 16. Shared post-recovery finalization
 
-To keep the treatment narrow, the preferred working design uses the same
+To keep the treatment narrow, the shared design uses the same
 post-recovery finalization rule in B1 and G1.
 
 After the final permitted recovery cycle:
@@ -547,39 +527,105 @@ resource-stopped outcome.
 
 This post-recovery rule is identical for B1 and G1.
 
-This rule is provisional and must be frozen before benchmark execution.
+This rule is frozen.
 
 Using a shared post-recovery rule prevents condition differences from being
 introduced after both systems have already consumed the same recovery
 capability.
 
-## 17. Terminal outcomes
+## 17. Terminal outcomes (frozen)
 
-The workflow must distinguish terminal outcomes explicitly.
+The workflow terminates in exactly one of the five `RunStatus` values below.
+This mapping is frozen, and it applies identically to B1 and G1.
 
-### Completed answer
+`answer` and `abstained` are the two output fields that together distinguish
+terminal outcomes. A run with `abstained = true` is a deliberate abstention,
+is distinguishable from system failure, and is a legitimate terminal outcome
+in scoring.
 
-- run status: completed, or completed-after-recovery as applicable;
-- final answer: present;
-- abstained: false.
+### `completed` — before recovery
 
-### Abstention
+- `ACCEPT` (the initial critic produced `release_ok = true`, the pre-recovery
+  policy returned `ACCEPT`, and `FINALIZE_ACCEPT` terminated the run):
+  - `status`: `completed`;
+  - `answer`: the initial draft candidate, unchanged;
+  - `abstained`: `false`.
+- `ABSTAIN` (the initial critic produced `release_ok = false`, the pre-recovery
+  policy returned `ABSTAIN`, and `FINALIZE_ABSTAIN` terminated the run; recovery
+  was not attempted):
+  - `status`: `completed`;
+  - `answer`: `None`;
+  - `abstained`: `true`.
 
-- final answer: an explicitly defined abstention representation;
-- abstained: true;
-- must be distinguishable from system failure.
+### `completed_after_recovery`
 
-### Resource stop
+- `ACCEPT` (the pre-recovery policy returned a recovery action,
+  `POST_RECOVERY_CRITIC` produced `release_ok = true`, and
+  `POST_RECOVERY_FINALIZE` returned `ACCEPT`):
+  - `status`: `completed_after_recovery`;
+  - `answer`: the revised (post-revision) answer candidate;
+  - `abstained`: `false`.
+- `ABSTAIN` (the pre-recovery policy returned a recovery action,
+  `POST_RECOVERY_CRITIC` produced `release_ok = false`, and
+  `POST_RECOVERY_FINALIZE` returned `ABSTAIN`):
+  - `status`: `completed_after_recovery`;
+  - `answer`: `None`;
+  - `abstained`: `true`.
 
-- run status: resource-stopped;
-- must not automatically count as a correct abstention;
-- reason for the stop must be logged.
+A run with `abstained = true` is a deliberate abstention, is distinguishable
+from system failure, and is a legitimate terminal outcome in scoring. Both
+ABSTAIN terminal mappings have `answer = None` and `abstained = true`; they
+share the `final_output` shape exactly, and they differ only in `RunStatus`
+(`completed` vs `completed_after_recovery`).
 
-### Tool or workflow failure
+### `resource_stopped`
 
-- use the applicable failure status;
-- preserve the failed run;
-- do not silently convert failure to abstention.
+- the pre-recovery policy returned `RESOURCE_STOP`, or the shared hard
+  execution guard blocked a required call before the run could terminate
+  normally;
+- `answer`: `None`;
+- `abstained`: `false`.
+
+`POST_RECOVERY_FINALIZE` never produces `RESOURCE_STOP`. After the single
+recovery cycle it terminates unconditionally in `ACCEPT`
+(`release_ok = true`) or `ABSTAIN` (`release_ok = false`). A
+`resource_stopped` outcome following recovery arises only from a
+pre-recovery `RESOURCE_STOP` decision or an execution-level hard guard that
+blocked a required call before `POST_RECOVERY_FINALIZE` could run.
+
+A resource stop is not an abstention. It must not be counted as a correct
+abstention in scoring, and the blocked `BlockedLimit` value must be preserved
+in the recorded event payload. When a guard blocks a path, the run terminates
+in `resource_stopped` without performing the blocked external call, and it is
+never converted to `ABSTAIN`.
+
+### `tool_error`
+
+- a tool or model call failed in a way that cannot be retried within the
+  frozen limits;
+- `answer`: `None`;
+- `abstained`: `false`.
+
+The failed run is preserved, including the failed call and its error.
+
+### `failed`
+
+- the workflow itself failed (state corruption, schema validation failure,
+  unexpected exception);
+- `answer`: `None`;
+- `abstained`: `false`.
+
+Failures are never silently converted to abstention.
+
+### Additional terminal-output rules
+
+- An unreleased candidate (a draft that never passed a `release_ok = true`
+  verdict at the terminating critic) is never published in
+  `final_output.answer`, even when a `resource_stopped` or `tool_error` run
+  has a partial candidate in state.
+- `cited_chunk_ids` remains empty until explicit citation generation is
+  frozen and enabled; it must not be populated heuristically in the
+  interim.
 
 ## 18. Resource accounting
 
@@ -600,44 +646,69 @@ It is an explicit control input for G1.
 
 ## 19. Required policy logging
 
-Every recovery-policy decision should produce a structured event containing at
-least:
+Every recovery-policy decision must produce a single `policy_decision` event
+containing, at decision time:
 
-- policy identity;
-- decision sequence;
-- critic iteration;
-- evidence status;
-- selected action;
-- reason code;
-- recovery iteration;
-- resource snapshot at decision time.
+- `policy_id` (the identity of the injected recovery policy object);
+- `action` (`ACCEPT`, `REVISE_ONLY`, `RERETRIEVE_REVISE`, `ABSTAIN`, or
+  `RESOURCE_STOP`);
+- `reason_code` (the structured `RecoveryReasonCode`);
+- `critic_iteration` and `recovery_iteration`;
+- the full `CriticControlState` fields supplied to the policy;
+- the full `ResourceSnapshot` fields supplied to the policy
+  (`llm_calls_used`, `retrieval_calls_used`, `retries_used`,
+  `input_tokens_used`, `output_tokens_used`, `total_tokens_used`);
+- remaining capacity for each of the four limits relevant to the selected
+  path (`max_llm_calls`, `max_retrieval_calls`, `max_retries`,
+  `max_total_tokens`), recorded as `null` when that limit is unconfigured;
+- the `HardRecoveryFeasibility` entry computed for the selected path (only
+  when a recovery path was selected).
 
-For G1, the event should additionally preserve the resource variables actually
-used by the decision rule.
+The event is a pure logging artifact of the policy inputs and output. It must
+not include benchmark gold information, and it must not be altered after
+emission.
 
-Logging must capture the inputs to the policy without including benchmark gold
-information.
+## 20. Required workflow events (frozen)
 
-## 20. Required workflow events
+The implementation must make it possible to reconstruct the execution path.
 
-The implementation should make it possible to reconstruct the execution path.
+Exactly the following 13 workflow event identifiers are required. This list is
+frozen: no other identifier may be introduced and no listed identifier may be
+renamed. Note in particular that `critic_completed` is not an event
+identifier; critic results are reported by `initial_critic_completed` and
+`post_recovery_critic_completed`.
 
-Candidate events include:
+1. `plan_completed`;
+2. `initial_retrieval_completed`;
+3. `draft_completed`;
+4. `initial_critic_completed`;
+5. `policy_decision`;
+6. `recovery_started`;
+7. `recovery_retrieval_completed` (emitted only on the `RERETRIEVE_REVISE`
+   path);
+8. `revision_completed`;
+9. `post_recovery_critic_completed`;
+10. `answer_accepted`;
+11. `abstained`;
+12. `resource_stopped`;
+13. `workflow_failed` (emitted only when the run terminates in failure).
 
-- `plan_completed`;
-- `initial_retrieval_completed`;
-- `draft_completed`;
-- `critic_completed`;
-- `policy_decision`;
-- `recovery_retrieval_completed`;
-- `revision_completed`;
-- `post_recovery_critic_completed`;
-- `answer_accepted`;
-- `abstained`;
-- `resource_stopped`.
+The `policy_decision` event must preserve, at decision time:
 
-Exact event names may change during implementation, but the required
-information must remain reconstructable.
+- policy identity (`policy_id`);
+- selected action (`ACCEPT`, `REVISE_ONLY`, `RERETRIEVE_REVISE`, `ABSTAIN`,
+  or `RESOURCE_STOP`);
+- structured reason code;
+- critic iteration and recovery iteration;
+- the full `CriticControlState` fields supplied to the policy;
+- the full `ResourceSnapshot` values supplied to the policy
+  (`llm_calls_used`, `retrieval_calls_used`, `retries_used`,
+  `input_tokens_used`, `output_tokens_used`, `total_tokens_used`);
+- remaining capacity for each limit relevant to the selected path;
+- the `HardRecoveryFeasibility` computed for the selected path.
+
+The event must not contain benchmark reference answers, reference evidence,
+adjudication labels, or benchmark correctness information.
 
 ## 21. Treatment-isolation matrix
 
@@ -707,43 +778,82 @@ This contract intentionally does not yet freeze:
 
 - planner prompt and structured output;
 - exact planning granularity;
-- critic prompt;
-- critic structured-output schema;
-- exact evidence sufficiency criterion;
-- exact G1 recovery-worthiness criterion;
-- exact G1 path-specific resource reserve rules for `REVISE_ONLY` and
-  `RERETRIEVE_REVISE`;
-- maximum model calls;
-- maximum retrieval calls;
-- retry limits;
-- total workflow token ceiling;
-- per-call output limit;
-- timeout;
-- recovery query construction;
-- context-merging policy after re-retrieval;
+- critic prompt wording and prompt-version identifier
+  (the critic structured-output schema and release predicate are frozen);
+- numerical resource limit values:
+  - maximum model calls;
+  - maximum retrieval calls;
+  - retry limits;
+  - total workflow token ceiling;
+  - per-call output limit;
+  - timeout;
 - final abstention text;
-- exact workflow event names;
-- workflow configuration identifiers.
+- workflow configuration identifiers;
+- UC2/UC3 corpus preparation.
 
-These decisions must be resolved and frozen before scientific benchmark
-execution.
+The following execution semantics are frozen even though the shared
+LangGraph workflow code has not been implemented:
+
+- the common graph routing with exactly the frozen node set (`START`,
+  `PLAN`, `INITIAL_RETRIEVE`, `DRAFT`, `INITIAL_CRITIC`, `RECOVERY_POLICY`,
+  `FINALIZE_ACCEPT`, `FINALIZE_ABSTAIN`, `FINALIZE_RESOURCE_STOP`,
+  `BEGIN_RECOVERY`, `REVISE`, `RECOVERY_RETRIEVE`, `MERGE_EVIDENCE`,
+  `POST_RECOVERY_CRITIC`, `POST_RECOVERY_FINALIZE`);
+- `MAX_RECOVERY_CYCLES = 1` per run, with `recovery_iteration` moving from
+  0 to 1 at most once and the policy invoked exactly once per run;
+- deterministic recovery query construction with zero LLM calls, using
+  `question` plus non-empty critic `evidence_gaps` in the frozen listing
+  format and excluding the frozen forbidden inputs;
+- evidence merge for `RERETRIEVE_REVISE` (retain current order, append unseen
+  `chunk_id` in recovery rank order, first-occurrence-wins, no score fusion,
+  no reranking);
+- exactly one revision model call per recovery, with the frozen revision
+  inputs (question, plan, merged evidence, current draft, critic assessment,
+  critic `evidence_gaps` and `unsupported_claims`);
+- exactly one post-recovery critic call using the identical
+  `StructuredCritic` implementation as the initial critic;
+- `POST_RECOVERY_FINALIZE` as the unconditional terminal node after recovery,
+  applying the shared `release_ok` rule;
+- the shared hard execution guard and its blocked-limit vocabulary
+  (five `BlockedLimit` values: `LLM_CALL_LIMIT`, `RETRIEVAL_CALL_LIMIT`,
+  `RETRY_LIMIT`, `TOKEN_LIMIT`, `TIMEOUT_LIMIT`; the first four are
+  evaluated by `calculate_hard_recovery_feasibility`, `TIMEOUT_LIMIT` is
+  reserved and not yet evaluated; guard checks are execution-level and are
+  distinct from policy-time feasibility, are evaluated before each external
+  call, and a blocked path terminates in `RESOURCE_STOP` without any
+  external call and without conversion to `ABSTAIN`);
+- terminal outcome representation (the five `RunStatus` literals:
+  `completed`, `completed_after_recovery`, `resource_stopped`, `tool_error`,
+  `failed`), with the frozen `answer` and `abstained` value per status and
+  the unreleased-candidate exclusion rule;
+- the workflow event names (exactly 13, listed in §20);
+- the workflow-state gold boundary (allowed and forbidden categories listed
+  in §5);
+- policy-time resource accounting (`retries_used = recovery_iteration`,
+  snapshot-derived counters, dual pre-policy feasibility computation).
+
+These remaining decisions must be resolved and frozen before scientific
+benchmark execution.
 
 ## 25. Implementation sequence
 
 The intended implementation sequence is:
 
-1. define typed shared workflow state;
-2. define critic-result contract;
-3. define recovery-action and policy protocols;
-4. implement common shared nodes;
-5. implement B1 fixed policy;
-6. implement G1 policy only after its decision rule is pre-specified;
-7. assemble one common LangGraph workflow;
+1. define typed shared workflow state — done;
+2. define critic-result contract — done;
+3. define recovery-action and policy protocols — done;
+4. implement B1 fixed policy — done;
+5. implement G1 policy — done;
+6. implement hard recovery feasibility — done;
+7. implement common shared nodes and assemble one common LangGraph workflow;
 8. extend execution logging for policy and stage events;
 9. test all routing with synthetic components;
 10. run synthetic real-model engineering validation;
-11. freeze prompts, policies, resource limits, and workflow configuration;
+11. freeze prompts, policies, and resource limits, including numerical
+    resource-limit values;
 12. only then permit scientific benchmark execution.
+
+Steps 1 through 6 are complete.
 
 ## 26. Current boundary
 
@@ -752,10 +862,11 @@ At this checkpoint:
 - B0 engineering validation is complete;
 - contribution positioning is recorded;
 - algorithmic novelty is not claimed;
-- B1 implementation has not started;
-- G1 implementation has not started;
+- B1 policy, G1 policy, the critic contract and release predicate, hard
+  recovery feasibility, and the shared typed workflow state are implemented;
+- the common shared workflow nodes and the single LangGraph workflow graph
+  have not been implemented;
 - the scientific benchmark has not started.
 
 The next engineering step after review of this contract is to implement the
-shared typed state and policy interfaces without yet implementing the full
-agentic workflow.
+common shared nodes and assemble the single LangGraph workflow.
