@@ -221,6 +221,42 @@ class RunRecorder:
             }
         )
 
+    def record_event(
+        self,
+        *,
+        event_type: str,
+        stage: str | None = None,
+        details: dict[str, object] | None = None,
+    ) -> None:
+        """Record one structured workflow event for audit logging."""
+
+        if (
+            not isinstance(event_type, str)
+            or not event_type.strip()
+        ):
+            raise ValueError("event_type must be a non-empty string")
+
+        if stage is not None and (
+            not isinstance(stage, str)
+            or not stage.strip()
+        ):
+            raise ValueError(
+                "stage must be a non-empty string when provided"
+            )
+
+        if details is not None and not isinstance(details, dict):
+            raise ValueError("details must be an object when provided")
+
+        self._events.append(
+            {
+                "sequence": len(self._events) + 1,
+                "event_type": event_type,
+                "stage": stage,
+                "timestamp": _utc_now(),
+                "details": deepcopy(details),
+            }
+        )
+
     def record_error(
         self,
         *,
