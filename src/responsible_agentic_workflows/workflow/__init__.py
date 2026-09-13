@@ -1,4 +1,5 @@
 from .b0_baseline import B0Baseline, B0Result
+from .b1_policy import B1FixedRecoveryPolicy
 from .control import (
     BlockedLimit,
     CriticControlState,
@@ -21,6 +22,7 @@ from .control import (
 __all__ = [
     "B0Baseline",
     "B0Result",
+    "B1FixedRecoveryPolicy",
     "BlockedLimit",
     "CriticControlState",
     "CriticResult",
