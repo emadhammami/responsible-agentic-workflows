@@ -178,39 +178,53 @@ The initial sequence is also the same:
 
 After the critic result is available, G1 enables ERGR.
 
-ERGR uses pre-specified runtime evidence and resource state to choose among
-bounded actions.
+The pre-recovery ERGR rule is pre-specified before scientific benchmark
+execution.
 
-Candidate actions are:
+The frozen decision order is:
 
-### ACCEPT
+1. if the shared release predicate is satisfied, `ACCEPT`;
+2. if a material unresolved evidence conflict remains, `ABSTAIN`;
+3. if evidence is `SUFFICIENT` and no unresolved conflict remains, select
+   `REVISE_ONLY`;
+4. if evidence is `INSUFFICIENT`, no unresolved conflict remains, and the
+   structured gap state contains `MISSING_EVIDENCE` or `INCOMPLETE_EVIDENCE`,
+   select `RERETRIEVE_REVISE`;
+5. otherwise, `ABSTAIN`;
+6. for a selected recovery path, apply the common hard-feasibility result;
+7. if the path is hard-infeasible, return `RESOURCE_STOP`;
+8. if the path is hard-feasible, apply the path-specific G1 completion reserve;
+9. if the reserve is unavailable, return `RESOURCE_STOP`;
+10. otherwise execute the selected bounded recovery path.
 
-Finalize the current answer when the available evidence and critic result
-satisfy the pre-specified release criteria.
+The path-specific completion reserve is derived from the shared recovery
+structure rather than benchmark outcomes.
 
-### REVISE_ONLY
+`REVISE_ONLY` requires capacity for:
 
-Revise the current candidate using already-available evidence when evidence is
-sufficient but the answer itself does not satisfy the shared release criterion.
-No additional retrieval is performed.
+- one bounded recovery cycle;
+- the revision model call; and
+- the required shared post-recovery critic call.
 
-### RERETRIEVE_REVISE
+Operationally, when the corresponding limits are configured, this means at
+least two remaining LLM-call slots and one remaining retry/recovery slot.
 
-Use an additional bounded retrieval/revision cycle when the current evidence is
-recoverable and sufficient resources remain.
+`RERETRIEVE_REVISE` additionally requires one remaining retrieval-call slot.
 
-### ABSTAIN
+No token-percentage threshold, average-token estimate, safety multiplier, or
+latency threshold is introduced into the G1 reserve.
 
-Return an abstention when adequate supporting evidence cannot be established
-under the pre-specified evidence criteria.
+The common total-token hard guard still prevents recovery when configured total
+token capacity is already exhausted.
 
-### RESOURCE_STOP
+This design intentionally separates:
 
-Do not initiate another recovery action when the remaining resource allowance
-cannot support the pre-specified recovery path.
+- the common hard guard, which asks whether recovery can legally begin; from
+- the G1 completion reserve, which asks whether enough structured capacity
+  remains to commit to the selected bounded recovery path.
 
-`RESOURCE_STOP` is an execution outcome and must not be silently relabeled as a
-successful abstention.
+The resulting G1 treatment is therefore both evidence-aware and resource-aware
+while remaining deterministic, inspectable, and pre-specified.
 
 ## 8. Why verification is shared
 
@@ -233,44 +247,70 @@ selective invocation of verification itself.
 
 ## 9. Evidence state available to G1
 
-ERGR may use only information available during normal execution.
+G1 receives the same restricted structured critic projection used by the common
+recovery-policy interface:
 
-Candidate evidence-state variables include:
+    CriticControlState
+      support_status
+      evidence_sufficiency
+      unresolved_conflict
+      gap_types
+      release_ok
 
-- critic support assessment;
-- missing support identified by the critic;
-- contradiction or inconsistency identified by the critic;
-- evidence coverage indicators;
-- retrieval result characteristics that are available at runtime;
-- whether the revised answer resolves previously identified support gaps.
+The G1 policy does not branch directly on:
 
-The policy must not access:
-
+- `unsupported_claims` free text;
+- `incomplete_support` free text;
+- `evidence_gaps` free text;
+- critic explanation;
+- raw benchmark question text;
+- document text;
 - benchmark reference answers;
 - benchmark reference evidence;
 - human adjudication labels;
-- final benchmark correctness scores;
-- information derived from benchmark outcomes.
+- final benchmark correctness scores.
 
-The exact evidence representation must be frozen before scientific execution.
+Diagnostic text may still be used later by the shared recovery implementation
+after the policy has already selected a recovery path.
+
+The evidence-state representation used by the G1 decision rule is therefore
+structured and frozen before scientific execution.
 
 ## 10. Resource state available to G1
 
-Candidate runtime resource variables include:
+G1 receives the same immutable resource snapshot and resource limits available
+through the shared recovery-policy context.
 
-- model calls used;
-- model calls remaining;
-- retrieval or tool calls used;
-- retrieval or tool calls remaining;
-- token allowance used;
-- token allowance remaining;
-- retries used;
-- retries remaining;
-- minimum reserve required for a safe finalization step.
+The relevant resource dimensions are:
 
-The exact resource limits remain open at this stage.
+- LLM calls used and remaining;
+- retrieval calls used and remaining;
+- retries/recovery cycles used and remaining;
+- total tokens used and remaining.
 
-They must be fixed before the primary benchmark.
+Remaining values are derived from the common limits and authoritative recorded
+usage rather than maintained as treatment-specific counters.
+
+The common hard guard is shared by B1 and G1.
+
+The frozen G1 completion reserve is path-specific:
+
+- `REVISE_ONLY`: at least two remaining LLM-call slots and one remaining
+  retry/recovery slot when those limits are configured;
+- `RERETRIEVE_REVISE`: the same requirements plus at least one remaining
+  retrieval-call slot.
+
+A resource limit configured as `None` is disabled and does not block the G1
+reserve.
+
+The two LLM-call slots correspond to the revision generation call and the
+required shared post-recovery critic call.
+
+No prospective token-cost estimate or latency threshold is used in the G1
+policy.
+
+B1 and G1 begin comparable runs with the same externally imposed resource
+limits.
 
 ## 11. Resource parity
 
@@ -498,8 +538,16 @@ At this checkpoint:
 - ERGR is retained as a descriptive composite guardrail policy;
 - verification is shared between B1 and G1;
 - the primary treatment is fixed versus evidence/resource-aware recovery;
-- B1 and G1 implementation has not started;
+- the B1 fixed recovery policy is implemented;
+- the shared structured critic is implemented;
+- the common hard-recovery feasibility calculation is implemented;
+- the G1 recovery-worthiness rule is frozen for implementation;
+- the G1 path-specific completion-reserve rule is frozen for implementation;
+- G1 policy code has not yet been implemented;
+- the common workflow graph and recovery execution have not yet been
+  implemented;
 - the scientific benchmark has not started.
 
-The next implementation step is to specify the common B1/G1 workflow contract
-and state transitions before writing the condition-specific control policies.
+The next implementation step is the deterministic G1 policy using the frozen
+structured decision rule, shared hard-feasibility result, and path-specific
+completion reserve.

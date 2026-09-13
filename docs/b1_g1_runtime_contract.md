@@ -1,6 +1,6 @@
 # B1/G1 Runtime Control Contracts
 
-**Status:** Pre-implementation working specification
+**Status:** Working specification; G1 decision logic frozen for implementation
 **Primary comparison:** B1 vs G1
 **Primary treatment:** Recovery decision policy
 **Benchmark started:** No
@@ -300,66 +300,230 @@ pre-benchmark justification and freeze.
 ## 11. Common hard-feasibility check
 
 Before starting a recovery path, the shared execution guard determines whether
-the requested recovery can begin without violating a hard execution ceiling.
+the requested path can begin without violating the determinable hard execution
+ceilings represented in the policy-time resource snapshot.
 
-Hard feasibility is path-specific:
+The hard-feasibility calculation is deterministic and shared by B1 and G1.
 
-- `REVISE_ONLY` requires that the guard can permit the revision model call.
-- `RERETRIEVE_REVISE` additionally requires that the guard can permit one
-  recovery retrieval call.
+One bounded recovery cycle consumes one retry/recovery slot.
 
-Conceptually:
+The frozen path requirements are:
+
+### REVISE_ONLY
+
+The path requires:
+
+- at least one remaining LLM-call slot when that limit is configured;
+- at least one remaining retry/recovery slot when that limit is configured;
+- non-exhausted total-token capacity when that limit is configured.
+
+It does not require a recovery retrieval-call slot.
+
+### RERETRIEVE_REVISE
+
+The path requires:
+
+- at least one remaining LLM-call slot when that limit is configured;
+- at least one remaining retrieval-call slot when that limit is configured;
+- at least one remaining retry/recovery slot when that limit is configured;
+- non-exhausted total-token capacity when that limit is configured.
+
+If a corresponding resource limit is `None`, that limit is disabled and does
+not block the path.
+
+The token hard guard does not estimate future model-call token consumption.
+`TOKEN_LIMIT` blocks policy-time hard feasibility only when configured total
+token capacity is already exhausted.
+
+`timeout_ms` is not evaluated by the policy-time hard-feasibility calculator
+because the current `ResourceSnapshot` deliberately contains no elapsed-runtime
+field. The timeout remains a shared execution-level hard ceiling to be enforced
+by the workflow runtime.
+
+When more than one determinable limit is exhausted, all applicable blockers are
+reported in this fixed order:
+
+1. `LLM_CALL_LIMIT`;
+2. `RETRIEVAL_CALL_LIMIT`, where applicable;
+3. `RETRY_LIMIT`;
+4. `TOKEN_LIMIT`.
+
+The result is represented as:
 
     HardRecoveryFeasibility
       recovery_path
       feasible
       blocked_limits
 
-Working blocked-limit identifiers are:
+Hard feasibility is not the G1 treatment. Both B1 and G1 consume the same
+calculation.
 
-- `LLM_CALL_LIMIT`;
-- `RETRIEVAL_CALL_LIMIT`;
-- `RETRY_LIMIT`;
-- `TOKEN_LIMIT`;
-- `TIMEOUT_LIMIT`.
+## 12. Frozen G1 recovery-worthiness and completion-reserve rule
 
-The exact prospective feasibility calculation must be deterministic and shared.
+The G1 Evidence- and Resource-Gated Recovery policy uses only the restricted
+`CriticControlState`, the shared hard-feasibility result, and the common
+resource snapshot and limits.
 
-Hard feasibility is not the G1 treatment.
+The pre-recovery decision order is frozen for implementation as follows.
 
-B1 and G1 use the same hard guard.
+### 12.1 Release first
 
-## 12. G1 resource-reserve concept
+If `critic.release_ok` is true:
 
-G1 may apply a stricter pre-specified resource-reserve rule after recovery has
-been judged worthwhile.
+    ACCEPT / RELEASE_OK
 
-The reserve rule is path-specific: one frozen rule for `REVISE_ONLY` and a
-separate frozen rule for `RERETRIEVE_REVISE`.
+This decision occurs before any recovery-path feasibility or reserve check.
 
-The two reserves must not be conflated, and neither may include the cost of the
-initial draft, which has already been paid.
+### 12.2 Unresolved evidence conflict
 
-This is distinct from the common hard guard.
+If `critic.release_ok` is false and `critic.unresolved_conflict` is true:
 
-Conceptually:
+    ABSTAIN / G1_RECOVERY_NOT_WORTHWHILE
 
-    hard guard:
-        "Can the requested recovery legally start?"
+The current treatment does not contain a source-priority or conflict-arbitration
+mechanism. A material unresolved conflict therefore does not trigger a bounded
+recovery attempt.
 
-    G1 reserve rule:
-        "Given the frozen policy, is enough resource capacity available to
-        justify committing to the recovery path?"
+### 12.3 Sufficient evidence with an unreleased answer
 
-The reserve rule must be computable from:
+If:
 
-- the frozen resource limits;
-- the authoritative resource snapshot;
-- pre-specified recovery requirements.
+- `critic.release_ok` is false;
+- `critic.evidence_sufficiency` is `SUFFICIENT`; and
+- `critic.unresolved_conflict` is false;
 
-It must not depend on benchmark outcome labels.
+then recovery is considered worthwhile and the selected path is:
 
-The exact reserve formula and numerical thresholds remain open.
+    REVISE_ONLY
+
+This treats the remaining problem as answer construction or grounding rather
+than missing evidence.
+
+### 12.4 Insufficient but bounded-recoverable evidence
+
+If:
+
+- `critic.release_ok` is false;
+- `critic.evidence_sufficiency` is `INSUFFICIENT`;
+- `critic.unresolved_conflict` is false; and
+- `critic.gap_types` contains `MISSING_EVIDENCE` or
+  `INCOMPLETE_EVIDENCE`;
+
+then recovery is considered worthwhile and the selected path is:
+
+    RERETRIEVE_REVISE
+
+The structured gap signal supplies the pre-specified justification for one
+additional bounded retrieval/revision cycle.
+
+### 12.5 Insufficient evidence without a bounded retrieval signal
+
+If evidence is `INSUFFICIENT`, there is no unresolved conflict, and neither
+`MISSING_EVIDENCE` nor `INCOMPLETE_EVIDENCE` is present in `gap_types`:
+
+    ABSTAIN / G1_RECOVERY_NOT_WORTHWHILE
+
+G1 does not trigger retrieval merely because the answer failed the release
+predicate.
+
+### 12.6 Shared hard-feasibility gate
+
+After G1 selects a recovery path, it must use the supplied
+`HardRecoveryFeasibility` entry for that path.
+
+A missing feasibility entry for the selected path is malformed runtime context
+and must raise an error rather than being converted into a policy outcome.
+
+If the selected path is hard-infeasible:
+
+    RESOURCE_STOP / HARD_LIMIT_BLOCKED
+
+G1 must not reinterpret a common hard-limit failure as abstention.
+
+### 12.7 Path-specific G1 completion reserve
+
+If the selected path is hard-feasible, G1 applies an additional deterministic
+completion-reserve check.
+
+This reserve is the resource-aware component of the treatment and is distinct
+from the shared hard guard.
+
+For a configured limit, the required remaining capacity is:
+
+#### REVISE_ONLY
+
+- at least two remaining LLM-call slots;
+- at least one remaining retry/recovery slot.
+
+#### RERETRIEVE_REVISE
+
+- at least two remaining LLM-call slots;
+- at least one remaining retrieval-call slot;
+- at least one remaining retry/recovery slot.
+
+A corresponding limit of `None` is disabled and automatically satisfies that
+reserve dimension.
+
+The two LLM-call slots represent the shared recovery structure that follows the
+policy decision:
+
+1. the revision generation call; and
+2. the required shared post-recovery critic call.
+
+The retrieval slot for `RERETRIEVE_REVISE` represents its one bounded recovery
+retrieval call.
+
+The retry slot represents the one bounded recovery cycle.
+
+If the path-specific completion reserve is unavailable:
+
+    RESOURCE_STOP / G1_RESOURCE_RESERVE_BLOCKED
+
+If the reserve is available:
+
+    REVISE_ONLY / G1_REVISE_ONLY
+
+or:
+
+    RERETRIEVE_REVISE / G1_RERETRIEVE_REVISE
+
+according to the selected path.
+
+### 12.8 No token-percentage or latency reserve
+
+The G1 completion reserve does not introduce:
+
+- a token percentage threshold;
+- an estimated average recovery-token cost;
+- a safety multiplier;
+- an empirical token threshold;
+- a wall-clock latency threshold.
+
+Token exhaustion remains governed by the common hard guard.
+
+No future token-cost estimate is used by the frozen G1 rule.
+
+Latency remains a measured benchmark outcome and shared execution-level concern,
+not a G1 policy input.
+
+### 12.9 Treatment isolation
+
+The frozen G1 rule must not branch on:
+
+- free-text critic explanation;
+- diagnostic string contents;
+- raw benchmark question text;
+- document text;
+- benchmark gold information;
+- human adjudication;
+- final correctness labels;
+- wall-clock latency.
+
+The exact structured treatment inputs are therefore limited to the frozen
+policy-visible critic state, common resource state, common limits, and shared
+hard-feasibility result.
+
+The rule must not be changed in response to primary benchmark outcomes.
 
 ## 13. Recovery-policy context
 
