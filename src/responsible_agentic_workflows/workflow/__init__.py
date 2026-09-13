@@ -25,6 +25,7 @@ from .critic import (
     StructuredCritic,
     parse_critic_result,
 )
+from .feasibility import calculate_hard_recovery_feasibility
 
 __all__ = [
     "B0Baseline",
@@ -49,6 +50,7 @@ __all__ = [
     "ResourceSnapshot",
     "SupportStatus",
     "StructuredCritic",
+    "calculate_hard_recovery_feasibility",
     "parse_critic_result",
     "release_ok",
 ]
