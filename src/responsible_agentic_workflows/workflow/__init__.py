@@ -27,22 +27,54 @@ from .critic import (
 )
 from .feasibility import calculate_hard_recovery_feasibility
 from .g1_policy import G1ERGRPolicy
+from .graph import (
+    GraphComponents,
+    NodeFunc,
+    build_graph,
+    route_after_begin_recovery,
+    route_after_recovery_policy,
+)
+from .recovery import (
+    MAX_RECOVERY_CYCLES,
+    RecoveryCycleState,
+    begin_recovery_cycle,
+    build_recovery_query,
+    mark_recovery_completed,
+    merge_evidence,
+)
+from .state import (
+    CONDITION_METADATA_VALUES,
+    EXECUTION_MODES,
+    WORKFLOW_STATE_FIELDS,
+    ConditionMetadata,
+    ExecutionMode,
+    WorkflowState,
+    initial_workflow_state,
+)
 
 __all__ = [
     "B0Baseline",
     "B0Result",
     "B1FixedRecoveryPolicy",
     "BlockedLimit",
+    "CONDITION_METADATA_VALUES",
     "CRITIC_PROMPT_VERSION",
     "CRITIC_SCHEMA_VERSION",
+    "ConditionMetadata",
     "CriticControlState",
     "CriticParseError",
     "CriticResult",
+    "EXECUTION_MODES",
+    "ExecutionMode",
     "EvidenceSufficiency",
     "GapType",
     "G1ERGRPolicy",
+    "GraphComponents",
     "HardRecoveryFeasibility",
+    "MAX_RECOVERY_CYCLES",
+    "NodeFunc",
     "RecoveryAction",
+    "RecoveryCycleState",
     "RecoveryDecision",
     "RecoveryPath",
     "RecoveryPolicy",
@@ -51,8 +83,18 @@ __all__ = [
     "ResourceLimits",
     "ResourceSnapshot",
     "SupportStatus",
+    "WORKFLOW_STATE_FIELDS",
+    "WorkflowState",
     "StructuredCritic",
+    "begin_recovery_cycle",
+    "build_graph",
+    "build_recovery_query",
     "calculate_hard_recovery_feasibility",
+    "initial_workflow_state",
+    "mark_recovery_completed",
+    "merge_evidence",
     "parse_critic_result",
     "release_ok",
+    "route_after_begin_recovery",
+    "route_after_recovery_policy",
 ]
