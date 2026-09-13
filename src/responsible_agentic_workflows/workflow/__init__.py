@@ -26,6 +26,7 @@ from .critic import (
     parse_critic_result,
 )
 from .feasibility import calculate_hard_recovery_feasibility
+from .g1_policy import G1ERGRPolicy
 
 __all__ = [
     "B0Baseline",
@@ -39,6 +40,7 @@ __all__ = [
     "CriticResult",
     "EvidenceSufficiency",
     "GapType",
+    "G1ERGRPolicy",
     "HardRecoveryFeasibility",
     "RecoveryAction",
     "RecoveryDecision",
