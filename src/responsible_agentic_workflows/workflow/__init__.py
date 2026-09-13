@@ -18,13 +18,23 @@ from .control import (
     SupportStatus,
     release_ok,
 )
+from .critic import (
+    CRITIC_PROMPT_VERSION,
+    CRITIC_SCHEMA_VERSION,
+    CriticParseError,
+    StructuredCritic,
+    parse_critic_result,
+)
 
 __all__ = [
     "B0Baseline",
     "B0Result",
     "B1FixedRecoveryPolicy",
     "BlockedLimit",
+    "CRITIC_PROMPT_VERSION",
+    "CRITIC_SCHEMA_VERSION",
     "CriticControlState",
+    "CriticParseError",
     "CriticResult",
     "EvidenceSufficiency",
     "GapType",
@@ -38,5 +48,7 @@ __all__ = [
     "ResourceLimits",
     "ResourceSnapshot",
     "SupportStatus",
+    "StructuredCritic",
+    "parse_critic_result",
     "release_ok",
 ]
