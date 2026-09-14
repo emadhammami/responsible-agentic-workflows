@@ -177,6 +177,38 @@ class RunRecorder:
 
         return len(self._model_calls)
 
+    @property
+    def input_tokens_used(self) -> int:
+        """Return total input tokens consumed by recorded model calls."""
+
+        return sum(
+            int(call["input_tokens"])
+            for call in self._model_calls
+            if call["input_tokens"] is not None
+        )
+
+    @property
+    def output_tokens_used(self) -> int:
+        """Return total output tokens consumed by recorded model calls."""
+
+        return sum(
+            int(call["output_tokens"])
+            for call in self._model_calls
+            if call["output_tokens"] is not None
+        )
+
+    @property
+    def total_tokens_used(self) -> int:
+        """Return total tokens (input + output) consumed so far."""
+
+        return self.input_tokens_used + self.output_tokens_used
+
+    @property
+    def elapsed_ms(self) -> float:
+        """Return milliseconds elapsed since the recorder was created."""
+
+        return _elapsed_ms(self._started_ns)
+
     def record_model_call(
         self,
         *,
