@@ -1,0 +1,99 @@
+{
+  "schema_version": "0.1",
+  "protocol_id": "UC3-METADATA-IDENTITY-PROBES-v0.1",
+  "status": "frozen_before_execution",
+  "purpose": "Engineering-only identity retrieval diagnostic for the working UC3 dense retrieval configuration.",
+  "source_basis": "Queries and expected document identities are derived only from pre-existing canonical title and reference metadata in corpus/use_cases/UC3/source_selection.tsv and corpus/use_cases/UC3/eligibility_review.tsv.",
+  "UC1_PROTOCOL_CORE_STRUCTURE_PRESERVED": true,
+  "UC3_DOCUMENT_COVERAGE": "9/9",
+  "PROBE_COUNT_ADAPTATION": "prospectively adapted from 8 to 9 because UC3 has 9 accepted documents",
+  "methodological_note": "The UC1 core identity-diagnostic design is preserved (top-k, repeats, ranking unit, expected-document measure, and benchmark separation), while probe count is prospectively adapted for complete UC3 document coverage.",
+  "benchmark_separation": {
+    "benchmark_questions_used": false,
+    "benchmark_gold_used": false,
+    "benchmark_answers_used": false,
+    "raw_document_text_used_to_design_queries": false,
+    "retrieval_results_used_to_design_queries": false
+  },
+  "interpretation": "This protocol tests real-corpus retrieval identity and execution integrity for UC3. It is not by itself an embedding-model acceptance test.",
+  "execution": {
+    "top_k": 10,
+    "repeats_per_probe": 3,
+    "ranking_unit": "chunk",
+    "expected_document_measure": "rank of the first retrieved chunk belonging to the expected document"
+  },
+  "probes": [
+    {
+      "probe_id": "ID01",
+      "canonical_title": "DigComp 3.0",
+      "reference": "DigComp 3.0 / DOI 10.2760/0001149",
+      "expected_document_id": "DOC032",
+      "source_basis": "source_selection.tsv row UC3-C01 (title 'DigComp 3.0', reference 'DigComp 3.0 / DOI 10.2760/0001149'); eligibility_review.tsv row UC3-C01 B_stable_id (JRC144121, DOI 10.2760/0001149)",
+      "query": "DigComp 3.0. DigComp 3.0 / DOI 10.2760/0001149."
+    },
+    {
+      "probe_id": "ID02",
+      "canonical_title": "Reference Framework of Competences for Democratic Culture Volume 1",
+      "reference": "RFCDC Volume 1",
+      "expected_document_id": "DOC033",
+      "source_basis": "source_selection.tsv row UC3-C02 (title 'Reference Framework of Competences for Democratic Culture Volume 1', reference 'RFCDC Volume 1'); eligibility_review.tsv row UC3-C02 B_stable_id (Council of Europe, Vol.1, 2018)",
+      "query": "Reference Framework of Competences for Democratic Culture Volume 1. RFCDC Volume 1."
+    },
+    {
+      "probe_id": "ID03",
+      "canonical_title": "Reference Framework of Competences for Democratic Culture Volume 2",
+      "reference": "RFCDC Volume 2",
+      "expected_document_id": "DOC034",
+      "source_basis": "source_selection.tsv row UC3-C03 (title 'Reference Framework of Competences for Democratic Culture Volume 2', reference 'RFCDC Volume 2'); eligibility_review.tsv row UC3-C03 B_stable_id (Council of Europe, Vol.2, 2018)",
+      "query": "Reference Framework of Competences for Democratic Culture Volume 2. RFCDC Volume 2."
+    },
+    {
+      "probe_id": "ID04",
+      "canonical_title": "Reference Framework of Competences for Democratic Culture Volume 3",
+      "reference": "RFCDC Volume 3",
+      "expected_document_id": "DOC035",
+      "source_basis": "source_selection.tsv row UC3-C04 (title 'Reference Framework of Competences for Democratic Culture Volume 3', reference 'RFCDC Volume 3'); eligibility_review.tsv row UC3-C04 B_stable_id (Council of Europe, Vol.3, 2018)",
+      "query": "Reference Framework of Competences for Democratic Culture Volume 3. RFCDC Volume 3."
+    },
+    {
+      "probe_id": "ID05",
+      "canonical_title": "Key Competences for Lifelong Learning",
+      "reference": "2018/C 189/01",
+      "expected_document_id": "DOC036",
+      "source_basis": "source_selection.tsv row UC3-C05 (title 'Key Competences for Lifelong Learning', reference '2018/C 189/01'); eligibility_review.tsv row UC3-C05 B_stable_id (2018/C 189/01, OJ C 189/1)",
+      "query": "Key Competences for Lifelong Learning. 2018/C 189/01."
+    },
+    {
+      "probe_id": "ID06",
+      "canonical_title": "UNESCO ICT Competency Framework for Teachers Version 3",
+      "reference": "ICT CFT Version 3",
+      "expected_document_id": "DOC037",
+      "source_basis": "source_selection.tsv row UC3-C06 (title 'UNESCO ICT Competency Framework for Teachers Version 3', reference 'ICT CFT Version 3'); eligibility_review.tsv row UC3-C06 B_stable_id (UNESCO, v3, unesdoc pf0000265721)",
+      "query": "UNESCO ICT Competency Framework for Teachers Version 3. ICT CFT Version 3."
+    },
+    {
+      "probe_id": "ID07",
+      "canonical_title": "European Declaration on Digital Rights and Principles for the Digital Decade",
+      "reference": "2023/C 23/01",
+      "expected_document_id": "DOC038",
+      "source_basis": "source_selection.tsv row UC3-C07 (title 'European Declaration on Digital Rights and Principles for the Digital Decade', reference '2023/C 23/01'); eligibility_review.tsv row UC3-C07 B_stable_id (2023/C 23/01, OJ C 23/1)",
+      "query": "European Declaration on Digital Rights and Principles for the Digital Decade. 2023/C 23/01."
+    },
+    {
+      "probe_id": "ID08",
+      "canonical_title": "European Framework for the Digital Competence of Educators",
+      "reference": "DigCompEdu",
+      "expected_document_id": "DOC039",
+      "source_basis": "source_selection.tsv row UC3-C08 (title 'European Framework for the Digital Competence of Educators', reference 'DigCompEdu'); eligibility_review.tsv row UC3-C08 B_stable_id (JRC, EUR 287, JRC107466)",
+      "query": "European Framework for the Digital Competence of Educators. DigCompEdu."
+    },
+    {
+      "probe_id": "ID09",
+      "canonical_title": "European Framework for Digitally-Competent Educational Organisations",
+      "reference": "DigCompOrg / JRC98209",
+      "expected_document_id": "DOC040",
+      "source_basis": "source_selection.tsv row UC3-C09 (title 'European Framework for Digitally-Competent Educational Organisations', reference 'DigCompOrg / JRC98209'); eligibility_review.tsv row UC3-C09 B_stable_id (JRC, EUR 27599, JRC98209)",
+      "query": "European Framework for Digitally-Competent Educational Organisations. DigCompOrg / JRC98209."
+    }
+  ]
+}

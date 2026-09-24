@@ -1,0 +1,51 @@
+{
+  "schema_version": "0.1",
+  "use_case_id": "UC3",
+  "documents": [
+    {
+      "title": "DigComp 3.0",
+      "pdf_url": "https://publications.jrc.ec.europa.eu/repository/bitstream/JRC144121/JRC144121_01.pdf",
+      "target_filename": "UC3-C01_digcomp_3_0.pdf"
+    },
+    {
+      "title": "RFCDC Volume 1",
+      "pdf_url": "https://rm.coe.int/prems-008318-gbr-2508-reference-framework-of-competences-vol-1-8573-co/16807bc66c",
+      "target_filename": "UC3-C02_rfcdc_volume_1.pdf"
+    },
+    {
+      "title": "RFCDC Volume 2",
+      "pdf_url": "https://rm.coe.int/prems-008418-gbr-2508-reference-framework-of-competences-vol-2-8573-co/16807bc66d",
+      "target_filename": "UC3-C03_rfcdc_volume_2.pdf"
+    },
+    {
+      "title": "RFCDC Volume 3",
+      "pdf_url": "https://rm.coe.int/prems-008518-gbr-2508-reference-framework-of-competences-vol-3-8575-co/16807bc66e",
+      "target_filename": "UC3-C04_rfcdc_volume_3.pdf"
+    },
+    {
+      "title": "Key Competences for Lifelong Learning",
+      "pdf_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A32018H0604%2801%29",
+      "target_filename": "UC3-C05_key_competences_lifelong_learning.pdf"
+    },
+    {
+      "title": "UNESCO ICT Competency Framework for Teachers Version 3",
+      "pdf_url": "https://unesdoc.unesco.org/in/rest/annotationSVC/DownloadWatermarkedAttachment/attach_import_d7d2d5d0-c418-48ae-b932-4005d4d665c6?_=265721eng.pdf",
+      "target_filename": "UC3-C06_unesco_ict_cft_v3.pdf"
+    },
+    {
+      "title": "European Declaration on Digital Rights and Principles",
+      "pdf_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A32023C0123%2801%29",
+      "target_filename": "UC3-C07_eu_digital_rights.pdf"
+    },
+    {
+      "title": "European Framework for the Digital Competence of Educators",
+      "pdf_url": "https://publications.jrc.ec.europa.eu/repository/bitstream/JRC107466/pdf_digcomedu_a4_final.pdf",
+      "target_filename": "UC3-C08_digcompedu.pdf"
+    },
+    {
+      "title": "European Framework for Digitally-Competent Educational Organisations",
+      "pdf_url": "https://publications.jrc.ec.europa.eu/repository/bitstream/JRC98209/jrc98209_r_digcomporg_final.pdf",
+      "target_filename": "UC3-C09_digcomporg.pdf"
+    }
+  ]
+}

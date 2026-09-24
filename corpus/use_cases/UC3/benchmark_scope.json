@@ -1,0 +1,44 @@
+{
+  "schema_version": "0.1",
+  "use_case_id": "UC3",
+  "status": "frozen",
+  "benchmark_scope_rule": "All adjudicated accepted UC3 documents are included in benchmark retrieval. The corpus is the final accepted set of nine authoritative public European and international policy and framework documents on digital, democratic and teacher competences, confirmed as accepted and retrieval-active after formal eligibility adjudication against the frozen UC3 eligibility rubric. No document was added to or removed from the corpus on the basis of this scope definition or of retrieval or benchmark performance.",
+  "benchmark_active_document_ids": [
+    "DOC032",
+    "DOC033",
+    "DOC034",
+    "DOC035",
+    "DOC036",
+    "DOC037",
+    "DOC038",
+    "DOC039",
+    "DOC040"
+  ],
+  "source_groups": {
+    "competence_framework_document_ids": [
+      "DOC032",
+      "DOC033",
+      "DOC034",
+      "DOC035",
+      "DOC037",
+      "DOC039",
+      "DOC040"
+    ],
+    "policy_and_reference_document_ids": [
+      "DOC036",
+      "DOC038"
+    ]
+  },
+  "manifest_excluded_document_ids": [],
+  "controls": {
+    "all_accepted_documents_retrieval_active": true,
+    "selection_based_on_benchmark_performance": false,
+    "corpus_frozen": true
+  },
+  "notes": [
+    "The nine UC3 documents are an independently verified, publicly sourced authoritative set on digital, democratic and teacher competences, confirmed as accepted and retrieval-active after formal eligibility adjudication.",
+    "benchmark_active_document_ids reflects the final adjudicated set of accepted documents, all confirmed ELIGIBLE and retrieval-active.",
+    "No document may be added or removed based on benchmark performance.",
+    "The corpus remained working until formal eligibility adjudication, provenance validation, and the pre-benchmark freeze described by this record were complete."
+  ]
+}

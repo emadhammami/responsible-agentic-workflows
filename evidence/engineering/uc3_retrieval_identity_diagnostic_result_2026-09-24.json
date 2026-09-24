@@ -1,0 +1,2218 @@
+{
+  "schema_version": "0.1",
+  "artifact_type": "uc3_retrieval_identity_diagnostic_result",
+  "phase": "4B3-ID",
+  "generated_at": "2026-09-24T16:09:40+00:00",
+  "status": "executed_frozen_protocol",
+  "interpretation": "Descriptive engineering evidence only. This identity diagnostic is not an embedding-model acceptance test. The semantic diagnostic remains the pre-specified acceptance gate. Identity top_k=10 does not freeze benchmark top_k.",
+  "execution_source": "repository retrieval APIs only",
+  "retriever": "DenseExactRetriever (exact cosine, repo dense.py)",
+  "query_embedder": "OllamaEmbeddingClient (repo embedding.py)",
+  "artifact_source": "Run-1 materialized artifacts (not re-embedded)",
+  "pre_execution_shas": {
+    "protocol": "6221b933ae21058bee73b1eb7dbd0c6169a6f16a6457ac5c348c8672276da9fd",
+    "semantic": "ca8a0979edb090ebc63b7d702f4edb2003ca83b21dbea344dfff81ebe34721c4",
+    "config": "33537bd048416ea5ead63d8e179e815f1dc2cec290db33c3324f41fc84937eef",
+    "scope": "4ba17151cf9795b4ab24b58c49ed608dca84aed824d2eb97ee73390a28c115bb",
+    "chunk_ids": "7ee115260ad10f5fb89a42e34262261197dfe9b31229e7b3e532a1e28a186a62",
+    "embeddings": "7c7cdbd63f3fd1d2fded22b35407309d7ad41b0b41b8a0a2ce198f6b385e2450",
+    "metadata": "12129813eef60501ced56cbc17e4108090fccbb0388d95279fdeccfe0c708866"
+  },
+  "config_snapshot": {
+    "retrieval_config_id": "UC3-QWEN3-EMBED4B-EXACT-COSINE-v0.1",
+    "status": "working",
+    "backend": "dense-exact-cosine",
+    "chunking_config_id": "UC3-PAGE-W450-O75-v0.1",
+    "model_tag": "qwen3-embedding:4b-q4_K_M",
+    "model_digest": "df5bd2e3c74cd8d069d21dc038f1b359fcdc9458fce1c99bd43c9eb1518ff907",
+    "provider": "ollama",
+    "provider_version": "0.34.0",
+    "output_dimensions": 2560,
+    "truncate": false,
+    "query_instruction": "Given a policy question, retrieve relevant passages that answer the question",
+    "numpy_backend_version": "2.5.3"
+  },
+  "artifact_snapshot": {
+    "chunk_count": 850,
+    "dimensions": 2560,
+    "dtype": "float32",
+    "batch_size": 32,
+    "source_documents": 9
+  },
+  "execution": {
+    "top_k": 10,
+    "repeats_per_probe": 3,
+    "ranking_unit": "chunk",
+    "expected_document_measure": "rank of the first retrieved chunk belonging to the expected document",
+    "probe_count": 9,
+    "total_query_runs": 27
+  },
+  "aggregate_diagnostics": {
+    "EXPECTED_DOCUMENT_RANK1_PROBES": "7/9",
+    "EXPECTED_DOCUMENT_RANK_TOP3_PROBES": "8/9",
+    "EXPECTED_DOCUMENT_RANK_TOP10_PROBES": "9/9",
+    "STABLE_TOP1_DOCUMENT_PROBES": "9/9",
+    "STABLE_TOP1_CHUNK_PROBES": "8/9",
+    "EXACT_TOP10_ORDER_STABLE_PROBES": "4/9",
+    "VARIATION_PROBES": [
+      "ID01",
+      "ID05",
+      "ID06",
+      "ID08",
+      "ID09"
+    ]
+  },
+  "runs": [
+    {
+      "probe_id": "ID01",
+      "canonical_title": "DigComp 3.0",
+      "reference": "DigComp 3.0 / DOI 10.2760/0001149",
+      "expected_document_id": "DOC032",
+      "query": "DigComp 3.0. DigComp 3.0 / DOI 10.2760/0001149.",
+      "repeats": [
+        {
+          "repeat": 1,
+          "elapsed_ms": 4492.207,
+          "top1_chunk_id": "DOC032-P0053-C001",
+          "top1_document_id": "DOC032",
+          "top1_score": 0.8261911869049072,
+          "expected_document_first_rank": 1,
+          "expected_document_rank1": true,
+          "expected_document_rank_top3": true,
+          "expected_document_rank_top10": true,
+          "results": [
+            {
+              "rank": 1,
+              "chunk_id": "DOC032-P0053-C001",
+              "document_id": "DOC032",
+              "score": 0.8261911869049072
+            },
+            {
+              "rank": 2,
+              "chunk_id": "DOC032-P0009-C001",
+              "document_id": "DOC032",
+              "score": 0.8255953788757324
+            },
+            {
+              "rank": 3,
+              "chunk_id": "DOC032-P0017-C001",
+              "document_id": "DOC032",
+              "score": 0.8129149675369263
+            },
+            {
+              "rank": 4,
+              "chunk_id": "DOC032-P0078-C001",
+              "document_id": "DOC032",
+              "score": 0.799181342124939
+            },
+            {
+              "rank": 5,
+              "chunk_id": "DOC032-P0052-C001",
+              "document_id": "DOC032",
+              "score": 0.7987164258956909
+            },
+            {
+              "rank": 6,
+              "chunk_id": "DOC032-P0029-C001",
+              "document_id": "DOC032",
+              "score": 0.7927192449569702
+            },
+            {
+              "rank": 7,
+              "chunk_id": "DOC032-P0077-C001",
+              "document_id": "DOC032",
+              "score": 0.7839316725730896
+            },
+            {
+              "rank": 8,
+              "chunk_id": "DOC032-P0028-C001",
+              "document_id": "DOC032",
+              "score": 0.7771040201187134
+            },
+            {
+              "rank": 9,
+              "chunk_id": "DOC032-P0016-C001",
+              "document_id": "DOC032",
+              "score": 0.7654091119766235
+            },
+            {
+              "rank": 10,
+              "chunk_id": "DOC032-P0010-C001",
+              "document_id": "DOC032",
+              "score": 0.7623255252838135
+            }
+          ]
+        },
+        {
+          "repeat": 2,
+          "elapsed_ms": 127.858,
+          "top1_chunk_id": "DOC032-P0009-C001",
+          "top1_document_id": "DOC032",
+          "top1_score": 0.8270876407623291,
+          "expected_document_first_rank": 1,
+          "expected_document_rank1": true,
+          "expected_document_rank_top3": true,
+          "expected_document_rank_top10": true,
+          "results": [
+            {
+              "rank": 1,
+              "chunk_id": "DOC032-P0009-C001",
+              "document_id": "DOC032",
+              "score": 0.8270876407623291
+            },
+            {
+              "rank": 2,
+              "chunk_id": "DOC032-P0053-C001",
+              "document_id": "DOC032",
+              "score": 0.8269416689872742
+            },
+            {
+              "rank": 3,
+              "chunk_id": "DOC032-P0017-C001",
+              "document_id": "DOC032",
+              "score": 0.8145610094070435
+            },
+            {
+              "rank": 4,
+              "chunk_id": "DOC032-P0052-C001",
+              "document_id": "DOC032",
+              "score": 0.8004800081253052
+            },
+            {
+              "rank": 5,
+              "chunk_id": "DOC032-P0078-C001",
+              "document_id": "DOC032",
+              "score": 0.7998710870742798
+            },
+            {
+              "rank": 6,
+              "chunk_id": "DOC032-P0029-C001",
+              "document_id": "DOC032",
+              "score": 0.794196367263794
+            },
+            {
+              "rank": 7,
+              "chunk_id": "DOC032-P0077-C001",
+              "document_id": "DOC032",
+              "score": 0.7851970195770264
+            },
+            {
+              "rank": 8,
+              "chunk_id": "DOC032-P0028-C001",
+              "document_id": "DOC032",
+              "score": 0.7780673503875732
+            },
+            {
+              "rank": 9,
+              "chunk_id": "DOC032-P0016-C001",
+              "document_id": "DOC032",
+              "score": 0.7667914032936096
+            },
+            {
+              "rank": 10,
+              "chunk_id": "DOC032-P0010-C001",
+              "document_id": "DOC032",
+              "score": 0.7646621465682983
+            }
+          ]
+        },
+        {
+          "repeat": 3,
+          "elapsed_ms": 111.941,
+          "top1_chunk_id": "DOC032-P0009-C001",
+          "top1_document_id": "DOC032",
+          "top1_score": 0.8270876407623291,
+          "expected_document_first_rank": 1,
+          "expected_document_rank1": true,
+          "expected_document_rank_top3": true,
+          "expected_document_rank_top10": true,
+          "results": [
+            {
+              "rank": 1,
+              "chunk_id": "DOC032-P0009-C001",
+              "document_id": "DOC032",
+              "score": 0.8270876407623291
+            },
+            {
+              "rank": 2,
+              "chunk_id": "DOC032-P0053-C001",
+              "document_id": "DOC032",
+              "score": 0.8269416689872742
+            },
+            {
+              "rank": 3,
+              "chunk_id": "DOC032-P0017-C001",
+              "document_id": "DOC032",
+              "score": 0.8145610094070435
+            },
+            {
+              "rank": 4,
+              "chunk_id": "DOC032-P0052-C001",
+              "document_id": "DOC032",
+              "score": 0.8004800081253052
+            },
+            {
+              "rank": 5,
+              "chunk_id": "DOC032-P0078-C001",
+              "document_id": "DOC032",
+              "score": 0.7998710870742798
+            },
+            {
+              "rank": 6,
+              "chunk_id": "DOC032-P0029-C001",
+              "document_id": "DOC032",
+              "score": 0.794196367263794
+            },
+            {
+              "rank": 7,
+              "chunk_id": "DOC032-P0077-C001",
+              "document_id": "DOC032",
+              "score": 0.7851970195770264
+            },
+            {
+              "rank": 8,
+              "chunk_id": "DOC032-P0028-C001",
+              "document_id": "DOC032",
+              "score": 0.7780673503875732
+            },
+            {
+              "rank": 9,
+              "chunk_id": "DOC032-P0016-C001",
+              "document_id": "DOC032",
+              "score": 0.7667914032936096
+            },
+            {
+              "rank": 10,
+              "chunk_id": "DOC032-P0010-C001",
+              "document_id": "DOC032",
+              "score": 0.7646621465682983
+            }
+          ]
+        }
+      ],
+      "aggregate": {
+        "stable_top1_document": true,
+        "stable_top1_chunk": false,
+        "exact_top10_order_stable": false,
+        "first_ranks": [
+          1,
+          1,
+          1
+        ],
+        "variation_probe": true
+      }
+    },
+    {
+      "probe_id": "ID02",
+      "canonical_title": "Reference Framework of Competences for Democratic Culture Volume 1",
+      "reference": "RFCDC Volume 1",
+      "expected_document_id": "DOC033",
+      "query": "Reference Framework of Competences for Democratic Culture Volume 1. RFCDC Volume 1.",
+      "repeats": [
+        {
+          "repeat": 1,
+          "elapsed_ms": 112.63,
+          "top1_chunk_id": "DOC034-P0003-C001",
+          "top1_document_id": "DOC034",
+          "top1_score": 0.7969823479652405,
+          "expected_document_first_rank": 2,
+          "expected_document_rank1": false,
+          "expected_document_rank_top3": true,
+          "expected_document_rank_top10": true,
+          "results": [
+            {
+              "rank": 1,
+              "chunk_id": "DOC034-P0003-C001",
+              "document_id": "DOC034",
+              "score": 0.7969823479652405
+            },
+            {
+              "rank": 2,
+              "chunk_id": "DOC033-P0003-C001",
+              "document_id": "DOC033",
+              "score": 0.7902324199676514
+            },
+            {
+              "rank": 3,
+              "chunk_id": "DOC033-P0013-C001",
+              "document_id": "DOC033",
+              "score": 0.7744970321655273
+            },
+            {
+              "rank": 4,
+              "chunk_id": "DOC035-P0009-C001",
+              "document_id": "DOC035",
+              "score": 0.7296808958053589
+            },
+            {
+              "rank": 5,
+              "chunk_id": "DOC033-P0009-C001",
+              "document_id": "DOC033",
+              "score": 0.7272728085517883
+            },
+            {
+              "rank": 6,
+              "chunk_id": "DOC034-P0009-C001",
+              "document_id": "DOC034",
+              "score": 0.7249165773391724
+            },
+            {
+              "rank": 7,
+              "chunk_id": "DOC033-P0010-C001",
+              "document_id": "DOC033",
+              "score": 0.7136914730072021
+            },
+            {
+              "rank": 8,
+              "chunk_id": "DOC033-P0004-C001",
+              "document_id": "DOC033",
+              "score": 0.7038569450378418
+            },
+            {
+              "rank": 9,
+              "chunk_id": "DOC035-P0010-C001",
+              "document_id": "DOC035",
+              "score": 0.7024072408676147
+            },
+            {
+              "rank": 10,
+              "chunk_id": "DOC034-P0007-C001",
+              "document_id": "DOC034",
+              "score": 0.7005258798599243
+            }
+          ]
+        },
+        {
+          "repeat": 2,
+          "elapsed_ms": 83.335,
+          "top1_chunk_id": "DOC034-P0003-C001",
+          "top1_document_id": "DOC034",
+          "top1_score": 0.7967679500579834,
+          "expected_document_first_rank": 2,
+          "expected_document_rank1": false,
+          "expected_document_rank_top3": true,
+          "expected_document_rank_top10": true,
+          "results": [
+            {
+              "rank": 1,
+              "chunk_id": "DOC034-P0003-C001",
+              "document_id": "DOC034",
+              "score": 0.7967679500579834
+            },
+            {
+              "rank": 2,
+              "chunk_id": "DOC033-P0003-C001",
+              "document_id": "DOC033",
+              "score": 0.7894812822341919
+            },
+            {
+              "rank": 3,
+              "chunk_id": "DOC033-P0013-C001",
+              "document_id": "DOC033",
+              "score": 0.7750738859176636
+            },
+            {
+              "rank": 4,
+              "chunk_id": "DOC035-P0009-C001",
+              "document_id": "DOC035",
+              "score": 0.7298179268836975
+            },
+            {
+              "rank": 5,
+              "chunk_id": "DOC033-P0009-C001",
+              "document_id": "DOC033",
+              "score": 0.7274914979934692
+            },
+            {
+              "rank": 6,
+              "chunk_id": "DOC034-P0009-C001",
+              "document_id": "DOC034",
+              "score": 0.7251420021057129
+            },
+            {
+              "rank": 7,
+              "chunk_id": "DOC033-P0010-C001",
+              "document_id": "DOC033",
+              "score": 0.7152685523033142
+            },
+            {
+              "rank": 8,
+              "chunk_id": "DOC033-P0004-C001",
+              "document_id": "DOC033",
+              "score": 0.7043748497962952
+            },
+            {
+              "rank": 9,
+              "chunk_id": "DOC035-P0010-C001",
+              "document_id": "DOC035",
+              "score": 0.703787088394165
+            },
+            {
+              "rank": 10,
+              "chunk_id": "DOC034-P0007-C001",
+              "document_id": "DOC034",
+              "score": 0.6999876499176025
+            }
+          ]
+        },
+        {
+          "repeat": 3,
+          "elapsed_ms": 60.064,
+          "top1_chunk_id": "DOC034-P0003-C001",
+          "top1_document_id": "DOC034",
+          "top1_score": 0.7967679500579834,
+          "expected_document_first_rank": 2,
+          "expected_document_rank1": false,
+          "expected_document_rank_top3": true,
+          "expected_document_rank_top10": true,
+          "results": [
+            {
+              "rank": 1,
+              "chunk_id": "DOC034-P0003-C001",
+              "document_id": "DOC034",
+              "score": 0.7967679500579834
+            },
+            {
+              "rank": 2,
+              "chunk_id": "DOC033-P0003-C001",
+              "document_id": "DOC033",
+              "score": 0.7894812822341919
+            },
+            {
+              "rank": 3,
+              "chunk_id": "DOC033-P0013-C001",
+              "document_id": "DOC033",
+              "score": 0.7750738859176636
+            },
+            {
+              "rank": 4,
+              "chunk_id": "DOC035-P0009-C001",
+              "document_id": "DOC035",
+              "score": 0.7298179268836975
+            },
+            {
+              "rank": 5,
+              "chunk_id": "DOC033-P0009-C001",
+              "document_id": "DOC033",
+              "score": 0.7274914979934692
+            },
+            {
+              "rank": 6,
+              "chunk_id": "DOC034-P0009-C001",
+              "document_id": "DOC034",
+              "score": 0.7251420021057129
+            },
+            {
+              "rank": 7,
+              "chunk_id": "DOC033-P0010-C001",
+              "document_id": "DOC033",
+              "score": 0.7152685523033142
+            },
+            {
+              "rank": 8,
+              "chunk_id": "DOC033-P0004-C001",
+              "document_id": "DOC033",
+              "score": 0.7043748497962952
+            },
+            {
+              "rank": 9,
+              "chunk_id": "DOC035-P0010-C001",
+              "document_id": "DOC035",
+              "score": 0.703787088394165
+            },
+            {
+              "rank": 10,
+              "chunk_id": "DOC034-P0007-C001",
+              "document_id": "DOC034",
+              "score": 0.6999876499176025
+            }
+          ]
+        }
+      ],
+      "aggregate": {
+        "stable_top1_document": true,
+        "stable_top1_chunk": true,
+        "exact_top10_order_stable": true,
+        "first_ranks": [
+          2,
+          2,
+          2
+        ],
+        "variation_probe": false
+      }
+    },
+    {
+      "probe_id": "ID03",
+      "canonical_title": "Reference Framework of Competences for Democratic Culture Volume 2",
+      "reference": "RFCDC Volume 2",
+      "expected_document_id": "DOC034",
+      "query": "Reference Framework of Competences for Democratic Culture Volume 2. RFCDC Volume 2.",
+      "repeats": [
+        {
+          "repeat": 1,
+          "elapsed_ms": 131.385,
+          "top1_chunk_id": "DOC034-P0003-C001",
+          "top1_document_id": "DOC034",
+          "top1_score": 0.7897852659225464,
+          "expected_document_first_rank": 1,
+          "expected_document_rank1": true,
+          "expected_document_rank_top3": true,
+          "expected_document_rank_top10": true,
+          "results": [
+            {
+              "rank": 1,
+              "chunk_id": "DOC034-P0003-C001",
+              "document_id": "DOC034",
+              "score": 0.7897852659225464
+            },
+            {
+              "rank": 2,
+              "chunk_id": "DOC033-P0003-C001",
+              "document_id": "DOC033",
+              "score": 0.7363302707672119
+            },
+            {
+              "rank": 3,
+              "chunk_id": "DOC033-P0013-C001",
+              "document_id": "DOC033",
+              "score": 0.73270583152771
+            },
+            {
+              "rank": 4,
+              "chunk_id": "DOC033-P0009-C001",
+              "document_id": "DOC033",
+              "score": 0.7023324370384216
+            },
+            {
+              "rank": 5,
+              "chunk_id": "DOC035-P0009-C001",
+              "document_id": "DOC035",
+              "score": 0.70218425989151
+            },
+            {
+              "rank": 6,
+              "chunk_id": "DOC034-P0009-C001",
+              "document_id": "DOC034",
+              "score": 0.6997039318084717
+            },
+            {
+              "rank": 7,
+              "chunk_id": "DOC034-P0004-C001",
+              "document_id": "DOC034",
+              "score": 0.6968742609024048
+            },
+            {
+              "rank": 8,
+              "chunk_id": "DOC035-P0004-C001",
+              "document_id": "DOC035",
+              "score": 0.6851238012313843
+            },
+            {
+              "rank": 9,
+              "chunk_id": "DOC033-P0004-C001",
+              "document_id": "DOC033",
+              "score": 0.6846640706062317
+            },
+            {
+              "rank": 10,
+              "chunk_id": "DOC033-P0010-C001",
+              "document_id": "DOC033",
+              "score": 0.6785823106765747
+            }
+          ]
+        },
+        {
+          "repeat": 2,
+          "elapsed_ms": 40.605,
+          "top1_chunk_id": "DOC034-P0003-C001",
+          "top1_document_id": "DOC034",
+          "top1_score": 0.7899935245513916,
+          "expected_document_first_rank": 1,
+          "expected_document_rank1": true,
+          "expected_document_rank_top3": true,
+          "expected_document_rank_top10": true,
+          "results": [
+            {
+              "rank": 1,
+              "chunk_id": "DOC034-P0003-C001",
+              "document_id": "DOC034",
+              "score": 0.7899935245513916
+            },
+            {
+              "rank": 2,
+              "chunk_id": "DOC033-P0003-C001",
+              "document_id": "DOC033",
+              "score": 0.7372209429740906
+            },
+            {
+              "rank": 3,
+              "chunk_id": "DOC033-P0013-C001",
+              "document_id": "DOC033",
+              "score": 0.734094500541687
+            },
+            {
+              "rank": 4,
+              "chunk_id": "DOC033-P0009-C001",
+              "document_id": "DOC033",
+              "score": 0.7040172815322876
+            },
+            {
+              "rank": 5,
+              "chunk_id": "DOC035-P0009-C001",
+              "document_id": "DOC035",
+              "score": 0.7039282917976379
+            },
+            {
+              "rank": 6,
+              "chunk_id": "DOC034-P0009-C001",
+              "document_id": "DOC034",
+              "score": 0.7012549042701721
+            },
+            {
+              "rank": 7,
+              "chunk_id": "DOC034-P0004-C001",
+              "document_id": "DOC034",
+              "score": 0.6966590881347656
+            },
+            {
+              "rank": 8,
+              "chunk_id": "DOC035-P0004-C001",
+              "document_id": "DOC035",
+              "score": 0.6852626204490662
+            },
+            {
+              "rank": 9,
+              "chunk_id": "DOC033-P0004-C001",
+              "document_id": "DOC033",
+              "score": 0.6850261688232422
+            },
+            {
+              "rank": 10,
+              "chunk_id": "DOC033-P0010-C001",
+              "document_id": "DOC033",
+              "score": 0.6787581443786621
+            }
+          ]
+        },
+        {
+          "repeat": 3,
+          "elapsed_ms": 75.813,
+          "top1_chunk_id": "DOC034-P0003-C001",
+          "top1_document_id": "DOC034",
+          "top1_score": 0.7899935245513916,
+          "expected_document_first_rank": 1,
+          "expected_document_rank1": true,
+          "expected_document_rank_top3": true,
+          "expected_document_rank_top10": true,
+          "results": [
+            {
+              "rank": 1,
+              "chunk_id": "DOC034-P0003-C001",
+              "document_id": "DOC034",
+              "score": 0.7899935245513916
+            },
+            {
+              "rank": 2,
+              "chunk_id": "DOC033-P0003-C001",
+              "document_id": "DOC033",
+              "score": 0.7372209429740906
+            },
+            {
+              "rank": 3,
+              "chunk_id": "DOC033-P0013-C001",
+              "document_id": "DOC033",
+              "score": 0.734094500541687
+            },
+            {
+              "rank": 4,
+              "chunk_id": "DOC033-P0009-C001",
+              "document_id": "DOC033",
+              "score": 0.7040172815322876
+            },
+            {
+              "rank": 5,
+              "chunk_id": "DOC035-P0009-C001",
+              "document_id": "DOC035",
+              "score": 0.7039282917976379
+            },
+            {
+              "rank": 6,
+              "chunk_id": "DOC034-P0009-C001",
+              "document_id": "DOC034",
+              "score": 0.7012549042701721
+            },
+            {
+              "rank": 7,
+              "chunk_id": "DOC034-P0004-C001",
+              "document_id": "DOC034",
+              "score": 0.6966590881347656
+            },
+            {
+              "rank": 8,
+              "chunk_id": "DOC035-P0004-C001",
+              "document_id": "DOC035",
+              "score": 0.6852626204490662
+            },
+            {
+              "rank": 9,
+              "chunk_id": "DOC033-P0004-C001",
+              "document_id": "DOC033",
+              "score": 0.6850261688232422
+            },
+            {
+              "rank": 10,
+              "chunk_id": "DOC033-P0010-C001",
+              "document_id": "DOC033",
+              "score": 0.6787581443786621
+            }
+          ]
+        }
+      ],
+      "aggregate": {
+        "stable_top1_document": true,
+        "stable_top1_chunk": true,
+        "exact_top10_order_stable": true,
+        "first_ranks": [
+          1,
+          1,
+          1
+        ],
+        "variation_probe": false
+      }
+    },
+    {
+      "probe_id": "ID04",
+      "canonical_title": "Reference Framework of Competences for Democratic Culture Volume 3",
+      "reference": "RFCDC Volume 3",
+      "expected_document_id": "DOC035",
+      "query": "Reference Framework of Competences for Democratic Culture Volume 3. RFCDC Volume 3.",
+      "repeats": [
+        {
+          "repeat": 1,
+          "elapsed_ms": 52.029,
+          "top1_chunk_id": "DOC034-P0003-C001",
+          "top1_document_id": "DOC034",
+          "top1_score": 0.7395002841949463,
+          "expected_document_first_rank": 4,
+          "expected_document_rank1": false,
+          "expected_document_rank_top3": false,
+          "expected_document_rank_top10": true,
+          "results": [
+            {
+              "rank": 1,
+              "chunk_id": "DOC034-P0003-C001",
+              "document_id": "DOC034",
+              "score": 0.7395002841949463
+            },
+            {
+              "rank": 2,
+              "chunk_id": "DOC033-P0003-C001",
+              "document_id": "DOC033",
+              "score": 0.7213464975357056
+            },
+            {
+              "rank": 3,
+              "chunk_id": "DOC033-P0013-C001",
+              "document_id": "DOC033",
+              "score": 0.7189157009124756
+            },
+            {
+              "rank": 4,
+              "chunk_id": "DOC035-P0009-C001",
+              "document_id": "DOC035",
+              "score": 0.7088215351104736
+            },
+            {
+              "rank": 5,
+              "chunk_id": "DOC033-P0009-C001",
+              "document_id": "DOC033",
+              "score": 0.7066488265991211
+            },
+            {
+              "rank": 6,
+              "chunk_id": "DOC034-P0009-C001",
+              "document_id": "DOC034",
+              "score": 0.7000555396080017
+            },
+            {
+              "rank": 7,
+              "chunk_id": "DOC035-P0004-C001",
+              "document_id": "DOC035",
+              "score": 0.6949743032455444
+            },
+            {
+              "rank": 8,
+              "chunk_id": "DOC035-P0010-C001",
+              "document_id": "DOC035",
+              "score": 0.690928041934967
+            },
+            {
+              "rank": 9,
+              "chunk_id": "DOC034-P0010-C001",
+              "document_id": "DOC034",
+              "score": 0.6835330128669739
+            },
+            {
+              "rank": 10,
+              "chunk_id": "DOC033-P0010-C001",
+              "document_id": "DOC033",
+              "score": 0.6779876947402954
+            }
+          ]
+        },
+        {
+          "repeat": 2,
+          "elapsed_ms": 51.803,
+          "top1_chunk_id": "DOC034-P0003-C001",
+          "top1_document_id": "DOC034",
+          "top1_score": 0.7406715154647827,
+          "expected_document_first_rank": 4,
+          "expected_document_rank1": false,
+          "expected_document_rank_top3": false,
+          "expected_document_rank_top10": true,
+          "results": [
+            {
+              "rank": 1,
+              "chunk_id": "DOC034-P0003-C001",
+              "document_id": "DOC034",
+              "score": 0.7406715154647827
+            },
+            {
+              "rank": 2,
+              "chunk_id": "DOC033-P0003-C001",
+              "document_id": "DOC033",
+              "score": 0.723281741142273
+            },
+            {
+              "rank": 3,
+              "chunk_id": "DOC033-P0013-C001",
+              "document_id": "DOC033",
+              "score": 0.7201727628707886
+            },
+            {
+              "rank": 4,
+              "chunk_id": "DOC035-P0009-C001",
+              "document_id": "DOC035",
+              "score": 0.7113497257232666
+            },
+            {
+              "rank": 5,
+              "chunk_id": "DOC033-P0009-C001",
+              "document_id": "DOC033",
+              "score": 0.7094359397888184
+            },
+            {
+              "rank": 6,
+              "chunk_id": "DOC034-P0009-C001",
+              "document_id": "DOC034",
+              "score": 0.7032608985900879
+            },
+            {
+              "rank": 7,
+              "chunk_id": "DOC035-P0004-C001",
+              "document_id": "DOC035",
+              "score": 0.6972128748893738
+            },
+            {
+              "rank": 8,
+              "chunk_id": "DOC035-P0010-C001",
+              "document_id": "DOC035",
+              "score": 0.6931747198104858
+            },
+            {
+              "rank": 9,
+              "chunk_id": "DOC034-P0010-C001",
+              "document_id": "DOC034",
+              "score": 0.6856560707092285
+            },
+            {
+              "rank": 10,
+              "chunk_id": "DOC033-P0010-C001",
+              "document_id": "DOC033",
+              "score": 0.6808191537857056
+            }
+          ]
+        },
+        {
+          "repeat": 3,
+          "elapsed_ms": 143.647,
+          "top1_chunk_id": "DOC034-P0003-C001",
+          "top1_document_id": "DOC034",
+          "top1_score": 0.7406715154647827,
+          "expected_document_first_rank": 4,
+          "expected_document_rank1": false,
+          "expected_document_rank_top3": false,
+          "expected_document_rank_top10": true,
+          "results": [
+            {
+              "rank": 1,
+              "chunk_id": "DOC034-P0003-C001",
+              "document_id": "DOC034",
+              "score": 0.7406715154647827
+            },
+            {
+              "rank": 2,
+              "chunk_id": "DOC033-P0003-C001",
+              "document_id": "DOC033",
+              "score": 0.723281741142273
+            },
+            {
+              "rank": 3,
+              "chunk_id": "DOC033-P0013-C001",
+              "document_id": "DOC033",
+              "score": 0.7201727628707886
+            },
+            {
+              "rank": 4,
+              "chunk_id": "DOC035-P0009-C001",
+              "document_id": "DOC035",
+              "score": 0.7113497257232666
+            },
+            {
+              "rank": 5,
+              "chunk_id": "DOC033-P0009-C001",
+              "document_id": "DOC033",
+              "score": 0.7094359397888184
+            },
+            {
+              "rank": 6,
+              "chunk_id": "DOC034-P0009-C001",
+              "document_id": "DOC034",
+              "score": 0.7032608985900879
+            },
+            {
+              "rank": 7,
+              "chunk_id": "DOC035-P0004-C001",
+              "document_id": "DOC035",
+              "score": 0.6972128748893738
+            },
+            {
+              "rank": 8,
+              "chunk_id": "DOC035-P0010-C001",
+              "document_id": "DOC035",
+              "score": 0.6931747198104858
+            },
+            {
+              "rank": 9,
+              "chunk_id": "DOC034-P0010-C001",
+              "document_id": "DOC034",
+              "score": 0.6856560707092285
+            },
+            {
+              "rank": 10,
+              "chunk_id": "DOC033-P0010-C001",
+              "document_id": "DOC033",
+              "score": 0.6808191537857056
+            }
+          ]
+        }
+      ],
+      "aggregate": {
+        "stable_top1_document": true,
+        "stable_top1_chunk": true,
+        "exact_top10_order_stable": true,
+        "first_ranks": [
+          4,
+          4,
+          4
+        ],
+        "variation_probe": false
+      }
+    },
+    {
+      "probe_id": "ID05",
+      "canonical_title": "Key Competences for Lifelong Learning",
+      "reference": "2018/C 189/01",
+      "expected_document_id": "DOC036",
+      "query": "Key Competences for Lifelong Learning. 2018/C 189/01.",
+      "repeats": [
+        {
+          "repeat": 1,
+          "elapsed_ms": 36.852,
+          "top1_chunk_id": "DOC036-P0006-C001",
+          "top1_document_id": "DOC036",
+          "top1_score": 0.7350465059280396,
+          "expected_document_first_rank": 1,
+          "expected_document_rank1": true,
+          "expected_document_rank_top3": true,
+          "expected_document_rank_top10": true,
+          "results": [
+            {
+              "rank": 1,
+              "chunk_id": "DOC036-P0006-C001",
+              "document_id": "DOC036",
+              "score": 0.7350465059280396
+            },
+            {
+              "rank": 2,
+              "chunk_id": "DOC036-P0007-C001",
+              "document_id": "DOC036",
+              "score": 0.7071795463562012
+            },
+            {
+              "rank": 3,
+              "chunk_id": "DOC036-P0004-C001",
+              "document_id": "DOC036",
+              "score": 0.6936530470848083
+            },
+            {
+              "rank": 4,
+              "chunk_id": "DOC036-P0001-C001",
+              "document_id": "DOC036",
+              "score": 0.6933472156524658
+            },
+            {
+              "rank": 5,
+              "chunk_id": "DOC032-P0056-C002",
+              "document_id": "DOC032",
+              "score": 0.6764932870864868
+            },
+            {
+              "rank": 6,
+              "chunk_id": "DOC036-P0005-C002",
+              "document_id": "DOC036",
+              "score": 0.6574983596801758
+            },
+            {
+              "rank": 7,
+              "chunk_id": "DOC036-P0005-C001",
+              "document_id": "DOC036",
+              "score": 0.6470125317573547
+            },
+            {
+              "rank": 8,
+              "chunk_id": "DOC036-P0007-C002",
+              "document_id": "DOC036",
+              "score": 0.6223119497299194
+            },
+            {
+              "rank": 9,
+              "chunk_id": "DOC036-P0003-C001",
+              "document_id": "DOC036",
+              "score": 0.6184784173965454
+            },
+            {
+              "rank": 10,
+              "chunk_id": "DOC036-P0012-C001",
+              "document_id": "DOC036",
+              "score": 0.6073223352432251
+            }
+          ]
+        },
+        {
+          "repeat": 2,
+          "elapsed_ms": 63.544,
+          "top1_chunk_id": "DOC036-P0006-C001",
+          "top1_document_id": "DOC036",
+          "top1_score": 0.7325475215911865,
+          "expected_document_first_rank": 1,
+          "expected_document_rank1": true,
+          "expected_document_rank_top3": true,
+          "expected_document_rank_top10": true,
+          "results": [
+            {
+              "rank": 1,
+              "chunk_id": "DOC036-P0006-C001",
+              "document_id": "DOC036",
+              "score": 0.7325475215911865
+            },
+            {
+              "rank": 2,
+              "chunk_id": "DOC036-P0007-C001",
+              "document_id": "DOC036",
+              "score": 0.7036432027816772
+            },
+            {
+              "rank": 3,
+              "chunk_id": "DOC036-P0001-C001",
+              "document_id": "DOC036",
+              "score": 0.6917449235916138
+            },
+            {
+              "rank": 4,
+              "chunk_id": "DOC036-P0004-C001",
+              "document_id": "DOC036",
+              "score": 0.6913065910339355
+            },
+            {
+              "rank": 5,
+              "chunk_id": "DOC032-P0056-C002",
+              "document_id": "DOC032",
+              "score": 0.6744027137756348
+            },
+            {
+              "rank": 6,
+              "chunk_id": "DOC036-P0005-C002",
+              "document_id": "DOC036",
+              "score": 0.6536599397659302
+            },
+            {
+              "rank": 7,
+              "chunk_id": "DOC036-P0005-C001",
+              "document_id": "DOC036",
+              "score": 0.643323540687561
+            },
+            {
+              "rank": 8,
+              "chunk_id": "DOC036-P0007-C002",
+              "document_id": "DOC036",
+              "score": 0.6198505163192749
+            },
+            {
+              "rank": 9,
+              "chunk_id": "DOC036-P0003-C001",
+              "document_id": "DOC036",
+              "score": 0.6157757639884949
+            },
+            {
+              "rank": 10,
+              "chunk_id": "DOC036-P0002-C001",
+              "document_id": "DOC036",
+              "score": 0.6044522523880005
+            }
+          ]
+        },
+        {
+          "repeat": 3,
+          "elapsed_ms": 67.831,
+          "top1_chunk_id": "DOC036-P0006-C001",
+          "top1_document_id": "DOC036",
+          "top1_score": 0.7325475215911865,
+          "expected_document_first_rank": 1,
+          "expected_document_rank1": true,
+          "expected_document_rank_top3": true,
+          "expected_document_rank_top10": true,
+          "results": [
+            {
+              "rank": 1,
+              "chunk_id": "DOC036-P0006-C001",
+              "document_id": "DOC036",
+              "score": 0.7325475215911865
+            },
+            {
+              "rank": 2,
+              "chunk_id": "DOC036-P0007-C001",
+              "document_id": "DOC036",
+              "score": 0.7036432027816772
+            },
+            {
+              "rank": 3,
+              "chunk_id": "DOC036-P0001-C001",
+              "document_id": "DOC036",
+              "score": 0.6917449235916138
+            },
+            {
+              "rank": 4,
+              "chunk_id": "DOC036-P0004-C001",
+              "document_id": "DOC036",
+              "score": 0.6913065910339355
+            },
+            {
+              "rank": 5,
+              "chunk_id": "DOC032-P0056-C002",
+              "document_id": "DOC032",
+              "score": 0.6744027137756348
+            },
+            {
+              "rank": 6,
+              "chunk_id": "DOC036-P0005-C002",
+              "document_id": "DOC036",
+              "score": 0.6536599397659302
+            },
+            {
+              "rank": 7,
+              "chunk_id": "DOC036-P0005-C001",
+              "document_id": "DOC036",
+              "score": 0.643323540687561
+            },
+            {
+              "rank": 8,
+              "chunk_id": "DOC036-P0007-C002",
+              "document_id": "DOC036",
+              "score": 0.6198505163192749
+            },
+            {
+              "rank": 9,
+              "chunk_id": "DOC036-P0003-C001",
+              "document_id": "DOC036",
+              "score": 0.6157757639884949
+            },
+            {
+              "rank": 10,
+              "chunk_id": "DOC036-P0002-C001",
+              "document_id": "DOC036",
+              "score": 0.6044522523880005
+            }
+          ]
+        }
+      ],
+      "aggregate": {
+        "stable_top1_document": true,
+        "stable_top1_chunk": true,
+        "exact_top10_order_stable": false,
+        "first_ranks": [
+          1,
+          1,
+          1
+        ],
+        "variation_probe": true
+      }
+    },
+    {
+      "probe_id": "ID06",
+      "canonical_title": "UNESCO ICT Competency Framework for Teachers Version 3",
+      "reference": "ICT CFT Version 3",
+      "expected_document_id": "DOC037",
+      "query": "UNESCO ICT Competency Framework for Teachers Version 3. ICT CFT Version 3.",
+      "repeats": [
+        {
+          "repeat": 1,
+          "elapsed_ms": 64.09,
+          "top1_chunk_id": "DOC037-P0001-C001",
+          "top1_document_id": "DOC037",
+          "top1_score": 0.8420357704162598,
+          "expected_document_first_rank": 1,
+          "expected_document_rank1": true,
+          "expected_document_rank_top3": true,
+          "expected_document_rank_top10": true,
+          "results": [
+            {
+              "rank": 1,
+              "chunk_id": "DOC037-P0001-C001",
+              "document_id": "DOC037",
+              "score": 0.8420357704162598
+            },
+            {
+              "rank": 2,
+              "chunk_id": "DOC037-P0012-C001",
+              "document_id": "DOC037",
+              "score": 0.7965473532676697
+            },
+            {
+              "rank": 3,
+              "chunk_id": "DOC037-P0013-C001",
+              "document_id": "DOC037",
+              "score": 0.7905983924865723
+            },
+            {
+              "rank": 4,
+              "chunk_id": "DOC037-P0066-C001",
+              "document_id": "DOC037",
+              "score": 0.7732418775558472
+            },
+            {
+              "rank": 5,
+              "chunk_id": "DOC037-P0009-C001",
+              "document_id": "DOC037",
+              "score": 0.755273163318634
+            },
+            {
+              "rank": 6,
+              "chunk_id": "DOC037-P0009-C002",
+              "document_id": "DOC037",
+              "score": 0.755189061164856
+            },
+            {
+              "rank": 7,
+              "chunk_id": "DOC037-P0050-C001",
+              "document_id": "DOC037",
+              "score": 0.7211827039718628
+            },
+            {
+              "rank": 8,
+              "chunk_id": "DOC037-P0010-C001",
+              "document_id": "DOC037",
+              "score": 0.7074557542800903
+            },
+            {
+              "rank": 9,
+              "chunk_id": "DOC037-P0052-C001",
+              "document_id": "DOC037",
+              "score": 0.7069634795188904
+            },
+            {
+              "rank": 10,
+              "chunk_id": "DOC037-P0014-C001",
+              "document_id": "DOC037",
+              "score": 0.7027572989463806
+            }
+          ]
+        },
+        {
+          "repeat": 2,
+          "elapsed_ms": 43.972,
+          "top1_chunk_id": "DOC037-P0001-C001",
+          "top1_document_id": "DOC037",
+          "top1_score": 0.8415543437004089,
+          "expected_document_first_rank": 1,
+          "expected_document_rank1": true,
+          "expected_document_rank_top3": true,
+          "expected_document_rank_top10": true,
+          "results": [
+            {
+              "rank": 1,
+              "chunk_id": "DOC037-P0001-C001",
+              "document_id": "DOC037",
+              "score": 0.8415543437004089
+            },
+            {
+              "rank": 2,
+              "chunk_id": "DOC037-P0012-C001",
+              "document_id": "DOC037",
+              "score": 0.7972047328948975
+            },
+            {
+              "rank": 3,
+              "chunk_id": "DOC037-P0013-C001",
+              "document_id": "DOC037",
+              "score": 0.7916116714477539
+            },
+            {
+              "rank": 4,
+              "chunk_id": "DOC037-P0066-C001",
+              "document_id": "DOC037",
+              "score": 0.7733340263366699
+            },
+            {
+              "rank": 5,
+              "chunk_id": "DOC037-P0009-C002",
+              "document_id": "DOC037",
+              "score": 0.7570642232894897
+            },
+            {
+              "rank": 6,
+              "chunk_id": "DOC037-P0009-C001",
+              "document_id": "DOC037",
+              "score": 0.7555609941482544
+            },
+            {
+              "rank": 7,
+              "chunk_id": "DOC037-P0050-C001",
+              "document_id": "DOC037",
+              "score": 0.7225773334503174
+            },
+            {
+              "rank": 8,
+              "chunk_id": "DOC037-P0010-C001",
+              "document_id": "DOC037",
+              "score": 0.7088662385940552
+            },
+            {
+              "rank": 9,
+              "chunk_id": "DOC037-P0052-C001",
+              "document_id": "DOC037",
+              "score": 0.707831084728241
+            },
+            {
+              "rank": 10,
+              "chunk_id": "DOC037-P0014-C001",
+              "document_id": "DOC037",
+              "score": 0.7033823728561401
+            }
+          ]
+        },
+        {
+          "repeat": 3,
+          "elapsed_ms": 47.982,
+          "top1_chunk_id": "DOC037-P0001-C001",
+          "top1_document_id": "DOC037",
+          "top1_score": 0.8415543437004089,
+          "expected_document_first_rank": 1,
+          "expected_document_rank1": true,
+          "expected_document_rank_top3": true,
+          "expected_document_rank_top10": true,
+          "results": [
+            {
+              "rank": 1,
+              "chunk_id": "DOC037-P0001-C001",
+              "document_id": "DOC037",
+              "score": 0.8415543437004089
+            },
+            {
+              "rank": 2,
+              "chunk_id": "DOC037-P0012-C001",
+              "document_id": "DOC037",
+              "score": 0.7972047328948975
+            },
+            {
+              "rank": 3,
+              "chunk_id": "DOC037-P0013-C001",
+              "document_id": "DOC037",
+              "score": 0.7916116714477539
+            },
+            {
+              "rank": 4,
+              "chunk_id": "DOC037-P0066-C001",
+              "document_id": "DOC037",
+              "score": 0.7733340263366699
+            },
+            {
+              "rank": 5,
+              "chunk_id": "DOC037-P0009-C002",
+              "document_id": "DOC037",
+              "score": 0.7570642232894897
+            },
+            {
+              "rank": 6,
+              "chunk_id": "DOC037-P0009-C001",
+              "document_id": "DOC037",
+              "score": 0.7555609941482544
+            },
+            {
+              "rank": 7,
+              "chunk_id": "DOC037-P0050-C001",
+              "document_id": "DOC037",
+              "score": 0.7225773334503174
+            },
+            {
+              "rank": 8,
+              "chunk_id": "DOC037-P0010-C001",
+              "document_id": "DOC037",
+              "score": 0.7088662385940552
+            },
+            {
+              "rank": 9,
+              "chunk_id": "DOC037-P0052-C001",
+              "document_id": "DOC037",
+              "score": 0.707831084728241
+            },
+            {
+              "rank": 10,
+              "chunk_id": "DOC037-P0014-C001",
+              "document_id": "DOC037",
+              "score": 0.7033823728561401
+            }
+          ]
+        }
+      ],
+      "aggregate": {
+        "stable_top1_document": true,
+        "stable_top1_chunk": true,
+        "exact_top10_order_stable": false,
+        "first_ranks": [
+          1,
+          1,
+          1
+        ],
+        "variation_probe": true
+      }
+    },
+    {
+      "probe_id": "ID07",
+      "canonical_title": "European Declaration on Digital Rights and Principles for the Digital Decade",
+      "reference": "2023/C 23/01",
+      "expected_document_id": "DOC038",
+      "query": "European Declaration on Digital Rights and Principles for the Digital Decade. 2023/C 23/01.",
+      "repeats": [
+        {
+          "repeat": 1,
+          "elapsed_ms": 67.974,
+          "top1_chunk_id": "DOC038-P0001-C001",
+          "top1_document_id": "DOC038",
+          "top1_score": 0.8002210855484009,
+          "expected_document_first_rank": 1,
+          "expected_document_rank1": true,
+          "expected_document_rank_top3": true,
+          "expected_document_rank_top10": true,
+          "results": [
+            {
+              "rank": 1,
+              "chunk_id": "DOC038-P0001-C001",
+              "document_id": "DOC038",
+              "score": 0.8002210855484009
+            },
+            {
+              "rank": 2,
+              "chunk_id": "DOC038-P0003-C001",
+              "document_id": "DOC038",
+              "score": 0.7334142923355103
+            },
+            {
+              "rank": 3,
+              "chunk_id": "DOC032-P0013-C001",
+              "document_id": "DOC032",
+              "score": 0.6937735080718994
+            },
+            {
+              "rank": 4,
+              "chunk_id": "DOC032-P0012-C001",
+              "document_id": "DOC032",
+              "score": 0.6860955953598022
+            },
+            {
+              "rank": 5,
+              "chunk_id": "DOC038-P0002-C001",
+              "document_id": "DOC038",
+              "score": 0.6839739084243774
+            },
+            {
+              "rank": 6,
+              "chunk_id": "DOC032-P0057-C001",
+              "document_id": "DOC032",
+              "score": 0.6769006252288818
+            },
+            {
+              "rank": 7,
+              "chunk_id": "DOC032-P0013-C002",
+              "document_id": "DOC032",
+              "score": 0.6661605834960938
+            },
+            {
+              "rank": 8,
+              "chunk_id": "DOC038-P0002-C002",
+              "document_id": "DOC038",
+              "score": 0.6511729955673218
+            },
+            {
+              "rank": 9,
+              "chunk_id": "DOC038-P0006-C001",
+              "document_id": "DOC038",
+              "score": 0.6172323822975159
+            },
+            {
+              "rank": 10,
+              "chunk_id": "DOC038-P0004-C001",
+              "document_id": "DOC038",
+              "score": 0.611638605594635
+            }
+          ]
+        },
+        {
+          "repeat": 2,
+          "elapsed_ms": 55.896,
+          "top1_chunk_id": "DOC038-P0001-C001",
+          "top1_document_id": "DOC038",
+          "top1_score": 0.8015013933181763,
+          "expected_document_first_rank": 1,
+          "expected_document_rank1": true,
+          "expected_document_rank_top3": true,
+          "expected_document_rank_top10": true,
+          "results": [
+            {
+              "rank": 1,
+              "chunk_id": "DOC038-P0001-C001",
+              "document_id": "DOC038",
+              "score": 0.8015013933181763
+            },
+            {
+              "rank": 2,
+              "chunk_id": "DOC038-P0003-C001",
+              "document_id": "DOC038",
+              "score": 0.7350291013717651
+            },
+            {
+              "rank": 3,
+              "chunk_id": "DOC032-P0013-C001",
+              "document_id": "DOC032",
+              "score": 0.6952172517776489
+            },
+            {
+              "rank": 4,
+              "chunk_id": "DOC032-P0012-C001",
+              "document_id": "DOC032",
+              "score": 0.6872742772102356
+            },
+            {
+              "rank": 5,
+              "chunk_id": "DOC038-P0002-C001",
+              "document_id": "DOC038",
+              "score": 0.6846432685852051
+            },
+            {
+              "rank": 6,
+              "chunk_id": "DOC032-P0057-C001",
+              "document_id": "DOC032",
+              "score": 0.6781210899353027
+            },
+            {
+              "rank": 7,
+              "chunk_id": "DOC032-P0013-C002",
+              "document_id": "DOC032",
+              "score": 0.6679571866989136
+            },
+            {
+              "rank": 8,
+              "chunk_id": "DOC038-P0002-C002",
+              "document_id": "DOC038",
+              "score": 0.6519225835800171
+            },
+            {
+              "rank": 9,
+              "chunk_id": "DOC038-P0006-C001",
+              "document_id": "DOC038",
+              "score": 0.6189271211624146
+            },
+            {
+              "rank": 10,
+              "chunk_id": "DOC038-P0004-C001",
+              "document_id": "DOC038",
+              "score": 0.6141413450241089
+            }
+          ]
+        },
+        {
+          "repeat": 3,
+          "elapsed_ms": 140.713,
+          "top1_chunk_id": "DOC038-P0001-C001",
+          "top1_document_id": "DOC038",
+          "top1_score": 0.8015013933181763,
+          "expected_document_first_rank": 1,
+          "expected_document_rank1": true,
+          "expected_document_rank_top3": true,
+          "expected_document_rank_top10": true,
+          "results": [
+            {
+              "rank": 1,
+              "chunk_id": "DOC038-P0001-C001",
+              "document_id": "DOC038",
+              "score": 0.8015013933181763
+            },
+            {
+              "rank": 2,
+              "chunk_id": "DOC038-P0003-C001",
+              "document_id": "DOC038",
+              "score": 0.7350291013717651
+            },
+            {
+              "rank": 3,
+              "chunk_id": "DOC032-P0013-C001",
+              "document_id": "DOC032",
+              "score": 0.6952172517776489
+            },
+            {
+              "rank": 4,
+              "chunk_id": "DOC032-P0012-C001",
+              "document_id": "DOC032",
+              "score": 0.6872742772102356
+            },
+            {
+              "rank": 5,
+              "chunk_id": "DOC038-P0002-C001",
+              "document_id": "DOC038",
+              "score": 0.6846432685852051
+            },
+            {
+              "rank": 6,
+              "chunk_id": "DOC032-P0057-C001",
+              "document_id": "DOC032",
+              "score": 0.6781210899353027
+            },
+            {
+              "rank": 7,
+              "chunk_id": "DOC032-P0013-C002",
+              "document_id": "DOC032",
+              "score": 0.6679571866989136
+            },
+            {
+              "rank": 8,
+              "chunk_id": "DOC038-P0002-C002",
+              "document_id": "DOC038",
+              "score": 0.6519225835800171
+            },
+            {
+              "rank": 9,
+              "chunk_id": "DOC038-P0006-C001",
+              "document_id": "DOC038",
+              "score": 0.6189271211624146
+            },
+            {
+              "rank": 10,
+              "chunk_id": "DOC038-P0004-C001",
+              "document_id": "DOC038",
+              "score": 0.6141413450241089
+            }
+          ]
+        }
+      ],
+      "aggregate": {
+        "stable_top1_document": true,
+        "stable_top1_chunk": true,
+        "exact_top10_order_stable": true,
+        "first_ranks": [
+          1,
+          1,
+          1
+        ],
+        "variation_probe": false
+      }
+    },
+    {
+      "probe_id": "ID08",
+      "canonical_title": "European Framework for the Digital Competence of Educators",
+      "reference": "DigCompEdu",
+      "expected_document_id": "DOC039",
+      "query": "European Framework for the Digital Competence of Educators. DigCompEdu.",
+      "repeats": [
+        {
+          "repeat": 1,
+          "elapsed_ms": 39.349,
+          "top1_chunk_id": "DOC039-P0003-C001",
+          "top1_document_id": "DOC039",
+          "top1_score": 0.890692949295044,
+          "expected_document_first_rank": 1,
+          "expected_document_rank1": true,
+          "expected_document_rank_top3": true,
+          "expected_document_rank_top10": true,
+          "results": [
+            {
+              "rank": 1,
+              "chunk_id": "DOC039-P0003-C001",
+              "document_id": "DOC039",
+              "score": 0.890692949295044
+            },
+            {
+              "rank": 2,
+              "chunk_id": "DOC039-P0001-C001",
+              "document_id": "DOC039",
+              "score": 0.8467270135879517
+            },
+            {
+              "rank": 3,
+              "chunk_id": "DOC039-P0015-C001",
+              "document_id": "DOC039",
+              "score": 0.8254468441009521
+            },
+            {
+              "rank": 4,
+              "chunk_id": "DOC039-P0004-C001",
+              "document_id": "DOC039",
+              "score": 0.8144395351409912
+            },
+            {
+              "rank": 5,
+              "chunk_id": "DOC039-P0008-C001",
+              "document_id": "DOC039",
+              "score": 0.8129340410232544
+            },
+            {
+              "rank": 6,
+              "chunk_id": "DOC039-P0093-C001",
+              "document_id": "DOC039",
+              "score": 0.7902606725692749
+            },
+            {
+              "rank": 7,
+              "chunk_id": "DOC039-P0007-C001",
+              "document_id": "DOC039",
+              "score": 0.7686880826950073
+            },
+            {
+              "rank": 8,
+              "chunk_id": "DOC039-P0009-C001",
+              "document_id": "DOC039",
+              "score": 0.7641780376434326
+            },
+            {
+              "rank": 9,
+              "chunk_id": "DOC032-P0001-C001",
+              "document_id": "DOC032",
+              "score": 0.7638512849807739
+            },
+            {
+              "rank": 10,
+              "chunk_id": "DOC039-P0012-C001",
+              "document_id": "DOC039",
+              "score": 0.7633332014083862
+            }
+          ]
+        },
+        {
+          "repeat": 2,
+          "elapsed_ms": 55.831,
+          "top1_chunk_id": "DOC039-P0003-C001",
+          "top1_document_id": "DOC039",
+          "top1_score": 0.8905991315841675,
+          "expected_document_first_rank": 1,
+          "expected_document_rank1": true,
+          "expected_document_rank_top3": true,
+          "expected_document_rank_top10": true,
+          "results": [
+            {
+              "rank": 1,
+              "chunk_id": "DOC039-P0003-C001",
+              "document_id": "DOC039",
+              "score": 0.8905991315841675
+            },
+            {
+              "rank": 2,
+              "chunk_id": "DOC039-P0001-C001",
+              "document_id": "DOC039",
+              "score": 0.846947968006134
+            },
+            {
+              "rank": 3,
+              "chunk_id": "DOC039-P0015-C001",
+              "document_id": "DOC039",
+              "score": 0.8251215219497681
+            },
+            {
+              "rank": 4,
+              "chunk_id": "DOC039-P0008-C001",
+              "document_id": "DOC039",
+              "score": 0.8129875659942627
+            },
+            {
+              "rank": 5,
+              "chunk_id": "DOC039-P0004-C001",
+              "document_id": "DOC039",
+              "score": 0.812772274017334
+            },
+            {
+              "rank": 6,
+              "chunk_id": "DOC039-P0093-C001",
+              "document_id": "DOC039",
+              "score": 0.7902860641479492
+            },
+            {
+              "rank": 7,
+              "chunk_id": "DOC039-P0007-C001",
+              "document_id": "DOC039",
+              "score": 0.7677419185638428
+            },
+            {
+              "rank": 8,
+              "chunk_id": "DOC039-P0009-C001",
+              "document_id": "DOC039",
+              "score": 0.7634681463241577
+            },
+            {
+              "rank": 9,
+              "chunk_id": "DOC032-P0001-C001",
+              "document_id": "DOC032",
+              "score": 0.7634497880935669
+            },
+            {
+              "rank": 10,
+              "chunk_id": "DOC039-P0012-C001",
+              "document_id": "DOC039",
+              "score": 0.7618058919906616
+            }
+          ]
+        },
+        {
+          "repeat": 3,
+          "elapsed_ms": 36.145,
+          "top1_chunk_id": "DOC039-P0003-C001",
+          "top1_document_id": "DOC039",
+          "top1_score": 0.8905991315841675,
+          "expected_document_first_rank": 1,
+          "expected_document_rank1": true,
+          "expected_document_rank_top3": true,
+          "expected_document_rank_top10": true,
+          "results": [
+            {
+              "rank": 1,
+              "chunk_id": "DOC039-P0003-C001",
+              "document_id": "DOC039",
+              "score": 0.8905991315841675
+            },
+            {
+              "rank": 2,
+              "chunk_id": "DOC039-P0001-C001",
+              "document_id": "DOC039",
+              "score": 0.846947968006134
+            },
+            {
+              "rank": 3,
+              "chunk_id": "DOC039-P0015-C001",
+              "document_id": "DOC039",
+              "score": 0.8251215219497681
+            },
+            {
+              "rank": 4,
+              "chunk_id": "DOC039-P0008-C001",
+              "document_id": "DOC039",
+              "score": 0.8129875659942627
+            },
+            {
+              "rank": 5,
+              "chunk_id": "DOC039-P0004-C001",
+              "document_id": "DOC039",
+              "score": 0.812772274017334
+            },
+            {
+              "rank": 6,
+              "chunk_id": "DOC039-P0093-C001",
+              "document_id": "DOC039",
+              "score": 0.7902860641479492
+            },
+            {
+              "rank": 7,
+              "chunk_id": "DOC039-P0007-C001",
+              "document_id": "DOC039",
+              "score": 0.7677419185638428
+            },
+            {
+              "rank": 8,
+              "chunk_id": "DOC039-P0009-C001",
+              "document_id": "DOC039",
+              "score": 0.7634681463241577
+            },
+            {
+              "rank": 9,
+              "chunk_id": "DOC032-P0001-C001",
+              "document_id": "DOC032",
+              "score": 0.7634497880935669
+            },
+            {
+              "rank": 10,
+              "chunk_id": "DOC039-P0012-C001",
+              "document_id": "DOC039",
+              "score": 0.7618058919906616
+            }
+          ]
+        }
+      ],
+      "aggregate": {
+        "stable_top1_document": true,
+        "stable_top1_chunk": true,
+        "exact_top10_order_stable": false,
+        "first_ranks": [
+          1,
+          1,
+          1
+        ],
+        "variation_probe": true
+      }
+    },
+    {
+      "probe_id": "ID09",
+      "canonical_title": "European Framework for Digitally-Competent Educational Organisations",
+      "reference": "DigCompOrg / JRC98209",
+      "expected_document_id": "DOC040",
+      "query": "European Framework for Digitally-Competent Educational Organisations. DigCompOrg / JRC98209.",
+      "repeats": [
+        {
+          "repeat": 1,
+          "elapsed_ms": 56.401,
+          "top1_chunk_id": "DOC040-P0001-C001",
+          "top1_document_id": "DOC040",
+          "top1_score": 0.860709547996521,
+          "expected_document_first_rank": 1,
+          "expected_document_rank1": true,
+          "expected_document_rank_top3": true,
+          "expected_document_rank_top10": true,
+          "results": [
+            {
+              "rank": 1,
+              "chunk_id": "DOC040-P0001-C001",
+              "document_id": "DOC040",
+              "score": 0.860709547996521
+            },
+            {
+              "rank": 2,
+              "chunk_id": "DOC040-P0006-C001",
+              "document_id": "DOC040",
+              "score": 0.8038784265518188
+            },
+            {
+              "rank": 3,
+              "chunk_id": "DOC040-P0002-C001",
+              "document_id": "DOC040",
+              "score": 0.7970458269119263
+            },
+            {
+              "rank": 4,
+              "chunk_id": "DOC040-P0007-C001",
+              "document_id": "DOC040",
+              "score": 0.7830290794372559
+            },
+            {
+              "rank": 5,
+              "chunk_id": "DOC039-P0003-C001",
+              "document_id": "DOC039",
+              "score": 0.7783151865005493
+            },
+            {
+              "rank": 6,
+              "chunk_id": "DOC039-P0001-C001",
+              "document_id": "DOC039",
+              "score": 0.7601249814033508
+            },
+            {
+              "rank": 7,
+              "chunk_id": "DOC039-P0004-C001",
+              "document_id": "DOC039",
+              "score": 0.7501600384712219
+            },
+            {
+              "rank": 8,
+              "chunk_id": "DOC040-P0010-C001",
+              "document_id": "DOC040",
+              "score": 0.7478659749031067
+            },
+            {
+              "rank": 9,
+              "chunk_id": "DOC040-P0008-C001",
+              "document_id": "DOC040",
+              "score": 0.747444748878479
+            },
+            {
+              "rank": 10,
+              "chunk_id": "DOC040-P0006-C002",
+              "document_id": "DOC040",
+              "score": 0.7391843795776367
+            }
+          ]
+        },
+        {
+          "repeat": 2,
+          "elapsed_ms": 119.406,
+          "top1_chunk_id": "DOC040-P0001-C001",
+          "top1_document_id": "DOC040",
+          "top1_score": 0.8605258464813232,
+          "expected_document_first_rank": 1,
+          "expected_document_rank1": true,
+          "expected_document_rank_top3": true,
+          "expected_document_rank_top10": true,
+          "results": [
+            {
+              "rank": 1,
+              "chunk_id": "DOC040-P0001-C001",
+              "document_id": "DOC040",
+              "score": 0.8605258464813232
+            },
+            {
+              "rank": 2,
+              "chunk_id": "DOC040-P0006-C001",
+              "document_id": "DOC040",
+              "score": 0.80594402551651
+            },
+            {
+              "rank": 3,
+              "chunk_id": "DOC040-P0002-C001",
+              "document_id": "DOC040",
+              "score": 0.8002915382385254
+            },
+            {
+              "rank": 4,
+              "chunk_id": "DOC040-P0007-C001",
+              "document_id": "DOC040",
+              "score": 0.7843999862670898
+            },
+            {
+              "rank": 5,
+              "chunk_id": "DOC039-P0003-C001",
+              "document_id": "DOC039",
+              "score": 0.7798552513122559
+            },
+            {
+              "rank": 6,
+              "chunk_id": "DOC039-P0001-C001",
+              "document_id": "DOC039",
+              "score": 0.7614577412605286
+            },
+            {
+              "rank": 7,
+              "chunk_id": "DOC039-P0004-C001",
+              "document_id": "DOC039",
+              "score": 0.753013551235199
+            },
+            {
+              "rank": 8,
+              "chunk_id": "DOC040-P0008-C001",
+              "document_id": "DOC040",
+              "score": 0.7495216131210327
+            },
+            {
+              "rank": 9,
+              "chunk_id": "DOC040-P0010-C001",
+              "document_id": "DOC040",
+              "score": 0.7487598657608032
+            },
+            {
+              "rank": 10,
+              "chunk_id": "DOC040-P0006-C002",
+              "document_id": "DOC040",
+              "score": 0.7411410212516785
+            }
+          ]
+        },
+        {
+          "repeat": 3,
+          "elapsed_ms": 35.932,
+          "top1_chunk_id": "DOC040-P0001-C001",
+          "top1_document_id": "DOC040",
+          "top1_score": 0.8605258464813232,
+          "expected_document_first_rank": 1,
+          "expected_document_rank1": true,
+          "expected_document_rank_top3": true,
+          "expected_document_rank_top10": true,
+          "results": [
+            {
+              "rank": 1,
+              "chunk_id": "DOC040-P0001-C001",
+              "document_id": "DOC040",
+              "score": 0.8605258464813232
+            },
+            {
+              "rank": 2,
+              "chunk_id": "DOC040-P0006-C001",
+              "document_id": "DOC040",
+              "score": 0.80594402551651
+            },
+            {
+              "rank": 3,
+              "chunk_id": "DOC040-P0002-C001",
+              "document_id": "DOC040",
+              "score": 0.8002915382385254
+            },
+            {
+              "rank": 4,
+              "chunk_id": "DOC040-P0007-C001",
+              "document_id": "DOC040",
+              "score": 0.7843999862670898
+            },
+            {
+              "rank": 5,
+              "chunk_id": "DOC039-P0003-C001",
+              "document_id": "DOC039",
+              "score": 0.7798552513122559
+            },
+            {
+              "rank": 6,
+              "chunk_id": "DOC039-P0001-C001",
+              "document_id": "DOC039",
+              "score": 0.7614577412605286
+            },
+            {
+              "rank": 7,
+              "chunk_id": "DOC039-P0004-C001",
+              "document_id": "DOC039",
+              "score": 0.753013551235199
+            },
+            {
+              "rank": 8,
+              "chunk_id": "DOC040-P0008-C001",
+              "document_id": "DOC040",
+              "score": 0.7495216131210327
+            },
+            {
+              "rank": 9,
+              "chunk_id": "DOC040-P0010-C001",
+              "document_id": "DOC040",
+              "score": 0.7487598657608032
+            },
+            {
+              "rank": 10,
+              "chunk_id": "DOC040-P0006-C002",
+              "document_id": "DOC040",
+              "score": 0.7411410212516785
+            }
+          ]
+        }
+      ],
+      "aggregate": {
+        "stable_top1_document": true,
+        "stable_top1_chunk": true,
+        "exact_top10_order_stable": false,
+        "first_ranks": [
+          1,
+          1,
+          1
+        ],
+        "variation_probe": true
+      }
+    }
+  ]
+}

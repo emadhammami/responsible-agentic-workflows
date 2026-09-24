@@ -1,0 +1,24 @@
+{
+  "schema_version": "0.1",
+  "config_id": "UC3-PAGE-W450-O75-v0.1",
+  "use_case_id": "UC3",
+  "status": "frozen",
+  "strategy": "page_aware_word_windows",
+  "max_words": 450,
+  "overlap_words": 75,
+  "cross_page_boundaries": false,
+  "empty_pages_generate_chunks": false,
+  "selection_basis": {
+    "selection_based_on_benchmark_performance": false,
+    "inherited_from_use_case": "UC1",
+    "inherited_from_config_id": "UC1-PAGE-W450-O75-v0.1",
+    "uc3_content_tuning": false
+  },
+  "rationale": [
+    "UC3 inherits the frozen UC1 chunking contract (W450-O75) as the fixed technical reference.",
+    "No UC3-specific observation was used to tune max_words, overlap_words, or cross-page behavior.",
+    "Chunks remain bounded by physical PDF pages to preserve page-level provenance.",
+    "Empty pages do not generate retrieval chunks, matching the existing UC1 behavior."
+  ],
+  "frozen": true
+}

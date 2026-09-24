@@ -1,0 +1,18 @@
+{
+  "schema_version": "0.1",
+  "document_id": "DOC033",
+  "use_case_id": "UC3",
+  "source_sha256": "a93866bccc575a825b4cc9e9b5f25c115d7c1ffd29dc677a1acc0aa226daa612",
+  "document_status": "accepted",
+  "quality_status": "pass",
+  "metrics": {
+    "pages": 89,
+    "file_size_bytes": 4154359,
+    "characters": 215596,
+    "words": 29762,
+    "lines": 3402,
+    "nonempty_lines": 2936,
+    "encrypted": false
+  },
+  "issues": []
+}

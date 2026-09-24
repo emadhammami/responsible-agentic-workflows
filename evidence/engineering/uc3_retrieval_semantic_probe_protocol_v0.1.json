@@ -1,0 +1,96 @@
+{
+  "schema_version": "0.1",
+  "protocol_id": "UC3-SEMANTIC-RETRIEVAL-PROBES-v0.1",
+  "status": "frozen_before_execution",
+  "purpose": "Final engineering semantic retrieval gate for the working UC3 embedding configuration.",
+  "scope": "Engineering retrieval-configuration qualification only. This is not a benchmark result.",
+  "UC1_PROTOCOL_CORE_STRUCTURE_PRESERVED": true,
+  "UC3_DOCUMENT_COVERAGE": "9/9",
+  "PROBE_COUNT_ADAPTATION": "prospectively adapted from 8 to 9 because UC3 has 9 accepted documents",
+  "methodological_note": "The UC1 core semantic-diagnostic design is preserved (top-k, repeats, expected-document measure, benchmark separation, and prospective acceptance-gate logic), while probe count is prospectively adapted for complete UC3 document coverage.",
+  "source_basis": "Probe targets and purpose paraphrases are derived only from pre-existing non-retrieval metadata in corpus/use_cases/UC3/source_selection.tsv, corpus/use_cases/UC3/eligibility_review.tsv, corpus/use_cases/UC3/README.md, and corpus/use_cases/UC3/benchmark_scope.json.",
+  "design": {
+    "probe_count": 9,
+    "top_k": 10,
+    "repeats_per_probe": 3,
+    "query_style": "Semantic purpose paraphrases. Prohibited in every query: canonical titles, aliases (DigComp, RFCDC, DigCompEdu, DigCompOrg), document IDs, URLs, DOIs, JRC identifiers, OJ/CELEX/legal citations, and phrases that are effectively the canonical title with minor grammatical changes.",
+    "expected_target": "Rank of the first retrieved chunk belonging to the pre-specified expected document.",
+    "identity_diagnostic_results_used_to_select_targets": false,
+    "benchmark_questions_used": false,
+    "benchmark_gold_used": false,
+    "benchmark_answers_used": false
+  },
+  "engineering_acceptance_gate": {
+    "note": "These are pre-specified engineering sufficiency criteria, not thesis outcome metrics. Thresholds scale the UC1 v0.1 gate (7/6/4/7 out of 8) to the UC3 probe count of 9 using CEILING.",
+    "threshold_rationale": "Thresholds were prospectively scaled from the frozen UC1 gate using ceil(UC3_probe_count * UC1_threshold / UC1_probe_count) before any UC3 diagnostic execution or result observation.",
+    "minimum_probes_expected_document_top10_all_repeats": 8,
+    "minimum_probes_expected_document_top5_all_repeats": 7,
+    "minimum_probes_expected_document_top3_all_repeats": 5,
+    "minimum_probes_stable_top1_document_across_repeats": 8
+  },
+  "probes": [
+    {
+      "probe_id": "SEM01",
+      "expected_document_id": "DOC032",
+      "source_group": "competence_framework",
+      "query": "What a person needs to know and be able to do with digital technologies in work, education and everyday civic life, organised across competence areas and proficiency levels.",
+      "source_basis": "eligibility_review.tsv row UC3-C01 (D_uc3_scope: core digital-competence framework; 5 competence areas, 21 competences, 4 proficiency levels, AI competence section; E_evidentiary: component tables, learning outcomes); benchmark_scope.json source_groups.competence_framework_document_ids (DOC032); README.md core policy family 1"
+    },
+    {
+      "probe_id": "SEM02",
+      "expected_document_id": "DOC033",
+      "source_group": "competence_framework",
+      "query": "Values, attitudes, dispositions, knowledge and skills that underpin democratic participation and how each of them is articulated as a competence.",
+      "source_basis": "eligibility_review.tsv row UC3-C02 (D_uc3_scope: democratic/civic competence model; 4 areas, 20 competences; digital citizenship education); benchmark_scope.json source_groups.competence_framework_document_ids (DOC033); README.md core policy family 2"
+    },
+    {
+      "probe_id": "SEM03",
+      "expected_document_id": "DOC034",
+      "source_group": "competence_framework",
+      "query": "A set of key expectations and descriptors that spell out concrete behaviours and skills in line with competence areas for civic participation.",
+      "source_basis": "eligibility_review.tsv row UC3-C03 (D_uc3_scope: operational descriptors for the 20 competence model; 135 key + 447 descriptors across 3 levels; E_evidentiary: dense structured descriptor tables); benchmark_scope.json source_groups.competence_framework_document_ids (DOC034); README.md core policy family 2"
+    },
+    {
+      "probe_id": "SEM04",
+      "expected_document_id": "DOC035",
+      "source_group": "competence_framework",
+      "query": "Practical guidance about how to embed, practise and assess these competences across curriculum, pedagogy, assessment, teacher education and whole-school settings.",
+      "source_basis": "eligibility_review.tsv row UC3-C04 (D_uc3_scope: implementation guidance applying the 20 competences across curriculum, pedagogy, assessment, teacher education, whole-school); benchmark_scope.json source_groups.competence_framework_document_ids (DOC035); README.md core policy family 2"
+    },
+    {
+      "probe_id": "SEM05",
+      "expected_document_id": "DOC036",
+      "source_group": "policy_and_reference",
+      "query": "A European recommendation setting out the key competences all citizens should develop over a lifetime, including how to use, apply, create and participate through digital means, including the definition and scope of digital competence.",
+      "source_basis": "eligibility_review.tsv row UC3-C05 (D_uc3_scope: EU key-competence framework incl. digital competence definition; 8 key competences; E_evidentiary: primary legal/normative Recommendation text); benchmark_scope.json source_groups.policy_and_reference_document_ids (DOC036); README.md core policy family 3"
+    },
+    {
+      "probe_id": "SEM06",
+      "expected_document_id": "DOC037",
+      "source_group": "competence_framework",
+      "query": "A competency framework aimed at educators, describing what they should know and be able to do with information and communication technologies, including digital content, collaboration and learner support.",
+      "source_basis": "eligibility_review.tsv row UC3-C06 (D_uc3_scope: educator digital-competence framework; 18 competencies, 6 aspects, 3 levels; E_evidentiary: KA/KD/KC indicators); benchmark_scope.json source_groups.competence_framework_document_ids (DOC037); README.md supporting framework 4"
+    },
+    {
+      "probe_id": "SEM07",
+      "expected_document_id": "DOC038",
+      "source_group": "policy_and_reference",
+      "query": "A primary declaratory source organised into six chapters and twenty-four numbered normative items setting out rights-related normative principles for a digital context.",
+      "source_basis": "eligibility_review.tsv row UC3-C07 (D_uc3_scope: digital rights & principles for the Digital Decade; E_evidentiary: 24 numbered normative items across 6 chapters); benchmark_scope.json source_groups.policy_and_reference_document_ids (DOC038); README.md supporting framework 5"
+    },
+    {
+      "probe_id": "SEM08",
+      "expected_document_id": "DOC039",
+      "source_group": "competence_framework",
+      "query": "A structured set of educator capabilities organised into twenty-two competences, six areas and six proficiency levels, with per-level descriptors, typical activities and an evaluation rubric.",
+      "source_basis": "eligibility_review.tsv row UC3-C08 (D_uc3_scope: educator digital-competence framework; 22 competences, 6 areas, 6 levels A1-C2; E_evidentiary: per-competence x per-level descriptors + typical activities + rubric); benchmark_scope.json source_groups.competence_framework_document_ids (DOC039); README.md supporting framework 6"
+    },
+    {
+      "probe_id": "SEM09",
+      "expected_document_id": "DOC040",
+      "source_group": "competence_framework",
+      "query": "An organisational and institutional digital-competence framework structured into seven elements, fifteen sub-elements and seventy-four descriptors presented in tables.",
+      "source_basis": "eligibility_review.tsv row UC3-C09 (D_uc3_scope: organisational/institutional digital-competence framework; 7 elements, 15 sub-elements, 74 descriptors; E_evidentiary: element/sub-element/descriptor tables); benchmark_scope.json source_groups.competence_framework_document_ids (DOC040); README.md supporting framework 7"
+    }
+  ]
+}
