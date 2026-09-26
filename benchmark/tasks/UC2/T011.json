@@ -1,0 +1,21 @@
+{
+  "schema_version": "0.1",
+  "task_id": "T011",
+  "question": "Under Green Freeport NDR relief, for how long can relief run from first eligibility, and by what date must it be applied for, subject to the 2028 review?",
+  "task_type": "direct_retrieval",
+  "required_documents": [
+    "DOC046"
+  ],
+  "reference_answer": "Relief can run for up to five years from when the beneficiary first becomes eligible, including any period in which another relief is awarded in its place. It must be applied for by 30 September 2034, subject to the outcome of the 2028 mid-point review. Availability also depends on the relevant tax site having been established and designated. [DOC046-U0001-C0002]",
+  "reference_evidence": [
+    {
+      "document_id": "DOC046",
+      "page": null,
+      "section": "Timespan and Eligibility",
+      "chunk_id": "DOC046-U0001-C0002"
+    }
+  ],
+  "difficulty": "low",
+  "notes": "Benchmark task. Human verified on 2026-09-26 by explicit researcher approval APPROVE UC2 T011-T020; latest approved candidate in evidence/engineering/uc2_task_human_review_dossier_2026-09-26.md.",
+  "validation_status": "frozen"
+}

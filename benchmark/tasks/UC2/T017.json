@@ -1,0 +1,40 @@
+{
+  "schema_version": "0.1",
+  "task_id": "T017",
+  "question": "How do enhanced Structures and Buildings Allowance and Enhanced Capital Allowance differ in eligible assets, relief structure and qualifying use/location conditions in Scottish Green Freeport tax sites?",
+  "task_type": "cross_document_reasoning",
+  "required_documents": [
+    "DOC056",
+    "DOC057"
+  ],
+  "reference_answer": "Enhanced Structures and Buildings Allowance covers qualifying expenditure on structures/buildings and provides 10% annually for ten years, starting at the later of first non-residential use and incurring qualifying expenditure. Construction must begin while the asset is in a special tax site (first contract or construction work, whichever is earlier); qualifying use and expenditure must occur while in the site and by 30 September 2034 for Scottish Green Freeports. The claimant must meet the ordinary structures/buildings allowance requirements and be registered for Corporation Tax or Income Tax. Enhanced and normal rates are apportioned where part lies outside the site or part enters qualifying use after the deadline. [DOC056-U0001-C0001; DOC056-U0001-C0002]\n\nEnhanced Capital Allowance covers unused, non-second-hand plant/machinery for trading activity or a land activity taxed as trading. It provides 100% of qualifying expenditure against qualifying-activity profits in the accounting period of expenditure; the claimant must be registered for Corporation Tax. At expenditure the asset must be intended primarily for use in a designated special tax site; Scottish qualifying expenditure runs from designation to 30 September 2034. Primary special-tax-site use must continue for five years from first qualifying use or keeping for qualifying use there; cessation within that period requires withdrawal and notification within three months. For mixed use, the restriction to expenditure attributable to site use applies when the asset is also for use outside a site and the main purpose of expenditure is to obtain the enhanced allowance for that outside-site part. [DOC057-U0001-C0001; DOC057-U0001-C0002]\n\nBoth concern tax sites, which the guidance distinguishes from separately authorised customs sites. [DOC056-U0001-C0001; DOC057-U0001-C0001]",
+  "reference_evidence": [
+    {
+      "document_id": "DOC056",
+      "page": null,
+      "section": "How to qualify — structures/buildings",
+      "chunk_id": "DOC056-U0001-C0001"
+    },
+    {
+      "document_id": "DOC056",
+      "page": null,
+      "section": "How to apportion; how much relief",
+      "chunk_id": "DOC056-U0001-C0002"
+    },
+    {
+      "document_id": "DOC057",
+      "page": null,
+      "section": "How to qualify; how much relief — plant/machinery",
+      "chunk_id": "DOC057-U0001-C0001"
+    },
+    {
+      "document_id": "DOC057",
+      "page": null,
+      "section": "Withdrawal of relief; mixed-use restriction continuation",
+      "chunk_id": "DOC057-U0001-C0002"
+    }
+  ],
+  "difficulty": "high",
+  "notes": "Benchmark task. Human verified on 2026-09-26 by explicit researcher approval APPROVE UC2 T011-T020; latest approved candidate in evidence/engineering/uc2_task_human_review_dossier_2026-09-26.md.",
+  "validation_status": "frozen"
+}

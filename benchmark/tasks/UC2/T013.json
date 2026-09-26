@@ -1,0 +1,21 @@
+{
+  "schema_version": "0.1",
+  "task_id": "T013",
+  "question": "What location and project-approval conditions must be satisfied for a Scottish Green Freeport seed-capital subsidy to support a project?",
+  "task_type": "direct_retrieval",
+  "required_documents": [
+    "DOC058"
+  ],
+  "reference_answer": "The project must be within the outer boundary of Forth or Inverness and Cromarty Firth Green Freeport, or in an economically connected location where justified in the Full Business Case. It must be set out and agreed in the relevant Freeport's Full Business Case, or subsequently approved by government through a formal change request. Its own business case must also be approved by the accountable body under local assurance processes and by the Green Freeport Board. If another local authority awards the subsidy, it needs the relevant accountable body's permission and confirmation that the accountable body approved the project business case under those processes. [DOC058-U0001-C0002]",
+  "reference_evidence": [
+    {
+      "document_id": "DOC058",
+      "page": null,
+      "section": "Eligibility rules — 1. Eligible location; 2. Eligible activity",
+      "chunk_id": "DOC058-U0001-C0002"
+    }
+  ],
+  "difficulty": "low",
+  "notes": "Benchmark task. Human verified on 2026-09-26 by explicit researcher approval APPROVE UC2 T011-T020; latest approved candidate in evidence/engineering/uc2_task_human_review_dossier_2026-09-26.md.",
+  "validation_status": "frozen"
+}

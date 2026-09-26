@@ -1,0 +1,21 @@
+{
+  "schema_version": "0.1",
+  "task_id": "T012",
+  "question": "What proportion of chargeable consideration must relate to qualifying Green Freeport land for full LBTT relief, and what minimum proportion permits partial relief?",
+  "task_type": "direct_retrieval",
+  "required_documents": [
+    "DOC047"
+  ],
+  "reference_answer": "Full relief requires at least 90% of the transaction's chargeable consideration to relate to qualifying land on a designated Green Freeport tax site. The minimum threshold for partial relief is at least 10%. [DOC047-U0001-C0001]",
+  "reference_evidence": [
+    {
+      "document_id": "DOC047",
+      "page": null,
+      "section": "Overview — Green Freeports relief",
+      "chunk_id": "DOC047-U0001-C0001"
+    }
+  ],
+  "difficulty": "low",
+  "notes": "Benchmark task. Human verified on 2026-09-26 by explicit researcher approval APPROVE UC2 T011-T020; latest approved candidate in evidence/engineering/uc2_task_human_review_dossier_2026-09-26.md.",
+  "validation_status": "frozen"
+}

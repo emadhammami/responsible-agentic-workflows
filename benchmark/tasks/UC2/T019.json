@@ -1,0 +1,12 @@
+{
+  "schema_version": "0.1",
+  "task_id": "T019",
+  "question": "By 31 March 2026, how many jobs were reported as actually created on the designated tax sites of each of the Inverness and Cromarty Firth Green Freeport and the Forth Green Freeport?",
+  "task_type": "insufficient_evidence",
+  "required_documents": [],
+  "reference_answer": "The frozen UC2 corpus does not provide enough evidence to determine how many jobs were reported as actually created on the designated tax sites of either Green Freeport by 31 March 2026. Its job projections, anticipated tax-site outputs and programme staffing passages do not establish those realised counts.",
+  "reference_evidence": [],
+  "difficulty": "medium",
+  "notes": "Benchmark task. Human verified on 2026-09-26 by explicit researcher approval APPROVE UC2 T011-T020; latest approved candidate in evidence/engineering/uc2_task_human_review_dossier_2026-09-26.md. Corpus-wide absence audit: evidence/engineering/uc2_insufficient_evidence_absence_audit_2026-09-26.md (SHA256 e068d2c40c378d8b8bb276f6903a0f52502edcab39b301bca9a0106e6eb2f57d).",
+  "validation_status": "frozen"
+}

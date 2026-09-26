@@ -1,0 +1,149 @@
+{
+  "schema_version": "0.1",
+  "freeze_id": "UC2-BENCHMARK-TASKS-v0.1",
+  "use_case_id": "UC2",
+  "status": "frozen_pre_benchmark",
+  "frozen_on": "2026-09-26",
+  "pre_freeze_source_commit": "4ca03cde8dd969c07590670615008b17d5448a2e",
+  "task_count": 10,
+  "task_ids": [
+    "T011",
+    "T012",
+    "T013",
+    "T014",
+    "T015",
+    "T016",
+    "T017",
+    "T018",
+    "T019",
+    "T020"
+  ],
+  "task_type_allocation": {
+    "direct_retrieval": 3,
+    "within_document_reasoning": 3,
+    "cross_document_reasoning": 2,
+    "insufficient_evidence": 2,
+    "conflicting_document_reasoning": 0
+  },
+  "task_type_bindings": {
+    "direct_retrieval": [
+      "T011",
+      "T012",
+      "T013"
+    ],
+    "within_document_reasoning": [
+      "T014",
+      "T015",
+      "T016"
+    ],
+    "cross_document_reasoning": [
+      "T017",
+      "T018"
+    ],
+    "insufficient_evidence": [
+      "T019",
+      "T020"
+    ]
+  },
+  "pre_freeze_human_verified_task_set_sha256": "9a98dc5a7eea20537d5b4ed0c72467e971d8abe959b41f03ecb5bb57870ea5d8",
+  "pre_freeze_human_verified_task_file_sha256": {
+    "T011.json": "3e4ad8b02b9635be5d77789234f37b48bd92f4e42361201bc4f4647467a3fe42",
+    "T012.json": "777468c626824b0f78d929f3552a772b75127b6643d8d461282b91186254fe15",
+    "T013.json": "229af4d245539bbd371fa16a5a8ce5bf64a3d5917d058f1fba282980dd32f67d",
+    "T014.json": "f80ab6853eb339cd56bca93270256e6f2470e2f825d19b05d9b4576fdd2b9da8",
+    "T015.json": "69c2eed655e92e93e2247f613d513ad8e4710032689c9d265467760641f64208",
+    "T016.json": "52a4c32635656a889cddce8298af0f964ac2400f01e8894e59749e5942ea0b2d",
+    "T017.json": "b59643f59a92a48eac0bea68bea9feab93efebaafba97e58692e5d37285c87df",
+    "T018.json": "fbb5cd47ac8b32c83ca16e5e823a0801120eeb3d5f509b2bfc4713b7e71d7c8c",
+    "T019.json": "06688d6ffb5c585bb71320fd99ccbc8604bdfece2bbd5a9c43cee245ef38b123",
+    "T020.json": "72bb7f036a9b34209629277bd867fcf4364f73b1c104ea684dd1e4a92eb929db"
+  },
+  "frozen_task_file_sha256": {
+    "T011.json": "9186e34f54d316eb42f60d01d5be698efc5d374f875cd189d1cd076f4f89b326",
+    "T012.json": "9698e5ff344ad196585590c1f02c38b91d7213628b464d1bfcd00958a1a8695b",
+    "T013.json": "03134ae01701e4ac927eec700bb06b2fd75ea2e0b3716dd7931a800468b9afa8",
+    "T014.json": "5b1899d1cdb6b5aa60366d695116c7e233aa80941298149c20642297df6a4f59",
+    "T015.json": "f037490c92c3d0d9718708573b429f91620641a5d81663a13bdd6037a17355a8",
+    "T016.json": "230908239270ce56b466c2eac369993cf269bd4c64b15029ad2aa06b1ef68a50",
+    "T017.json": "040fe84ba5808c8691af6f3f561544cbbff9aa2ca03782e143100f5c30da9732",
+    "T018.json": "4b16802c97d3e9ca38e4e047fbe3a39a9c622f7cd4e5eba9749154fae9149610",
+    "T019.json": "9c658572a1e42d63956f9a7b80a5320424a46895bc1312352e6220b39bf4c13f",
+    "T020.json": "3daf6ead9c7e12e7725b06f3a18c3269684dd25a08ce2cd92da2ee6efcb2f27b"
+  },
+  "frozen_task_set_sha256": "8dae88d00cab7fc77024a459dee7d49b6518eacb63077acec9e86d87e5d2de60",
+  "task_set_hash_algorithm": "SHA256 of UTF-8 concatenation, in sorted T*.json filename order, of filename + NUL + lowercase SHA256(file bytes) + LF. Reproduces the UC1 freeze-manifest task-set hash.",
+  "task_schema_identity": "https://github.com/emadhammami/responsible-agentic-workflows/benchmark/schema/task.schema.json",
+  "corpus_identity": {
+    "use_case_id": "UC2",
+    "processed_corpus_id": "UC2-SOURCEUNIT-W450-O75-v0.1",
+    "canonical_document_count": 17,
+    "canonical_chunk_count": 293
+  },
+  "foundation_paths": {
+    "task_schema": "benchmark/schema/task.schema.json",
+    "benchmark_scope": "corpus/use_cases/UC2/benchmark_scope.json",
+    "corpus_membership": "corpus/use_cases/UC2/corpus_membership.json",
+    "canonical_chunks": "corpus/use_cases/UC2/processed/UC2-SOURCEUNIT-W450-O75-v0.1/chunks.jsonl",
+    "authoring_protocol": "benchmark/task_authoring_protocol_v0.1.json"
+  },
+  "foundation_sha256": {
+    "task_schema": "34ddb275e659b86d759d5fabcf3500bc963c34b60425f601677b88bbb858145f",
+    "benchmark_scope": "87f8de97ee51645ef140398c02ce94f047d5107412d17e08139551353d3d268d",
+    "corpus_membership": "e9b000a20d470b7cac52f232027f2a8ba9128ad41a92bb8b945b479997a37cc4",
+    "canonical_chunks": "b3dd26958805320420f0dc7e379b0e0f1c2ec85d4b55fffd3cd8884c8e9841f2",
+    "authoring_protocol": "c537f2a627c8f0734b3e4addc8a52ce96132a2cde762b0dca6be338aee1fe169"
+  },
+  "review_evidence_paths": {
+    "candidate_evidence_audit": "evidence/engineering/uc2_task_candidate_evidence_audit_2026-09-26.md",
+    "insufficient_evidence_authoring_audit": "evidence/engineering/uc2_insufficient_evidence_absence_audit_2026-09-26.md",
+    "human_review_record": "evidence/engineering/uc2_task_human_review_dossier_2026-09-26.md"
+  },
+  "review_evidence_sha256": {
+    "candidate_evidence_audit": "728fe36bcfd3097005594053ffef69cb6ac586a09964be5579a2ee9437f15d56",
+    "insufficient_evidence_authoring_audit": "e068d2c40c378d8b8bb276f6903a0f52502edcab39b301bca9a0106e6eb2f57d",
+    "human_review_record": "db0d81d3e88c8c5e0352dc6bfffaa914c14d55fdbda63644b41e7fcde4c59932"
+  },
+  "pre_approval_dossier_sha256": "dd5735ef5fe9e5a7ff8f987770959b19e37a4e39700182dee142487f3695f01d",
+  "final_approved_dossier_sha256": "db0d81d3e88c8c5e0352dc6bfffaa914c14d55fdbda63644b41e7fcde4c59932",
+  "researcher_approval": {
+    "approval_text": "APPROVE UC2 T011-T020",
+    "approval_date": "2026-09-26",
+    "approved_tasks": "T011-T020",
+    "approval_stage": "PRE_BENCHMARK",
+    "human_verification_completed": true,
+    "result_driven_approval": false
+  },
+  "approved_revision_bindings": {
+    "T014": "Human-Directed Pre-Freeze Revision 1",
+    "T018": "Precision Revision 1",
+    "T019": "Precision Revision 1",
+    "T020": "Researcher-Directed Pre-Freeze Revision 2"
+  },
+  "controls": {
+    "human_verified_before_freeze": true,
+    "human_verification_completed": true,
+    "benchmark_run_used_for_task_selection": false,
+    "benchmark_run_used_for_task_revision": false,
+    "runtime_gold_isolation_verified": true,
+    "uc2_corpus_frozen_before_task_freeze": true,
+    "result_driven_revision": false,
+    "retrieval_ranking_used": false,
+    "b0_b1_g1_output_used": false,
+    "benchmark_result_used": false,
+    "benchmark_started": false,
+    "tasks_frozen": true,
+    "post_freeze_result_driven_task_edits_allowed": false
+  },
+  "validation": {
+    "schema": "PASS",
+    "canonical_loader": "PASS",
+    "source_traceability": "PASS",
+    "task_type_integrity": "PASS",
+    "reference_support": "PASS",
+    "insufficient_evidence_binding": "PASS",
+    "gold_isolation": "PASS",
+    "duplicate_ids": 0,
+    "duplicate_exact_questions": 0
+  },
+  "scope_note": "This manifest freezes the ten UC2 tasks only. UC1 remains unchanged; UC3 and the complete 30-task primary benchmark are not frozen by this artifact. No benchmark execution is authorized or performed."
+}

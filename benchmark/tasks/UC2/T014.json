@@ -1,0 +1,27 @@
+{
+  "schema_version": "0.1",
+  "task_id": "T014",
+  "question": "How are seed capital and retained non-domestic rates intended to play different financing roles in Green Freeport delivery, and how do their accountability and governance arrangements differ?",
+  "task_type": "within_document_reasoning",
+  "required_documents": [
+    "DOC043"
+  ],
+  "reference_answer": "Seed capital is intended for projects deliverable in the short term; longer-term public investment projects are expected to use retained non-domestic rates. Seed capital is paid to each coalition's accountable body in annual tranches. That body is responsible for ensuring relevant regulations and best-practice standards, including public procurement, are met and that Value for Money and policy objectives are delivered, taking individual projects through local assurance/business-case processes. Business Cases are approved by the Green Freeport Programme Board, with joint representation from the governments. [DOC043-U0001-C0004, sections 3.1.6–3.1.8]\n\nRetained NDR concerns tax-site rates growth above an agreed pre-designation baseline, minus an agreed displacement factor. Retention is guaranteed for 25 years, providing local authorities certainty to borrow for regeneration and infrastructure supporting further growth. The local authority or authorities remain accountable for its use as public funds, while strategic direction should be set by the Green Freeport governing body. The retained funds are expected to support Green Freeport-associated purposes, including operating costs and investment-supporting infrastructure and other activities. [DOC043-U0001-C0009, section 6.1.1 continuation and sections 6.1.2–6.1.6]",
+  "reference_evidence": [
+    {
+      "document_id": "DOC043",
+      "page": null,
+      "section": "3.1.6–3.1.8 — Seed capital funding",
+      "chunk_id": "DOC043-U0001-C0004"
+    },
+    {
+      "document_id": "DOC043",
+      "page": null,
+      "section": "6.1.1 continuation; 6.1.2–6.1.6 — Retained non-domestic rates",
+      "chunk_id": "DOC043-U0001-C0009"
+    }
+  ],
+  "difficulty": "medium",
+  "notes": "Benchmark task. Human verified on 2026-09-26 by explicit researcher approval APPROVE UC2 T011-T020; latest approved candidate in evidence/engineering/uc2_task_human_review_dossier_2026-09-26.md.",
+  "validation_status": "frozen"
+}

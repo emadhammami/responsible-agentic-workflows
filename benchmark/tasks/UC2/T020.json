@@ -1,0 +1,12 @@
+{
+  "schema_version": "0.1",
+  "task_id": "T020",
+  "question": "By 31 March 2026, what aggregate monetary value of LBTT Green Freeports relief had been claimed in LBTT returns for transactions across the designated tax sites within each of Scotland's two Green Freeports, reported separately for Inverness and Cromarty Firth Green Freeport and Forth Green Freeport?",
+  "task_type": "insufficient_evidence",
+  "required_documents": [],
+  "reference_answer": "The frozen UC2 corpus does not provide enough evidence to determine the aggregate monetary value of LBTT Green Freeports relief claimed in LBTT returns by 31 March 2026 across the designated tax sites within either Inverness and Cromarty Firth Green Freeport or Forth Green Freeport. It contains eligibility and filing guidance and worked examples, rather than the requested aggregate actual claim values.",
+  "reference_evidence": [],
+  "difficulty": "medium",
+  "notes": "Benchmark task. Human verified on 2026-09-26 by explicit researcher approval APPROVE UC2 T011-T020; latest approved candidate in evidence/engineering/uc2_task_human_review_dossier_2026-09-26.md. Corpus-wide absence audit: evidence/engineering/uc2_insufficient_evidence_absence_audit_2026-09-26.md (SHA256 e068d2c40c378d8b8bb276f6903a0f52502edcab39b301bca9a0106e6eb2f57d).",
+  "validation_status": "frozen"
+}

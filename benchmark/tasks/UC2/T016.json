@@ -1,0 +1,27 @@
+{
+  "schema_version": "0.1",
+  "task_id": "T016",
+  "question": "How do the customs-site-operator role and Freeport business authorisation differ and interact, including when a customs site operator needs an additional Freeport customs procedure authorisation?",
+  "task_type": "within_document_reasoning",
+  "required_documents": [
+    "DOC051"
+  ],
+  "reference_answer": "The customs site operator is the responsible authority controlling goods movement and people's access, taking reasonable steps to prevent unauthorised activity and meeting designation-order requirements for records, site security and HMRC access/facilities. [DOC051-U0005-C0001] A business separately needs HMRC authorisation to declare goods for the free-zone procedure and conduct industrial, service or commercial activities on those goods; the specified transfer-of-free-zone-goods activity is excepted. It must confirm at application that it has an agreement with the relevant operator allowing it to operate on the site. The operator also needs Freeport customs procedure authorisation, in addition to its operator role, if it wishes to import goods to the site or carry out activities on goods declared to that procedure. [DOC051-U0004-C0002]",
+  "reference_evidence": [
+    {
+      "document_id": "DOC051",
+      "page": null,
+      "section": "Designation and Authorisation — Authorisation",
+      "chunk_id": "DOC051-U0004-C0002"
+    },
+    {
+      "document_id": "DOC051",
+      "page": null,
+      "section": "Operating a Freeport customs site — responsibilities",
+      "chunk_id": "DOC051-U0005-C0001"
+    }
+  ],
+  "difficulty": "medium",
+  "notes": "Benchmark task. Human verified on 2026-09-26 by explicit researcher approval APPROVE UC2 T011-T020; latest approved candidate in evidence/engineering/uc2_task_human_review_dossier_2026-09-26.md.",
+  "validation_status": "frozen"
+}

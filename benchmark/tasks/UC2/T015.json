@@ -1,0 +1,27 @@
+{
+  "schema_version": "0.1",
+  "task_id": "T015",
+  "question": "How does the national planning protocol seek to accelerate Green Freeport consenting while retaining normal statutory decision frameworks, and what roles do councils, consultees and developers play?",
+  "task_type": "within_document_reasoning",
+  "required_documents": [
+    "DOC045"
+  ],
+  "reference_answer": "The protocol accelerates consenting through coordinated early engagement, shared evidence, early environmental screening/scoping and processing agreements with agreed timelines and infrastructure arrangements. Planning decisions still follow legislation and the development plan unless material considerations indicate otherwise; other consents retain their established regulatory frameworks. It seeks decisions within two months for local and four months for major/national planning applications without legal agreements; where legal agreements are involved, committee or delegated decisions should be taken within those periods wherever possible. More complex applications may have longer agreed timescales. [DOC045-U0001-C0002]\n\nCouncils align consent processes, provide senior and application contacts, coordinate pre-application information requirements, agree consultee deadlines, review processing dates with developers within four weeks of validation and discuss conditions/contributions and legal agreements early. Statutory consultees provide contacts, clarify information needs early and adhere to reasonable response dates, contacting authority leads if deadlines are missed. Developers engage early with councils/agencies and communities, submit and supply timely high-quality information, consider reasonable legal-agreement/contribution requests and agree Habitats assessment information and surveys early. [DOC045-U0001-C0003]",
+  "reference_evidence": [
+    {
+      "document_id": "DOC045",
+      "page": null,
+      "section": "All partners; statutory frameworks and processing agreements",
+      "chunk_id": "DOC045-U0001-C0002"
+    },
+    {
+      "document_id": "DOC045",
+      "page": null,
+      "section": "Councils; other consenting bodies; statutory consultees/agencies; developers",
+      "chunk_id": "DOC045-U0001-C0003"
+    }
+  ],
+  "difficulty": "medium",
+  "notes": "Benchmark task. Human verified on 2026-09-26 by explicit researcher approval APPROVE UC2 T011-T020; latest approved candidate in evidence/engineering/uc2_task_human_review_dossier_2026-09-26.md.",
+  "validation_status": "frozen"
+}

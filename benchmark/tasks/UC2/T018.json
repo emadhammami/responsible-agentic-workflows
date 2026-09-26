@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.1",
+  "task_id": "T018",
+  "question": "According to their business-case documents, how are the Inverness and Cromarty Firth and Forth Green Freeports planned to use seed capital to unlock investment, including funding scale, project selection/deployment, and governance/accountability arrangements?",
+  "task_type": "cross_document_reasoning",
+  "required_documents": [
+    "DOC052",
+    "DOC053"
+  ],
+  "reference_answer": "Inverness and Cromarty Firth proposes £25m of seed capital for enabling infrastructure that unlocks tax-site land. Project sponsors responsible for the 11 preferred seed capital projects were invited to submit individual project OBCs to the Council for assessment. The gateway test determines whether projects proceed to FBC; the OBC template followed Green Book principles, with the process assessing expected economic benefits, viability and affordability. [DOC052-U0012-C0001] Following confirmation of the award, sponsors are to submit FBCs to the accountable body, reviewed by an investment subgroup comprising Freeport-company and Highland Council representatives, with further subsidy-control checks and government change requests for reserve-list alternatives if necessary. Highland Council is accountable for accounting and public governance; the Freeport and partners deliver the programme and manage delivery, risk and outcomes. The £25m is to be complemented by over £60m further public funding and almost £175m private funding, giving around £260m total seed-capital project expenditure. [DOC052-U0014-C0001]\n\nForth plans to use early seed capital as an investment lever. [DOC053-U0028-C0001] Proposals were assessed/prioritised in line with the Scottish Government Investment Hierarchy and considered by local-authority partners. Four core projects—Forth Ports Leith land preparation, Babcock integrated energy system, Grangemouth utility capacity and INEOS low-carbon hydrogen preparation—require a minimum £17.9m ask, attracting at least £17.9m private match funding. The maximum £24.5m ask enables six additional projects costing £6.6m, with £12.9m partner match funding. [DOC053-U0027-C0001] The financial case expects £24.5m seed capital to attract £8m further public and £64.4m private funding, for circa £96.9m overall project expenditure; these are the financial-case totals, distinct from the proposal-level match-funding figures. Procurement is by private landowners and other sponsors, including public bodies, aligned with general public procurement rules. Forth Green Freeport Operating Ltd delivers under Forth Green Freeport Ltd oversight; operating functions include financial compliance/audit, reporting and monitoring/evaluation. [DOC053-U0008-C0001] In tax-site investment governance, Investment Principles are implemented through agreements addressing reporting, monitoring/evaluation and subsidy obligations; landowners and the operating company monitor compliance, reporting to the Governance Board and accountable body, Falkirk Council. [DOC053-U0028-C0001]\n\nBoth business cases plan to use public seed capital and enabling projects to attract wider investment, with local-authority accountability and Freeport/partner delivery structures. The frozen reports describe proposals, expectations and approval/deployment arrangements; these figures do not establish completed expenditure or realised investment.",
+  "reference_evidence": [
+    {
+      "document_id": "DOC052",
+      "page": 12,
+      "section": "5.3.3 — Seed capital",
+      "chunk_id": "DOC052-U0012-C0001"
+    },
+    {
+      "document_id": "DOC052",
+      "page": 14,
+      "section": "5.4.6–5.4.8 — Seed capital accountability/funding",
+      "chunk_id": "DOC052-U0014-C0001"
+    },
+    {
+      "document_id": "DOC053",
+      "page": 8,
+      "section": "4.7–4.12 — Financial/commercial/management case",
+      "chunk_id": "DOC053-U0008-C0001"
+    },
+    {
+      "document_id": "DOC053",
+      "page": 27,
+      "section": "Seed-capital proposal assessment/prioritisation",
+      "chunk_id": "DOC053-U0027-C0001"
+    },
+    {
+      "document_id": "DOC053",
+      "page": 28,
+      "section": "Tax-site Investment Principles; 2.3c Trade and Investment Promotion",
+      "chunk_id": "DOC053-U0028-C0001"
+    }
+  ],
+  "difficulty": "high",
+  "notes": "Benchmark task. Human verified on 2026-09-26 by explicit researcher approval APPROVE UC2 T011-T020; latest approved candidate in evidence/engineering/uc2_task_human_review_dossier_2026-09-26.md.",
+  "validation_status": "frozen"
+}
