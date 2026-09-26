@@ -1,0 +1,27 @@
+{
+  "schema_version": "0.1",
+  "task_id": "T024",
+  "question": "In RFCDC Volume 3, what cautions should a teacher apply when considering high-stakes assessment of learners' values and attitudes and when using observational assessment of competence clusters across situations?",
+  "task_type": "within_document_reasoning",
+  "required_documents": [
+    "DOC035"
+  ],
+  "reference_answer": "High-stakes assessment of values and attitudes raises respectfulness concerns, including learners' freedom of thought, conscience and religion. Attitudes are complex and personal, so assessment may be perceived as judging the person and may damage future prospects. Users might consider low-stakes assessment for values/attitudes and high-stakes assessment for skills, knowledge and critical understanding, deciding for their context while preserving respectfulness. Observational assessment requires planned situations and records of how learners deploy and adjust competence clusters. Assessor attentiveness, preconceptions and expectations can cause selective perception and inappropriate conclusions; inconsistency across situations can undermine reliability. The text presents contextual choices, not an unconditional ban or a claim that observation is automatically reliable.",
+  "reference_evidence": [
+    {
+      "document_id": "DOC035",
+      "page": 62,
+      "section": "Page 62",
+      "chunk_id": "DOC035-P0062-C001"
+    },
+    {
+      "document_id": "DOC035",
+      "page": 69,
+      "section": "Page 69",
+      "chunk_id": "DOC035-P0069-C001"
+    }
+  ],
+  "difficulty": "high",
+  "notes": "Human verified on 2026-09-27 by explicit researcher approval APPROVE UC3 T021-T030; approved candidate in evidence/engineering/uc3_task_human_review_dossier_2026-09-27.md (SHA256 4376a5dcc36c1bb2f9590949cf71db32dc3faf5d6d6ea4cf0da887f91dc049be); human approval evidence: evidence/engineering/uc3_task_human_approval_2026-09-27.md.",
+  "validation_status": "frozen"
+}

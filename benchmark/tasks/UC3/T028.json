@@ -1,0 +1,28 @@
+{
+  "schema_version": "0.1",
+  "task_id": "T028",
+  "question": "How do DigCompEdu and DigCompOrg distinguish educator-level analysis of digital evidence about learners from organisational implementation of learning analytics, in terms of purpose and responsibilities?",
+  "task_type": "cross_document_reasoning",
+  "required_documents": [
+    "DOC039",
+    "DOC040"
+  ],
+  "reference_answer": "DigCompEdu asks educators to generate, select, critically analyse and interpret digital evidence of learner activity, performance and progress to inform teaching and learning. Activities include recording/comparing/synthesising progress data, considering and combining different evidence sources and critically valuing the evidence. DigCompOrg gives learning analytics strategic organisational consideration, aiming to optimise individual/group outcomes and organisational performance. Before implementation, the organisation should have a code of practice and processes for safe, secure collection, validation, storage, aggregation, analysis and reporting of student data. Analytics supports immediate personalised feedback and tutorial/remedial interventions; aggregated progress and achievement data inform quality management, course design/review and retention/outcome interventions. These are distinct framework responsibilities, not proven effects or equivalent proficiency scales.",
+  "reference_evidence": [
+    {
+      "document_id": "DOC039",
+      "page": 64,
+      "section": "Page 64",
+      "chunk_id": "DOC039-P0064-C001"
+    },
+    {
+      "document_id": "DOC040",
+      "page": 29,
+      "section": "Page 29",
+      "chunk_id": "DOC040-P0029-C001"
+    }
+  ],
+  "difficulty": "high",
+  "notes": "Human verified on 2026-09-27 by explicit researcher approval APPROVE UC3 T021-T030; approved candidate in evidence/engineering/uc3_task_human_review_dossier_2026-09-27.md (SHA256 4376a5dcc36c1bb2f9590949cf71db32dc3faf5d6d6ea4cf0da887f91dc049be); human approval evidence: evidence/engineering/uc3_task_human_approval_2026-09-27.md.",
+  "validation_status": "frozen"
+}

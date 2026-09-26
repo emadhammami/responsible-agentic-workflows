@@ -1,0 +1,27 @@
+{
+  "schema_version": "0.1",
+  "task_id": "T026",
+  "question": "What does DigCompOrg call for in assigning responsibility and reviewing a digital-capacity implementation plan, and in protecting data and planning digital-infrastructure procurement?",
+  "task_type": "within_document_reasoning",
+  "required_documents": [
+    "DOC040"
+  ],
+  "reference_answer": "Management responsibility for delivery and monitoring of the digital-capacity implementation plan should be clearly assigned. Staffing and resources should align with organisational budgets/plans; outcomes, quality and impact should be reviewed and reported periodically, with the plan updated for organisational needs and technological/pedagogical developments. Infrastructure requires policies, procedures and safeguards for privacy, confidentiality and safe use of technologies/data, including data-protection/licensing obligations, learning-analytics policies and staff/student guidelines. Procurement should account for general and specialist requirements and use whole-of-life costing; a viable operational plan should address procurement, maintenance, interoperability and security of core ICT services. These are framework provisions, not claims about an institution implementing them.",
+  "reference_evidence": [
+    {
+      "document_id": "DOC040",
+      "page": 24,
+      "section": "Page 24",
+      "chunk_id": "DOC040-P0024-C001"
+    },
+    {
+      "document_id": "DOC040",
+      "page": 35,
+      "section": "Page 35",
+      "chunk_id": "DOC040-P0035-C001"
+    }
+  ],
+  "difficulty": "high",
+  "notes": "Human verified on 2026-09-27 by explicit researcher approval APPROVE UC3 T021-T030; approved candidate in evidence/engineering/uc3_task_human_review_dossier_2026-09-27.md (SHA256 4376a5dcc36c1bb2f9590949cf71db32dc3faf5d6d6ea4cf0da887f91dc049be); human approval evidence: evidence/engineering/uc3_task_human_approval_2026-09-27.md.",
+  "validation_status": "frozen"
+}

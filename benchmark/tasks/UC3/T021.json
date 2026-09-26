@@ -1,0 +1,21 @@
+{
+  "schema_version": "0.1",
+  "task_id": "T021",
+  "question": "When using DigComp 3.0 learning outcomes to develop measures of achieved learning, what measurement risk does the framework identify and what approach does it recommend?",
+  "task_type": "direct_retrieval",
+  "required_documents": [
+    "DOC032"
+  ],
+  "reference_answer": "DigComp 3.0 provides intended, not achieved, learning outcomes. A strictly empirical measurement approach risks undervaluing or omitting softer or harder-to-measure competences. Outcomes that cannot be directly or easily observed or measured are likely to be as important as those that can. The framework recommends a balanced, context-sensitive approach.",
+  "reference_evidence": [
+    {
+      "document_id": "DOC032",
+      "page": 88,
+      "section": "Page 88",
+      "chunk_id": "DOC032-P0088-C002"
+    }
+  ],
+  "difficulty": "low",
+  "notes": "Human verified on 2026-09-27 by explicit researcher approval APPROVE UC3 T021-T030; approved candidate in evidence/engineering/uc3_task_human_review_dossier_2026-09-27.md (SHA256 4376a5dcc36c1bb2f9590949cf71db32dc3faf5d6d6ea4cf0da887f91dc049be); human approval evidence: evidence/engineering/uc3_task_human_approval_2026-09-27.md.",
+  "validation_status": "frozen"
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": "0.1",
+  "task_id": "T022",
+  "question": "What commitments does the European Declaration on Digital Rights and Principles make to protect people's informed choice and fundamental rights when they interact with algorithms and AI systems?",
+  "task_type": "direct_retrieval",
+  "required_documents": [
+    "DOC038"
+  ],
+  "reference_answer": "The Declaration commits to promoting human-centric, trustworthy and ethical AI throughout development, deployment and use; transparency about algorithms and AI, empowerment to use them and information when interacting with them; adequate datasets to avoid discrimination and human supervision of outcomes affecting safety and fundamental rights; preventing AI from pre-empting people's choices; safeguards and appropriate action, including trustworthy standards, for safe systems respecting fundamental rights; and AI research meeting the highest ethical standards and relevant EU law. These are declared commitments, not evidence of their fulfilment.",
+  "reference_evidence": [
+    {
+      "document_id": "DOC038",
+      "page": 5,
+      "section": "Page 5",
+      "chunk_id": "DOC038-P0005-C001"
+    }
+  ],
+  "difficulty": "medium",
+  "notes": "Human verified on 2026-09-27 by explicit researcher approval APPROVE UC3 T021-T030; approved candidate in evidence/engineering/uc3_task_human_review_dossier_2026-09-27.md (SHA256 4376a5dcc36c1bb2f9590949cf71db32dc3faf5d6d6ea4cf0da887f91dc049be); human approval evidence: evidence/engineering/uc3_task_human_approval_2026-09-27.md.",
+  "validation_status": "frozen"
+}

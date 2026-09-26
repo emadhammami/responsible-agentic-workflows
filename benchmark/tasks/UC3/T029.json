@@ -1,0 +1,12 @@
+{
+  "schema_version": "0.1",
+  "task_id": "T029",
+  "question": "According to the frozen UC3 corpus, among educational settings explicitly\nreported as implementing RFCDC competences or descriptors, what empirically\nmeasured change in learners' democratic participation was reported using an\nexplicitly defined participation outcome measure?",
+  "task_type": "insufficient_evidence",
+  "required_documents": [],
+  "reference_answer": "The frozen UC3 corpus does not provide sufficient empirical evidence to determine a measured change in learners' democratic participation using an explicitly defined participation outcome measure after explicit RFCDC implementation. Descriptor-validation data and framework guidance do not establish that implementation outcome.",
+  "reference_evidence": [],
+  "difficulty": "high",
+  "notes": "Human verified on 2026-09-27 by explicit researcher approval APPROVE UC3 T021-T030; approved candidate in evidence/engineering/uc3_task_human_review_dossier_2026-09-27.md (SHA256 4376a5dcc36c1bb2f9590949cf71db32dc3faf5d6d6ea4cf0da887f91dc049be); human approval evidence: evidence/engineering/uc3_task_human_approval_2026-09-27.md. Latest researcher-directed Revision 1. Corpus-wide absence audit: evidence/engineering/uc3_insufficient_evidence_absence_audit_2026-09-27.md (SHA256 577031ef70ae369ee0b3b9b1291b23a8453c4f3de6e00b5b0bf265ed3b593fad); 9 public documents, 664 source units, 850 canonical chunks.",
+  "validation_status": "frozen"
+}

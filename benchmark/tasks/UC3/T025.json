@@ -1,0 +1,27 @@
+{
+  "schema_version": "0.1",
+  "task_id": "T025",
+  "question": "In the UNESCO ICT Competency Framework for Teachers v3 Pedagogy aspect, how do the teacher's role and proposed learning activities differ between Knowledge Acquisition and Knowledge Creation? Illustrate each level with the lesson- or project-related activities specified in the framework.",
+  "task_type": "within_document_reasoning",
+  "required_documents": [
+    "DOC037"
+  ],
+  "reference_answer": "At Knowledge Acquisition, teachers make appropriate ICT choices to support teaching/learning methodologies and students' acquisition of subject knowledge. They devise ICT-supported lesson plans, for example using tutorials, drill-and-practice or accessible multilingual digital resources; presentation software and inclusive media can support instruction. At Knowledge Creation, teachers determine learning parameters while encouraging student self-management in student-centred collaborative learning, modelling reasoning, problem solving and knowledge creation. They design collaborative research activities and help students plan projects with activities, timelines, milestones and allocated responsibilities, create digital media and reflect on learning through milestone activities such as blogs or video diaries. These are framework objectives and example activities, not observed attainment.",
+  "reference_evidence": [
+    {
+      "document_id": "DOC037",
+      "page": 29,
+      "section": "Page 29",
+      "chunk_id": "DOC037-P0029-C001"
+    },
+    {
+      "document_id": "DOC037",
+      "page": 44,
+      "section": "Page 44",
+      "chunk_id": "DOC037-P0044-C001"
+    }
+  ],
+  "difficulty": "high",
+  "notes": "Human verified on 2026-09-27 by explicit researcher approval APPROVE UC3 T021-T030; approved candidate in evidence/engineering/uc3_task_human_review_dossier_2026-09-27.md (SHA256 4376a5dcc36c1bb2f9590949cf71db32dc3faf5d6d6ea4cf0da887f91dc049be); human approval evidence: evidence/engineering/uc3_task_human_approval_2026-09-27.md.",
+  "validation_status": "frozen"
+}

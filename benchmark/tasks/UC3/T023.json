@@ -1,0 +1,21 @@
+{
+  "schema_version": "0.1",
+  "task_id": "T023",
+  "question": "According to the Council Recommendation on key competences for lifelong learning, what skills and attitudes underpin constructive civic participation, including engagement with media?",
+  "task_type": "direct_retrieval",
+  "required_documents": [
+    "DOC036"
+  ],
+  "reference_answer": "Citizenship skills include engaging with others in the common or public interest, critical thinking and integrated problem solving, developing arguments, constructive community participation and decision-making from local to international levels. They include accessing, critically understanding and interacting with traditional and new media and understanding media's democratic role. The attitude rests on respect for human rights and willingness to participate in democratic decisions and civic activities, supporting diversity, gender equality, social cohesion, sustainable lifestyles and peace/non-violence, respecting privacy and environmental responsibility. Interest in political and socioeconomic developments, humanities and intercultural communication supports overcoming prejudice, compromise where necessary, social justice and fairness.",
+  "reference_evidence": [
+    {
+      "document_id": "DOC036",
+      "page": 11,
+      "section": "Page 11",
+      "chunk_id": "DOC036-P0011-C001"
+    }
+  ],
+  "difficulty": "medium",
+  "notes": "Human verified on 2026-09-27 by explicit researcher approval APPROVE UC3 T021-T030; approved candidate in evidence/engineering/uc3_task_human_review_dossier_2026-09-27.md (SHA256 4376a5dcc36c1bb2f9590949cf71db32dc3faf5d6d6ea4cf0da887f91dc049be); human approval evidence: evidence/engineering/uc3_task_human_approval_2026-09-27.md.",
+  "validation_status": "frozen"
+}
