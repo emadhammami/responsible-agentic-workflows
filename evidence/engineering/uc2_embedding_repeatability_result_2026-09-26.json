@@ -1,0 +1,27 @@
+{
+  "diagnostic": "embedding_repeatability",
+  "dtype": "float32",
+  "finite_run1": true,
+  "finite_run2": true,
+  "interpretation": "Descriptive engineering repeatability evidence only; no post-hoc acceptance threshold introduced.",
+  "max_abs_diff": 0.006636835169047117,
+  "mean_abs_diff": 4.665092274080962e-05,
+  "mismatch_fraction": 0.07167235494880546,
+  "mismatched_elements": 53760,
+  "row_cosine_max": 1.000000238418579,
+  "row_cosine_mean": 0.9999347925186157,
+  "row_cosine_min": 0.9981675744056702,
+  "row_rmse_max": 0.0011965176090598106,
+  "row_rmse_mean": 5.888043961022049e-05,
+  "run1_canonical": true,
+  "run1_embeddings_sha256": "621a229c066f2b9cf1d2eef257da4ba8215e7bf1513f8113aebaf3717464d78f",
+  "run2_embeddings_sha256": "1c86de0a9d648821318b4b425767fbee5096f9b3fcc4d5ba48fb4ca66e3e7d89",
+  "schema_version": "0.1",
+  "shape": [
+    293,
+    2560
+  ],
+  "total_elements": 750080,
+  "use_case_id": "UC2",
+  "vector_payload_exact_equal": false
+}

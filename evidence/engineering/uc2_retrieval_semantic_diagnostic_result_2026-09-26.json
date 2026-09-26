@@ -1,0 +1,3636 @@
+{
+  "diagnostic": "semantic_retrieval_qualification",
+  "gate_checks": {
+    "stable_top1": true,
+    "top10": true,
+    "top3": true,
+    "top5": true
+  },
+  "observed": {
+    "stable_top1": 17,
+    "top10": 16,
+    "top3": 16,
+    "top5": 16
+  },
+  "probe_count": 17,
+  "protocol_id": "UC2-SEMANTIC-RETRIEVAL-PROBES-v0.1",
+  "qualification": "PASS",
+  "query_runs": 51,
+  "repeats_per_probe": 3,
+  "results": [
+    {
+      "expected_document_id": "DOC041",
+      "probe_id": "SEM01",
+      "query": "Policy design for Scotland's designated economic-zone programme and how the programme is intended to operate.",
+      "repeats": [
+        {
+          "expected_document_rank": 2,
+          "repeat": 1,
+          "retrieved": [
+            {
+              "chunk_id": "DOC044-U0001-C0001",
+              "document_id": "DOC044",
+              "rank": 1,
+              "score": 0.593462347984314
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0005",
+              "document_id": "DOC041",
+              "rank": 2,
+              "score": 0.5765112638473511
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0002",
+              "document_id": "DOC041",
+              "rank": 3,
+              "score": 0.5743069648742676
+            },
+            {
+              "chunk_id": "DOC045-U0001-C0001",
+              "document_id": "DOC045",
+              "rank": 4,
+              "score": 0.5551145076751709
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0004",
+              "document_id": "DOC041",
+              "rank": 5,
+              "score": 0.5497716069221497
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0048",
+              "document_id": "DOC041",
+              "rank": 6,
+              "score": 0.5464041233062744
+            },
+            {
+              "chunk_id": "DOC044-U0001-C0008",
+              "document_id": "DOC044",
+              "rank": 7,
+              "score": 0.5442700386047363
+            },
+            {
+              "chunk_id": "DOC044-U0001-C0002",
+              "document_id": "DOC044",
+              "rank": 8,
+              "score": 0.5437190532684326
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0001",
+              "document_id": "DOC041",
+              "rank": 9,
+              "score": 0.5419408082962036
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0003",
+              "document_id": "DOC041",
+              "rank": 10,
+              "score": 0.5395240783691406
+            }
+          ],
+          "top1_document_id": "DOC044"
+        },
+        {
+          "expected_document_rank": 2,
+          "repeat": 2,
+          "retrieved": [
+            {
+              "chunk_id": "DOC044-U0001-C0001",
+              "document_id": "DOC044",
+              "rank": 1,
+              "score": 0.593462347984314
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0005",
+              "document_id": "DOC041",
+              "rank": 2,
+              "score": 0.5765112638473511
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0002",
+              "document_id": "DOC041",
+              "rank": 3,
+              "score": 0.5743069648742676
+            },
+            {
+              "chunk_id": "DOC045-U0001-C0001",
+              "document_id": "DOC045",
+              "rank": 4,
+              "score": 0.5551145076751709
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0004",
+              "document_id": "DOC041",
+              "rank": 5,
+              "score": 0.5497716069221497
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0048",
+              "document_id": "DOC041",
+              "rank": 6,
+              "score": 0.5464041233062744
+            },
+            {
+              "chunk_id": "DOC044-U0001-C0008",
+              "document_id": "DOC044",
+              "rank": 7,
+              "score": 0.5442700386047363
+            },
+            {
+              "chunk_id": "DOC044-U0001-C0002",
+              "document_id": "DOC044",
+              "rank": 8,
+              "score": 0.5437190532684326
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0001",
+              "document_id": "DOC041",
+              "rank": 9,
+              "score": 0.5419408082962036
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0003",
+              "document_id": "DOC041",
+              "rank": 10,
+              "score": 0.5395240783691406
+            }
+          ],
+          "top1_document_id": "DOC044"
+        },
+        {
+          "expected_document_rank": 2,
+          "repeat": 3,
+          "retrieved": [
+            {
+              "chunk_id": "DOC044-U0001-C0001",
+              "document_id": "DOC044",
+              "rank": 1,
+              "score": 0.593462347984314
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0005",
+              "document_id": "DOC041",
+              "rank": 2,
+              "score": 0.5765112638473511
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0002",
+              "document_id": "DOC041",
+              "rank": 3,
+              "score": 0.5743069648742676
+            },
+            {
+              "chunk_id": "DOC045-U0001-C0001",
+              "document_id": "DOC045",
+              "rank": 4,
+              "score": 0.5551145076751709
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0004",
+              "document_id": "DOC041",
+              "rank": 5,
+              "score": 0.5497716069221497
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0048",
+              "document_id": "DOC041",
+              "rank": 6,
+              "score": 0.5464041233062744
+            },
+            {
+              "chunk_id": "DOC044-U0001-C0008",
+              "document_id": "DOC044",
+              "rank": 7,
+              "score": 0.5442700386047363
+            },
+            {
+              "chunk_id": "DOC044-U0001-C0002",
+              "document_id": "DOC044",
+              "rank": 8,
+              "score": 0.5437190532684326
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0001",
+              "document_id": "DOC041",
+              "rank": 9,
+              "score": 0.5419408082962036
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0003",
+              "document_id": "DOC041",
+              "rank": 10,
+              "score": 0.5395240783691406
+            }
+          ],
+          "top1_document_id": "DOC044"
+        }
+      ],
+      "stable_top1": true,
+      "top10": true,
+      "top3": true,
+      "top5": true
+    },
+    {
+      "expected_document_id": "DOC042",
+      "probe_id": "SEM02",
+      "query": "Official clarification of questions about how the Scottish designated-zone programme should be interpreted and applied.",
+      "repeats": [
+        {
+          "expected_document_rank": null,
+          "repeat": 1,
+          "retrieved": [
+            {
+              "chunk_id": "DOC051-U0003-C0001",
+              "document_id": "DOC051",
+              "rank": 1,
+              "score": 0.4997045397758484
+            },
+            {
+              "chunk_id": "DOC051-U0003-C0002",
+              "document_id": "DOC051",
+              "rank": 2,
+              "score": 0.4966944456100464
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0044",
+              "document_id": "DOC041",
+              "rank": 3,
+              "score": 0.4883795380592346
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0030",
+              "document_id": "DOC041",
+              "rank": 4,
+              "score": 0.48804301023483276
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0005",
+              "document_id": "DOC041",
+              "rank": 5,
+              "score": 0.47985970973968506
+            },
+            {
+              "chunk_id": "DOC058-U0001-C0002",
+              "document_id": "DOC058",
+              "rank": 6,
+              "score": 0.47801899909973145
+            },
+            {
+              "chunk_id": "DOC058-U0001-C0001",
+              "document_id": "DOC058",
+              "rank": 7,
+              "score": 0.473280668258667
+            },
+            {
+              "chunk_id": "DOC051-U0003-C0003",
+              "document_id": "DOC051",
+              "rank": 8,
+              "score": 0.47139090299606323
+            },
+            {
+              "chunk_id": "DOC046-U0001-C0006",
+              "document_id": "DOC046",
+              "rank": 9,
+              "score": 0.47030025720596313
+            },
+            {
+              "chunk_id": "DOC045-U0001-C0001",
+              "document_id": "DOC045",
+              "rank": 10,
+              "score": 0.4693776071071625
+            }
+          ],
+          "top1_document_id": "DOC051"
+        },
+        {
+          "expected_document_rank": null,
+          "repeat": 2,
+          "retrieved": [
+            {
+              "chunk_id": "DOC051-U0003-C0001",
+              "document_id": "DOC051",
+              "rank": 1,
+              "score": 0.5005665421485901
+            },
+            {
+              "chunk_id": "DOC051-U0003-C0002",
+              "document_id": "DOC051",
+              "rank": 2,
+              "score": 0.49712103605270386
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0044",
+              "document_id": "DOC041",
+              "rank": 3,
+              "score": 0.48895910382270813
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0030",
+              "document_id": "DOC041",
+              "rank": 4,
+              "score": 0.4870944023132324
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0005",
+              "document_id": "DOC041",
+              "rank": 5,
+              "score": 0.4796784520149231
+            },
+            {
+              "chunk_id": "DOC058-U0001-C0002",
+              "document_id": "DOC058",
+              "rank": 6,
+              "score": 0.4767645597457886
+            },
+            {
+              "chunk_id": "DOC051-U0003-C0003",
+              "document_id": "DOC051",
+              "rank": 7,
+              "score": 0.4720735549926758
+            },
+            {
+              "chunk_id": "DOC058-U0001-C0001",
+              "document_id": "DOC058",
+              "rank": 8,
+              "score": 0.4718586802482605
+            },
+            {
+              "chunk_id": "DOC046-U0001-C0006",
+              "document_id": "DOC046",
+              "rank": 9,
+              "score": 0.4694424271583557
+            },
+            {
+              "chunk_id": "DOC045-U0001-C0001",
+              "document_id": "DOC045",
+              "rank": 10,
+              "score": 0.4686048626899719
+            }
+          ],
+          "top1_document_id": "DOC051"
+        },
+        {
+          "expected_document_rank": null,
+          "repeat": 3,
+          "retrieved": [
+            {
+              "chunk_id": "DOC051-U0003-C0001",
+              "document_id": "DOC051",
+              "rank": 1,
+              "score": 0.5005665421485901
+            },
+            {
+              "chunk_id": "DOC051-U0003-C0002",
+              "document_id": "DOC051",
+              "rank": 2,
+              "score": 0.49712103605270386
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0044",
+              "document_id": "DOC041",
+              "rank": 3,
+              "score": 0.48895910382270813
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0030",
+              "document_id": "DOC041",
+              "rank": 4,
+              "score": 0.4870944023132324
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0005",
+              "document_id": "DOC041",
+              "rank": 5,
+              "score": 0.4796784520149231
+            },
+            {
+              "chunk_id": "DOC058-U0001-C0002",
+              "document_id": "DOC058",
+              "rank": 6,
+              "score": 0.4767645597457886
+            },
+            {
+              "chunk_id": "DOC051-U0003-C0003",
+              "document_id": "DOC051",
+              "rank": 7,
+              "score": 0.4720735549926758
+            },
+            {
+              "chunk_id": "DOC058-U0001-C0001",
+              "document_id": "DOC058",
+              "rank": 8,
+              "score": 0.4718586802482605
+            },
+            {
+              "chunk_id": "DOC046-U0001-C0006",
+              "document_id": "DOC046",
+              "rank": 9,
+              "score": 0.4694424271583557
+            },
+            {
+              "chunk_id": "DOC045-U0001-C0001",
+              "document_id": "DOC045",
+              "rank": 10,
+              "score": 0.4686048626899719
+            }
+          ],
+          "top1_document_id": "DOC051"
+        }
+      ],
+      "stable_top1": true,
+      "top10": false,
+      "top3": false,
+      "top5": false
+    },
+    {
+      "expected_document_id": "DOC043",
+      "probe_id": "SEM03",
+      "query": "Requirements for the set-up stage, business-case preparation and delivery arrangements for selected Scottish sites.",
+      "repeats": [
+        {
+          "expected_document_rank": 1,
+          "repeat": 1,
+          "retrieved": [
+            {
+              "chunk_id": "DOC043-U0001-C0001",
+              "document_id": "DOC043",
+              "rank": 1,
+              "score": 0.6651486158370972
+            },
+            {
+              "chunk_id": "DOC053-U0007-C0001",
+              "document_id": "DOC053",
+              "rank": 2,
+              "score": 0.5760858058929443
+            },
+            {
+              "chunk_id": "DOC042-U0001-C0007",
+              "document_id": "DOC042",
+              "rank": 3,
+              "score": 0.573442816734314
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0037",
+              "document_id": "DOC041",
+              "rank": 4,
+              "score": 0.5598456263542175
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0044",
+              "document_id": "DOC041",
+              "rank": 5,
+              "score": 0.5521177053451538
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0048",
+              "document_id": "DOC041",
+              "rank": 6,
+              "score": 0.5460829734802246
+            },
+            {
+              "chunk_id": "DOC043-U0001-C0002",
+              "document_id": "DOC043",
+              "rank": 7,
+              "score": 0.5456691384315491
+            },
+            {
+              "chunk_id": "DOC043-U0001-C0034",
+              "document_id": "DOC043",
+              "rank": 8,
+              "score": 0.5456599593162537
+            },
+            {
+              "chunk_id": "DOC043-U0001-C0030",
+              "document_id": "DOC043",
+              "rank": 9,
+              "score": 0.5414389371871948
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0041",
+              "document_id": "DOC041",
+              "rank": 10,
+              "score": 0.5369699001312256
+            }
+          ],
+          "top1_document_id": "DOC043"
+        },
+        {
+          "expected_document_rank": 1,
+          "repeat": 2,
+          "retrieved": [
+            {
+              "chunk_id": "DOC043-U0001-C0001",
+              "document_id": "DOC043",
+              "rank": 1,
+              "score": 0.663978099822998
+            },
+            {
+              "chunk_id": "DOC053-U0007-C0001",
+              "document_id": "DOC053",
+              "rank": 2,
+              "score": 0.5742660760879517
+            },
+            {
+              "chunk_id": "DOC042-U0001-C0007",
+              "document_id": "DOC042",
+              "rank": 3,
+              "score": 0.5719165802001953
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0037",
+              "document_id": "DOC041",
+              "rank": 4,
+              "score": 0.5579187870025635
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0044",
+              "document_id": "DOC041",
+              "rank": 5,
+              "score": 0.5498989224433899
+            },
+            {
+              "chunk_id": "DOC043-U0001-C0002",
+              "document_id": "DOC043",
+              "rank": 6,
+              "score": 0.5453223586082458
+            },
+            {
+              "chunk_id": "DOC043-U0001-C0034",
+              "document_id": "DOC043",
+              "rank": 7,
+              "score": 0.5442620515823364
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0048",
+              "document_id": "DOC041",
+              "rank": 8,
+              "score": 0.5432001352310181
+            },
+            {
+              "chunk_id": "DOC043-U0001-C0030",
+              "document_id": "DOC043",
+              "rank": 9,
+              "score": 0.5402907133102417
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0041",
+              "document_id": "DOC041",
+              "rank": 10,
+              "score": 0.5347975492477417
+            }
+          ],
+          "top1_document_id": "DOC043"
+        },
+        {
+          "expected_document_rank": 1,
+          "repeat": 3,
+          "retrieved": [
+            {
+              "chunk_id": "DOC043-U0001-C0001",
+              "document_id": "DOC043",
+              "rank": 1,
+              "score": 0.663978099822998
+            },
+            {
+              "chunk_id": "DOC053-U0007-C0001",
+              "document_id": "DOC053",
+              "rank": 2,
+              "score": 0.5742660760879517
+            },
+            {
+              "chunk_id": "DOC042-U0001-C0007",
+              "document_id": "DOC042",
+              "rank": 3,
+              "score": 0.5719165802001953
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0037",
+              "document_id": "DOC041",
+              "rank": 4,
+              "score": 0.5579187870025635
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0044",
+              "document_id": "DOC041",
+              "rank": 5,
+              "score": 0.5498989224433899
+            },
+            {
+              "chunk_id": "DOC043-U0001-C0002",
+              "document_id": "DOC043",
+              "rank": 6,
+              "score": 0.5453223586082458
+            },
+            {
+              "chunk_id": "DOC043-U0001-C0034",
+              "document_id": "DOC043",
+              "rank": 7,
+              "score": 0.5442620515823364
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0048",
+              "document_id": "DOC041",
+              "rank": 8,
+              "score": 0.5432001352310181
+            },
+            {
+              "chunk_id": "DOC043-U0001-C0030",
+              "document_id": "DOC043",
+              "rank": 9,
+              "score": 0.5402907133102417
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0041",
+              "document_id": "DOC041",
+              "rank": 10,
+              "score": 0.5347975492477417
+            }
+          ],
+          "top1_document_id": "DOC043"
+        }
+      ],
+      "stable_top1": true,
+      "top10": true,
+      "top3": true,
+      "top5": true
+    },
+    {
+      "expected_document_id": "DOC044",
+      "probe_id": "SEM04",
+      "query": "Assessment of programme impacts, controls and implementation effects arising from the Scottish designated-zone policy.",
+      "repeats": [
+        {
+          "expected_document_rank": 3,
+          "repeat": 1,
+          "retrieved": [
+            {
+              "chunk_id": "DOC041-U0001-C0039",
+              "document_id": "DOC041",
+              "rank": 1,
+              "score": 0.5517368912696838
+            },
+            {
+              "chunk_id": "DOC052-U0005-C0001",
+              "document_id": "DOC052",
+              "rank": 2,
+              "score": 0.5119469165802002
+            },
+            {
+              "chunk_id": "DOC044-U0001-C0008",
+              "document_id": "DOC044",
+              "rank": 3,
+              "score": 0.507969081401825
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0032",
+              "document_id": "DOC041",
+              "rank": 4,
+              "score": 0.5017234086990356
+            },
+            {
+              "chunk_id": "DOC052-U0003-C0002",
+              "document_id": "DOC052",
+              "rank": 5,
+              "score": 0.5010823011398315
+            },
+            {
+              "chunk_id": "DOC052-U0018-C0001",
+              "document_id": "DOC052",
+              "rank": 6,
+              "score": 0.4988638758659363
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0030",
+              "document_id": "DOC041",
+              "rank": 7,
+              "score": 0.4944617450237274
+            },
+            {
+              "chunk_id": "DOC044-U0001-C0001",
+              "document_id": "DOC044",
+              "rank": 8,
+              "score": 0.49385350942611694
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0048",
+              "document_id": "DOC041",
+              "rank": 9,
+              "score": 0.4925709068775177
+            },
+            {
+              "chunk_id": "DOC043-U0001-C0001",
+              "document_id": "DOC043",
+              "rank": 10,
+              "score": 0.48664525151252747
+            }
+          ],
+          "top1_document_id": "DOC041"
+        },
+        {
+          "expected_document_rank": 3,
+          "repeat": 2,
+          "retrieved": [
+            {
+              "chunk_id": "DOC041-U0001-C0039",
+              "document_id": "DOC041",
+              "rank": 1,
+              "score": 0.5510679483413696
+            },
+            {
+              "chunk_id": "DOC052-U0005-C0001",
+              "document_id": "DOC052",
+              "rank": 2,
+              "score": 0.5125182867050171
+            },
+            {
+              "chunk_id": "DOC044-U0001-C0008",
+              "document_id": "DOC044",
+              "rank": 3,
+              "score": 0.5097335577011108
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0032",
+              "document_id": "DOC041",
+              "rank": 4,
+              "score": 0.5028849840164185
+            },
+            {
+              "chunk_id": "DOC052-U0003-C0002",
+              "document_id": "DOC052",
+              "rank": 5,
+              "score": 0.5021998286247253
+            },
+            {
+              "chunk_id": "DOC052-U0018-C0001",
+              "document_id": "DOC052",
+              "rank": 6,
+              "score": 0.49986961483955383
+            },
+            {
+              "chunk_id": "DOC044-U0001-C0001",
+              "document_id": "DOC044",
+              "rank": 7,
+              "score": 0.49568480253219604
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0030",
+              "document_id": "DOC041",
+              "rank": 8,
+              "score": 0.4952356815338135
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0048",
+              "document_id": "DOC041",
+              "rank": 9,
+              "score": 0.4943818151950836
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0044",
+              "document_id": "DOC041",
+              "rank": 10,
+              "score": 0.4876089096069336
+            }
+          ],
+          "top1_document_id": "DOC041"
+        },
+        {
+          "expected_document_rank": 3,
+          "repeat": 3,
+          "retrieved": [
+            {
+              "chunk_id": "DOC041-U0001-C0039",
+              "document_id": "DOC041",
+              "rank": 1,
+              "score": 0.5510679483413696
+            },
+            {
+              "chunk_id": "DOC052-U0005-C0001",
+              "document_id": "DOC052",
+              "rank": 2,
+              "score": 0.5125182867050171
+            },
+            {
+              "chunk_id": "DOC044-U0001-C0008",
+              "document_id": "DOC044",
+              "rank": 3,
+              "score": 0.5097335577011108
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0032",
+              "document_id": "DOC041",
+              "rank": 4,
+              "score": 0.5028849840164185
+            },
+            {
+              "chunk_id": "DOC052-U0003-C0002",
+              "document_id": "DOC052",
+              "rank": 5,
+              "score": 0.5021998286247253
+            },
+            {
+              "chunk_id": "DOC052-U0018-C0001",
+              "document_id": "DOC052",
+              "rank": 6,
+              "score": 0.49986961483955383
+            },
+            {
+              "chunk_id": "DOC044-U0001-C0001",
+              "document_id": "DOC044",
+              "rank": 7,
+              "score": 0.49568480253219604
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0030",
+              "document_id": "DOC041",
+              "rank": 8,
+              "score": 0.4952356815338135
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0048",
+              "document_id": "DOC041",
+              "rank": 9,
+              "score": 0.4943818151950836
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0044",
+              "document_id": "DOC041",
+              "rank": 10,
+              "score": 0.4876089096069336
+            }
+          ],
+          "top1_document_id": "DOC041"
+        }
+      ],
+      "stable_top1": true,
+      "top10": true,
+      "top3": true,
+      "top5": true
+    },
+    {
+      "expected_document_id": "DOC045",
+      "probe_id": "SEM05",
+      "query": "How planning and consenting should be coordinated for development associated with Scotland's designated zones.",
+      "repeats": [
+        {
+          "expected_document_rank": 2,
+          "repeat": 1,
+          "retrieved": [
+            {
+              "chunk_id": "DOC041-U0001-C0030",
+              "document_id": "DOC041",
+              "rank": 1,
+              "score": 0.6636780500411987
+            },
+            {
+              "chunk_id": "DOC045-U0001-C0002",
+              "document_id": "DOC045",
+              "rank": 2,
+              "score": 0.6090928316116333
+            },
+            {
+              "chunk_id": "DOC045-U0001-C0003",
+              "document_id": "DOC045",
+              "rank": 3,
+              "score": 0.5986027717590332
+            },
+            {
+              "chunk_id": "DOC045-U0001-C0004",
+              "document_id": "DOC045",
+              "rank": 4,
+              "score": 0.591937243938446
+            },
+            {
+              "chunk_id": "DOC045-U0001-C0001",
+              "document_id": "DOC045",
+              "rank": 5,
+              "score": 0.5786865949630737
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0031",
+              "document_id": "DOC041",
+              "rank": 6,
+              "score": 0.5125494003295898
+            },
+            {
+              "chunk_id": "DOC042-U0001-C0002",
+              "document_id": "DOC042",
+              "rank": 7,
+              "score": 0.5071142911911011
+            },
+            {
+              "chunk_id": "DOC053-U0022-C0001",
+              "document_id": "DOC053",
+              "rank": 8,
+              "score": 0.5054157376289368
+            },
+            {
+              "chunk_id": "DOC043-U0001-C0001",
+              "document_id": "DOC043",
+              "rank": 9,
+              "score": 0.5042793154716492
+            },
+            {
+              "chunk_id": "DOC043-U0001-C0010",
+              "document_id": "DOC043",
+              "rank": 10,
+              "score": 0.49664825201034546
+            }
+          ],
+          "top1_document_id": "DOC041"
+        },
+        {
+          "expected_document_rank": 2,
+          "repeat": 2,
+          "retrieved": [
+            {
+              "chunk_id": "DOC041-U0001-C0030",
+              "document_id": "DOC041",
+              "rank": 1,
+              "score": 0.6665776968002319
+            },
+            {
+              "chunk_id": "DOC045-U0001-C0002",
+              "document_id": "DOC045",
+              "rank": 2,
+              "score": 0.611946165561676
+            },
+            {
+              "chunk_id": "DOC045-U0001-C0003",
+              "document_id": "DOC045",
+              "rank": 3,
+              "score": 0.6004300713539124
+            },
+            {
+              "chunk_id": "DOC045-U0001-C0004",
+              "document_id": "DOC045",
+              "rank": 4,
+              "score": 0.5937682390213013
+            },
+            {
+              "chunk_id": "DOC045-U0001-C0001",
+              "document_id": "DOC045",
+              "rank": 5,
+              "score": 0.5805672407150269
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0031",
+              "document_id": "DOC041",
+              "rank": 6,
+              "score": 0.5135574340820312
+            },
+            {
+              "chunk_id": "DOC042-U0001-C0002",
+              "document_id": "DOC042",
+              "rank": 7,
+              "score": 0.5086915493011475
+            },
+            {
+              "chunk_id": "DOC053-U0022-C0001",
+              "document_id": "DOC053",
+              "rank": 8,
+              "score": 0.5075417757034302
+            },
+            {
+              "chunk_id": "DOC043-U0001-C0001",
+              "document_id": "DOC043",
+              "rank": 9,
+              "score": 0.5058102011680603
+            },
+            {
+              "chunk_id": "DOC043-U0001-C0010",
+              "document_id": "DOC043",
+              "rank": 10,
+              "score": 0.49879521131515503
+            }
+          ],
+          "top1_document_id": "DOC041"
+        },
+        {
+          "expected_document_rank": 2,
+          "repeat": 3,
+          "retrieved": [
+            {
+              "chunk_id": "DOC041-U0001-C0030",
+              "document_id": "DOC041",
+              "rank": 1,
+              "score": 0.6665776968002319
+            },
+            {
+              "chunk_id": "DOC045-U0001-C0002",
+              "document_id": "DOC045",
+              "rank": 2,
+              "score": 0.611946165561676
+            },
+            {
+              "chunk_id": "DOC045-U0001-C0003",
+              "document_id": "DOC045",
+              "rank": 3,
+              "score": 0.6004300713539124
+            },
+            {
+              "chunk_id": "DOC045-U0001-C0004",
+              "document_id": "DOC045",
+              "rank": 4,
+              "score": 0.5937682390213013
+            },
+            {
+              "chunk_id": "DOC045-U0001-C0001",
+              "document_id": "DOC045",
+              "rank": 5,
+              "score": 0.5805672407150269
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0031",
+              "document_id": "DOC041",
+              "rank": 6,
+              "score": 0.5135574340820312
+            },
+            {
+              "chunk_id": "DOC042-U0001-C0002",
+              "document_id": "DOC042",
+              "rank": 7,
+              "score": 0.5086915493011475
+            },
+            {
+              "chunk_id": "DOC053-U0022-C0001",
+              "document_id": "DOC053",
+              "rank": 8,
+              "score": 0.5075417757034302
+            },
+            {
+              "chunk_id": "DOC043-U0001-C0001",
+              "document_id": "DOC043",
+              "rank": 9,
+              "score": 0.5058102011680603
+            },
+            {
+              "chunk_id": "DOC043-U0001-C0010",
+              "document_id": "DOC043",
+              "rank": 10,
+              "score": 0.49879521131515503
+            }
+          ],
+          "top1_document_id": "DOC041"
+        }
+      ],
+      "stable_top1": true,
+      "top10": true,
+      "top3": true,
+      "top5": true
+    },
+    {
+      "expected_document_id": "DOC046",
+      "probe_id": "SEM06",
+      "query": "Rules for Scottish non-domestic rates relief and retention of rates income within designated areas.",
+      "repeats": [
+        {
+          "expected_document_rank": 1,
+          "repeat": 1,
+          "retrieved": [
+            {
+              "chunk_id": "DOC046-U0001-C0001",
+              "document_id": "DOC046",
+              "rank": 1,
+              "score": 0.6171948909759521
+            },
+            {
+              "chunk_id": "DOC046-U0001-C0007",
+              "document_id": "DOC046",
+              "rank": 2,
+              "score": 0.5841729044914246
+            },
+            {
+              "chunk_id": "DOC042-U0001-C0002",
+              "document_id": "DOC042",
+              "rank": 3,
+              "score": 0.569861114025116
+            },
+            {
+              "chunk_id": "DOC043-U0001-C0009",
+              "document_id": "DOC043",
+              "rank": 4,
+              "score": 0.5698107481002808
+            },
+            {
+              "chunk_id": "DOC052-U0008-C0001",
+              "document_id": "DOC052",
+              "rank": 5,
+              "score": 0.5558019876480103
+            },
+            {
+              "chunk_id": "DOC046-U0001-C0004",
+              "document_id": "DOC046",
+              "rank": 6,
+              "score": 0.5536346435546875
+            },
+            {
+              "chunk_id": "DOC048-U0002-C0001",
+              "document_id": "DOC048",
+              "rank": 7,
+              "score": 0.5529190301895142
+            },
+            {
+              "chunk_id": "DOC046-U0001-C0002",
+              "document_id": "DOC046",
+              "rank": 8,
+              "score": 0.5503673553466797
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0021",
+              "document_id": "DOC041",
+              "rank": 9,
+              "score": 0.5412055253982544
+            },
+            {
+              "chunk_id": "DOC048-U0001-C0001",
+              "document_id": "DOC048",
+              "rank": 10,
+              "score": 0.5370768904685974
+            }
+          ],
+          "top1_document_id": "DOC046"
+        },
+        {
+          "expected_document_rank": 1,
+          "repeat": 2,
+          "retrieved": [
+            {
+              "chunk_id": "DOC046-U0001-C0001",
+              "document_id": "DOC046",
+              "rank": 1,
+              "score": 0.618459165096283
+            },
+            {
+              "chunk_id": "DOC046-U0001-C0007",
+              "document_id": "DOC046",
+              "rank": 2,
+              "score": 0.5853588581085205
+            },
+            {
+              "chunk_id": "DOC043-U0001-C0009",
+              "document_id": "DOC043",
+              "rank": 3,
+              "score": 0.571937620639801
+            },
+            {
+              "chunk_id": "DOC042-U0001-C0002",
+              "document_id": "DOC042",
+              "rank": 4,
+              "score": 0.5712047815322876
+            },
+            {
+              "chunk_id": "DOC052-U0008-C0001",
+              "document_id": "DOC052",
+              "rank": 5,
+              "score": 0.5579419136047363
+            },
+            {
+              "chunk_id": "DOC046-U0001-C0004",
+              "document_id": "DOC046",
+              "rank": 6,
+              "score": 0.5552971959114075
+            },
+            {
+              "chunk_id": "DOC048-U0002-C0001",
+              "document_id": "DOC048",
+              "rank": 7,
+              "score": 0.5543851852416992
+            },
+            {
+              "chunk_id": "DOC046-U0001-C0002",
+              "document_id": "DOC046",
+              "rank": 8,
+              "score": 0.5522875785827637
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0021",
+              "document_id": "DOC041",
+              "rank": 9,
+              "score": 0.5427121520042419
+            },
+            {
+              "chunk_id": "DOC048-U0001-C0001",
+              "document_id": "DOC048",
+              "rank": 10,
+              "score": 0.5380398035049438
+            }
+          ],
+          "top1_document_id": "DOC046"
+        },
+        {
+          "expected_document_rank": 1,
+          "repeat": 3,
+          "retrieved": [
+            {
+              "chunk_id": "DOC046-U0001-C0001",
+              "document_id": "DOC046",
+              "rank": 1,
+              "score": 0.618459165096283
+            },
+            {
+              "chunk_id": "DOC046-U0001-C0007",
+              "document_id": "DOC046",
+              "rank": 2,
+              "score": 0.5853588581085205
+            },
+            {
+              "chunk_id": "DOC043-U0001-C0009",
+              "document_id": "DOC043",
+              "rank": 3,
+              "score": 0.571937620639801
+            },
+            {
+              "chunk_id": "DOC042-U0001-C0002",
+              "document_id": "DOC042",
+              "rank": 4,
+              "score": 0.5712047815322876
+            },
+            {
+              "chunk_id": "DOC052-U0008-C0001",
+              "document_id": "DOC052",
+              "rank": 5,
+              "score": 0.5579419136047363
+            },
+            {
+              "chunk_id": "DOC046-U0001-C0004",
+              "document_id": "DOC046",
+              "rank": 6,
+              "score": 0.5552971959114075
+            },
+            {
+              "chunk_id": "DOC048-U0002-C0001",
+              "document_id": "DOC048",
+              "rank": 7,
+              "score": 0.5543851852416992
+            },
+            {
+              "chunk_id": "DOC046-U0001-C0002",
+              "document_id": "DOC046",
+              "rank": 8,
+              "score": 0.5522875785827637
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0021",
+              "document_id": "DOC041",
+              "rank": 9,
+              "score": 0.5427121520042419
+            },
+            {
+              "chunk_id": "DOC048-U0001-C0001",
+              "document_id": "DOC048",
+              "rank": 10,
+              "score": 0.5380398035049438
+            }
+          ],
+          "top1_document_id": "DOC046"
+        }
+      ],
+      "stable_top1": true,
+      "top10": true,
+      "top3": true,
+      "top5": true
+    },
+    {
+      "expected_document_id": "DOC047",
+      "probe_id": "SEM07",
+      "query": "Administrative guidance on Scottish land and buildings transaction tax relief available within designated tax sites.",
+      "repeats": [
+        {
+          "expected_document_rank": 3,
+          "repeat": 1,
+          "retrieved": [
+            {
+              "chunk_id": "DOC048-U0007-C0001",
+              "document_id": "DOC048",
+              "rank": 1,
+              "score": 0.6836308240890503
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0021",
+              "document_id": "DOC041",
+              "rank": 2,
+              "score": 0.6739646196365356
+            },
+            {
+              "chunk_id": "DOC047-U0001-C0001",
+              "document_id": "DOC047",
+              "rank": 3,
+              "score": 0.6512922048568726
+            },
+            {
+              "chunk_id": "DOC048-U0001-C0001",
+              "document_id": "DOC048",
+              "rank": 4,
+              "score": 0.6374061107635498
+            },
+            {
+              "chunk_id": "DOC056-U0001-C0002",
+              "document_id": "DOC056",
+              "rank": 5,
+              "score": 0.6229653358459473
+            },
+            {
+              "chunk_id": "DOC044-U0001-C0003",
+              "document_id": "DOC044",
+              "rank": 6,
+              "score": 0.6115365624427795
+            },
+            {
+              "chunk_id": "DOC048-U0002-C0001",
+              "document_id": "DOC048",
+              "rank": 7,
+              "score": 0.6106096506118774
+            },
+            {
+              "chunk_id": "DOC047-U0001-C0002",
+              "document_id": "DOC047",
+              "rank": 8,
+              "score": 0.6092474460601807
+            },
+            {
+              "chunk_id": "DOC047-U0001-C0004",
+              "document_id": "DOC047",
+              "rank": 9,
+              "score": 0.6033923625946045
+            },
+            {
+              "chunk_id": "DOC047-U0001-C0006",
+              "document_id": "DOC047",
+              "rank": 10,
+              "score": 0.6009255647659302
+            }
+          ],
+          "top1_document_id": "DOC048"
+        },
+        {
+          "expected_document_rank": 3,
+          "repeat": 2,
+          "retrieved": [
+            {
+              "chunk_id": "DOC048-U0007-C0001",
+              "document_id": "DOC048",
+              "rank": 1,
+              "score": 0.6853622198104858
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0021",
+              "document_id": "DOC041",
+              "rank": 2,
+              "score": 0.6759111285209656
+            },
+            {
+              "chunk_id": "DOC047-U0001-C0001",
+              "document_id": "DOC047",
+              "rank": 3,
+              "score": 0.6539164185523987
+            },
+            {
+              "chunk_id": "DOC048-U0001-C0001",
+              "document_id": "DOC048",
+              "rank": 4,
+              "score": 0.6387406587600708
+            },
+            {
+              "chunk_id": "DOC056-U0001-C0002",
+              "document_id": "DOC056",
+              "rank": 5,
+              "score": 0.6250996589660645
+            },
+            {
+              "chunk_id": "DOC044-U0001-C0003",
+              "document_id": "DOC044",
+              "rank": 6,
+              "score": 0.6142513751983643
+            },
+            {
+              "chunk_id": "DOC048-U0002-C0001",
+              "document_id": "DOC048",
+              "rank": 7,
+              "score": 0.6121433973312378
+            },
+            {
+              "chunk_id": "DOC047-U0001-C0002",
+              "document_id": "DOC047",
+              "rank": 8,
+              "score": 0.6103971600532532
+            },
+            {
+              "chunk_id": "DOC047-U0001-C0004",
+              "document_id": "DOC047",
+              "rank": 9,
+              "score": 0.6053602695465088
+            },
+            {
+              "chunk_id": "DOC047-U0001-C0006",
+              "document_id": "DOC047",
+              "rank": 10,
+              "score": 0.6021715402603149
+            }
+          ],
+          "top1_document_id": "DOC048"
+        },
+        {
+          "expected_document_rank": 3,
+          "repeat": 3,
+          "retrieved": [
+            {
+              "chunk_id": "DOC048-U0007-C0001",
+              "document_id": "DOC048",
+              "rank": 1,
+              "score": 0.6853622198104858
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0021",
+              "document_id": "DOC041",
+              "rank": 2,
+              "score": 0.6759111285209656
+            },
+            {
+              "chunk_id": "DOC047-U0001-C0001",
+              "document_id": "DOC047",
+              "rank": 3,
+              "score": 0.6539164185523987
+            },
+            {
+              "chunk_id": "DOC048-U0001-C0001",
+              "document_id": "DOC048",
+              "rank": 4,
+              "score": 0.6387406587600708
+            },
+            {
+              "chunk_id": "DOC056-U0001-C0002",
+              "document_id": "DOC056",
+              "rank": 5,
+              "score": 0.6250996589660645
+            },
+            {
+              "chunk_id": "DOC044-U0001-C0003",
+              "document_id": "DOC044",
+              "rank": 6,
+              "score": 0.6142513751983643
+            },
+            {
+              "chunk_id": "DOC048-U0002-C0001",
+              "document_id": "DOC048",
+              "rank": 7,
+              "score": 0.6121433973312378
+            },
+            {
+              "chunk_id": "DOC047-U0001-C0002",
+              "document_id": "DOC047",
+              "rank": 8,
+              "score": 0.6103971600532532
+            },
+            {
+              "chunk_id": "DOC047-U0001-C0004",
+              "document_id": "DOC047",
+              "rank": 9,
+              "score": 0.6053602695465088
+            },
+            {
+              "chunk_id": "DOC047-U0001-C0006",
+              "document_id": "DOC047",
+              "rank": 10,
+              "score": 0.6021715402603149
+            }
+          ],
+          "top1_document_id": "DOC048"
+        }
+      ],
+      "stable_top1": true,
+      "top10": true,
+      "top3": true,
+      "top5": true
+    },
+    {
+      "expected_document_id": "DOC048",
+      "probe_id": "SEM08",
+      "query": "The statutory basis creating Scottish land and buildings transaction tax relief within designated tax sites.",
+      "repeats": [
+        {
+          "expected_document_rank": 1,
+          "repeat": 1,
+          "retrieved": [
+            {
+              "chunk_id": "DOC048-U0007-C0001",
+              "document_id": "DOC048",
+              "rank": 1,
+              "score": 0.7212855219841003
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0021",
+              "document_id": "DOC041",
+              "rank": 2,
+              "score": 0.712358832359314
+            },
+            {
+              "chunk_id": "DOC048-U0001-C0001",
+              "document_id": "DOC048",
+              "rank": 3,
+              "score": 0.6944557428359985
+            },
+            {
+              "chunk_id": "DOC047-U0001-C0001",
+              "document_id": "DOC047",
+              "rank": 4,
+              "score": 0.6784694790840149
+            },
+            {
+              "chunk_id": "DOC048-U0002-C0001",
+              "document_id": "DOC048",
+              "rank": 5,
+              "score": 0.6568695902824402
+            },
+            {
+              "chunk_id": "DOC056-U0001-C0002",
+              "document_id": "DOC056",
+              "rank": 6,
+              "score": 0.6501920819282532
+            },
+            {
+              "chunk_id": "DOC047-U0001-C0002",
+              "document_id": "DOC047",
+              "rank": 7,
+              "score": 0.6329510807991028
+            },
+            {
+              "chunk_id": "DOC049-U0003-C0001",
+              "document_id": "DOC049",
+              "rank": 8,
+              "score": 0.6303942203521729
+            },
+            {
+              "chunk_id": "DOC050-U0003-C0001",
+              "document_id": "DOC050",
+              "rank": 9,
+              "score": 0.6303942203521729
+            },
+            {
+              "chunk_id": "DOC044-U0001-C0003",
+              "document_id": "DOC044",
+              "rank": 10,
+              "score": 0.6266418695449829
+            }
+          ],
+          "top1_document_id": "DOC048"
+        },
+        {
+          "expected_document_rank": 1,
+          "repeat": 2,
+          "retrieved": [
+            {
+              "chunk_id": "DOC048-U0007-C0001",
+              "document_id": "DOC048",
+              "rank": 1,
+              "score": 0.721291184425354
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0021",
+              "document_id": "DOC041",
+              "rank": 2,
+              "score": 0.7119123935699463
+            },
+            {
+              "chunk_id": "DOC048-U0001-C0001",
+              "document_id": "DOC048",
+              "rank": 3,
+              "score": 0.6940370798110962
+            },
+            {
+              "chunk_id": "DOC047-U0001-C0001",
+              "document_id": "DOC047",
+              "rank": 4,
+              "score": 0.6785567998886108
+            },
+            {
+              "chunk_id": "DOC048-U0002-C0001",
+              "document_id": "DOC048",
+              "rank": 5,
+              "score": 0.6585121154785156
+            },
+            {
+              "chunk_id": "DOC056-U0001-C0002",
+              "document_id": "DOC056",
+              "rank": 6,
+              "score": 0.6512092351913452
+            },
+            {
+              "chunk_id": "DOC049-U0003-C0001",
+              "document_id": "DOC049",
+              "rank": 7,
+              "score": 0.6325236558914185
+            },
+            {
+              "chunk_id": "DOC050-U0003-C0001",
+              "document_id": "DOC050",
+              "rank": 8,
+              "score": 0.6325236558914185
+            },
+            {
+              "chunk_id": "DOC047-U0001-C0002",
+              "document_id": "DOC047",
+              "rank": 9,
+              "score": 0.6322031021118164
+            },
+            {
+              "chunk_id": "DOC044-U0001-C0003",
+              "document_id": "DOC044",
+              "rank": 10,
+              "score": 0.6267566680908203
+            }
+          ],
+          "top1_document_id": "DOC048"
+        },
+        {
+          "expected_document_rank": 1,
+          "repeat": 3,
+          "retrieved": [
+            {
+              "chunk_id": "DOC048-U0007-C0001",
+              "document_id": "DOC048",
+              "rank": 1,
+              "score": 0.721291184425354
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0021",
+              "document_id": "DOC041",
+              "rank": 2,
+              "score": 0.7119123935699463
+            },
+            {
+              "chunk_id": "DOC048-U0001-C0001",
+              "document_id": "DOC048",
+              "rank": 3,
+              "score": 0.6940370798110962
+            },
+            {
+              "chunk_id": "DOC047-U0001-C0001",
+              "document_id": "DOC047",
+              "rank": 4,
+              "score": 0.6785567998886108
+            },
+            {
+              "chunk_id": "DOC048-U0002-C0001",
+              "document_id": "DOC048",
+              "rank": 5,
+              "score": 0.6585121154785156
+            },
+            {
+              "chunk_id": "DOC056-U0001-C0002",
+              "document_id": "DOC056",
+              "rank": 6,
+              "score": 0.6512092351913452
+            },
+            {
+              "chunk_id": "DOC049-U0003-C0001",
+              "document_id": "DOC049",
+              "rank": 7,
+              "score": 0.6325236558914185
+            },
+            {
+              "chunk_id": "DOC050-U0003-C0001",
+              "document_id": "DOC050",
+              "rank": 8,
+              "score": 0.6325236558914185
+            },
+            {
+              "chunk_id": "DOC047-U0001-C0002",
+              "document_id": "DOC047",
+              "rank": 9,
+              "score": 0.6322031021118164
+            },
+            {
+              "chunk_id": "DOC044-U0001-C0003",
+              "document_id": "DOC044",
+              "rank": 10,
+              "score": 0.6267566680908203
+            }
+          ],
+          "top1_document_id": "DOC048"
+        }
+      ],
+      "stable_top1": true,
+      "top10": true,
+      "top3": true,
+      "top5": true
+    },
+    {
+      "expected_document_id": "DOC049",
+      "probe_id": "SEM09",
+      "query": "The legal designation of special tax-site areas for the northern Scottish zone around Inverness and the Cromarty Firth.",
+      "repeats": [
+        {
+          "expected_document_rank": 1,
+          "repeat": 1,
+          "retrieved": [
+            {
+              "chunk_id": "DOC049-U0001-C0001",
+              "document_id": "DOC049",
+              "rank": 1,
+              "score": 0.809217631816864
+            },
+            {
+              "chunk_id": "DOC049-U0002-C0001",
+              "document_id": "DOC049",
+              "rank": 2,
+              "score": 0.758935809135437
+            },
+            {
+              "chunk_id": "DOC049-U0002-C0002",
+              "document_id": "DOC049",
+              "rank": 3,
+              "score": 0.715815544128418
+            },
+            {
+              "chunk_id": "DOC050-U0002-C0001",
+              "document_id": "DOC050",
+              "rank": 4,
+              "score": 0.7047703266143799
+            },
+            {
+              "chunk_id": "DOC050-U0001-C0001",
+              "document_id": "DOC050",
+              "rank": 5,
+              "score": 0.7015891671180725
+            },
+            {
+              "chunk_id": "DOC052-U0007-C0001",
+              "document_id": "DOC052",
+              "rank": 6,
+              "score": 0.6409292817115784
+            },
+            {
+              "chunk_id": "DOC052-U0007-C0002",
+              "document_id": "DOC052",
+              "rank": 7,
+              "score": 0.6376367211341858
+            },
+            {
+              "chunk_id": "DOC049-U0003-C0001",
+              "document_id": "DOC049",
+              "rank": 8,
+              "score": 0.6254307627677917
+            },
+            {
+              "chunk_id": "DOC050-U0003-C0001",
+              "document_id": "DOC050",
+              "rank": 9,
+              "score": 0.6254307627677917
+            },
+            {
+              "chunk_id": "DOC047-U0001-C0001",
+              "document_id": "DOC047",
+              "rank": 10,
+              "score": 0.6093202829360962
+            }
+          ],
+          "top1_document_id": "DOC049"
+        },
+        {
+          "expected_document_rank": 1,
+          "repeat": 2,
+          "retrieved": [
+            {
+              "chunk_id": "DOC049-U0001-C0001",
+              "document_id": "DOC049",
+              "rank": 1,
+              "score": 0.8106743097305298
+            },
+            {
+              "chunk_id": "DOC049-U0002-C0001",
+              "document_id": "DOC049",
+              "rank": 2,
+              "score": 0.7596096992492676
+            },
+            {
+              "chunk_id": "DOC049-U0002-C0002",
+              "document_id": "DOC049",
+              "rank": 3,
+              "score": 0.7157721519470215
+            },
+            {
+              "chunk_id": "DOC050-U0002-C0001",
+              "document_id": "DOC050",
+              "rank": 4,
+              "score": 0.7057704925537109
+            },
+            {
+              "chunk_id": "DOC050-U0001-C0001",
+              "document_id": "DOC050",
+              "rank": 5,
+              "score": 0.7042980194091797
+            },
+            {
+              "chunk_id": "DOC052-U0007-C0001",
+              "document_id": "DOC052",
+              "rank": 6,
+              "score": 0.6422901749610901
+            },
+            {
+              "chunk_id": "DOC052-U0007-C0002",
+              "document_id": "DOC052",
+              "rank": 7,
+              "score": 0.6401160955429077
+            },
+            {
+              "chunk_id": "DOC049-U0003-C0001",
+              "document_id": "DOC049",
+              "rank": 8,
+              "score": 0.628530740737915
+            },
+            {
+              "chunk_id": "DOC050-U0003-C0001",
+              "document_id": "DOC050",
+              "rank": 9,
+              "score": 0.628530740737915
+            },
+            {
+              "chunk_id": "DOC047-U0001-C0001",
+              "document_id": "DOC047",
+              "rank": 10,
+              "score": 0.6111508011817932
+            }
+          ],
+          "top1_document_id": "DOC049"
+        },
+        {
+          "expected_document_rank": 1,
+          "repeat": 3,
+          "retrieved": [
+            {
+              "chunk_id": "DOC049-U0001-C0001",
+              "document_id": "DOC049",
+              "rank": 1,
+              "score": 0.8106743097305298
+            },
+            {
+              "chunk_id": "DOC049-U0002-C0001",
+              "document_id": "DOC049",
+              "rank": 2,
+              "score": 0.7596096992492676
+            },
+            {
+              "chunk_id": "DOC049-U0002-C0002",
+              "document_id": "DOC049",
+              "rank": 3,
+              "score": 0.7157721519470215
+            },
+            {
+              "chunk_id": "DOC050-U0002-C0001",
+              "document_id": "DOC050",
+              "rank": 4,
+              "score": 0.7057704925537109
+            },
+            {
+              "chunk_id": "DOC050-U0001-C0001",
+              "document_id": "DOC050",
+              "rank": 5,
+              "score": 0.7042980194091797
+            },
+            {
+              "chunk_id": "DOC052-U0007-C0001",
+              "document_id": "DOC052",
+              "rank": 6,
+              "score": 0.6422901749610901
+            },
+            {
+              "chunk_id": "DOC052-U0007-C0002",
+              "document_id": "DOC052",
+              "rank": 7,
+              "score": 0.6401160955429077
+            },
+            {
+              "chunk_id": "DOC049-U0003-C0001",
+              "document_id": "DOC049",
+              "rank": 8,
+              "score": 0.628530740737915
+            },
+            {
+              "chunk_id": "DOC050-U0003-C0001",
+              "document_id": "DOC050",
+              "rank": 9,
+              "score": 0.628530740737915
+            },
+            {
+              "chunk_id": "DOC047-U0001-C0001",
+              "document_id": "DOC047",
+              "rank": 10,
+              "score": 0.6111508011817932
+            }
+          ],
+          "top1_document_id": "DOC049"
+        }
+      ],
+      "stable_top1": true,
+      "top10": true,
+      "top3": true,
+      "top5": true
+    },
+    {
+      "expected_document_id": "DOC050",
+      "probe_id": "SEM10",
+      "query": "The legal designation of special tax-site areas for the Scottish zone centred on the Forth.",
+      "repeats": [
+        {
+          "expected_document_rank": 1,
+          "repeat": 1,
+          "retrieved": [
+            {
+              "chunk_id": "DOC050-U0001-C0001",
+              "document_id": "DOC050",
+              "rank": 1,
+              "score": 0.7635536789894104
+            },
+            {
+              "chunk_id": "DOC050-U0002-C0001",
+              "document_id": "DOC050",
+              "rank": 2,
+              "score": 0.7567393183708191
+            },
+            {
+              "chunk_id": "DOC049-U0001-C0001",
+              "document_id": "DOC049",
+              "rank": 3,
+              "score": 0.7502015233039856
+            },
+            {
+              "chunk_id": "DOC053-U0024-C0001",
+              "document_id": "DOC053",
+              "rank": 4,
+              "score": 0.6979635953903198
+            },
+            {
+              "chunk_id": "DOC049-U0002-C0001",
+              "document_id": "DOC049",
+              "rank": 5,
+              "score": 0.6941753625869751
+            },
+            {
+              "chunk_id": "DOC047-U0001-C0001",
+              "document_id": "DOC047",
+              "rank": 6,
+              "score": 0.6570342183113098
+            },
+            {
+              "chunk_id": "DOC052-U0007-C0002",
+              "document_id": "DOC052",
+              "rank": 7,
+              "score": 0.6524658203125
+            },
+            {
+              "chunk_id": "DOC052-U0007-C0001",
+              "document_id": "DOC052",
+              "rank": 8,
+              "score": 0.6517754197120667
+            },
+            {
+              "chunk_id": "DOC057-U0001-C0001",
+              "document_id": "DOC057",
+              "rank": 9,
+              "score": 0.6483456492424011
+            },
+            {
+              "chunk_id": "DOC049-U0003-C0001",
+              "document_id": "DOC049",
+              "rank": 10,
+              "score": 0.6419949531555176
+            }
+          ],
+          "top1_document_id": "DOC050"
+        },
+        {
+          "expected_document_rank": 1,
+          "repeat": 2,
+          "retrieved": [
+            {
+              "chunk_id": "DOC050-U0001-C0001",
+              "document_id": "DOC050",
+              "rank": 1,
+              "score": 0.7652527689933777
+            },
+            {
+              "chunk_id": "DOC050-U0002-C0001",
+              "document_id": "DOC050",
+              "rank": 2,
+              "score": 0.7575485706329346
+            },
+            {
+              "chunk_id": "DOC049-U0001-C0001",
+              "document_id": "DOC049",
+              "rank": 3,
+              "score": 0.7519408464431763
+            },
+            {
+              "chunk_id": "DOC053-U0024-C0001",
+              "document_id": "DOC053",
+              "rank": 4,
+              "score": 0.6992267370223999
+            },
+            {
+              "chunk_id": "DOC049-U0002-C0001",
+              "document_id": "DOC049",
+              "rank": 5,
+              "score": 0.6953279972076416
+            },
+            {
+              "chunk_id": "DOC047-U0001-C0001",
+              "document_id": "DOC047",
+              "rank": 6,
+              "score": 0.6572713851928711
+            },
+            {
+              "chunk_id": "DOC052-U0007-C0002",
+              "document_id": "DOC052",
+              "rank": 7,
+              "score": 0.6530725955963135
+            },
+            {
+              "chunk_id": "DOC052-U0007-C0001",
+              "document_id": "DOC052",
+              "rank": 8,
+              "score": 0.6514754295349121
+            },
+            {
+              "chunk_id": "DOC057-U0001-C0001",
+              "document_id": "DOC057",
+              "rank": 9,
+              "score": 0.6500639319419861
+            },
+            {
+              "chunk_id": "DOC049-U0003-C0001",
+              "document_id": "DOC049",
+              "rank": 10,
+              "score": 0.6438907384872437
+            }
+          ],
+          "top1_document_id": "DOC050"
+        },
+        {
+          "expected_document_rank": 1,
+          "repeat": 3,
+          "retrieved": [
+            {
+              "chunk_id": "DOC050-U0001-C0001",
+              "document_id": "DOC050",
+              "rank": 1,
+              "score": 0.7652527689933777
+            },
+            {
+              "chunk_id": "DOC050-U0002-C0001",
+              "document_id": "DOC050",
+              "rank": 2,
+              "score": 0.7575485706329346
+            },
+            {
+              "chunk_id": "DOC049-U0001-C0001",
+              "document_id": "DOC049",
+              "rank": 3,
+              "score": 0.7519408464431763
+            },
+            {
+              "chunk_id": "DOC053-U0024-C0001",
+              "document_id": "DOC053",
+              "rank": 4,
+              "score": 0.6992267370223999
+            },
+            {
+              "chunk_id": "DOC049-U0002-C0001",
+              "document_id": "DOC049",
+              "rank": 5,
+              "score": 0.6953279972076416
+            },
+            {
+              "chunk_id": "DOC047-U0001-C0001",
+              "document_id": "DOC047",
+              "rank": 6,
+              "score": 0.6572713851928711
+            },
+            {
+              "chunk_id": "DOC052-U0007-C0002",
+              "document_id": "DOC052",
+              "rank": 7,
+              "score": 0.6530725955963135
+            },
+            {
+              "chunk_id": "DOC052-U0007-C0001",
+              "document_id": "DOC052",
+              "rank": 8,
+              "score": 0.6514754295349121
+            },
+            {
+              "chunk_id": "DOC057-U0001-C0001",
+              "document_id": "DOC057",
+              "rank": 9,
+              "score": 0.6500639319419861
+            },
+            {
+              "chunk_id": "DOC049-U0003-C0001",
+              "document_id": "DOC049",
+              "rank": 10,
+              "score": 0.6438907384872437
+            }
+          ],
+          "top1_document_id": "DOC050"
+        }
+      ],
+      "stable_top1": true,
+      "top10": true,
+      "top3": true,
+      "top5": true
+    },
+    {
+      "expected_document_id": "DOC051",
+      "probe_id": "SEM11",
+      "query": "Operational customs rules for authorised sites and goods movements that apply to Scotland's designated zones.",
+      "repeats": [
+        {
+          "expected_document_rank": 2,
+          "repeat": 1,
+          "retrieved": [
+            {
+              "chunk_id": "DOC041-U0001-C0024",
+              "document_id": "DOC041",
+              "rank": 1,
+              "score": 0.6824712157249451
+            },
+            {
+              "chunk_id": "DOC051-U0006-C0001",
+              "document_id": "DOC051",
+              "rank": 2,
+              "score": 0.6759783029556274
+            },
+            {
+              "chunk_id": "DOC051-U0003-C0002",
+              "document_id": "DOC051",
+              "rank": 3,
+              "score": 0.6717675924301147
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0025",
+              "document_id": "DOC041",
+              "rank": 4,
+              "score": 0.6607500314712524
+            },
+            {
+              "chunk_id": "DOC051-U0003-C0001",
+              "document_id": "DOC051",
+              "rank": 5,
+              "score": 0.6547787189483643
+            },
+            {
+              "chunk_id": "DOC051-U0006-C0002",
+              "document_id": "DOC051",
+              "rank": 6,
+              "score": 0.6487311124801636
+            },
+            {
+              "chunk_id": "DOC051-U0004-C0002",
+              "document_id": "DOC051",
+              "rank": 7,
+              "score": 0.6485781669616699
+            },
+            {
+              "chunk_id": "DOC051-U0004-C0001",
+              "document_id": "DOC051",
+              "rank": 8,
+              "score": 0.6455347537994385
+            },
+            {
+              "chunk_id": "DOC051-U0005-C0002",
+              "document_id": "DOC051",
+              "rank": 9,
+              "score": 0.6448663473129272
+            },
+            {
+              "chunk_id": "DOC042-U0001-C0003",
+              "document_id": "DOC042",
+              "rank": 10,
+              "score": 0.6443544030189514
+            }
+          ],
+          "top1_document_id": "DOC041"
+        },
+        {
+          "expected_document_rank": 2,
+          "repeat": 2,
+          "retrieved": [
+            {
+              "chunk_id": "DOC041-U0001-C0024",
+              "document_id": "DOC041",
+              "rank": 1,
+              "score": 0.6822171807289124
+            },
+            {
+              "chunk_id": "DOC051-U0006-C0001",
+              "document_id": "DOC051",
+              "rank": 2,
+              "score": 0.6756610870361328
+            },
+            {
+              "chunk_id": "DOC051-U0003-C0002",
+              "document_id": "DOC051",
+              "rank": 3,
+              "score": 0.6725730299949646
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0025",
+              "document_id": "DOC041",
+              "rank": 4,
+              "score": 0.6612441539764404
+            },
+            {
+              "chunk_id": "DOC051-U0003-C0001",
+              "document_id": "DOC051",
+              "rank": 5,
+              "score": 0.6551274061203003
+            },
+            {
+              "chunk_id": "DOC051-U0006-C0002",
+              "document_id": "DOC051",
+              "rank": 6,
+              "score": 0.6497118473052979
+            },
+            {
+              "chunk_id": "DOC051-U0004-C0002",
+              "document_id": "DOC051",
+              "rank": 7,
+              "score": 0.6481515765190125
+            },
+            {
+              "chunk_id": "DOC051-U0005-C0002",
+              "document_id": "DOC051",
+              "rank": 8,
+              "score": 0.6457852125167847
+            },
+            {
+              "chunk_id": "DOC051-U0004-C0001",
+              "document_id": "DOC051",
+              "rank": 9,
+              "score": 0.6453918218612671
+            },
+            {
+              "chunk_id": "DOC042-U0001-C0003",
+              "document_id": "DOC042",
+              "rank": 10,
+              "score": 0.6449259519577026
+            }
+          ],
+          "top1_document_id": "DOC041"
+        },
+        {
+          "expected_document_rank": 2,
+          "repeat": 3,
+          "retrieved": [
+            {
+              "chunk_id": "DOC041-U0001-C0024",
+              "document_id": "DOC041",
+              "rank": 1,
+              "score": 0.6822171807289124
+            },
+            {
+              "chunk_id": "DOC051-U0006-C0001",
+              "document_id": "DOC051",
+              "rank": 2,
+              "score": 0.6756610870361328
+            },
+            {
+              "chunk_id": "DOC051-U0003-C0002",
+              "document_id": "DOC051",
+              "rank": 3,
+              "score": 0.6725730299949646
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0025",
+              "document_id": "DOC041",
+              "rank": 4,
+              "score": 0.6612441539764404
+            },
+            {
+              "chunk_id": "DOC051-U0003-C0001",
+              "document_id": "DOC051",
+              "rank": 5,
+              "score": 0.6551274061203003
+            },
+            {
+              "chunk_id": "DOC051-U0006-C0002",
+              "document_id": "DOC051",
+              "rank": 6,
+              "score": 0.6497118473052979
+            },
+            {
+              "chunk_id": "DOC051-U0004-C0002",
+              "document_id": "DOC051",
+              "rank": 7,
+              "score": 0.6481515765190125
+            },
+            {
+              "chunk_id": "DOC051-U0005-C0002",
+              "document_id": "DOC051",
+              "rank": 8,
+              "score": 0.6457852125167847
+            },
+            {
+              "chunk_id": "DOC051-U0004-C0001",
+              "document_id": "DOC051",
+              "rank": 9,
+              "score": 0.6453918218612671
+            },
+            {
+              "chunk_id": "DOC042-U0001-C0003",
+              "document_id": "DOC042",
+              "rank": 10,
+              "score": 0.6449259519577026
+            }
+          ],
+          "top1_document_id": "DOC041"
+        }
+      ],
+      "stable_top1": true,
+      "top10": true,
+      "top3": true,
+      "top5": true
+    },
+    {
+      "expected_document_id": "DOC052",
+      "probe_id": "SEM12",
+      "query": "A public local-authority summary updating the full business case and implementation position of the northern Scottish zone around Inverness and the Cromarty Firth.",
+      "repeats": [
+        {
+          "expected_document_rank": 1,
+          "repeat": 1,
+          "retrieved": [
+            {
+              "chunk_id": "DOC052-U0001-C0001",
+              "document_id": "DOC052",
+              "rank": 1,
+              "score": 0.6524445414543152
+            },
+            {
+              "chunk_id": "DOC052-U0002-C0001",
+              "document_id": "DOC052",
+              "rank": 2,
+              "score": 0.5939631462097168
+            },
+            {
+              "chunk_id": "DOC052-U0019-C0001",
+              "document_id": "DOC052",
+              "rank": 3,
+              "score": 0.5939184427261353
+            },
+            {
+              "chunk_id": "DOC053-U0034-C0001",
+              "document_id": "DOC053",
+              "rank": 4,
+              "score": 0.5747079253196716
+            },
+            {
+              "chunk_id": "DOC049-U0002-C0001",
+              "document_id": "DOC049",
+              "rank": 5,
+              "score": 0.5697245597839355
+            },
+            {
+              "chunk_id": "DOC052-U0007-C0001",
+              "document_id": "DOC052",
+              "rank": 6,
+              "score": 0.568069338798523
+            },
+            {
+              "chunk_id": "DOC049-U0002-C0002",
+              "document_id": "DOC049",
+              "rank": 7,
+              "score": 0.5665105581283569
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0048",
+              "document_id": "DOC041",
+              "rank": 8,
+              "score": 0.5452566742897034
+            },
+            {
+              "chunk_id": "DOC053-U0017-C0001",
+              "document_id": "DOC053",
+              "rank": 9,
+              "score": 0.542314350605011
+            },
+            {
+              "chunk_id": "DOC053-U0024-C0001",
+              "document_id": "DOC053",
+              "rank": 10,
+              "score": 0.5406894087791443
+            }
+          ],
+          "top1_document_id": "DOC052"
+        },
+        {
+          "expected_document_rank": 1,
+          "repeat": 2,
+          "retrieved": [
+            {
+              "chunk_id": "DOC052-U0001-C0001",
+              "document_id": "DOC052",
+              "rank": 1,
+              "score": 0.6501304507255554
+            },
+            {
+              "chunk_id": "DOC052-U0019-C0001",
+              "document_id": "DOC052",
+              "rank": 2,
+              "score": 0.5921309590339661
+            },
+            {
+              "chunk_id": "DOC052-U0002-C0001",
+              "document_id": "DOC052",
+              "rank": 3,
+              "score": 0.5920085906982422
+            },
+            {
+              "chunk_id": "DOC053-U0034-C0001",
+              "document_id": "DOC053",
+              "rank": 4,
+              "score": 0.5741269588470459
+            },
+            {
+              "chunk_id": "DOC049-U0002-C0001",
+              "document_id": "DOC049",
+              "rank": 5,
+              "score": 0.5690756440162659
+            },
+            {
+              "chunk_id": "DOC052-U0007-C0001",
+              "document_id": "DOC052",
+              "rank": 6,
+              "score": 0.566423773765564
+            },
+            {
+              "chunk_id": "DOC049-U0002-C0002",
+              "document_id": "DOC049",
+              "rank": 7,
+              "score": 0.5657488107681274
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0048",
+              "document_id": "DOC041",
+              "rank": 8,
+              "score": 0.5422883033752441
+            },
+            {
+              "chunk_id": "DOC053-U0017-C0001",
+              "document_id": "DOC053",
+              "rank": 9,
+              "score": 0.5397664308547974
+            },
+            {
+              "chunk_id": "DOC053-U0024-C0001",
+              "document_id": "DOC053",
+              "rank": 10,
+              "score": 0.538485050201416
+            }
+          ],
+          "top1_document_id": "DOC052"
+        },
+        {
+          "expected_document_rank": 1,
+          "repeat": 3,
+          "retrieved": [
+            {
+              "chunk_id": "DOC052-U0001-C0001",
+              "document_id": "DOC052",
+              "rank": 1,
+              "score": 0.6501304507255554
+            },
+            {
+              "chunk_id": "DOC052-U0019-C0001",
+              "document_id": "DOC052",
+              "rank": 2,
+              "score": 0.5921309590339661
+            },
+            {
+              "chunk_id": "DOC052-U0002-C0001",
+              "document_id": "DOC052",
+              "rank": 3,
+              "score": 0.5920085906982422
+            },
+            {
+              "chunk_id": "DOC053-U0034-C0001",
+              "document_id": "DOC053",
+              "rank": 4,
+              "score": 0.5741269588470459
+            },
+            {
+              "chunk_id": "DOC049-U0002-C0001",
+              "document_id": "DOC049",
+              "rank": 5,
+              "score": 0.5690756440162659
+            },
+            {
+              "chunk_id": "DOC052-U0007-C0001",
+              "document_id": "DOC052",
+              "rank": 6,
+              "score": 0.566423773765564
+            },
+            {
+              "chunk_id": "DOC049-U0002-C0002",
+              "document_id": "DOC049",
+              "rank": 7,
+              "score": 0.5657488107681274
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0048",
+              "document_id": "DOC041",
+              "rank": 8,
+              "score": 0.5422883033752441
+            },
+            {
+              "chunk_id": "DOC053-U0017-C0001",
+              "document_id": "DOC053",
+              "rank": 9,
+              "score": 0.5397664308547974
+            },
+            {
+              "chunk_id": "DOC053-U0024-C0001",
+              "document_id": "DOC053",
+              "rank": 10,
+              "score": 0.538485050201416
+            }
+          ],
+          "top1_document_id": "DOC052"
+        }
+      ],
+      "stable_top1": true,
+      "top10": true,
+      "top3": true,
+      "top5": true
+    },
+    {
+      "expected_document_id": "DOC053",
+      "probe_id": "SEM13",
+      "query": "Public local-authority full-business-case material concerning implementation of the Scottish zone centred on the Forth.",
+      "repeats": [
+        {
+          "expected_document_rank": 1,
+          "repeat": 1,
+          "retrieved": [
+            {
+              "chunk_id": "DOC053-U0034-C0001",
+              "document_id": "DOC053",
+              "rank": 1,
+              "score": 0.6915891766548157
+            },
+            {
+              "chunk_id": "DOC053-U0024-C0001",
+              "document_id": "DOC053",
+              "rank": 2,
+              "score": 0.6712384223937988
+            },
+            {
+              "chunk_id": "DOC053-U0001-C0001",
+              "document_id": "DOC053",
+              "rank": 3,
+              "score": 0.6554996967315674
+            },
+            {
+              "chunk_id": "DOC053-U0022-C0001",
+              "document_id": "DOC053",
+              "rank": 4,
+              "score": 0.6440565586090088
+            },
+            {
+              "chunk_id": "DOC053-U0002-C0001",
+              "document_id": "DOC053",
+              "rank": 5,
+              "score": 0.636786699295044
+            },
+            {
+              "chunk_id": "DOC053-U0017-C0001",
+              "document_id": "DOC053",
+              "rank": 6,
+              "score": 0.6367594003677368
+            },
+            {
+              "chunk_id": "DOC053-U0004-C0001",
+              "document_id": "DOC053",
+              "rank": 7,
+              "score": 0.6356160640716553
+            },
+            {
+              "chunk_id": "DOC052-U0001-C0001",
+              "document_id": "DOC052",
+              "rank": 8,
+              "score": 0.6271657943725586
+            },
+            {
+              "chunk_id": "DOC053-U0018-C0001",
+              "document_id": "DOC053",
+              "rank": 9,
+              "score": 0.6095755100250244
+            },
+            {
+              "chunk_id": "DOC043-U0001-C0001",
+              "document_id": "DOC043",
+              "rank": 10,
+              "score": 0.606890082359314
+            }
+          ],
+          "top1_document_id": "DOC053"
+        },
+        {
+          "expected_document_rank": 1,
+          "repeat": 2,
+          "retrieved": [
+            {
+              "chunk_id": "DOC053-U0034-C0001",
+              "document_id": "DOC053",
+              "rank": 1,
+              "score": 0.6917503476142883
+            },
+            {
+              "chunk_id": "DOC053-U0024-C0001",
+              "document_id": "DOC053",
+              "rank": 2,
+              "score": 0.6710072755813599
+            },
+            {
+              "chunk_id": "DOC053-U0001-C0001",
+              "document_id": "DOC053",
+              "rank": 3,
+              "score": 0.6545975208282471
+            },
+            {
+              "chunk_id": "DOC053-U0022-C0001",
+              "document_id": "DOC053",
+              "rank": 4,
+              "score": 0.6436308026313782
+            },
+            {
+              "chunk_id": "DOC053-U0017-C0001",
+              "document_id": "DOC053",
+              "rank": 5,
+              "score": 0.6357740163803101
+            },
+            {
+              "chunk_id": "DOC053-U0002-C0001",
+              "document_id": "DOC053",
+              "rank": 6,
+              "score": 0.6354620456695557
+            },
+            {
+              "chunk_id": "DOC053-U0004-C0001",
+              "document_id": "DOC053",
+              "rank": 7,
+              "score": 0.6346396803855896
+            },
+            {
+              "chunk_id": "DOC052-U0001-C0001",
+              "document_id": "DOC052",
+              "rank": 8,
+              "score": 0.6260851621627808
+            },
+            {
+              "chunk_id": "DOC053-U0018-C0001",
+              "document_id": "DOC053",
+              "rank": 9,
+              "score": 0.6097168922424316
+            },
+            {
+              "chunk_id": "DOC043-U0001-C0001",
+              "document_id": "DOC043",
+              "rank": 10,
+              "score": 0.6069833636283875
+            }
+          ],
+          "top1_document_id": "DOC053"
+        },
+        {
+          "expected_document_rank": 1,
+          "repeat": 3,
+          "retrieved": [
+            {
+              "chunk_id": "DOC053-U0034-C0001",
+              "document_id": "DOC053",
+              "rank": 1,
+              "score": 0.6917503476142883
+            },
+            {
+              "chunk_id": "DOC053-U0024-C0001",
+              "document_id": "DOC053",
+              "rank": 2,
+              "score": 0.6710072755813599
+            },
+            {
+              "chunk_id": "DOC053-U0001-C0001",
+              "document_id": "DOC053",
+              "rank": 3,
+              "score": 0.6545975208282471
+            },
+            {
+              "chunk_id": "DOC053-U0022-C0001",
+              "document_id": "DOC053",
+              "rank": 4,
+              "score": 0.6436308026313782
+            },
+            {
+              "chunk_id": "DOC053-U0017-C0001",
+              "document_id": "DOC053",
+              "rank": 5,
+              "score": 0.6357740163803101
+            },
+            {
+              "chunk_id": "DOC053-U0002-C0001",
+              "document_id": "DOC053",
+              "rank": 6,
+              "score": 0.6354620456695557
+            },
+            {
+              "chunk_id": "DOC053-U0004-C0001",
+              "document_id": "DOC053",
+              "rank": 7,
+              "score": 0.6346396803855896
+            },
+            {
+              "chunk_id": "DOC052-U0001-C0001",
+              "document_id": "DOC052",
+              "rank": 8,
+              "score": 0.6260851621627808
+            },
+            {
+              "chunk_id": "DOC053-U0018-C0001",
+              "document_id": "DOC053",
+              "rank": 9,
+              "score": 0.6097168922424316
+            },
+            {
+              "chunk_id": "DOC043-U0001-C0001",
+              "document_id": "DOC043",
+              "rank": 10,
+              "score": 0.6069833636283875
+            }
+          ],
+          "top1_document_id": "DOC053"
+        }
+      ],
+      "stable_top1": true,
+      "top10": true,
+      "top3": true,
+      "top5": true
+    },
+    {
+      "expected_document_id": "DOC055",
+      "probe_id": "SEM14",
+      "query": "Employer National Insurance contribution relief available for qualifying employment in Scottish special tax sites.",
+      "repeats": [
+        {
+          "expected_document_rank": 1,
+          "repeat": 1,
+          "retrieved": [
+            {
+              "chunk_id": "DOC055-U0001-C0001",
+              "document_id": "DOC055",
+              "rank": 1,
+              "score": 0.7256234884262085
+            },
+            {
+              "chunk_id": "DOC055-U0001-C0002",
+              "document_id": "DOC055",
+              "rank": 2,
+              "score": 0.7021471858024597
+            },
+            {
+              "chunk_id": "DOC055-U0001-C0005",
+              "document_id": "DOC055",
+              "rank": 3,
+              "score": 0.6993222236633301
+            },
+            {
+              "chunk_id": "DOC056-U0001-C0002",
+              "document_id": "DOC056",
+              "rank": 4,
+              "score": 0.6430577039718628
+            },
+            {
+              "chunk_id": "DOC055-U0001-C0004",
+              "document_id": "DOC055",
+              "rank": 5,
+              "score": 0.6375805735588074
+            },
+            {
+              "chunk_id": "DOC057-U0001-C0001",
+              "document_id": "DOC057",
+              "rank": 6,
+              "score": 0.6347607374191284
+            },
+            {
+              "chunk_id": "DOC056-U0001-C0003",
+              "document_id": "DOC056",
+              "rank": 7,
+              "score": 0.6313837766647339
+            },
+            {
+              "chunk_id": "DOC055-U0001-C0003",
+              "document_id": "DOC055",
+              "rank": 8,
+              "score": 0.6231608986854553
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0022",
+              "document_id": "DOC041",
+              "rank": 9,
+              "score": 0.61954265832901
+            },
+            {
+              "chunk_id": "DOC046-U0001-C0001",
+              "document_id": "DOC046",
+              "rank": 10,
+              "score": 0.6132306456565857
+            }
+          ],
+          "top1_document_id": "DOC055"
+        },
+        {
+          "expected_document_rank": 1,
+          "repeat": 2,
+          "retrieved": [
+            {
+              "chunk_id": "DOC055-U0001-C0001",
+              "document_id": "DOC055",
+              "rank": 1,
+              "score": 0.7273746728897095
+            },
+            {
+              "chunk_id": "DOC055-U0001-C0002",
+              "document_id": "DOC055",
+              "rank": 2,
+              "score": 0.7045827507972717
+            },
+            {
+              "chunk_id": "DOC055-U0001-C0005",
+              "document_id": "DOC055",
+              "rank": 3,
+              "score": 0.7017883062362671
+            },
+            {
+              "chunk_id": "DOC056-U0001-C0002",
+              "document_id": "DOC056",
+              "rank": 4,
+              "score": 0.6463428735733032
+            },
+            {
+              "chunk_id": "DOC055-U0001-C0004",
+              "document_id": "DOC055",
+              "rank": 5,
+              "score": 0.6405302286148071
+            },
+            {
+              "chunk_id": "DOC057-U0001-C0001",
+              "document_id": "DOC057",
+              "rank": 6,
+              "score": 0.6373732089996338
+            },
+            {
+              "chunk_id": "DOC056-U0001-C0003",
+              "document_id": "DOC056",
+              "rank": 7,
+              "score": 0.6344971656799316
+            },
+            {
+              "chunk_id": "DOC055-U0001-C0003",
+              "document_id": "DOC055",
+              "rank": 8,
+              "score": 0.6260203123092651
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0022",
+              "document_id": "DOC041",
+              "rank": 9,
+              "score": 0.6210988759994507
+            },
+            {
+              "chunk_id": "DOC046-U0001-C0001",
+              "document_id": "DOC046",
+              "rank": 10,
+              "score": 0.6163568496704102
+            }
+          ],
+          "top1_document_id": "DOC055"
+        },
+        {
+          "expected_document_rank": 1,
+          "repeat": 3,
+          "retrieved": [
+            {
+              "chunk_id": "DOC055-U0001-C0001",
+              "document_id": "DOC055",
+              "rank": 1,
+              "score": 0.7273746728897095
+            },
+            {
+              "chunk_id": "DOC055-U0001-C0002",
+              "document_id": "DOC055",
+              "rank": 2,
+              "score": 0.7045827507972717
+            },
+            {
+              "chunk_id": "DOC055-U0001-C0005",
+              "document_id": "DOC055",
+              "rank": 3,
+              "score": 0.7017883062362671
+            },
+            {
+              "chunk_id": "DOC056-U0001-C0002",
+              "document_id": "DOC056",
+              "rank": 4,
+              "score": 0.6463428735733032
+            },
+            {
+              "chunk_id": "DOC055-U0001-C0004",
+              "document_id": "DOC055",
+              "rank": 5,
+              "score": 0.6405302286148071
+            },
+            {
+              "chunk_id": "DOC057-U0001-C0001",
+              "document_id": "DOC057",
+              "rank": 6,
+              "score": 0.6373732089996338
+            },
+            {
+              "chunk_id": "DOC056-U0001-C0003",
+              "document_id": "DOC056",
+              "rank": 7,
+              "score": 0.6344971656799316
+            },
+            {
+              "chunk_id": "DOC055-U0001-C0003",
+              "document_id": "DOC055",
+              "rank": 8,
+              "score": 0.6260203123092651
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0022",
+              "document_id": "DOC041",
+              "rank": 9,
+              "score": 0.6210988759994507
+            },
+            {
+              "chunk_id": "DOC046-U0001-C0001",
+              "document_id": "DOC046",
+              "rank": 10,
+              "score": 0.6163568496704102
+            }
+          ],
+          "top1_document_id": "DOC055"
+        }
+      ],
+      "stable_top1": true,
+      "top10": true,
+      "top3": true,
+      "top5": true
+    },
+    {
+      "expected_document_id": "DOC056",
+      "probe_id": "SEM15",
+      "query": "Enhanced structures and buildings allowance relief available for qualifying investment in Scottish special tax sites.",
+      "repeats": [
+        {
+          "expected_document_rank": 1,
+          "repeat": 1,
+          "retrieved": [
+            {
+              "chunk_id": "DOC056-U0001-C0001",
+              "document_id": "DOC056",
+              "rank": 1,
+              "score": 0.7920438647270203
+            },
+            {
+              "chunk_id": "DOC056-U0001-C0002",
+              "document_id": "DOC056",
+              "rank": 2,
+              "score": 0.7908164858818054
+            },
+            {
+              "chunk_id": "DOC057-U0001-C0001",
+              "document_id": "DOC057",
+              "rank": 3,
+              "score": 0.7150639295578003
+            },
+            {
+              "chunk_id": "DOC056-U0001-C0003",
+              "document_id": "DOC056",
+              "rank": 4,
+              "score": 0.7141955494880676
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0021",
+              "document_id": "DOC041",
+              "rank": 5,
+              "score": 0.7129945158958435
+            },
+            {
+              "chunk_id": "DOC049-U0003-C0001",
+              "document_id": "DOC049",
+              "rank": 6,
+              "score": 0.6999324560165405
+            },
+            {
+              "chunk_id": "DOC050-U0003-C0001",
+              "document_id": "DOC050",
+              "rank": 7,
+              "score": 0.6999324560165405
+            },
+            {
+              "chunk_id": "DOC057-U0001-C0002",
+              "document_id": "DOC057",
+              "rank": 8,
+              "score": 0.6729056239128113
+            },
+            {
+              "chunk_id": "DOC046-U0001-C0002",
+              "document_id": "DOC046",
+              "rank": 9,
+              "score": 0.6133801937103271
+            },
+            {
+              "chunk_id": "DOC057-U0001-C0004",
+              "document_id": "DOC057",
+              "rank": 10,
+              "score": 0.60635906457901
+            }
+          ],
+          "top1_document_id": "DOC056"
+        },
+        {
+          "expected_document_rank": 1,
+          "repeat": 2,
+          "retrieved": [
+            {
+              "chunk_id": "DOC056-U0001-C0001",
+              "document_id": "DOC056",
+              "rank": 1,
+              "score": 0.7918047904968262
+            },
+            {
+              "chunk_id": "DOC056-U0001-C0002",
+              "document_id": "DOC056",
+              "rank": 2,
+              "score": 0.7905514240264893
+            },
+            {
+              "chunk_id": "DOC057-U0001-C0001",
+              "document_id": "DOC057",
+              "rank": 3,
+              "score": 0.7140311002731323
+            },
+            {
+              "chunk_id": "DOC056-U0001-C0003",
+              "document_id": "DOC056",
+              "rank": 4,
+              "score": 0.7133179903030396
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0021",
+              "document_id": "DOC041",
+              "rank": 5,
+              "score": 0.7120311260223389
+            },
+            {
+              "chunk_id": "DOC049-U0003-C0001",
+              "document_id": "DOC049",
+              "rank": 6,
+              "score": 0.7000255584716797
+            },
+            {
+              "chunk_id": "DOC050-U0003-C0001",
+              "document_id": "DOC050",
+              "rank": 7,
+              "score": 0.7000255584716797
+            },
+            {
+              "chunk_id": "DOC057-U0001-C0002",
+              "document_id": "DOC057",
+              "rank": 8,
+              "score": 0.6723869442939758
+            },
+            {
+              "chunk_id": "DOC046-U0001-C0002",
+              "document_id": "DOC046",
+              "rank": 9,
+              "score": 0.6119653582572937
+            },
+            {
+              "chunk_id": "DOC057-U0001-C0004",
+              "document_id": "DOC057",
+              "rank": 10,
+              "score": 0.6054357290267944
+            }
+          ],
+          "top1_document_id": "DOC056"
+        },
+        {
+          "expected_document_rank": 1,
+          "repeat": 3,
+          "retrieved": [
+            {
+              "chunk_id": "DOC056-U0001-C0001",
+              "document_id": "DOC056",
+              "rank": 1,
+              "score": 0.7918047904968262
+            },
+            {
+              "chunk_id": "DOC056-U0001-C0002",
+              "document_id": "DOC056",
+              "rank": 2,
+              "score": 0.7905514240264893
+            },
+            {
+              "chunk_id": "DOC057-U0001-C0001",
+              "document_id": "DOC057",
+              "rank": 3,
+              "score": 0.7140311002731323
+            },
+            {
+              "chunk_id": "DOC056-U0001-C0003",
+              "document_id": "DOC056",
+              "rank": 4,
+              "score": 0.7133179903030396
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0021",
+              "document_id": "DOC041",
+              "rank": 5,
+              "score": 0.7120311260223389
+            },
+            {
+              "chunk_id": "DOC049-U0003-C0001",
+              "document_id": "DOC049",
+              "rank": 6,
+              "score": 0.7000255584716797
+            },
+            {
+              "chunk_id": "DOC050-U0003-C0001",
+              "document_id": "DOC050",
+              "rank": 7,
+              "score": 0.7000255584716797
+            },
+            {
+              "chunk_id": "DOC057-U0001-C0002",
+              "document_id": "DOC057",
+              "rank": 8,
+              "score": 0.6723869442939758
+            },
+            {
+              "chunk_id": "DOC046-U0001-C0002",
+              "document_id": "DOC046",
+              "rank": 9,
+              "score": 0.6119653582572937
+            },
+            {
+              "chunk_id": "DOC057-U0001-C0004",
+              "document_id": "DOC057",
+              "rank": 10,
+              "score": 0.6054357290267944
+            }
+          ],
+          "top1_document_id": "DOC056"
+        }
+      ],
+      "stable_top1": true,
+      "top10": true,
+      "top3": true,
+      "top5": true
+    },
+    {
+      "expected_document_id": "DOC057",
+      "probe_id": "SEM16",
+      "query": "Enhanced capital allowance relief available for qualifying investment in Scottish special tax sites.",
+      "repeats": [
+        {
+          "expected_document_rank": 1,
+          "repeat": 1,
+          "retrieved": [
+            {
+              "chunk_id": "DOC057-U0001-C0001",
+              "document_id": "DOC057",
+              "rank": 1,
+              "score": 0.7629427909851074
+            },
+            {
+              "chunk_id": "DOC056-U0001-C0002",
+              "document_id": "DOC056",
+              "rank": 2,
+              "score": 0.7186586260795593
+            },
+            {
+              "chunk_id": "DOC056-U0001-C0003",
+              "document_id": "DOC056",
+              "rank": 3,
+              "score": 0.7112686634063721
+            },
+            {
+              "chunk_id": "DOC057-U0001-C0002",
+              "document_id": "DOC057",
+              "rank": 4,
+              "score": 0.7105735540390015
+            },
+            {
+              "chunk_id": "DOC056-U0001-C0001",
+              "document_id": "DOC056",
+              "rank": 5,
+              "score": 0.7086069583892822
+            },
+            {
+              "chunk_id": "DOC049-U0003-C0001",
+              "document_id": "DOC049",
+              "rank": 6,
+              "score": 0.7052626609802246
+            },
+            {
+              "chunk_id": "DOC050-U0003-C0001",
+              "document_id": "DOC050",
+              "rank": 7,
+              "score": 0.7052626609802246
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0021",
+              "document_id": "DOC041",
+              "rank": 8,
+              "score": 0.6905862092971802
+            },
+            {
+              "chunk_id": "DOC057-U0001-C0004",
+              "document_id": "DOC057",
+              "rank": 9,
+              "score": 0.6428111791610718
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0022",
+              "document_id": "DOC041",
+              "rank": 10,
+              "score": 0.6162835955619812
+            }
+          ],
+          "top1_document_id": "DOC057"
+        },
+        {
+          "expected_document_rank": 1,
+          "repeat": 2,
+          "retrieved": [
+            {
+              "chunk_id": "DOC057-U0001-C0001",
+              "document_id": "DOC057",
+              "rank": 1,
+              "score": 0.7628145217895508
+            },
+            {
+              "chunk_id": "DOC056-U0001-C0002",
+              "document_id": "DOC056",
+              "rank": 2,
+              "score": 0.7176809310913086
+            },
+            {
+              "chunk_id": "DOC056-U0001-C0003",
+              "document_id": "DOC056",
+              "rank": 3,
+              "score": 0.7102998495101929
+            },
+            {
+              "chunk_id": "DOC057-U0001-C0002",
+              "document_id": "DOC057",
+              "rank": 4,
+              "score": 0.7101340293884277
+            },
+            {
+              "chunk_id": "DOC056-U0001-C0001",
+              "document_id": "DOC056",
+              "rank": 5,
+              "score": 0.7077940106391907
+            },
+            {
+              "chunk_id": "DOC049-U0003-C0001",
+              "document_id": "DOC049",
+              "rank": 6,
+              "score": 0.7049952745437622
+            },
+            {
+              "chunk_id": "DOC050-U0003-C0001",
+              "document_id": "DOC050",
+              "rank": 7,
+              "score": 0.7049952745437622
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0021",
+              "document_id": "DOC041",
+              "rank": 8,
+              "score": 0.6891345381736755
+            },
+            {
+              "chunk_id": "DOC057-U0001-C0004",
+              "document_id": "DOC057",
+              "rank": 9,
+              "score": 0.6421342492103577
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0022",
+              "document_id": "DOC041",
+              "rank": 10,
+              "score": 0.6155389547348022
+            }
+          ],
+          "top1_document_id": "DOC057"
+        },
+        {
+          "expected_document_rank": 1,
+          "repeat": 3,
+          "retrieved": [
+            {
+              "chunk_id": "DOC057-U0001-C0001",
+              "document_id": "DOC057",
+              "rank": 1,
+              "score": 0.7628145217895508
+            },
+            {
+              "chunk_id": "DOC056-U0001-C0002",
+              "document_id": "DOC056",
+              "rank": 2,
+              "score": 0.7176809310913086
+            },
+            {
+              "chunk_id": "DOC056-U0001-C0003",
+              "document_id": "DOC056",
+              "rank": 3,
+              "score": 0.7102998495101929
+            },
+            {
+              "chunk_id": "DOC057-U0001-C0002",
+              "document_id": "DOC057",
+              "rank": 4,
+              "score": 0.7101340293884277
+            },
+            {
+              "chunk_id": "DOC056-U0001-C0001",
+              "document_id": "DOC056",
+              "rank": 5,
+              "score": 0.7077940106391907
+            },
+            {
+              "chunk_id": "DOC049-U0003-C0001",
+              "document_id": "DOC049",
+              "rank": 6,
+              "score": 0.7049952745437622
+            },
+            {
+              "chunk_id": "DOC050-U0003-C0001",
+              "document_id": "DOC050",
+              "rank": 7,
+              "score": 0.7049952745437622
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0021",
+              "document_id": "DOC041",
+              "rank": 8,
+              "score": 0.6891345381736755
+            },
+            {
+              "chunk_id": "DOC057-U0001-C0004",
+              "document_id": "DOC057",
+              "rank": 9,
+              "score": 0.6421342492103577
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0022",
+              "document_id": "DOC041",
+              "rank": 10,
+              "score": 0.6155389547348022
+            }
+          ],
+          "top1_document_id": "DOC057"
+        }
+      ],
+      "stable_top1": true,
+      "top10": true,
+      "top3": true,
+      "top5": true
+    },
+    {
+      "expected_document_id": "DOC058",
+      "probe_id": "SEM17",
+      "query": "Eligibility rules for seed-capital funding of projects in Scotland's designated zones.",
+      "repeats": [
+        {
+          "expected_document_rank": 1,
+          "repeat": 1,
+          "retrieved": [
+            {
+              "chunk_id": "DOC058-U0001-C0001",
+              "document_id": "DOC058",
+              "rank": 1,
+              "score": 0.7305934429168701
+            },
+            {
+              "chunk_id": "DOC058-U0001-C0002",
+              "document_id": "DOC058",
+              "rank": 2,
+              "score": 0.714052677154541
+            },
+            {
+              "chunk_id": "DOC058-U0001-C0003",
+              "document_id": "DOC058",
+              "rank": 3,
+              "score": 0.6582269668579102
+            },
+            {
+              "chunk_id": "DOC053-U0027-C0001",
+              "document_id": "DOC053",
+              "rank": 4,
+              "score": 0.6076845526695251
+            },
+            {
+              "chunk_id": "DOC053-U0010-C0001",
+              "document_id": "DOC053",
+              "rank": 5,
+              "score": 0.5785685777664185
+            },
+            {
+              "chunk_id": "DOC043-U0001-C0004",
+              "document_id": "DOC043",
+              "rank": 6,
+              "score": 0.5657947659492493
+            },
+            {
+              "chunk_id": "DOC043-U0001-C0003",
+              "document_id": "DOC043",
+              "rank": 7,
+              "score": 0.5623865127563477
+            },
+            {
+              "chunk_id": "DOC053-U0026-C0001",
+              "document_id": "DOC053",
+              "rank": 8,
+              "score": 0.5503045916557312
+            },
+            {
+              "chunk_id": "DOC052-U0012-C0001",
+              "document_id": "DOC052",
+              "rank": 9,
+              "score": 0.5399094223976135
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0001",
+              "document_id": "DOC041",
+              "rank": 10,
+              "score": 0.5396263599395752
+            }
+          ],
+          "top1_document_id": "DOC058"
+        },
+        {
+          "expected_document_rank": 1,
+          "repeat": 2,
+          "retrieved": [
+            {
+              "chunk_id": "DOC058-U0001-C0001",
+              "document_id": "DOC058",
+              "rank": 1,
+              "score": 0.7313202619552612
+            },
+            {
+              "chunk_id": "DOC058-U0001-C0002",
+              "document_id": "DOC058",
+              "rank": 2,
+              "score": 0.7140170335769653
+            },
+            {
+              "chunk_id": "DOC058-U0001-C0003",
+              "document_id": "DOC058",
+              "rank": 3,
+              "score": 0.6588496565818787
+            },
+            {
+              "chunk_id": "DOC053-U0027-C0001",
+              "document_id": "DOC053",
+              "rank": 4,
+              "score": 0.606827974319458
+            },
+            {
+              "chunk_id": "DOC053-U0010-C0001",
+              "document_id": "DOC053",
+              "rank": 5,
+              "score": 0.5787848830223083
+            },
+            {
+              "chunk_id": "DOC043-U0001-C0004",
+              "document_id": "DOC043",
+              "rank": 6,
+              "score": 0.565738320350647
+            },
+            {
+              "chunk_id": "DOC043-U0001-C0003",
+              "document_id": "DOC043",
+              "rank": 7,
+              "score": 0.5623911619186401
+            },
+            {
+              "chunk_id": "DOC053-U0026-C0001",
+              "document_id": "DOC053",
+              "rank": 8,
+              "score": 0.5493531823158264
+            },
+            {
+              "chunk_id": "DOC052-U0012-C0001",
+              "document_id": "DOC052",
+              "rank": 9,
+              "score": 0.5395259857177734
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0001",
+              "document_id": "DOC041",
+              "rank": 10,
+              "score": 0.5385584831237793
+            }
+          ],
+          "top1_document_id": "DOC058"
+        },
+        {
+          "expected_document_rank": 1,
+          "repeat": 3,
+          "retrieved": [
+            {
+              "chunk_id": "DOC058-U0001-C0001",
+              "document_id": "DOC058",
+              "rank": 1,
+              "score": 0.7313202619552612
+            },
+            {
+              "chunk_id": "DOC058-U0001-C0002",
+              "document_id": "DOC058",
+              "rank": 2,
+              "score": 0.7140170335769653
+            },
+            {
+              "chunk_id": "DOC058-U0001-C0003",
+              "document_id": "DOC058",
+              "rank": 3,
+              "score": 0.6588496565818787
+            },
+            {
+              "chunk_id": "DOC053-U0027-C0001",
+              "document_id": "DOC053",
+              "rank": 4,
+              "score": 0.606827974319458
+            },
+            {
+              "chunk_id": "DOC053-U0010-C0001",
+              "document_id": "DOC053",
+              "rank": 5,
+              "score": 0.5787848830223083
+            },
+            {
+              "chunk_id": "DOC043-U0001-C0004",
+              "document_id": "DOC043",
+              "rank": 6,
+              "score": 0.565738320350647
+            },
+            {
+              "chunk_id": "DOC043-U0001-C0003",
+              "document_id": "DOC043",
+              "rank": 7,
+              "score": 0.5623911619186401
+            },
+            {
+              "chunk_id": "DOC053-U0026-C0001",
+              "document_id": "DOC053",
+              "rank": 8,
+              "score": 0.5493531823158264
+            },
+            {
+              "chunk_id": "DOC052-U0012-C0001",
+              "document_id": "DOC052",
+              "rank": 9,
+              "score": 0.5395259857177734
+            },
+            {
+              "chunk_id": "DOC041-U0001-C0001",
+              "document_id": "DOC041",
+              "rank": 10,
+              "score": 0.5385584831237793
+            }
+          ],
+          "top1_document_id": "DOC058"
+        }
+      ],
+      "stable_top1": true,
+      "top10": true,
+      "top3": true,
+      "top5": true
+    }
+  ],
+  "retrieval_config_id": "UC2-QWEN3-EMBED4B-EXACT-COSINE-v0.1",
+  "schema_version": "0.1",
+  "thresholds": {
+    "stable_top1": 15,
+    "top10": 15,
+    "top3": 9,
+    "top5": 13
+  },
+  "top_k": 10,
+  "use_case_id": "UC2"
+}

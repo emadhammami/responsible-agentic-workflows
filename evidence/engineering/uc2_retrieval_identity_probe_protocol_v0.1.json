@@ -1,0 +1,177 @@
+{
+  "schema_version": "0.1",
+  "protocol_id": "UC2-METADATA-IDENTITY-PROBES-v0.1",
+  "status": "frozen_before_execution",
+  "purpose": "Engineering-only identity retrieval diagnostic for the frozen UC2 dense retrieval configuration.",
+  "source_basis": "Queries use only frozen source_inventory.tsv title/issuer metadata and corpus_membership.json candidate-to-document mapping.",
+  "UC1_UC3_CORE_STRUCTURE_PRESERVED": true,
+  "UC2_DOCUMENT_COVERAGE": "17/17",
+  "benchmark_separation": {
+    "benchmark_questions_used": false,
+    "benchmark_gold_used": false,
+    "benchmark_answers_used": false,
+    "retrieval_results_used_to_design_queries": false
+  },
+  "interpretation": "Descriptive engineering evidence only; not an embedding acceptance gate.",
+  "execution": {
+    "top_k": 10,
+    "repeats_per_probe": 3,
+    "ranking_unit": "chunk",
+    "expected_document_measure": "rank of first retrieved chunk belonging to expected document"
+  },
+  "probes": [
+    {
+      "probe_id": "ID01",
+      "candidate_id": "UC2-C01",
+      "canonical_title": "Green Freeports in Scotland: bidding prospectus",
+      "issuer": "Scottish Government + UK Government",
+      "expected_document_id": "DOC041",
+      "source_basis": "source_inventory.tsv UC2-C01: title + issuer; corpus_membership.json mapping",
+      "query": "Green Freeports in Scotland: bidding prospectus. Scottish Government + UK Government."
+    },
+    {
+      "probe_id": "ID02",
+      "candidate_id": "UC2-C02",
+      "canonical_title": "Green Freeports clarification Q and A",
+      "issuer": "Scottish Government + UK Government",
+      "expected_document_id": "DOC042",
+      "source_basis": "source_inventory.tsv UC2-C02: title + issuer; corpus_membership.json mapping",
+      "query": "Green Freeports clarification Q and A. Scottish Government + UK Government."
+    },
+    {
+      "probe_id": "ID03",
+      "candidate_id": "UC2-C03",
+      "canonical_title": "Scottish Green Freeports: set up phase guidance",
+      "issuer": "UK Government / Scottish Green Freeports programme",
+      "expected_document_id": "DOC043",
+      "source_basis": "source_inventory.tsv UC2-C03: title + issuer; corpus_membership.json mapping",
+      "query": "Scottish Green Freeports: set up phase guidance. UK Government / Scottish Green Freeports programme."
+    },
+    {
+      "probe_id": "ID04",
+      "candidate_id": "UC2-C04",
+      "canonical_title": "Green Freeports Programme: business and regulatory impact assessment (BRIA)",
+      "issuer": "Scottish Government",
+      "expected_document_id": "DOC044",
+      "source_basis": "source_inventory.tsv UC2-C04: title + issuer; corpus_membership.json mapping",
+      "query": "Green Freeports Programme: business and regulatory impact assessment (BRIA). Scottish Government."
+    },
+    {
+      "probe_id": "ID05",
+      "candidate_id": "UC2-C05",
+      "canonical_title": "Green Freeports - Planning and Other Consents: National Protocol",
+      "issuer": "Scottish Government",
+      "expected_document_id": "DOC045",
+      "source_basis": "source_inventory.tsv UC2-C05: title + issuer; corpus_membership.json mapping",
+      "query": "Green Freeports - Planning and Other Consents: National Protocol. Scottish Government."
+    },
+    {
+      "probe_id": "ID06",
+      "candidate_id": "UC2-C06",
+      "canonical_title": "Local government finance circular 4/2024: Green Freeports Non-Domestic Rates relief and income retention",
+      "issuer": "Scottish Government",
+      "expected_document_id": "DOC046",
+      "source_basis": "source_inventory.tsv UC2-C06: title + issuer; corpus_membership.json mapping",
+      "query": "Local government finance circular 4/2024: Green Freeports Non-Domestic Rates relief and income retention. Scottish Government."
+    },
+    {
+      "probe_id": "ID07",
+      "candidate_id": "UC2-C07",
+      "canonical_title": "LBTT3049 - Green Freeports",
+      "issuer": "Revenue Scotland",
+      "expected_document_id": "DOC047",
+      "source_basis": "source_inventory.tsv UC2-C07: title + issuer; corpus_membership.json mapping",
+      "query": "LBTT3049 - Green Freeports. Revenue Scotland."
+    },
+    {
+      "probe_id": "ID08",
+      "candidate_id": "UC2-C08",
+      "canonical_title": "The Land and Buildings Transaction Tax (Green Freeports Relief) (Scotland) Order 2023",
+      "issuer": "Scottish Ministers / legislation.gov.uk",
+      "expected_document_id": "DOC048",
+      "source_basis": "source_inventory.tsv UC2-C08: title + issuer; corpus_membership.json mapping",
+      "query": "The Land and Buildings Transaction Tax (Green Freeports Relief) (Scotland) Order 2023. Scottish Ministers / legislation.gov.uk."
+    },
+    {
+      "probe_id": "ID09",
+      "candidate_id": "UC2-C09",
+      "canonical_title": "The Designation of Special Tax Sites (Inverness and Cromarty Firth Green Freeport) Regulations 2024",
+      "issuer": "HM Treasury / legislation.gov.uk",
+      "expected_document_id": "DOC049",
+      "source_basis": "source_inventory.tsv UC2-C09: title + issuer; corpus_membership.json mapping",
+      "query": "The Designation of Special Tax Sites (Inverness and Cromarty Firth Green Freeport) Regulations 2024. HM Treasury / legislation.gov.uk."
+    },
+    {
+      "probe_id": "ID10",
+      "candidate_id": "UC2-C10",
+      "canonical_title": "The Designation of Special Tax Sites (Forth Green Freeport) Regulations 2024",
+      "issuer": "HM Treasury / legislation.gov.uk",
+      "expected_document_id": "DOC050",
+      "source_basis": "source_inventory.tsv UC2-C10: title + issuer; corpus_membership.json mapping",
+      "query": "The Designation of Special Tax Sites (Forth Green Freeport) Regulations 2024. HM Treasury / legislation.gov.uk."
+    },
+    {
+      "probe_id": "ID11",
+      "candidate_id": "UC2-C11",
+      "canonical_title": "Freeports technical handbook",
+      "issuer": "HM Revenue & Customs",
+      "expected_document_id": "DOC051",
+      "source_basis": "source_inventory.tsv UC2-C11: title + issuer; corpus_membership.json mapping",
+      "query": "Freeports technical handbook. HM Revenue & Customs."
+    },
+    {
+      "probe_id": "ID12",
+      "candidate_id": "UC2-C12",
+      "canonical_title": "Inverness and Cromarty Firth Green Freeport - Full Business Case update / Executive Summary",
+      "issuer": "The Highland Council",
+      "expected_document_id": "DOC052",
+      "source_basis": "source_inventory.tsv UC2-C12: title + issuer; corpus_membership.json mapping",
+      "query": "Inverness and Cromarty Firth Green Freeport - Full Business Case update / Executive Summary. The Highland Council."
+    },
+    {
+      "probe_id": "ID13",
+      "candidate_id": "UC2-C13",
+      "canonical_title": "Forth Green Freeport - Full Business Case - referral from the Policy and Sustainability Committee",
+      "issuer": "The City of Edinburgh Council",
+      "expected_document_id": "DOC053",
+      "source_basis": "source_inventory.tsv UC2-C13: title + issuer; corpus_membership.json mapping",
+      "query": "Forth Green Freeport - Full Business Case - referral from the Policy and Sustainability Committee. The City of Edinburgh Council."
+    },
+    {
+      "probe_id": "ID14",
+      "candidate_id": "UC2-C15",
+      "canonical_title": "Check if you can claim National Insurance relief in UK Freeport or Investment Zone special tax sites",
+      "issuer": "HM Revenue & Customs",
+      "expected_document_id": "DOC055",
+      "source_basis": "source_inventory.tsv UC2-C15: title + issuer; corpus_membership.json mapping",
+      "query": "Check if you can claim National Insurance relief in UK Freeport or Investment Zone special tax sites. HM Revenue & Customs."
+    },
+    {
+      "probe_id": "ID15",
+      "candidate_id": "UC2-C16",
+      "canonical_title": "Check if you can claim enhanced structures and buildings allowance relief in UK Freeport or Investment Zone special tax sites",
+      "issuer": "HM Revenue & Customs",
+      "expected_document_id": "DOC056",
+      "source_basis": "source_inventory.tsv UC2-C16: title + issuer; corpus_membership.json mapping",
+      "query": "Check if you can claim enhanced structures and buildings allowance relief in UK Freeport or Investment Zone special tax sites. HM Revenue & Customs."
+    },
+    {
+      "probe_id": "ID16",
+      "candidate_id": "UC2-C17",
+      "canonical_title": "Check if you can claim the enhanced capital allowance relief in UK Freeport or Investment Zone special tax sites",
+      "issuer": "HM Revenue & Customs",
+      "expected_document_id": "DOC057",
+      "source_basis": "source_inventory.tsv UC2-C17: title + issuer; corpus_membership.json mapping",
+      "query": "Check if you can claim the enhanced capital allowance relief in UK Freeport or Investment Zone special tax sites. HM Revenue & Customs."
+    },
+    {
+      "probe_id": "ID17",
+      "candidate_id": "UC2-C18",
+      "canonical_title": "Scottish Green Freeport seed capital eligibility criteria",
+      "issuer": "UK Government",
+      "expected_document_id": "DOC058",
+      "source_basis": "source_inventory.tsv UC2-C18: title + issuer; corpus_membership.json mapping",
+      "query": "Scottish Green Freeport seed capital eligibility criteria. UK Government."
+    }
+  ]
+}

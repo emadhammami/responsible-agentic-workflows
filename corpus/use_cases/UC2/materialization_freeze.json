@@ -1,0 +1,30 @@
+{
+  "schema_version": "0.1",
+  "use_case_id": "UC2",
+  "status": "frozen",
+  "config_id": "UC2-SOURCEUNIT-W450-O75-v0.1",
+  "accepted_document_count": 17,
+  "excluded_document_ids": ["DOC054"],
+  "source_unit_count": 117,
+  "chunk_count": 293,
+  "total_normalized_words": 92521,
+  "materializer_sha256": "abd1b0d60f727950789b3cab51e76786e8a74af9b86da9955a8fffe3b6c10069",
+  "materialization_config_sha256": "7ec0e41b7ee8d1355d4d0908ca51adc782a47f2ab12612a8b95d4c1009c0e1a4",
+  "chunking_config_sha256": "a439204fc1382d9d2b1c57e587422fe0dcd9fece3ced3e3b40a0466ebfea45a8",
+  "source_units_sha256": "74bff0c161bc254773c0d4fe20c7aba00828cc88f0267adfa489782f74fb8628",
+  "chunks_sha256": "b3dd26958805320420f0dc7e379b0e0f1c2ec85d4b55fffd3cd8884c8e9841f2",
+  "summary_sha256": "50c835d1436eb7023bb67e774742844fcc7fc820865bb5a93cc3f8463fe2d8c2",
+  "aggregate_sha256": "f0d2c677b01dd8df01bc83e7dfbd5174cb2b6ccd75252df84b491679561ac981",
+  "determinism": {
+    "independent_runs": 2,
+    "byte_identical": true
+  },
+  "controls": {
+    "membership_frozen": true,
+    "materialization_frozen": true,
+    "embeddings_started": false,
+    "retrieval_diagnostic_started": false,
+    "benchmark_tasks_created": false,
+    "benchmark_started": false
+  }
+}

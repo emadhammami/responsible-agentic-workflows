@@ -1,0 +1,42 @@
+{
+  "schema_version": "0.1",
+  "use_case_id": "UC2",
+  "status": "frozen",
+  "benchmark_scope_rule": "All formally adjudicated accepted UC2 documents are retrieval-active. DOC054 remains excluded under frozen eligibility criterion F. No document was added or removed based on retrieval or benchmark performance.",
+  "benchmark_active_document_ids": [
+    "DOC041",
+    "DOC042",
+    "DOC043",
+    "DOC044",
+    "DOC045",
+    "DOC046",
+    "DOC047",
+    "DOC048",
+    "DOC049",
+    "DOC050",
+    "DOC051",
+    "DOC052",
+    "DOC053",
+    "DOC055",
+    "DOC056",
+    "DOC057",
+    "DOC058"
+  ],
+  "manifest_excluded_document_ids": [
+    "DOC054"
+  ],
+  "retrieval_config_id": "UC2-QWEN3-EMBED4B-EXACT-COSINE-v0.1",
+  "controls": {
+    "all_accepted_documents_retrieval_active": true,
+    "selection_based_on_retrieval_performance": false,
+    "selection_based_on_benchmark_performance": false,
+    "corpus_frozen": true,
+    "benchmark_started": false
+  },
+  "notes": [
+    "Membership was frozen before embeddings or retrieval diagnostics.",
+    "Semantic retrieval qualification passed the prospectively frozen 15/13/9/15 gate.",
+    "Benchmark-owned top_k remains unfrozen.",
+    "No benchmark execution occurred before this freeze."
+  ]
+}

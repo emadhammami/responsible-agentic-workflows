@@ -1,0 +1,218 @@
+{
+  "schema_version": "0.1",
+  "protocol_id": "UC2-SEMANTIC-RETRIEVAL-PROBES-v0.1",
+  "status": "frozen_before_execution",
+  "purpose": "Final engineering semantic retrieval qualification gate for UC2.",
+  "scope": "Engineering retrieval-configuration qualification only; not a thesis benchmark result.",
+  "UC1_UC3_CORE_STRUCTURE_PRESERVED": true,
+  "UC2_DOCUMENT_COVERAGE": "17/17",
+  "methodological_note": "One prospectively frozen semantic probe per accepted UC2 document. Queries are paraphrases of frozen scope/adjudication metadata and were fixed before retrieval execution.",
+  "design": {
+    "probe_count": 17,
+    "top_k": 10,
+    "repeats_per_probe": 3,
+    "ranking_unit": "chunk",
+    "expected_target": "rank of first retrieved chunk belonging to pre-specified expected document",
+    "identity_diagnostic_results_used_to_select_targets": false,
+    "benchmark_questions_used": false,
+    "benchmark_gold_used": false,
+    "benchmark_answers_used": false,
+    "retrieval_results_used_to_design_queries": false
+  },
+  "engineering_acceptance_gate": {
+    "note": "Prospectively scaled from frozen UC1 gate 7/6/4/7 of 8 using CEILING for 17 probes.",
+    "minimum_probes_expected_document_top10_all_repeats": 15,
+    "minimum_probes_expected_document_top5_all_repeats": 13,
+    "minimum_probes_expected_document_top3_all_repeats": 9,
+    "minimum_probes_stable_top1_document_across_repeats": 15
+  },
+  "probes": [
+    {
+      "probe_id": "SEM01",
+      "candidate_id": "UC2-C01",
+      "expected_document_id": "DOC041",
+      "query": "Policy design for Scotland's designated economic-zone programme and how the programme is intended to operate.",
+      "source_basis": {
+        "D_scope": "PASS: core Scotland Green Freeport policy design",
+        "E_scotland_applicability": "PASS: explicit authoritative Scottish applicability",
+        "F_evidentiary": "PASS: substantive primary legal, policy, governance or operational evidence"
+      }
+    },
+    {
+      "probe_id": "SEM02",
+      "candidate_id": "UC2-C02",
+      "expected_document_id": "DOC042",
+      "query": "Official clarification of questions about how the Scottish designated-zone programme should be interpreted and applied.",
+      "source_basis": {
+        "D_scope": "PASS: official Scotland policy clarification",
+        "E_scotland_applicability": "PASS: explicit authoritative Scottish applicability",
+        "F_evidentiary": "PASS: substantive primary legal, policy, governance or operational evidence"
+      }
+    },
+    {
+      "probe_id": "SEM03",
+      "candidate_id": "UC2-C03",
+      "expected_document_id": "DOC043",
+      "query": "Requirements for the set-up stage, business-case preparation and delivery arrangements for selected Scottish sites.",
+      "source_basis": {
+        "D_scope": "PASS: setup, business-case and delivery requirements",
+        "E_scotland_applicability": "PASS: explicit authoritative Scottish applicability",
+        "F_evidentiary": "PASS: substantive primary legal, policy, governance or operational evidence"
+      }
+    },
+    {
+      "probe_id": "SEM04",
+      "candidate_id": "UC2-C04",
+      "expected_document_id": "DOC044",
+      "query": "Assessment of programme impacts, controls and implementation effects arising from the Scottish designated-zone policy.",
+      "source_basis": {
+        "D_scope": "PASS: programme impacts, controls and implementation",
+        "E_scotland_applicability": "PASS: explicit authoritative Scottish applicability",
+        "F_evidentiary": "PASS: substantive primary legal, policy, governance or operational evidence"
+      }
+    },
+    {
+      "probe_id": "SEM05",
+      "candidate_id": "UC2-C05",
+      "expected_document_id": "DOC045",
+      "query": "How planning and consenting should be coordinated for development associated with Scotland's designated zones.",
+      "source_basis": {
+        "D_scope": "PASS: planning and consenting protocol",
+        "E_scotland_applicability": "PASS: explicit authoritative Scottish applicability",
+        "F_evidentiary": "PASS: substantive primary legal, policy, governance or operational evidence"
+      }
+    },
+    {
+      "probe_id": "SEM06",
+      "candidate_id": "UC2-C06",
+      "expected_document_id": "DOC046",
+      "query": "Rules for Scottish non-domestic rates relief and retention of rates income within designated areas.",
+      "source_basis": {
+        "D_scope": "PASS: Scottish NDR relief and retention rules",
+        "E_scotland_applicability": "PASS: explicit authoritative Scottish applicability",
+        "F_evidentiary": "PASS: substantive primary legal, policy, governance or operational evidence"
+      }
+    },
+    {
+      "probe_id": "SEM07",
+      "candidate_id": "UC2-C07",
+      "expected_document_id": "DOC047",
+      "query": "Administrative guidance on Scottish land and buildings transaction tax relief available within designated tax sites.",
+      "source_basis": {
+        "D_scope": "PASS: Scottish LBTT Green Freeport guidance",
+        "E_scotland_applicability": "PASS: explicit authoritative Scottish applicability",
+        "F_evidentiary": "PASS: substantive primary legal, policy, governance or operational evidence"
+      }
+    },
+    {
+      "probe_id": "SEM08",
+      "candidate_id": "UC2-C08",
+      "expected_document_id": "DOC048",
+      "query": "The statutory basis creating Scottish land and buildings transaction tax relief within designated tax sites.",
+      "source_basis": {
+        "D_scope": "PASS: statutory Scottish LBTT relief basis",
+        "E_scotland_applicability": "PASS: explicit authoritative Scottish applicability",
+        "F_evidentiary": "PASS: substantive primary legal, policy, governance or operational evidence"
+      }
+    },
+    {
+      "probe_id": "SEM09",
+      "candidate_id": "UC2-C09",
+      "expected_document_id": "DOC049",
+      "query": "The legal designation of special tax-site areas for the northern Scottish zone around Inverness and the Cromarty Firth.",
+      "source_basis": {
+        "D_scope": "PASS: ICF special tax-site designation",
+        "E_scotland_applicability": "PASS: explicit authoritative Scottish applicability",
+        "F_evidentiary": "PASS: substantive primary legal, policy, governance or operational evidence"
+      }
+    },
+    {
+      "probe_id": "SEM10",
+      "candidate_id": "UC2-C10",
+      "expected_document_id": "DOC050",
+      "query": "The legal designation of special tax-site areas for the Scottish zone centred on the Forth.",
+      "source_basis": {
+        "D_scope": "PASS: Forth special tax-site designation",
+        "E_scotland_applicability": "PASS: explicit authoritative Scottish applicability",
+        "F_evidentiary": "PASS: substantive primary legal, policy, governance or operational evidence"
+      }
+    },
+    {
+      "probe_id": "SEM11",
+      "candidate_id": "UC2-C11",
+      "expected_document_id": "DOC051",
+      "query": "Operational customs rules for authorised sites and goods movements that apply to Scotland's designated zones.",
+      "source_basis": {
+        "D_scope": "PASS: Freeport customs rules applicable to Scottish sites",
+        "E_scotland_applicability": "PASS: issuing guidance explicitly applies mechanism to Scottish Green Freeports",
+        "F_evidentiary": "PASS: substantive primary legal, policy, governance or operational evidence"
+      }
+    },
+    {
+      "probe_id": "SEM12",
+      "candidate_id": "UC2-C12",
+      "expected_document_id": "DOC052",
+      "query": "A public local-authority summary updating the full business case and implementation position of the northern Scottish zone around Inverness and the Cromarty Firth.",
+      "source_basis": {
+        "D_scope": "PASS: public ICF implementation/FBC summary",
+        "E_scotland_applicability": "PASS: explicit authoritative Scottish applicability",
+        "F_evidentiary": "PASS: substantive primary legal, policy, governance or operational evidence"
+      }
+    },
+    {
+      "probe_id": "SEM13",
+      "candidate_id": "UC2-C13",
+      "expected_document_id": "DOC053",
+      "query": "Public local-authority full-business-case material concerning implementation of the Scottish zone centred on the Forth.",
+      "source_basis": {
+        "D_scope": "PASS: public Forth implementation/FBC material",
+        "E_scotland_applicability": "PASS: explicit authoritative Scottish applicability",
+        "F_evidentiary": "PASS: substantive primary legal, policy, governance or operational evidence"
+      }
+    },
+    {
+      "probe_id": "SEM14",
+      "candidate_id": "UC2-C15",
+      "expected_document_id": "DOC055",
+      "query": "Employer National Insurance contribution relief available for qualifying employment in Scottish special tax sites.",
+      "source_basis": {
+        "D_scope": "PASS: NIC relief explicitly applicable to Scotland",
+        "E_scotland_applicability": "PASS: issuing guidance explicitly applies mechanism to Scottish Green Freeports",
+        "F_evidentiary": "PASS: substantive primary legal, policy, governance or operational evidence"
+      }
+    },
+    {
+      "probe_id": "SEM15",
+      "candidate_id": "UC2-C16",
+      "expected_document_id": "DOC056",
+      "query": "Enhanced structures and buildings allowance relief available for qualifying investment in Scottish special tax sites.",
+      "source_basis": {
+        "D_scope": "PASS: SBA relief explicitly applicable to Scotland",
+        "E_scotland_applicability": "PASS: issuing guidance explicitly applies mechanism to Scottish Green Freeports",
+        "F_evidentiary": "PASS: substantive primary legal, policy, governance or operational evidence"
+      }
+    },
+    {
+      "probe_id": "SEM16",
+      "candidate_id": "UC2-C17",
+      "expected_document_id": "DOC057",
+      "query": "Enhanced capital allowance relief available for qualifying investment in Scottish special tax sites.",
+      "source_basis": {
+        "D_scope": "PASS: ECA relief explicitly applicable to Scotland",
+        "E_scotland_applicability": "PASS: issuing guidance explicitly applies mechanism to Scottish Green Freeports",
+        "F_evidentiary": "PASS: substantive primary legal, policy, governance or operational evidence"
+      }
+    },
+    {
+      "probe_id": "SEM17",
+      "candidate_id": "UC2-C18",
+      "expected_document_id": "DOC058",
+      "query": "Eligibility rules for seed-capital funding of projects in Scotland's designated zones.",
+      "source_basis": {
+        "D_scope": "PASS: Scotland-specific seed-capital eligibility rules",
+        "E_scotland_applicability": "PASS: explicit authoritative Scottish applicability",
+        "F_evidentiary": "PASS: substantive primary legal, policy, governance or operational evidence"
+      }
+    }
+  ]
+}

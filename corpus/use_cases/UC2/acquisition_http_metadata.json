@@ -1,0 +1,273 @@
+{
+  "UC2-C01": [
+    {
+      "bytes": 388418,
+      "content_type": "text/html; charset=utf-8",
+      "file": "UC2-C01_bidding_prospectus.html",
+      "final_url": "https://www.gov.uk/government/publications/green-freeports-in-scotland-bidding-prospectus/green-freeports-in-scotland-bidding-prospectus-delivered-in-partnership-by-the-scottish-government-and-the-uk-government",
+      "http_status": 200,
+      "sha256": "dc99d7f4a74c137e4b726912384affd3e34482c5c3ace3cfc8ed8750bba4815b",
+      "url": "https://www.gov.uk/government/publications/green-freeports-in-scotland-bidding-prospectus/green-freeports-in-scotland-bidding-prospectus-delivered-in-partnership-by-the-scottish-government-and-the-uk-government"
+    }
+  ],
+  "UC2-C02": [
+    {
+      "bytes": 113141,
+      "content_type": "text/html; charset=utf-8",
+      "file": "UC2-C02_clarification_qa.html",
+      "final_url": "https://www.gov.uk/government/publications/green-freeports-in-scotland-bidding-prospectus/green-freeports-clarification-q-and-a",
+      "http_status": 200,
+      "sha256": "9ea1c48ab43b5e9bb2b43b0a3b51e7c5f54d938428db29a1f221a08a45c86461",
+      "url": "https://www.gov.uk/government/publications/green-freeports-in-scotland-bidding-prospectus/green-freeports-clarification-q-and-a"
+    }
+  ],
+  "UC2-C03": [
+    {
+      "bytes": 317100,
+      "content_type": "text/html; charset=utf-8",
+      "file": "UC2-C03_setup_phase_guidance.html",
+      "final_url": "https://www.gov.uk/government/publications/scottish-green-freeports-set-up-phase-guidance/scottish-green-freeports-set-up-phase-guidance",
+      "http_status": 200,
+      "sha256": "cbae9b71eea08b4ef54f967f79000e6f70dcc0f2b50d77605c8479acee29374a",
+      "url": "https://www.gov.uk/government/publications/scottish-green-freeports-set-up-phase-guidance/scottish-green-freeports-set-up-phase-guidance"
+    }
+  ],
+  "UC2-C04": [
+    {
+      "bytes": 72449,
+      "content_type": "text/html;charset=UTF-8",
+      "file": "UC2-C04_programme_bria.html",
+      "final_url": "https://www.gov.scot/publications/green-freeports-programme-business-regulatory-impact-assessment-bria/",
+      "http_status": 200,
+      "sha256": "402935b79bf1b6317d634bb74bef16bb0f332926cb06bf2c4bf06f970111e7cd",
+      "url": "https://www.gov.scot/publications/green-freeports-programme-business-regulatory-impact-assessment-bria/"
+    }
+  ],
+  "UC2-C05": [
+    {
+      "bytes": 39455,
+      "content_type": "text/html;charset=UTF-8",
+      "file": "UC2-C05_planning_consents_protocol.html",
+      "final_url": "https://www.gov.scot/publications/green-freeports-planning-and-other-consents-national-protocol/",
+      "http_status": 200,
+      "sha256": "fc875e7e520c320863582000189b5ba392feb2511c8943688c2bb823d84eb39f",
+      "url": "https://www.gov.scot/publications/green-freeports-planning-and-other-consents-national-protocol/"
+    }
+  ],
+  "UC2-C06": [
+    {
+      "bytes": 57705,
+      "content_type": "text/html;charset=UTF-8",
+      "file": "UC2-C06_ndr_relief_retention.html",
+      "final_url": "https://www.gov.scot/publications/local-government-finance-circular-4-2024/",
+      "http_status": 200,
+      "sha256": "c608792cf64f9c4388c028e9b48b035ea79aa8bf1f00d21726dbd04cd5b31ebd",
+      "url": "https://www.gov.scot/publications/local-government-finance-circular-4-2024/"
+    }
+  ],
+  "UC2-C07": [
+    {
+      "bytes": 108936,
+      "content_type": "text/html; charset=utf-8",
+      "file": "UC2-C07_lbtt3049_green_freeports.html",
+      "final_url": "https://revenue.scot/node/1203/revisions/4277/view",
+      "http_status": 200,
+      "sha256": "2b49abeb7589b14ca2d7e7377846f424bbea5f51d7c16c260168684af8090a98",
+      "url": "https://revenue.scot/node/1203/revisions/4277/view"
+    }
+  ],
+  "UC2-C08": [
+    {
+      "bytes": 51466,
+      "content_type": "application/pdf",
+      "file": "UC2-C08_lbtt_green_freeports_order_2023.pdf",
+      "final_url": "https://www.legislation.gov.uk/ssi/2023/280/pdfs/ssi_20230280_en.pdf",
+      "http_status": 200,
+      "sha256": "067623928e289ea276a6edd78839392fb5db37faeda91b7e80036f03bf8c6f20",
+      "url": "https://www.legislation.gov.uk/ssi/2023/280/pdfs/ssi_20230280_en.pdf"
+    }
+  ],
+  "UC2-C09": [
+    {
+      "bytes": 194463,
+      "content_type": "application/pdf",
+      "file": "UC2-C09_icf_special_tax_sites_2024.pdf",
+      "final_url": "https://www.legislation.gov.uk/uksi/2024/380/pdfs/uksi_20240380_en.pdf",
+      "http_status": 200,
+      "sha256": "4833f890723fdb7231d1eab08ddd1d38f135efc7501be180c33e3d24276bb036",
+      "url": "https://www.legislation.gov.uk/uksi/2024/380/pdfs/uksi_20240380_en.pdf"
+    }
+  ],
+  "UC2-C10": [
+    {
+      "bytes": 191313,
+      "content_type": "application/pdf",
+      "file": "UC2-C10_forth_special_tax_sites_2024.pdf",
+      "final_url": "https://www.legislation.gov.uk/uksi/2024/671/pdfs/uksi_20240671_en.pdf",
+      "http_status": 200,
+      "sha256": "cb3a96178ffeac8c6c7a49474f9fb79988637a69789f9c8c00984ac62978fa9a",
+      "url": "https://www.legislation.gov.uk/uksi/2024/671/pdfs/uksi_20240671_en.pdf"
+    }
+  ],
+  "UC2-C11": [
+    {
+      "bytes": 65559,
+      "content_type": "text/html; charset=utf-8",
+      "file": "UC2-C11_freeports_technical_handbook/00_freeports-handbook.html",
+      "final_url": "https://www.gov.uk/guidance/freeports-handbook",
+      "http_status": 200,
+      "sha256": "2360182fe3364ba83301c1dbaf0be222e4b9264610e59077fc2cad0a915014f5",
+      "url": "https://www.gov.uk/guidance/freeports-handbook"
+    },
+    {
+      "bytes": 62427,
+      "content_type": "text/html; charset=utf-8",
+      "file": "UC2-C11_freeports_technical_handbook/01_introduction.html",
+      "final_url": "https://www.gov.uk/guidance/freeports-handbook/introduction",
+      "http_status": 200,
+      "sha256": "10a658ec435839a94c9a23261031d0ed38d6e06b17fa7c560e832abdc8847502",
+      "url": "https://www.gov.uk/guidance/freeports-handbook/introduction"
+    },
+    {
+      "bytes": 88544,
+      "content_type": "text/html; charset=utf-8",
+      "file": "UC2-C11_freeports_technical_handbook/02_free-zone-legislation.html",
+      "final_url": "https://www.gov.uk/guidance/freeports-handbook/free-zone-legislation",
+      "http_status": 200,
+      "sha256": "7b6c9b5a77f0f572bd97e70c87444b497a3874f50fb438c515a644ad73b41b65",
+      "url": "https://www.gov.uk/guidance/freeports-handbook/free-zone-legislation"
+    },
+    {
+      "bytes": 65591,
+      "content_type": "text/html; charset=utf-8",
+      "file": "UC2-C11_freeports_technical_handbook/03_designation-and-authorisation.html",
+      "final_url": "https://www.gov.uk/guidance/freeports-handbook/designation-and-authorisation",
+      "http_status": 200,
+      "sha256": "559f4a5438abf05a17a76d7d516850993168880afe8d41fc2c12fdb028204c01",
+      "url": "https://www.gov.uk/guidance/freeports-handbook/designation-and-authorisation"
+    },
+    {
+      "bytes": 68265,
+      "content_type": "text/html; charset=utf-8",
+      "file": "UC2-C11_freeports_technical_handbook/04_operating-a-freeport-customs-site.html",
+      "final_url": "https://www.gov.uk/guidance/freeports-handbook/operating-a-freeport-customs-site",
+      "http_status": 200,
+      "sha256": "3ee0060a8e565ce375186b84ec9998a0d5ee95bd299a78090dffd0a1708434f4",
+      "url": "https://www.gov.uk/guidance/freeports-handbook/operating-a-freeport-customs-site"
+    },
+    {
+      "bytes": 84263,
+      "content_type": "text/html; charset=utf-8",
+      "file": "UC2-C11_freeports_technical_handbook/05_using-a-freeport-customs-site.html",
+      "final_url": "https://www.gov.uk/guidance/freeports-handbook/using-a-freeport-customs-site",
+      "http_status": 200,
+      "sha256": "e84b66bcbf9d70e5d356db5b1cabd38b7c0a7dfd3565054ba3d75e7439e65206",
+      "url": "https://www.gov.uk/guidance/freeports-handbook/using-a-freeport-customs-site"
+    },
+    {
+      "bytes": 60430,
+      "content_type": "text/html; charset=utf-8",
+      "file": "UC2-C11_freeports_technical_handbook/06_northern-ireland.html",
+      "final_url": "https://www.gov.uk/guidance/freeports-handbook/northern-ireland",
+      "http_status": 200,
+      "sha256": "5ae9e0d7af559f4adec1c86a7546e1bce00fd03f24564895b2e71f7267740e31",
+      "url": "https://www.gov.uk/guidance/freeports-handbook/northern-ireland"
+    },
+    {
+      "bytes": 61404,
+      "content_type": "text/html; charset=utf-8",
+      "file": "UC2-C11_freeports_technical_handbook/07_civil-penalties-for-contraventions-of-free-zone-requirements.html",
+      "final_url": "https://www.gov.uk/guidance/freeports-handbook/civil-penalties-for-contraventions-of-free-zone-requirements",
+      "http_status": 200,
+      "sha256": "f64d89c8346fe17b054d32c918aace20fdb3a6fe4ea14b487a4ab79ab7d29f72",
+      "url": "https://www.gov.uk/guidance/freeports-handbook/civil-penalties-for-contraventions-of-free-zone-requirements"
+    },
+    {
+      "bytes": 59897,
+      "content_type": "text/html; charset=utf-8",
+      "file": "UC2-C11_freeports_technical_handbook/08_transfer-of-rights-and-obligations-toro.html",
+      "final_url": "https://www.gov.uk/guidance/freeports-handbook/transfer-of-rights-and-obligations-toro",
+      "http_status": 200,
+      "sha256": "d0adfd2d0c3424c4e40ca5c404ce564f0f0c64d48e6b573a88801520a6f6a230",
+      "url": "https://www.gov.uk/guidance/freeports-handbook/transfer-of-rights-and-obligations-toro"
+    }
+  ],
+  "UC2-C12": [
+    {
+      "bytes": 6841581,
+      "content_type": "application/pdf",
+      "file": "UC2-C12_icfgf_fbc_update_eci31_24.pdf",
+      "final_url": "https://www.highland.gov.uk/download/meetings/id/83432/item_3_inverness_and_cromarty_firth_green_freeport_%E2%80%93_full_business_case_update_fbc",
+      "http_status": 200,
+      "sha256": "6d92b390436c55b039796bbe338146d0780ea880044459e919923776a0b66e5a",
+      "url": "https://www.highland.gov.uk/download/meetings/id/83432/item_3_inverness_and_cromarty_firth_green_freeport_%E2%80%93_full_business_case_update_fbc"
+    }
+  ],
+  "UC2-C13": [
+    {
+      "bytes": 858415,
+      "content_type": "application/pdf",
+      "file": "UC2-C13_forth_fbc_committee_report.pdf",
+      "final_url": "https://edinburgh.axlr8.uk/documents/50906/50906%20Forth%20Green%20Freeport%20-%20Full%20Business%20Case%20-%20referral%20from%20the%20Policy%20and%20Sustainability%20Committee.pdf",
+      "http_status": 200,
+      "recovery_of_frozen_planned_endpoint": true,
+      "sha256": "9e1d146a78e83e4bb6dcdfbf54974af8ccfe322cb226cf786ea8c62daccaccdb",
+      "url": "https://edinburgh.axlr8.uk/documents/50906/50906%20Forth%20Green%20Freeport%20-%20Full%20Business%20Case%20-%20referral%20from%20the%20Policy%20and%20Sustainability%20Committee.pdf"
+    }
+  ],
+  "UC2-C14": [
+    {
+      "bytes": 71071,
+      "content_type": "text/html; charset=utf-8",
+      "file": "UC2-C14_subsidy_scheme.html",
+      "final_url": "https://www.gov.uk/guidance/scottish-green-freeports-subsidy-scheme",
+      "http_status": 200,
+      "sha256": "db7b54b7ddec7bead63ba5bfa99327a76c97a84a5c3ebfb69ee0270932450171",
+      "url": "https://www.gov.uk/guidance/scottish-green-freeports-subsidy-scheme"
+    }
+  ],
+  "UC2-C15": [
+    {
+      "bytes": 100502,
+      "content_type": "text/html; charset=utf-8",
+      "file": "UC2-C15_nic_relief.html",
+      "final_url": "https://www.gov.uk/guidance/check-if-you-can-claim-national-insurance-relief-in-uk-freeport-or-investment-zone-special-tax-sites",
+      "http_status": 200,
+      "sha256": "018bf9f7717381efb7b4a4d219e78969926cf4bef61b250cdfa7577bc892fd36",
+      "url": "https://www.gov.uk/guidance/check-if-you-can-claim-national-insurance-relief-in-uk-freeport-or-investment-zone-special-tax-sites"
+    }
+  ],
+  "UC2-C16": [
+    {
+      "bytes": 90568,
+      "content_type": "text/html; charset=utf-8",
+      "file": "UC2-C16_sba_relief.html",
+      "final_url": "https://www.gov.uk/guidance/check-if-you-can-claim-enhanced-structures-and-buildings-allowance-relief-in-freeport-tax-sites",
+      "http_status": 200,
+      "sha256": "9e65d72e8bb0ecfb5bd8cdbed914b8c6098c99caa9611baae6bce5ef26a9ab9d",
+      "url": "https://www.gov.uk/guidance/check-if-you-can-claim-enhanced-structures-and-buildings-allowance-relief-in-freeport-tax-sites"
+    }
+  ],
+  "UC2-C17": [
+    {
+      "bytes": 92491,
+      "content_type": "text/html; charset=utf-8",
+      "file": "UC2-C17_eca_relief.html",
+      "final_url": "https://www.gov.uk/guidance/check-if-you-can-claim-the-enhanced-capital-allowance-relief-in-freeport-tax-sites",
+      "http_status": 200,
+      "sha256": "53701ccd49e8a4fcd1cbc2c2b1f907cb6f744149d0a1cdddfd42cbd2540fe2e7",
+      "url": "https://www.gov.uk/guidance/check-if-you-can-claim-the-enhanced-capital-allowance-relief-in-freeport-tax-sites"
+    }
+  ],
+  "UC2-C18": [
+    {
+      "bytes": 85434,
+      "content_type": "text/html; charset=utf-8",
+      "file": "UC2-C18_seed_capital_criteria.html",
+      "final_url": "https://www.gov.uk/guidance/scottish-green-freeport-seed-capital-eligibility-criteria",
+      "http_status": 200,
+      "sha256": "bd7689ac8d794b3d5ad6cd5b113b772e87d1e3634ecaa8080bf9d86790c47b6b",
+      "url": "https://www.gov.uk/guidance/scottish-green-freeport-seed-capital-eligibility-criteria"
+    }
+  ]
+}

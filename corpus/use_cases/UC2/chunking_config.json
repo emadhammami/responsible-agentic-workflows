@@ -1,0 +1,35 @@
+{
+  "schema_version": "0.1",
+  "config_id": "UC2-SOURCEUNIT-W450-O75-v0.1",
+  "use_case_id": "UC2",
+  "status": "frozen",
+  "strategy": "source_unit_aware_word_windows",
+  "max_words": 450,
+  "overlap_words": 75,
+  "stride_words": 375,
+  "cross_source_unit_boundaries": false,
+  "empty_source_units_generate_chunks": false,
+  "word_definition": "whitespace_delimited_after_frozen_text_normalization",
+  "selection_basis": {
+    "selection_based_on_benchmark_performance": false,
+    "selection_based_on_retrieval_performance": false,
+    "inherited_max_words_overlap_from_use_case": "UC1/UC3",
+    "inherited_reference_config": "W450-O75",
+    "uc2_content_tuning": false
+  },
+  "chunk_identity": {
+    "format": "<document_id>-U<source_unit_index:04d>-C<chunk_index:04d>",
+    "source_unit_index_origin": 1,
+    "chunk_index_origin": 1,
+    "deterministic": true
+  },
+  "rationale": [
+    "UC2 retains the experiment-wide W450-O75 technical chunking reference rather than tuning chunk size on UC2 content.",
+    "UC2 is mixed-media, therefore the provenance boundary is generalized from physical PDF pages to deterministic source units.",
+    "PDF source units remain physical pages.",
+    "HTML source units remain acquired authoritative HTML components.",
+    "No chunk crosses a source-unit boundary.",
+    "The excluded DOC054 artifact cannot contribute runtime chunks."
+  ],
+  "frozen": true
+}

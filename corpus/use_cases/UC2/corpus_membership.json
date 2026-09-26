@@ -1,0 +1,70 @@
+{
+  "schema_version": "0.1",
+  "use_case_id": "UC2",
+  "status": "membership_frozen",
+  "eligibility_criteria_sha256": "d35c735e88ff5c4a6a9241cc928e772d3a9940c453ef7ec20b93fe091b0c96ea",
+  "eligibility_review_sha256": "e04baf44698b848ed68cc5917ac86f258ef3c97b261a113eb2c09ce8c622043a",
+  "candidate_count": 18,
+  "accepted_count": 17,
+  "excluded_count": 1,
+  "candidate_document_mapping": {
+    "UC2-C01": "DOC041",
+    "UC2-C02": "DOC042",
+    "UC2-C03": "DOC043",
+    "UC2-C04": "DOC044",
+    "UC2-C05": "DOC045",
+    "UC2-C06": "DOC046",
+    "UC2-C07": "DOC047",
+    "UC2-C08": "DOC048",
+    "UC2-C09": "DOC049",
+    "UC2-C10": "DOC050",
+    "UC2-C11": "DOC051",
+    "UC2-C12": "DOC052",
+    "UC2-C13": "DOC053",
+    "UC2-C14": "DOC054",
+    "UC2-C15": "DOC055",
+    "UC2-C16": "DOC056",
+    "UC2-C17": "DOC057",
+    "UC2-C18": "DOC058"
+  },
+  "accepted_document_ids": [
+    "DOC041",
+    "DOC042",
+    "DOC043",
+    "DOC044",
+    "DOC045",
+    "DOC046",
+    "DOC047",
+    "DOC048",
+    "DOC049",
+    "DOC050",
+    "DOC051",
+    "DOC052",
+    "DOC053",
+    "DOC055",
+    "DOC056",
+    "DOC057",
+    "DOC058"
+  ],
+  "excluded_document_ids": [
+    "DOC054"
+  ],
+  "excluded": [
+    {
+      "candidate_id": "UC2-C14",
+      "document_id": "DOC054",
+      "reason": "Fails frozen criterion F: umbrella guidance/index page primarily enumerates six measures and links to substantive guidance."
+    }
+  ],
+  "controls": {
+    "document_level_adjudication_complete": true,
+    "membership_frozen": true,
+    "selection_based_on_retrieval_performance": false,
+    "selection_based_on_benchmark_performance": false,
+    "preprocessing_started": false,
+    "embeddings_materialized": false,
+    "retrieval_diagnostic_started": false,
+    "benchmark_tasks_created": false,
+    "benchmark_started": false
+  }
+}

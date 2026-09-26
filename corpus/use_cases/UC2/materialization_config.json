@@ -1,0 +1,75 @@
+{
+  "schema_version": "0.1",
+  "config_id": "UC2-MIXED-SOURCE-UNIT-v0.1",
+  "use_case_id": "UC2",
+  "status": "frozen",
+  "input_scope": {
+    "membership_source": "corpus_membership.json",
+    "accepted_documents_only": true,
+    "accepted_count": 17,
+    "excluded_document_ids": [
+      "DOC054"
+    ]
+  },
+  "source_unit_semantics": {
+    "pdf": "one physical PDF page",
+    "html_single": "one acquired HTML document component",
+    "html_bundle": "one acquired HTML component within the frozen bundle",
+    "cross_source_unit_materialization": false
+  },
+  "pdf_extraction": {
+    "tool": "pdftotext",
+    "encoding": "UTF-8",
+    "layout": true,
+    "page_unit": "physical_page"
+  },
+  "html_extraction": {
+    "parser": "python_stdlib_html_parser",
+    "encoding": "UTF-8",
+    "encoding_errors": "strict",
+    "preferred_content_root": "main",
+    "fallback_content_root": "body_then_document",
+    "excluded_elements": [
+      "script",
+      "style",
+      "noscript",
+      "svg",
+      "template",
+      "nav",
+      "header",
+      "footer",
+      "form",
+      "aside"
+    ]
+  },
+  "text_normalization": {
+    "unicode_normalization": "NFC",
+    "replace_nbsp_with_space": true,
+    "whitespace": "collapse_all_runs_to_single_ascii_space",
+    "strip": true
+  },
+  "empty_source_units": {
+    "retain_in_source_unit_materialization": true,
+    "generate_chunks": false
+  },
+  "provenance_fields": [
+    "document_id",
+    "candidate_id",
+    "source_unit_id",
+    "media_type",
+    "source_component_path",
+    "source_component_index",
+    "pdf_page_number",
+    "source_url",
+    "text_sha256",
+    "word_count"
+  ],
+  "controls": {
+    "selection_based_on_content_length": false,
+    "selection_based_on_retrieval_performance": false,
+    "selection_based_on_benchmark_performance": false,
+    "excluded_document_materialization_forbidden": true,
+    "benchmark_started": false
+  },
+  "frozen": true
+}
