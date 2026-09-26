@@ -1,0 +1,80 @@
+{
+  "schema_version": "0.1",
+  "protocol_id": "PRIMARY-UC2-UC3-TASK-AUTHORING-v0.1",
+  "status": "frozen_before_task_authoring",
+  "base_commit": "0eddba747e0c12fc463900235ac0ac63a57417b3",
+  "design_binding": {
+    "task_set_plan_sha256": "137bcef783e124e3410301f1fc89bead7f375b6b8bad94f3a0f0c04c1cce1958",
+    "task_schema_sha256": "34ddb275e659b86d759d5fabcf3500bc963c34b60425f601677b88bbb858145f",
+    "uc2_benchmark_scope_sha256": "87f8de97ee51645ef140398c02ce94f047d5107412d17e08139551353d3d268d",
+    "uc3_benchmark_scope_sha256": "2ea34f7a75def7a9a0c65671a54b0aa131c588acbab89d6ab92788b7e956542e"
+  },
+  "allocation": {
+    "tasks_per_use_case": 10,
+    "types_per_use_case": {
+      "direct_retrieval": 3,
+      "within_document_reasoning": 3,
+      "cross_document_reasoning": 2,
+      "insufficient_evidence": 2,
+      "conflicting_document_reasoning": 0
+    },
+    "task_slots": {
+      "UC2": {
+        "direct_retrieval": [
+          "T011",
+          "T012",
+          "T013"
+        ],
+        "within_document_reasoning": [
+          "T014",
+          "T015",
+          "T016"
+        ],
+        "cross_document_reasoning": [
+          "T017",
+          "T018"
+        ],
+        "insufficient_evidence": [
+          "T019",
+          "T020"
+        ]
+      },
+      "UC3": {
+        "direct_retrieval": [
+          "T021",
+          "T022",
+          "T023"
+        ],
+        "within_document_reasoning": [
+          "T024",
+          "T025",
+          "T026"
+        ],
+        "cross_document_reasoning": [
+          "T027",
+          "T028"
+        ],
+        "insufficient_evidence": [
+          "T029",
+          "T030"
+        ]
+      }
+    }
+  },
+  "authoring_rules": [
+    "Use only the frozen retrieval-active corpus for the corresponding use case.",
+    "Do not use B0/B1/G1 outputs, benchmark results, diagnostic rankings, or performance to select, rewrite, remove, or reclassify tasks.",
+    "Direct-retrieval tasks require localized evidence from one required document.",
+    "Within-document tasks require material synthesis across at least two evidence locations in one document.",
+    "Cross-document tasks require evidence from at least two required documents.",
+    "Insufficient-evidence tasks require a separate corpus-wide absence audit.",
+    "Reference answers and evidence require human verification before freeze.",
+    "Gold information must remain inaccessible to runtime."
+  ],
+  "controls": {
+    "task_authoring_started_before_protocol_freeze": false,
+    "benchmark_execution_before_task_freeze": false,
+    "result_driven_task_revision_allowed": false,
+    "runtime_gold_isolation_required": true
+  }
+}
