@@ -1,0 +1,155 @@
+{
+  "schema_version": "0.2",
+  "protocol_id": "PRIMARY-UC2-UC3-TASK-AUTHORING-v0.2",
+  "status": "frozen_before_task_authoring",
+  "base_commit": "0eddba747e0c12fc463900235ac0ac63a57417b3",
+  "design_binding": {
+    "task_set_plan_sha256": "137bcef783e124e3410301f1fc89bead7f375b6b8bad94f3a0f0c04c1cce1958",
+    "task_schema_sha256": "34ddb275e659b86d759d5fabcf3500bc963c34b60425f601677b88bbb858145f",
+    "uc2_benchmark_scope_sha256": "87f8de97ee51645ef140398c02ce94f047d5107412d17e08139551353d3d268d",
+    "uc3_benchmark_scope_sha256": "2ea34f7a75def7a9a0c65671a54b0aa131c588acbab89d6ab92788b7e956542e"
+  },
+  "allocation": {
+    "tasks_per_use_case": 10,
+    "types_per_use_case": {
+      "direct_retrieval": 3,
+      "within_document_reasoning": 3,
+      "cross_document_reasoning": 2,
+      "insufficient_evidence": 2,
+      "conflicting_document_reasoning": 0
+    },
+    "task_slots": {
+      "UC2": {
+        "direct_retrieval": [
+          "T011",
+          "T012",
+          "T013"
+        ],
+        "within_document_reasoning": [
+          "T014",
+          "T015",
+          "T016"
+        ],
+        "cross_document_reasoning": [
+          "T017",
+          "T018"
+        ],
+        "insufficient_evidence": [
+          "T019",
+          "T020"
+        ]
+      },
+      "UC3": {
+        "direct_retrieval": [
+          "T021",
+          "T022",
+          "T023"
+        ],
+        "within_document_reasoning": [
+          "T024",
+          "T025",
+          "T026"
+        ],
+        "cross_document_reasoning": [
+          "T027",
+          "T028"
+        ],
+        "insufficient_evidence": [
+          "T029",
+          "T030"
+        ]
+      }
+    }
+  },
+  "authoring_rules": [
+    "Use only the frozen retrieval-active corpus for the corresponding use case.",
+    "Do not use B0/B1/G1 outputs, benchmark results, diagnostic rankings, or performance to select, rewrite, remove, or reclassify tasks.",
+    "Direct-retrieval tasks require localized evidence from one required document.",
+    "Within-document tasks require material synthesis across at least two evidence locations in one document.",
+    "Cross-document tasks require evidence from at least two required documents.",
+    "Insufficient-evidence tasks require a separate corpus-wide absence audit.",
+    "Reference answers and evidence require human verification before freeze.",
+    "Gold information must remain inaccessible to runtime."
+  ],
+  "controls": {
+    "task_authoring_started_before_protocol_freeze": false,
+    "benchmark_execution_before_task_freeze": false,
+    "result_driven_task_revision_allowed": false,
+    "runtime_gold_isolation_required": true
+  },
+  "supersedes": "benchmark/task_authoring_protocol_v0.1.json",
+  "supersedes_sha256": "c537f2a627c8f0734b3e4addc8a52ce96132a2cde762b0dca6be338aee1fe169",
+  "amendment_date": "2026-09-26",
+  "amendment_base_commit": "a24c6d6e8ceffcc149b09c148a0bf69f562eb31c",
+  "amendment_stage": "before_uc3_candidate_authoring",
+  "amendment_nature": "additive_methodological_clarification",
+  "authoring_chronology": [
+    {
+      "step": 1,
+      "action": "Inspect only the frozen corpus and identify a realistic document-based information need."
+    },
+    {
+      "step": 2,
+      "action": "Draft the candidate question and intended task type."
+    },
+    {
+      "step": 3,
+      "action": "Draft a minimal reference-answer candidate from frozen source content."
+    },
+    {
+      "step": 4,
+      "action": "Bind required documents and exact evidence through direct source inspection."
+    },
+    {
+      "step": 5,
+      "action": "For insufficient-evidence candidates, perform a corpus-wide absence audit before acceptance."
+    },
+    {
+      "step": 6,
+      "action": "Perform schema, source-traceability, task-type, ambiguity, duplication, and gold-leakage validation."
+    },
+    {
+      "step": 7,
+      "action": "Conduct researcher/human review, permitting only documented pre-freeze corrections based on source/design quality."
+    },
+    {
+      "step": 8,
+      "action": "Mark human_verified only after explicit researcher approval."
+    },
+    {
+      "step": 9,
+      "action": "Perform final validation and cryptographic freeze before any benchmark execution."
+    }
+  ],
+  "nontrivial_task_rule": {
+    "requirement": "Primary benchmark tasks must represent realistic document-based information needs and MUST NOT consist only of document identity lookup, document-title lookup, legal/reference citation lookup, or trivial metadata lookup.",
+    "prohibited_only_information_needs": [
+      "document identity lookup",
+      "document-title lookup",
+      "legal/reference citation lookup",
+      "trivial metadata lookup"
+    ],
+    "technical_answerability_is_not_sufficient": "Simple lookup of a title/reference/name alone is not sufficient merely because it is technically answerable.",
+    "direct_retrieval_requirement": "Direct_retrieval tasks may still use localized evidence but must ask for substantive document content."
+  },
+  "historical_prospective_boundary": {
+    "v0_1_immutable_historical_artifact": true,
+    "V0_1_AUTHORING_CHRONOLOGY_EXPLICIT": "NO",
+    "V0_1_NONTRIVIAL_TASK_RULE_EXPLICIT": "NO",
+    "retroactive_claim_that_v0_1_contained_new_controls": false,
+    "uc2_prior_qualification": "UC2 T011-T020 had already undergone candidate evidence audits, task-type checks, ambiguity review, explicit researcher approval, gold-isolation validation and cryptographic freeze before this amendment.",
+    "UC2_FREEZE_COMMIT": "a24c6d6e8ceffcc149b09c148a0bf69f562eb31c",
+    "UC2_ALREADY_FROZEN": "YES",
+    "UC2_REAUTHORING_REQUIRED": "NO",
+    "uc2_changed_or_reauthored_by_amendment": false,
+    "UC3_CANDIDATE_AUTHORING_STARTED": "NO",
+    "uc3_candidate_questions_T021_T030_created": false,
+    "BENCHMARK_STARTED": "NO",
+    "b0_b1_g1_benchmark_execution_occurred": false,
+    "RESULT_DRIVEN_AMENDMENT": "NO",
+    "benchmark_results_influenced_amendment": false,
+    "governing_scope": "UC3 candidate authoring and subsequent primary-benchmark task authoring.",
+    "not_before_uc2_authoring": true,
+    "inherited_metadata_interpretation": "base_commit retains the v0.1 historical design base. status remains frozen_before_task_authoring for the prospective governing scope; this amendment does not claim to precede UC2 authoring. amendment_base_commit identifies the actual current repository state."
+  }
+}
