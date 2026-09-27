@@ -1,0 +1,110 @@
+# Primary 30-Task Benchmark Tasks-Only Freeze
+
+Date: 2026-09-27
+
+## Scope
+
+FREEZE_ID=PRIMARY-30-TASK-BENCHMARK-v0.1
+STATUS=frozen_tasks_only
+PRE_FREEZE_HEAD=576bd4793fa1f8357895984ce1f61fb1816712fd
+
+This freeze binds the complete T001-T030 primary benchmark task set only.
+It is not the global experimental freeze and does not authorize benchmark execution.
+
+## Combined task set
+
+TOTAL_TASKS=30
+DIRECT=9
+WITHIN_DOCUMENT=9
+CROSS_DOCUMENT=6
+INSUFFICIENT_EVIDENCE=6
+CONFLICTING_DOCUMENT=0
+
+PRIMARY_30_TASK_SET_SHA256=a9c812fbc4812f099b1b0fdbc91850bf806b118c43e355e067ec5b1c2777ce81
+TASK_SET_HASH_METHOD=sha256_of_canonical_json_sorted_relative_task_path_to_file_sha256_map
+TASK_SCHEMA_SHA256=34ddb275e659b86d759d5fabcf3500bc963c34b60425f601677b88bbb858145f
+
+## Use-case freeze bindings
+
+UC1_FREEZE_ID=UC1-BENCHMARK-TASKS-v0.2
+UC1_MANIFEST_SHA256=0674b63db0ca7fa298598b2d3fd69fcad91aa8295299ec3c61e26d4b950785c3
+UC1_TASK_SET_SHA256=7f442f3417655c5508de37de2988fb1e7ba8d6d03e6b1b47e6d836ce7d1cc755
+
+UC2_FREEZE_ID=UC2-BENCHMARK-TASKS-v0.1
+UC2_MANIFEST_SHA256=4d15ef3f8dd321b413addbb61f6a80b397282d9670d8ad5f8bf290160fa16e88
+UC2_TASK_SET_SHA256=8dae88d00cab7fc77024a459dee7d49b6518eacb63077acec9e86d87e5d2de60
+
+UC3_FREEZE_ID=UC3-BENCHMARK-TASKS-v0.1
+UC3_MANIFEST_SHA256=1c9b207a0103f92354b54b919ff15d30253cf8e3d6d0fbd293b2f6e2ac5ccc0a
+UC3_TASK_SET_SHA256=bf0c9f61eb461b3d4e03235d23a80dfd69f0ff45524ac12ae153ed5bad4d112e
+
+## Authoring protocol provenance
+
+TASK_AUTHORING_PROTOCOL_V0_1_SHA256=c537f2a627c8f0734b3e4addc8a52ce96132a2cde762b0dca6be338aee1fe169
+TASK_AUTHORING_PROTOCOL_V0_2_SHA256=13e360d22ef94f670603c0349058ba0244a085493c69a26266b45f22d1a2b7e6
+
+v0.1 remains the historical governing protocol for UC2.
+v0.2 prospectively governs UC3 and subsequent primary-benchmark task controls.
+No retroactive claim is made that UC2 was authored under v0.2.
+
+## UC1 pre-benchmark adjudication and repair
+
+T005_FULL_TASK_TYPE_AUDIT_SHA256=076b4dc84ccdf0aef3c91888deedbc86d47f3434401d026630462f9157070c0c
+T005_REPAIR_PROPOSAL_SHA256=a035894268c3e145eb8a8bf44757b61821d991238c5c15891c50d27af6b9d0fe
+T005_REPAIR_AND_REFREEZE_SHA256=898fd67d0eabdc05fab5709bfeae7af40d536fc8a226badd8bc86653654c4a76
+
+T005_DEFECT_CONFIRMED=YES
+T005_REPAIRED_PREBENCHMARK=YES
+T005_WITHIN_DOCUMENT_VALID=YES
+
+T008_DIAGNOSIS_SHA256=b860c551e2a8b95230a7820ded4f16222efa135c6acb9055f20e15ba7c2642f7
+T008_HUMAN_ADJUDICATION_SHA256=1a4a112186ed3361ac2037e82745e3260bf2b9b252e06fd051d114a894f1bb14
+
+T008_DEFECT_CONFIRMED=NO
+T008_FALSE_POSITIVE_PREBENCHMARK_FINDING=YES
+T008_ADJUDICATED_VALID_UNCHANGED=YES
+T008_CROSS_DOCUMENT_VALID=YES
+
+The T008 adjudication historically binds the unchanged T008 content. The UC1
+manifest later changed solely because of the independent T005 pre-benchmark
+repair; T008 itself remained byte-identical.
+
+## Combined pre-freeze qualification
+
+SCHEMA_VALIDATION=PASS
+SOURCE_TRACEABILITY=PASS
+TASK_TYPE_INTEGRITY=PASS
+REFERENCE_ANSWER_SUPPORT=PASS
+AMBIGUITY_AUDIT=PASS
+CROSS_TASK_DUPLICATION_AUDIT=PASS
+INSUFFICIENT_EVIDENCE_AUDIT=PASS
+GOLD_ISOLATION=PASS
+RUNTIME_TASK_PROJECTION=PASS
+TARGETED_TESTS=24_PASS
+
+The semantic/source audit reviewed the current repaired T005, the binding T008
+adjudication, all current positive reference-evidence relationships, and the
+existing corpus-wide absence-audit provenance for the six insufficient-evidence
+tasks. No new genuine structural or semantic defect was identified.
+
+## Experimental integrity boundary
+
+TASKS_FROZEN=YES
+ALL_30_TASKS_FROZEN=YES
+
+BENCHMARK_TOP_K_FROZEN=NO
+PROMPTS_FROZEN=NO
+RESOURCE_LIMITS_FROZEN=NO
+FULL_EXPERIMENT_CONFIG_FROZEN=NO
+GLOBAL_EXPERIMENTAL_FREEZE=NO
+
+B0_B1_G1_BENCHMARK_OUTPUT_USED=NO
+RESULT_DRIVEN_REVISION=NO
+BENCHMARK_STARTED=NO
+
+No task is selected, removed, rewritten or reclassified using benchmark
+performance. This freeze does not execute B0, B1 or G1.
+
+## Artifact binding
+
+PRIMARY_FREEZE_MANIFEST_SHA256=e50c694e70824e50cc8b7769ee9f5561fa8a6af839e7b92906bfd07b5ba3fe70

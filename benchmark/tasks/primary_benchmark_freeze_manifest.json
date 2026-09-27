@@ -1,0 +1,154 @@
+{
+  "schema_version": "0.1",
+  "freeze_id": "PRIMARY-30-TASK-BENCHMARK-v0.1",
+  "status": "frozen_tasks_only",
+  "frozen_on": "2026-09-27",
+  "pre_freeze_source_commit": "576bd4793fa1f8357895984ce1f61fb1816712fd",
+  "task_count": 30,
+  "task_ids": [
+    "T001",
+    "T002",
+    "T003",
+    "T004",
+    "T005",
+    "T006",
+    "T007",
+    "T008",
+    "T009",
+    "T010",
+    "T011",
+    "T012",
+    "T013",
+    "T014",
+    "T015",
+    "T016",
+    "T017",
+    "T018",
+    "T019",
+    "T020",
+    "T021",
+    "T022",
+    "T023",
+    "T024",
+    "T025",
+    "T026",
+    "T027",
+    "T028",
+    "T029",
+    "T030"
+  ],
+  "task_type_allocation": {
+    "direct_retrieval": 9,
+    "within_document_reasoning": 9,
+    "cross_document_reasoning": 6,
+    "insufficient_evidence": 6,
+    "conflicting_document_reasoning": 0
+  },
+  "frozen_task_file_sha256": {
+    "benchmark/tasks/UC1/T001.json": "6f6bd0a21c6998bdc953a535dc327f750602ac139ae492f69e43fe90ce5c941a",
+    "benchmark/tasks/UC1/T002.json": "70df44f45004610ec0f3882f4382ae7c5851786dea3cad8282e400d1af4a1837",
+    "benchmark/tasks/UC1/T003.json": "6ca0a20f8736e9524004deaedbb3c08a3f6fc125bea79a252d85158b87cdcd87",
+    "benchmark/tasks/UC1/T004.json": "704fff83f51729448a0d7075daf5b5570d960cb3be07d125353ecf2300e30340",
+    "benchmark/tasks/UC1/T005.json": "91e3db7d666429ea576c3b725816218fe922c900c49d361bdc6231b9c8de5836",
+    "benchmark/tasks/UC1/T006.json": "aec0964d32042a8107a0d57aab3bd7871b710e58f48c0df6f2b3e301d692e340",
+    "benchmark/tasks/UC1/T007.json": "e8f784adfc8f0b24fb6b98ac85d44eb30ab8356fcb01da78e6d50a8fa3c2fa0d",
+    "benchmark/tasks/UC1/T008.json": "8ff3a00c053afb66e1b060d2a52faf65b4125fdff1b5a1d5e9d110b7a1627cb9",
+    "benchmark/tasks/UC1/T009.json": "a1f7bc496bf1f83b267e3e513b52d8fbf0437fae4f10f3e4d3f7aa896e78612a",
+    "benchmark/tasks/UC1/T010.json": "7aa9d9c5ee24678b41ba6361f3c80d39c7cc5a5bd2798cb8417136c0c0cf976b",
+    "benchmark/tasks/UC2/T011.json": "9186e34f54d316eb42f60d01d5be698efc5d374f875cd189d1cd076f4f89b326",
+    "benchmark/tasks/UC2/T012.json": "9698e5ff344ad196585590c1f02c38b91d7213628b464d1bfcd00958a1a8695b",
+    "benchmark/tasks/UC2/T013.json": "03134ae01701e4ac927eec700bb06b2fd75ea2e0b3716dd7931a800468b9afa8",
+    "benchmark/tasks/UC2/T014.json": "5b1899d1cdb6b5aa60366d695116c7e233aa80941298149c20642297df6a4f59",
+    "benchmark/tasks/UC2/T015.json": "f037490c92c3d0d9718708573b429f91620641a5d81663a13bdd6037a17355a8",
+    "benchmark/tasks/UC2/T016.json": "230908239270ce56b466c2eac369993cf269bd4c64b15029ad2aa06b1ef68a50",
+    "benchmark/tasks/UC2/T017.json": "040fe84ba5808c8691af6f3f561544cbbff9aa2ca03782e143100f5c30da9732",
+    "benchmark/tasks/UC2/T018.json": "4b16802c97d3e9ca38e4e047fbe3a39a9c622f7cd4e5eba9749154fae9149610",
+    "benchmark/tasks/UC2/T019.json": "9c658572a1e42d63956f9a7b80a5320424a46895bc1312352e6220b39bf4c13f",
+    "benchmark/tasks/UC2/T020.json": "3daf6ead9c7e12e7725b06f3a18c3269684dd25a08ce2cd92da2ee6efcb2f27b",
+    "benchmark/tasks/UC3/T021.json": "b1bb2702820e8e304aeef8c149a8d76cba8b646579e2391eea002dab75821e75",
+    "benchmark/tasks/UC3/T022.json": "2f21202dc9d19de039b75d9b808c6cf1202688189a943a6c4fb828aa878f6948",
+    "benchmark/tasks/UC3/T023.json": "eb7e668bb393cd47a9ef52caee305f896f5e63f5a46251a01432062429542556",
+    "benchmark/tasks/UC3/T024.json": "82fbeb38e05a2e8fe1f19829ed51eb6a23849e3499e14c8e36109c94c837da9e",
+    "benchmark/tasks/UC3/T025.json": "6b333889ed071d8358dbb2a8654cb12feed1c8d8bb4cb6a9423784bfa2cc5862",
+    "benchmark/tasks/UC3/T026.json": "a4a3c80938841092f25096c82dbbf73c5a71e2420182f3053dbfe68f236909ec",
+    "benchmark/tasks/UC3/T027.json": "0b52f162b7523090044b86f1e64c265a682d9a07f22a48d2af877d033808802a",
+    "benchmark/tasks/UC3/T028.json": "f4605745d5b239b4f5125359edecf5e1eaa150f5add3991ceb00253c6a7e7bc3",
+    "benchmark/tasks/UC3/T029.json": "66dfcf45626471f3837bfeaaed24ef96435ab255ff3c09dd341d247186066d7e",
+    "benchmark/tasks/UC3/T030.json": "070150e863049ff6e8e9024a2d657b98d3b3f690f7101ace249b417ecd74890e"
+  },
+  "frozen_task_set_sha256": "a9c812fbc4812f099b1b0fdbc91850bf806b118c43e355e067ec5b1c2777ce81",
+  "frozen_task_set_hash_method": "sha256_of_canonical_json_sorted_relative_task_path_to_file_sha256_map",
+  "use_case_freeze_bindings": {
+    "UC1": {
+      "freeze_id": "UC1-BENCHMARK-TASKS-v0.2",
+      "manifest_path": "benchmark/tasks/UC1/freeze_manifest.json",
+      "manifest_sha256": "0674b63db0ca7fa298598b2d3fd69fcad91aa8295299ec3c61e26d4b950785c3",
+      "frozen_task_set_sha256": "7f442f3417655c5508de37de2988fb1e7ba8d6d03e6b1b47e6d836ce7d1cc755"
+    },
+    "UC2": {
+      "freeze_id": "UC2-BENCHMARK-TASKS-v0.1",
+      "manifest_path": "benchmark/tasks/UC2/freeze_manifest.json",
+      "manifest_sha256": "4d15ef3f8dd321b413addbb61f6a80b397282d9670d8ad5f8bf290160fa16e88",
+      "frozen_task_set_sha256": "8dae88d00cab7fc77024a459dee7d49b6518eacb63077acec9e86d87e5d2de60"
+    },
+    "UC3": {
+      "freeze_id": "UC3-BENCHMARK-TASKS-v0.1",
+      "manifest_path": "benchmark/tasks/UC3/freeze_manifest.json",
+      "manifest_sha256": "1c9b207a0103f92354b54b919ff15d30253cf8e3d6d0fbd293b2f6e2ac5ccc0a",
+      "frozen_task_set_sha256": "bf0c9f61eb461b3d4e03235d23a80dfd69f0ff45524ac12ae153ed5bad4d112e"
+    }
+  },
+  "task_schema": {
+    "path": "benchmark/schema/task.schema.json",
+    "sha256": "34ddb275e659b86d759d5fabcf3500bc963c34b60425f601677b88bbb858145f"
+  },
+  "task_authoring_protocols": {
+    "v0.1": {
+      "path": "benchmark/task_authoring_protocol_v0.1.json",
+      "sha256": "c537f2a627c8f0734b3e4addc8a52ce96132a2cde762b0dca6be338aee1fe169",
+      "scope_note": "Historical governing protocol for UC2 task authoring."
+    },
+    "v0.2": {
+      "path": "benchmark/task_authoring_protocol_v0.2.json",
+      "sha256": "13e360d22ef94f670603c0349058ba0244a085493c69a26266b45f22d1a2b7e6",
+      "scope_note": "Prospective amendment governing UC3 and subsequent primary-benchmark task controls; not retroactively attributed to UC2."
+    }
+  },
+  "uc1_prebenchmark_provenance": {
+    "t005": {
+      "status": "repaired_and_refrozen_before_benchmark",
+      "full_integrity_audit_sha256": "076b4dc84ccdf0aef3c91888deedbc86d47f3434401d026630462f9157070c0c",
+      "repair_proposal_sha256": "a035894268c3e145eb8a8bf44757b61821d991238c5c15891c50d27af6b9d0fe",
+      "repair_and_refreeze_sha256": "898fd67d0eabdc05fab5709bfeae7af40d536fc8a226badd8bc86653654c4a76"
+    },
+    "t008": {
+      "status": "adjudicated_valid_unchanged",
+      "diagnosis_sha256": "b860c551e2a8b95230a7820ded4f16222efa135c6acb9055f20e15ba7c2642f7",
+      "human_adjudication_sha256": "1a4a112186ed3361ac2037e82745e3260bf2b9b252e06fd051d114a894f1bb14"
+    }
+  },
+  "validation": {
+    "schema_validation": "PASS",
+    "source_traceability": "PASS",
+    "task_type_integrity": "PASS",
+    "reference_answer_support": "PASS",
+    "ambiguity_audit": "PASS",
+    "cross_task_duplication_audit": "PASS",
+    "gold_isolation": "PASS",
+    "runtime_task_projection": "PASS",
+    "insufficient_evidence_audit": "PASS",
+    "targeted_tests": "24_PASS"
+  },
+  "experimental_boundary": {
+    "tasks_frozen": true,
+    "all_30_tasks_frozen": true,
+    "benchmark_top_k_frozen": false,
+    "prompts_frozen": false,
+    "resource_limits_frozen": false,
+    "full_experiment_config_frozen": false,
+    "global_experimental_freeze": false,
+    "result_driven_revision": false,
+    "benchmark_started": false
+  },
+  "scope_note": "This artifact freezes only the complete 30-task primary benchmark task set. It does not freeze benchmark retrieval top_k, prompts, resource limits, generation/runtime configuration, or the complete experimental configuration."
+}
