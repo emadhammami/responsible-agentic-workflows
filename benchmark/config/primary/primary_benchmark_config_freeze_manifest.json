@@ -1,11 +1,30 @@
 {
-  "schema_version": "0.1",
-  "freeze_id": "PRIMARY-BENCHMARK-CONFIG-FREEZE-v0.1",
-  "status": "frozen",
-  "implementation_parent_head": "e3febd8fd0eb68dedf543519c7808d758132eedf",
-  "benchmark_started": false,
-  "result_driven_revision": false,
-  "benchmark_ready_to_execute": false,
+  "artifact_bindings": {
+    "archived_v0_1_schema": {
+      "path": "benchmark/config/benchmark_config.schema.v0.1.json",
+      "sha256": "bf6935fb64198bcec87fbac837f05aec85d731c940cc4910973c3c8489db48a7"
+    },
+    "canonical_v0_2_schema": {
+      "path": "benchmark/config/benchmark_config.schema.json",
+      "sha256": "95659c0f3874bce28dba3c2fcd31c5afc83aa2e710e43aed6bb2c7a0862c2208"
+    },
+    "frozen_decision_artifact": {
+      "path": "evidence/engineering/benchmark_configuration_decisions_v0.1_2026-09-27.md",
+      "sha256": "d755850dde0d6c9f0ff3f623dc2cbb9065d0a6bf2478be7c14d931663dcce7e8"
+    },
+    "generation_model_configuration": {
+      "path": "benchmark/config/model/OLLAMA-QWEN38-27B-48K-v0.1.json",
+      "sha256": "f507c2d4270ad64a81ebaaef2c18a7236fba26dd30a99ed79ceed5d9b728b5e1"
+    },
+    "primary_30_task_freeze_manifest": {
+      "path": "benchmark/tasks/primary_benchmark_freeze_manifest.json",
+      "sha256": "e50c694e70824e50cc8b7769ee9f5561fa8a6af839e7b92906bfd07b5ba3fe70"
+    },
+    "task_set_plan": {
+      "path": "benchmark/task_set_plan.json",
+      "sha256": "137bcef783e124e3410301f1fc89bead7f375b6b8bad94f3a0f0c04c1cce1958"
+    }
+  },
   "authoritative_configs": {
     "UC1": {
       "path": "benchmark/config/primary/benchmark-config-primary-uc1-v0.2.json",
@@ -20,32 +39,54 @@
       "sha256": "6d3a09fb938ce537b7054e658220ff84a2276739206bfc0100e27c095bdcaf99"
     }
   },
-  "artifact_bindings": {
-    "canonical_v0_2_schema": {
-      "path": "benchmark/config/benchmark_config.schema.json",
-      "sha256": "95659c0f3874bce28dba3c2fcd31c5afc83aa2e710e43aed6bb2c7a0862c2208"
+  "benchmark_ready_to_execute": true,
+  "benchmark_started": false,
+  "execution_order_manifest": {
+    "generation_seed": 20260912,
+    "path": "evidence/engineering/primary_execution_order_v1.json",
+    "run_count": 270,
+    "sha256": "f027a367684cb69120379c627a16003ebf5c07927e091e3879dd149c911cef79"
+  },
+  "execution_order_manifest_frozen": true,
+  "execution_order_manifest_status": "FROZEN",
+  "execution_source_bindings": {
+    "src/responsible_agentic_workflows/benchmark/configuration.py": {
+      "path": "src/responsible_agentic_workflows/benchmark/configuration.py",
+      "sha256": "82fe0985b7b25fae8ffd1de373c026f8bdf2be089ebc8758a2b0841462979b0f"
     },
-    "archived_v0_1_schema": {
-      "path": "benchmark/config/benchmark_config.schema.v0.1.json",
-      "sha256": "bf6935fb64198bcec87fbac837f05aec85d731c940cc4910973c3c8489db48a7"
+    "src/responsible_agentic_workflows/benchmark/legacy_uc2.py": {
+      "path": "src/responsible_agentic_workflows/benchmark/legacy_uc2.py",
+      "sha256": "abb363f893ef2e78be17a36e945db8fc5531033af1767d86b6fe5d12795e9576"
     },
-    "frozen_decision_artifact": {
-      "path": "evidence/engineering/benchmark_configuration_decisions_v0.1_2026-09-27.md",
-      "sha256": "d755850dde0d6c9f0ff3f623dc2cbb9065d0a6bf2478be7c14d931663dcce7e8"
+    "src/responsible_agentic_workflows/benchmark/orchestration.py": {
+      "path": "src/responsible_agentic_workflows/benchmark/orchestration.py",
+      "sha256": "a4147e344ef83c5f260612f76e8dec6c306eb451c5d6683652ada79cf09d409a"
     },
-    "generation_model_configuration": {
-      "path": "benchmark/config/model/OLLAMA-QWEN38-27B-48K-v0.1.json",
-      "sha256": "f507c2d4270ad64a81ebaaef2c18a7236fba26dd30a99ed79ceed5d9b728b5e1"
-    },
-    "task_set_plan": {
-      "path": "benchmark/task_set_plan.json",
-      "sha256": "137bcef783e124e3410301f1fc89bead7f375b6b8bad94f3a0f0c04c1cce1958"
-    },
-    "primary_30_task_freeze_manifest": {
-      "path": "benchmark/tasks/primary_benchmark_freeze_manifest.json",
-      "sha256": "e50c694e70824e50cc8b7769ee9f5561fa8a6af839e7b92906bfd07b5ba3fe70"
+    "src/responsible_agentic_workflows/logging/run_record.py": {
+      "path": "src/responsible_agentic_workflows/logging/run_record.py",
+      "sha256": "5a86865cf4d70869e913aa402f71e1b8869d4fc31bf73d05a608dd9cc12a8884"
     }
   },
+  "final_benchmark_execution_code_revision": "fc5a631a7cee4d412d28f2dc06e99ac96c849475",
+  "final_benchmark_execution_code_revision_frozen": true,
+  "final_benchmark_execution_code_revision_status": "FROZEN",
+  "freeze_id": "PRIMARY-BENCHMARK-CONFIG-FREEZE-v0.1",
+  "implementation_parent_head": "e3febd8fd0eb68dedf543519c7808d758132eedf",
+  "pre_result_contract_bindings": {
+    "evidence/engineering/primary_analysis_visualization_contract_v0.1_2026-09-27.md": {
+      "path": "evidence/engineering/primary_analysis_visualization_contract_v0.1_2026-09-27.md",
+      "sha256": "24167da34967037b2d711e9ced2d2fcfd6180f69c02e76ce5def79eb1b9ee7b0"
+    },
+    "evidence/engineering/primary_benchmark_orchestration_contract_v0.1_2026-09-27.md": {
+      "path": "evidence/engineering/primary_benchmark_orchestration_contract_v0.1_2026-09-27.md",
+      "sha256": "471c569a3c81b10188d75e498ca59201a842ad7f78bbf442fe9eda2eddc44b5e"
+    },
+    "evidence/engineering/primary_run_order_protocol_v0.1_2026-09-27.md": {
+      "path": "evidence/engineering/primary_run_order_protocol_v0.1_2026-09-27.md",
+      "sha256": "a77c2c0282961866ace52d97e8d89d86cb17b3fba0c936556083562d9e657d38"
+    }
+  },
+  "result_driven_revision": false,
   "retrieval_configuration_bindings": {
     "UC1": {
       "path": "benchmark/config/retrieval/UC1-QWEN3-EMBED4B-EXACT-COSINE-v0.1.json",
@@ -60,18 +101,11 @@
       "sha256": "cbc006fbab5623af240613e4348bccd17107943e0556a5746409130cd073bac1"
     }
   },
+  "schema_version": "0.1",
   "source_bindings": {
-    "src/responsible_agentic_workflows/workflow/b0_baseline.py": {
-      "path": "src/responsible_agentic_workflows/workflow/b0_baseline.py",
-      "sha256": "ff65547eba4d39ff111806977acb9af9f2174c370daf804c70eb6833f30aaec3"
-    },
     "src/responsible_agentic_workflows/workflow/agentic_execution.py": {
       "path": "src/responsible_agentic_workflows/workflow/agentic_execution.py",
       "sha256": "7371c264d37d5df08c9803dedad3caa67f66fe147f10eb5cf0f1903f45e7752f"
-    },
-    "src/responsible_agentic_workflows/workflow/graph.py": {
-      "path": "src/responsible_agentic_workflows/workflow/graph.py",
-      "sha256": "427817fba77ccbb2aad12b0a25094c6c597e7055eef5b79a9911bc80baab1c22"
     },
     "src/responsible_agentic_workflows/workflow/agentic_nodes.py": {
       "path": "src/responsible_agentic_workflows/workflow/agentic_nodes.py",
@@ -81,6 +115,10 @@
       "path": "src/responsible_agentic_workflows/workflow/agentic_runner.py",
       "sha256": "f44c96002fc6bb3c5937e64e3619fc87c6f50c7a0294a4342ceac8942fc1f986"
     },
+    "src/responsible_agentic_workflows/workflow/b0_baseline.py": {
+      "path": "src/responsible_agentic_workflows/workflow/b0_baseline.py",
+      "sha256": "ff65547eba4d39ff111806977acb9af9f2174c370daf804c70eb6833f30aaec3"
+    },
     "src/responsible_agentic_workflows/workflow/b1_policy.py": {
       "path": "src/responsible_agentic_workflows/workflow/b1_policy.py",
       "sha256": "22c4b377fd3f6c7987375523d3d1496cd20b9efb763d851f9d856704b261a5a1"
@@ -88,10 +126,11 @@
     "src/responsible_agentic_workflows/workflow/g1_policy.py": {
       "path": "src/responsible_agentic_workflows/workflow/g1_policy.py",
       "sha256": "a0fbdf98d9ec37506c32810e59668baf4fabb2d8024d0a93904645bd59bafdba"
+    },
+    "src/responsible_agentic_workflows/workflow/graph.py": {
+      "path": "src/responsible_agentic_workflows/workflow/graph.py",
+      "sha256": "427817fba77ccbb2aad12b0a25094c6c597e7055eef5b79a9911bc80baab1c22"
     }
   },
-  "execution_order_manifest_frozen": false,
-  "execution_order_manifest_status": "NOT YET FROZEN; final run order remains pending.",
-  "final_benchmark_execution_code_revision_frozen": false,
-  "final_benchmark_execution_code_revision_status": "NOT YET FROZEN because benchmark orchestration/harness qualification remains pending."
+  "status": "frozen"
 }
