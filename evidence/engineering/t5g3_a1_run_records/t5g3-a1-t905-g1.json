@@ -1,0 +1,242 @@
+{
+  "code_revision": "6fae07dc69f636acfc0aa88304c57423e0f3416e",
+  "condition": null,
+  "configuration": {
+    "max_output_tokens": 1024,
+    "model_config_id": "OLLAMA-QWEN38-27B-48K-v0.1",
+    "model_name": "qwen3.8-27b-48k:latest",
+    "model_provider": "ollama",
+    "model_version": "a68eeb5701b0a627f513a134f7ec029477a04b66a4605b32e27917ac93bd67a3",
+    "prompt_version": "agentic-engineering-v0.1",
+    "random_seed": 20260912,
+    "retrieval_config_id": "T5G3-SYNTHETIC-QWEN3-EMBED4B-EXACT-COSINE-v0.1",
+    "temperature": 0,
+    "workflow_config_id": "g1-agentic-ergr-v0.1"
+  },
+  "errors": [],
+  "events": [
+    {
+      "details": null,
+      "event_type": "plan_completed",
+      "sequence": 1,
+      "stage": "plan",
+      "timestamp": "2026-09-27T12:51:08.521490Z"
+    },
+    {
+      "details": null,
+      "event_type": "initial_retrieval_completed",
+      "sequence": 2,
+      "stage": "initial_retrieve",
+      "timestamp": "2026-09-27T12:51:11.790391Z"
+    },
+    {
+      "details": null,
+      "event_type": "draft_completed",
+      "sequence": 3,
+      "stage": "draft",
+      "timestamp": "2026-09-27T12:51:18.986325Z"
+    },
+    {
+      "details": null,
+      "event_type": "initial_critic_completed",
+      "sequence": 4,
+      "stage": "initial_critic",
+      "timestamp": "2026-09-27T12:51:21.754548Z"
+    },
+    {
+      "details": {
+        "blocked_limits": [],
+        "critic_iteration": 1,
+        "decision_sequence": 1,
+        "evidence_sufficiency": "SUFFICIENT",
+        "gap_types": [],
+        "hard_recovery_feasible": null,
+        "input_tokens_used": 2439,
+        "llm_calls_remaining": 2,
+        "llm_calls_used": 3,
+        "output_tokens_used": 323,
+        "path_reserve_satisfied": null,
+        "policy_id": "g1-ergr-policy-v0.1",
+        "reason_code": "RELEASE_OK",
+        "recovery_iteration": 0,
+        "recovery_rule_version": null,
+        "release_ok": true,
+        "resource_reserve_rule_version": null,
+        "retries_remaining": 1,
+        "retries_used": 0,
+        "retrieval_calls_remaining": 1,
+        "retrieval_calls_used": 1,
+        "selected_action": "ACCEPT",
+        "selected_recovery_path": "NONE",
+        "support_status": "SUPPORTED",
+        "total_tokens_remaining": null,
+        "total_tokens_used": 2762,
+        "unresolved_conflict": false
+      },
+      "event_type": "policy_decision",
+      "sequence": 5,
+      "stage": null,
+      "timestamp": "2026-09-27T12:51:21.755438Z"
+    },
+    {
+      "details": null,
+      "event_type": "answer_accepted",
+      "sequence": 6,
+      "stage": null,
+      "timestamp": "2026-09-27T12:51:21.755980Z"
+    }
+  ],
+  "execution_mode": "engineering",
+  "experiment_id": "T5G3-SYNTHETIC-QUALIFICATION-A1",
+  "final_output": {
+    "abstained": false,
+    "answer": "Expense receipts must be retained for **five years after the end of the financial year** in which the expense was recorded.",
+    "cited_chunk_ids": []
+  },
+  "finished_at": "2026-09-27T12:51:21.755989Z",
+  "model": {
+    "calls": [
+      {
+        "finish_reason": "stop",
+        "input_tokens": 49,
+        "latency_ms": 5121.695296,
+        "output_tokens": 210,
+        "provider_response_id": null,
+        "sequence": 1,
+        "status": "completed",
+        "total_tokens": 259
+      },
+      {
+        "finish_reason": "stop",
+        "input_tokens": 1043,
+        "latency_ms": 7195.130565,
+        "output_tokens": 25,
+        "provider_response_id": null,
+        "sequence": 2,
+        "status": "completed",
+        "total_tokens": 1068
+      },
+      {
+        "finish_reason": "stop",
+        "input_tokens": 1347,
+        "latency_ms": 2764.09022,
+        "output_tokens": 88,
+        "provider_response_id": null,
+        "sequence": 3,
+        "status": "completed",
+        "total_tokens": 1435
+      }
+    ]
+  },
+  "retrieval": {
+    "calls": [
+      {
+        "latency_ms": 3268.307289,
+        "query": "How long must expense receipts be retained?",
+        "retrieved_chunks": [
+          {
+            "chunk_id": "DOC902-S001",
+            "document_id": "DOC902",
+            "page": null,
+            "rank": 1,
+            "retrieval_score": 0.8409731388092041,
+            "section": "Expense records"
+          },
+          {
+            "chunk_id": "DOC901-S002",
+            "document_id": "DOC901",
+            "page": null,
+            "rank": 2,
+            "retrieval_score": 0.5802644491195679,
+            "section": "Expense documentation"
+          },
+          {
+            "chunk_id": "DOC902-S002",
+            "document_id": "DOC902",
+            "page": null,
+            "rank": 3,
+            "retrieval_score": 0.48884451389312744,
+            "section": "Project decision records"
+          },
+          {
+            "chunk_id": "DOC904-S003",
+            "document_id": "DOC904",
+            "page": null,
+            "rank": 4,
+            "retrieval_score": 0.3517700731754303,
+            "section": "Documentation"
+          },
+          {
+            "chunk_id": "DOC903-S002",
+            "document_id": "DOC903",
+            "page": null,
+            "rank": 5,
+            "retrieval_score": 0.32250291109085083,
+            "section": "Access review"
+          },
+          {
+            "chunk_id": "DOC901-S003",
+            "document_id": "DOC901",
+            "page": null,
+            "rank": 6,
+            "retrieval_score": 0.28956007957458496,
+            "section": "Scope"
+          },
+          {
+            "chunk_id": "DOC901-S001",
+            "document_id": "DOC901",
+            "page": null,
+            "rank": 7,
+            "retrieval_score": 0.2887747585773468,
+            "section": "International travel"
+          },
+          {
+            "chunk_id": "DOC904-S001",
+            "document_id": "DOC904",
+            "page": null,
+            "rank": 8,
+            "retrieval_score": 0.2726154923439026,
+            "section": "Initial notification"
+          },
+          {
+            "chunk_id": "DOC905-S002",
+            "document_id": "DOC905",
+            "page": null,
+            "rank": 9,
+            "retrieval_score": 0.263843834400177,
+            "section": "Relationship to general travel policy"
+          },
+          {
+            "chunk_id": "DOC903-S003",
+            "document_id": "DOC903",
+            "page": null,
+            "rank": 10,
+            "retrieval_score": 0.25531259179115295,
+            "section": "Privileged access"
+          }
+        ],
+        "sequence": 1,
+        "top_k": 10
+      }
+    ]
+  },
+  "run_id": "t5g3-a1-t905-g1",
+  "schema_version": "0.4",
+  "started_at": "2026-09-27T12:51:03.391286Z",
+  "status": "completed",
+  "task_id": "T905",
+  "timing": {
+    "end_to_end_ms": 18364.710172,
+    "llm_ms": 15080.916081,
+    "retrieval_ms": 3268.307289
+  },
+  "usage": {
+    "input_tokens": 2439,
+    "llm_calls": 3,
+    "output_tokens": 323,
+    "retries": 0,
+    "retrieval_calls": 1,
+    "tool_calls": 0,
+    "total_tokens": 2762
+  }
+}

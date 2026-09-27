@@ -1,0 +1,151 @@
+{
+  "code_revision": "6fae07dc69f636acfc0aa88304c57423e0f3416e",
+  "condition": null,
+  "configuration": {
+    "max_output_tokens": 1024,
+    "model_config_id": "OLLAMA-QWEN38-27B-48K-v0.1",
+    "model_name": "qwen3.8-27b-48k:latest",
+    "model_provider": "ollama",
+    "model_version": "a68eeb5701b0a627f513a134f7ec029477a04b66a4605b32e27917ac93bd67a3",
+    "prompt_version": "b0-engineering-v0.1",
+    "random_seed": 20260912,
+    "retrieval_config_id": "T5G3-SYNTHETIC-QWEN3-EMBED4B-EXACT-COSINE-v0.1",
+    "temperature": 0,
+    "workflow_config_id": "b0-two-step-rag-v0.1"
+  },
+  "errors": [],
+  "events": [],
+  "execution_mode": "engineering",
+  "experiment_id": "T5G3-SYNTHETIC-QUALIFICATION-A1",
+  "final_output": {
+    "abstained": false,
+    "answer": "The retrieved context does not contain information about the maximum reimbursable nightly hotel rate. It only states that employees must submit receipts for reimbursable travel expenses (DOC901-S002) and that receipts must be retained for five years (DOC902-S001).",
+    "cited_chunk_ids": []
+  },
+  "finished_at": "2026-09-27T12:49:25.714944Z",
+  "model": {
+    "calls": [
+      {
+        "finish_reason": "stop",
+        "input_tokens": 638,
+        "latency_ms": 7597.610321,
+        "output_tokens": 61,
+        "provider_response_id": null,
+        "sequence": 1,
+        "status": "completed",
+        "total_tokens": 699
+      }
+    ]
+  },
+  "retrieval": {
+    "calls": [
+      {
+        "latency_ms": 2984.130025,
+        "query": "What is the maximum reimbursable nightly hotel rate?",
+        "retrieved_chunks": [
+          {
+            "chunk_id": "DOC901-S002",
+            "document_id": "DOC901",
+            "page": null,
+            "rank": 1,
+            "retrieval_score": 0.3836853504180908,
+            "section": "Expense documentation"
+          },
+          {
+            "chunk_id": "DOC905-S002",
+            "document_id": "DOC905",
+            "page": null,
+            "rank": 2,
+            "retrieval_score": 0.3327867090702057,
+            "section": "Relationship to general travel policy"
+          },
+          {
+            "chunk_id": "DOC901-S003",
+            "document_id": "DOC901",
+            "page": null,
+            "rank": 3,
+            "retrieval_score": 0.32786500453948975,
+            "section": "Scope"
+          },
+          {
+            "chunk_id": "DOC905-S001",
+            "document_id": "DOC905",
+            "page": null,
+            "rank": 4,
+            "retrieval_score": 0.31032103300094604,
+            "section": "High-risk destinations"
+          },
+          {
+            "chunk_id": "DOC901-S001",
+            "document_id": "DOC901",
+            "page": null,
+            "rank": 5,
+            "retrieval_score": 0.29007211327552795,
+            "section": "International travel"
+          },
+          {
+            "chunk_id": "DOC902-S001",
+            "document_id": "DOC902",
+            "page": null,
+            "rank": 6,
+            "retrieval_score": 0.28762945532798767,
+            "section": "Expense records"
+          },
+          {
+            "chunk_id": "DOC903-S002",
+            "document_id": "DOC903",
+            "page": null,
+            "rank": 7,
+            "retrieval_score": 0.2633403539657593,
+            "section": "Access review"
+          },
+          {
+            "chunk_id": "DOC903-S003",
+            "document_id": "DOC903",
+            "page": null,
+            "rank": 8,
+            "retrieval_score": 0.22270426154136658,
+            "section": "Privileged access"
+          },
+          {
+            "chunk_id": "DOC904-S001",
+            "document_id": "DOC904",
+            "page": null,
+            "rank": 9,
+            "retrieval_score": 0.20087577402591705,
+            "section": "Initial notification"
+          },
+          {
+            "chunk_id": "DOC902-S002",
+            "document_id": "DOC902",
+            "page": null,
+            "rank": 10,
+            "retrieval_score": 0.19804221391677856,
+            "section": "Project decision records"
+          }
+        ],
+        "sequence": 1,
+        "top_k": 10
+      }
+    ]
+  },
+  "run_id": "t5g3-a1-t904-b0",
+  "schema_version": "0.4",
+  "started_at": "2026-09-27T12:49:15.132403Z",
+  "status": "completed",
+  "task_id": "T904",
+  "timing": {
+    "end_to_end_ms": 10582.580913,
+    "llm_ms": 7597.610321,
+    "retrieval_ms": 2984.130025
+  },
+  "usage": {
+    "input_tokens": 638,
+    "llm_calls": 1,
+    "output_tokens": 61,
+    "retries": 0,
+    "retrieval_calls": 1,
+    "tool_calls": 0,
+    "total_tokens": 699
+  }
+}

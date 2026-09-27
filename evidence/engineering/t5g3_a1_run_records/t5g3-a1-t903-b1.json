@@ -1,0 +1,242 @@
+{
+  "code_revision": "6fae07dc69f636acfc0aa88304c57423e0f3416e",
+  "condition": null,
+  "configuration": {
+    "max_output_tokens": 1024,
+    "model_config_id": "OLLAMA-QWEN38-27B-48K-v0.1",
+    "model_name": "qwen3.8-27b-48k:latest",
+    "model_provider": "ollama",
+    "model_version": "a68eeb5701b0a627f513a134f7ec029477a04b66a4605b32e27917ac93bd67a3",
+    "prompt_version": "agentic-engineering-v0.1",
+    "random_seed": 20260912,
+    "retrieval_config_id": "T5G3-SYNTHETIC-QWEN3-EMBED4B-EXACT-COSINE-v0.1",
+    "temperature": 0,
+    "workflow_config_id": "b1-agentic-fixed-recovery-v0.1"
+  },
+  "errors": [],
+  "events": [
+    {
+      "details": null,
+      "event_type": "plan_completed",
+      "sequence": 1,
+      "stage": "plan",
+      "timestamp": "2026-09-27T12:48:33.387757Z"
+    },
+    {
+      "details": null,
+      "event_type": "initial_retrieval_completed",
+      "sequence": 2,
+      "stage": "initial_retrieve",
+      "timestamp": "2026-09-27T12:48:36.507570Z"
+    },
+    {
+      "details": null,
+      "event_type": "draft_completed",
+      "sequence": 3,
+      "stage": "draft",
+      "timestamp": "2026-09-27T12:48:48.289750Z"
+    },
+    {
+      "details": null,
+      "event_type": "initial_critic_completed",
+      "sequence": 4,
+      "stage": "initial_critic",
+      "timestamp": "2026-09-27T12:48:51.302840Z"
+    },
+    {
+      "details": {
+        "blocked_limits": [],
+        "critic_iteration": 1,
+        "decision_sequence": 1,
+        "evidence_sufficiency": "SUFFICIENT",
+        "gap_types": [],
+        "hard_recovery_feasible": null,
+        "input_tokens_used": 2816,
+        "llm_calls_remaining": 2,
+        "llm_calls_used": 3,
+        "output_tokens_used": 624,
+        "path_reserve_satisfied": null,
+        "policy_id": "b1-fixed-recovery-policy-v0.1",
+        "reason_code": "RELEASE_OK",
+        "recovery_iteration": 0,
+        "recovery_rule_version": null,
+        "release_ok": true,
+        "resource_reserve_rule_version": null,
+        "retries_remaining": 1,
+        "retries_used": 0,
+        "retrieval_calls_remaining": 1,
+        "retrieval_calls_used": 1,
+        "selected_action": "ACCEPT",
+        "selected_recovery_path": "NONE",
+        "support_status": "SUPPORTED",
+        "total_tokens_remaining": null,
+        "total_tokens_used": 3440,
+        "unresolved_conflict": false
+      },
+      "event_type": "policy_decision",
+      "sequence": 5,
+      "stage": null,
+      "timestamp": "2026-09-27T12:48:51.304278Z"
+    },
+    {
+      "details": null,
+      "event_type": "answer_accepted",
+      "sequence": 6,
+      "stage": null,
+      "timestamp": "2026-09-27T12:48:51.304900Z"
+    }
+  ],
+  "execution_mode": "engineering",
+  "experiment_id": "T5G3-SYNTHETIC-QUALIFICATION-A1",
+  "final_output": {
+    "abstained": false,
+    "answer": "Based on the provided document evidence, the following approvals are required for an external collaborator needing temporary privileged project access while travelling internationally:\n\n1.  **Project Owner Approval**: Required for any access granted to external collaborators (DOC903-S001).\n2.  **System Owner Approval**: Required specifically for *temporary privileged access*, in addition to normal project access requirements (DOC903-S003).\n3.  **Department Head Approval**: Required for international business travel before it is booked (DOC901-S001).\n    *   *Note*: If the destination is classified as **high risk**, approval is required from **both** the employee's department head **and** the security officer (DOC905-S001). In this specific case, the high-risk requirements take precedence over the ordinary international-travel approval (DOC905-S002).\n\n**Additional Mandatory Conditions (Non-Approval Steps):**\n*   **Multi-factor authentication** must be enabled before the account becomes active (DOC903-S001).\n*   **Access Review**: Access granted to external collaborators must be reviewed at least once every three months (DOC903-S002).\n\n**Summary of Required Approvers:**\n*   **Project Owner**\n*   **System Owner**\n*   **Department Head** (and **Security Officer** if the destination is high-risk)",
+    "cited_chunk_ids": []
+  },
+  "finished_at": "2026-09-27T12:48:51.304911Z",
+  "model": {
+    "calls": [
+      {
+        "finish_reason": "stop",
+        "input_tokens": 63,
+        "latency_ms": 5996.894907,
+        "output_tokens": 237,
+        "provider_response_id": null,
+        "sequence": 1,
+        "status": "completed",
+        "total_tokens": 300
+      },
+      {
+        "finish_reason": "stop",
+        "input_tokens": 1101,
+        "latency_ms": 11780.500187,
+        "output_tokens": 299,
+        "provider_response_id": null,
+        "sequence": 2,
+        "status": "completed",
+        "total_tokens": 1400
+      },
+      {
+        "finish_reason": "stop",
+        "input_tokens": 1652,
+        "latency_ms": 3012.297254,
+        "output_tokens": 88,
+        "provider_response_id": null,
+        "sequence": 3,
+        "status": "completed",
+        "total_tokens": 1740
+      }
+    ]
+  },
+  "retrieval": {
+    "calls": [
+      {
+        "latency_ms": 3119.236354,
+        "query": "An external collaborator needs temporary privileged project access while travelling internationally. Which approvals are required by the available policies?",
+        "retrieved_chunks": [
+          {
+            "chunk_id": "DOC903-S003",
+            "document_id": "DOC903",
+            "page": null,
+            "rank": 1,
+            "retrieval_score": 0.766274094581604,
+            "section": "Privileged access"
+          },
+          {
+            "chunk_id": "DOC903-S001",
+            "document_id": "DOC903",
+            "page": null,
+            "rank": 2,
+            "retrieval_score": 0.6487101912498474,
+            "section": "External collaborators"
+          },
+          {
+            "chunk_id": "DOC903-S002",
+            "document_id": "DOC903",
+            "page": null,
+            "rank": 3,
+            "retrieval_score": 0.6381658315658569,
+            "section": "Access review"
+          },
+          {
+            "chunk_id": "DOC901-S001",
+            "document_id": "DOC901",
+            "page": null,
+            "rank": 4,
+            "retrieval_score": 0.5288956165313721,
+            "section": "International travel"
+          },
+          {
+            "chunk_id": "DOC905-S001",
+            "document_id": "DOC905",
+            "page": null,
+            "rank": 5,
+            "retrieval_score": 0.5280278921127319,
+            "section": "High-risk destinations"
+          },
+          {
+            "chunk_id": "DOC905-S002",
+            "document_id": "DOC905",
+            "page": null,
+            "rank": 6,
+            "retrieval_score": 0.4927383363246918,
+            "section": "Relationship to general travel policy"
+          },
+          {
+            "chunk_id": "DOC901-S003",
+            "document_id": "DOC901",
+            "page": null,
+            "rank": 7,
+            "retrieval_score": 0.4675735831260681,
+            "section": "Scope"
+          },
+          {
+            "chunk_id": "DOC904-S002",
+            "document_id": "DOC904",
+            "page": null,
+            "rank": 8,
+            "retrieval_score": 0.3880538046360016,
+            "section": "Project notification"
+          },
+          {
+            "chunk_id": "DOC904-S001",
+            "document_id": "DOC904",
+            "page": null,
+            "rank": 9,
+            "retrieval_score": 0.3817424774169922,
+            "section": "Initial notification"
+          },
+          {
+            "chunk_id": "DOC902-S002",
+            "document_id": "DOC902",
+            "page": null,
+            "rank": 10,
+            "retrieval_score": 0.3627236485481262,
+            "section": "Project decision records"
+          }
+        ],
+        "sequence": 1,
+        "top_k": 10
+      }
+    ]
+  },
+  "run_id": "t5g3-a1-t903-b1",
+  "schema_version": "0.4",
+  "started_at": "2026-09-27T12:48:27.384307Z",
+  "status": "completed",
+  "task_id": "T903",
+  "timing": {
+    "end_to_end_ms": 23920.726516,
+    "llm_ms": 20789.692348,
+    "retrieval_ms": 3119.236354
+  },
+  "usage": {
+    "input_tokens": 2816,
+    "llm_calls": 3,
+    "output_tokens": 624,
+    "retries": 0,
+    "retrieval_calls": 1,
+    "tool_calls": 0,
+    "total_tokens": 3440
+  }
+}

@@ -1,0 +1,242 @@
+{
+  "code_revision": "6fae07dc69f636acfc0aa88304c57423e0f3416e",
+  "condition": null,
+  "configuration": {
+    "max_output_tokens": 1024,
+    "model_config_id": "OLLAMA-QWEN38-27B-48K-v0.1",
+    "model_name": "qwen3.8-27b-48k:latest",
+    "model_provider": "ollama",
+    "model_version": "a68eeb5701b0a627f513a134f7ec029477a04b66a4605b32e27917ac93bd67a3",
+    "prompt_version": "agentic-engineering-v0.1",
+    "random_seed": 20260912,
+    "retrieval_config_id": "T5G3-SYNTHETIC-QWEN3-EMBED4B-EXACT-COSINE-v0.1",
+    "temperature": 0,
+    "workflow_config_id": "g1-agentic-ergr-v0.1"
+  },
+  "errors": [],
+  "events": [
+    {
+      "details": null,
+      "event_type": "plan_completed",
+      "sequence": 1,
+      "stage": "plan",
+      "timestamp": "2026-09-27T12:52:45.402521Z"
+    },
+    {
+      "details": null,
+      "event_type": "initial_retrieval_completed",
+      "sequence": 2,
+      "stage": "initial_retrieve",
+      "timestamp": "2026-09-27T12:52:48.535540Z"
+    },
+    {
+      "details": null,
+      "event_type": "draft_completed",
+      "sequence": 3,
+      "stage": "draft",
+      "timestamp": "2026-09-27T12:52:56.058992Z"
+    },
+    {
+      "details": null,
+      "event_type": "initial_critic_completed",
+      "sequence": 4,
+      "stage": "initial_critic",
+      "timestamp": "2026-09-27T12:52:58.798751Z"
+    },
+    {
+      "details": {
+        "blocked_limits": [],
+        "critic_iteration": 1,
+        "decision_sequence": 1,
+        "evidence_sufficiency": "SUFFICIENT",
+        "gap_types": [],
+        "hard_recovery_feasible": null,
+        "input_tokens_used": 2460,
+        "llm_calls_remaining": 2,
+        "llm_calls_used": 3,
+        "output_tokens_used": 300,
+        "path_reserve_satisfied": null,
+        "policy_id": "g1-ergr-policy-v0.1",
+        "reason_code": "RELEASE_OK",
+        "recovery_iteration": 0,
+        "recovery_rule_version": null,
+        "release_ok": true,
+        "resource_reserve_rule_version": null,
+        "retries_remaining": 1,
+        "retries_used": 0,
+        "retrieval_calls_remaining": 1,
+        "retrieval_calls_used": 1,
+        "selected_action": "ACCEPT",
+        "selected_recovery_path": "NONE",
+        "support_status": "SUPPORTED",
+        "total_tokens_remaining": null,
+        "total_tokens_used": 2760,
+        "unresolved_conflict": false
+      },
+      "event_type": "policy_decision",
+      "sequence": 5,
+      "stage": null,
+      "timestamp": "2026-09-27T12:52:58.799437Z"
+    },
+    {
+      "details": null,
+      "event_type": "answer_accepted",
+      "sequence": 6,
+      "stage": null,
+      "timestamp": "2026-09-27T12:52:58.800007Z"
+    }
+  ],
+  "execution_mode": "engineering",
+  "experiment_id": "T5G3-SYNTHETIC-QUALIFICATION-A1",
+  "final_output": {
+    "abstained": false,
+    "answer": "Travel to a destination classified as high risk requires approval from both the employee's department head and the security officer before booking.",
+    "cited_chunk_ids": []
+  },
+  "finished_at": "2026-09-27T12:52:58.800018Z",
+  "model": {
+    "calls": [
+      {
+        "finish_reason": "stop",
+        "input_tokens": 57,
+        "latency_ms": 4390.978533,
+        "output_tokens": 187,
+        "provider_response_id": null,
+        "sequence": 1,
+        "status": "completed",
+        "total_tokens": 244
+      },
+      {
+        "finish_reason": "stop",
+        "input_tokens": 1038,
+        "latency_ms": 7522.657297,
+        "output_tokens": 25,
+        "provider_response_id": null,
+        "sequence": 2,
+        "status": "completed",
+        "total_tokens": 1063
+      },
+      {
+        "finish_reason": "stop",
+        "input_tokens": 1365,
+        "latency_ms": 2738.074531,
+        "output_tokens": 88,
+        "provider_response_id": null,
+        "sequence": 3,
+        "status": "completed",
+        "total_tokens": 1453
+      }
+    ]
+  },
+  "retrieval": {
+    "calls": [
+      {
+        "latency_ms": 3132.326436,
+        "query": "What approval is required before booking international travel to a destination classified as high risk?",
+        "retrieved_chunks": [
+          {
+            "chunk_id": "DOC905-S001",
+            "document_id": "DOC905",
+            "page": null,
+            "rank": 1,
+            "retrieval_score": 0.8270308971405029,
+            "section": "High-risk destinations"
+          },
+          {
+            "chunk_id": "DOC905-S002",
+            "document_id": "DOC905",
+            "page": null,
+            "rank": 2,
+            "retrieval_score": 0.7681263089179993,
+            "section": "Relationship to general travel policy"
+          },
+          {
+            "chunk_id": "DOC901-S003",
+            "document_id": "DOC901",
+            "page": null,
+            "rank": 3,
+            "retrieval_score": 0.7044960260391235,
+            "section": "Scope"
+          },
+          {
+            "chunk_id": "DOC901-S001",
+            "document_id": "DOC901",
+            "page": null,
+            "rank": 4,
+            "retrieval_score": 0.6663390398025513,
+            "section": "International travel"
+          },
+          {
+            "chunk_id": "DOC901-S002",
+            "document_id": "DOC901",
+            "page": null,
+            "rank": 5,
+            "retrieval_score": 0.36850690841674805,
+            "section": "Expense documentation"
+          },
+          {
+            "chunk_id": "DOC903-S002",
+            "document_id": "DOC903",
+            "page": null,
+            "rank": 6,
+            "retrieval_score": 0.3627545237541199,
+            "section": "Access review"
+          },
+          {
+            "chunk_id": "DOC903-S003",
+            "document_id": "DOC903",
+            "page": null,
+            "rank": 7,
+            "retrieval_score": 0.3458123803138733,
+            "section": "Privileged access"
+          },
+          {
+            "chunk_id": "DOC903-S001",
+            "document_id": "DOC903",
+            "page": null,
+            "rank": 8,
+            "retrieval_score": 0.3401697278022766,
+            "section": "External collaborators"
+          },
+          {
+            "chunk_id": "DOC904-S001",
+            "document_id": "DOC904",
+            "page": null,
+            "rank": 9,
+            "retrieval_score": 0.22043174505233765,
+            "section": "Initial notification"
+          },
+          {
+            "chunk_id": "DOC904-S003",
+            "document_id": "DOC904",
+            "page": null,
+            "rank": 10,
+            "retrieval_score": 0.21846508979797363,
+            "section": "Documentation"
+          }
+        ],
+        "sequence": 1,
+        "top_k": 10
+      }
+    ]
+  },
+  "run_id": "t5g3-a1-t907-g1",
+  "schema_version": "0.4",
+  "started_at": "2026-09-27T12:52:41.003905Z",
+  "status": "completed",
+  "task_id": "T907",
+  "timing": {
+    "end_to_end_ms": 17796.12819,
+    "llm_ms": 14651.710361000001,
+    "retrieval_ms": 3132.326436
+  },
+  "usage": {
+    "input_tokens": 2460,
+    "llm_calls": 3,
+    "output_tokens": 300,
+    "retries": 0,
+    "retrieval_calls": 1,
+    "tool_calls": 0,
+    "total_tokens": 2760
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "code_revision": "6fae07dc69f636acfc0aa88304c57423e0f3416e",
+  "condition": null,
+  "configuration": {
+    "max_output_tokens": 1024,
+    "model_config_id": "OLLAMA-QWEN38-27B-48K-v0.1",
+    "model_name": "qwen3.8-27b-48k:latest",
+    "model_provider": "ollama",
+    "model_version": "a68eeb5701b0a627f513a134f7ec029477a04b66a4605b32e27917ac93bd67a3",
+    "prompt_version": "b0-engineering-v0.1",
+    "random_seed": 20260912,
+    "retrieval_config_id": "T5G3-SYNTHETIC-QWEN3-EMBED4B-EXACT-COSINE-v0.1",
+    "temperature": 0,
+    "workflow_config_id": "b0-two-step-rag-v0.1"
+  },
+  "errors": [],
+  "events": [],
+  "execution_mode": "engineering",
+  "experiment_id": "T5G3-SYNTHETIC-QUALIFICATION-A1",
+  "final_output": {
+    "abstained": false,
+    "answer": "According to the retrieved context, ordinary international business travel must be approved by the employee's department head before it is booked.\n\nSource: [rank=1; document_id=DOC901; chunk_id=DOC901-S001; section=International travel]",
+    "cited_chunk_ids": []
+  },
+  "finished_at": "2026-09-27T12:46:52.239189Z",
+  "model": {
+    "calls": [
+      {
+        "finish_reason": "stop",
+        "input_tokens": 649,
+        "latency_ms": 16268.913533,
+        "output_tokens": 58,
+        "provider_response_id": null,
+        "sequence": 1,
+        "status": "completed",
+        "total_tokens": 707
+      }
+    ]
+  },
+  "retrieval": {
+    "calls": [
+      {
+        "latency_ms": 31.827053,
+        "query": "Who must approve ordinary international business travel before it is booked?",
+        "retrieved_chunks": [
+          {
+            "chunk_id": "DOC901-S001",
+            "document_id": "DOC901",
+            "page": null,
+            "rank": 1,
+            "retrieval_score": 0.823489248752594,
+            "section": "International travel"
+          },
+          {
+            "chunk_id": "DOC905-S001",
+            "document_id": "DOC905",
+            "page": null,
+            "rank": 2,
+            "retrieval_score": 0.6783685088157654,
+            "section": "High-risk destinations"
+          },
+          {
+            "chunk_id": "DOC901-S003",
+            "document_id": "DOC901",
+            "page": null,
+            "rank": 3,
+            "retrieval_score": 0.6390141248703003,
+            "section": "Scope"
+          },
+          {
+            "chunk_id": "DOC905-S002",
+            "document_id": "DOC905",
+            "page": null,
+            "rank": 4,
+            "retrieval_score": 0.5829834342002869,
+            "section": "Relationship to general travel policy"
+          },
+          {
+            "chunk_id": "DOC901-S002",
+            "document_id": "DOC901",
+            "page": null,
+            "rank": 5,
+            "retrieval_score": 0.45784705877304077,
+            "section": "Expense documentation"
+          },
+          {
+            "chunk_id": "DOC903-S002",
+            "document_id": "DOC903",
+            "page": null,
+            "rank": 6,
+            "retrieval_score": 0.4105980396270752,
+            "section": "Access review"
+          },
+          {
+            "chunk_id": "DOC903-S003",
+            "document_id": "DOC903",
+            "page": null,
+            "rank": 7,
+            "retrieval_score": 0.40786996483802795,
+            "section": "Privileged access"
+          },
+          {
+            "chunk_id": "DOC903-S001",
+            "document_id": "DOC903",
+            "page": null,
+            "rank": 8,
+            "retrieval_score": 0.37856149673461914,
+            "section": "External collaborators"
+          },
+          {
+            "chunk_id": "DOC902-S001",
+            "document_id": "DOC902",
+            "page": null,
+            "rank": 9,
+            "retrieval_score": 0.2701980471611023,
+            "section": "Expense records"
+          },
+          {
+            "chunk_id": "DOC902-S002",
+            "document_id": "DOC902",
+            "page": null,
+            "rank": 10,
+            "retrieval_score": 0.2589803636074066,
+            "section": "Project decision records"
+          }
+        ],
+        "sequence": 1,
+        "top_k": 10
+      }
+    ]
+  },
+  "run_id": "t5g3-a1-t901-b0",
+  "schema_version": "0.4",
+  "started_at": "2026-09-27T12:46:35.936207Z",
+  "status": "completed",
+  "task_id": "T901",
+  "timing": {
+    "end_to_end_ms": 16303.032514,
+    "llm_ms": 16268.913533,
+    "retrieval_ms": 31.827053
+  },
+  "usage": {
+    "input_tokens": 649,
+    "llm_calls": 1,
+    "output_tokens": 58,
+    "retries": 0,
+    "retrieval_calls": 1,
+    "tool_calls": 0,
+    "total_tokens": 707
+  }
+}

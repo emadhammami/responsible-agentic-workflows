@@ -1,0 +1,242 @@
+{
+  "code_revision": "6fae07dc69f636acfc0aa88304c57423e0f3416e",
+  "condition": null,
+  "configuration": {
+    "max_output_tokens": 1024,
+    "model_config_id": "OLLAMA-QWEN38-27B-48K-v0.1",
+    "model_name": "qwen3.8-27b-48k:latest",
+    "model_provider": "ollama",
+    "model_version": "a68eeb5701b0a627f513a134f7ec029477a04b66a4605b32e27917ac93bd67a3",
+    "prompt_version": "agentic-engineering-v0.1",
+    "random_seed": 20260912,
+    "retrieval_config_id": "T5G3-SYNTHETIC-QWEN3-EMBED4B-EXACT-COSINE-v0.1",
+    "temperature": 0,
+    "workflow_config_id": "b1-agentic-fixed-recovery-v0.1"
+  },
+  "errors": [],
+  "events": [
+    {
+      "details": null,
+      "event_type": "plan_completed",
+      "sequence": 1,
+      "stage": "plan",
+      "timestamp": "2026-09-27T12:51:37.029991Z"
+    },
+    {
+      "details": null,
+      "event_type": "initial_retrieval_completed",
+      "sequence": 2,
+      "stage": "initial_retrieve",
+      "timestamp": "2026-09-27T12:51:40.089666Z"
+    },
+    {
+      "details": null,
+      "event_type": "draft_completed",
+      "sequence": 3,
+      "stage": "draft",
+      "timestamp": "2026-09-27T12:51:48.941088Z"
+    },
+    {
+      "details": null,
+      "event_type": "initial_critic_completed",
+      "sequence": 4,
+      "stage": "initial_critic",
+      "timestamp": "2026-09-27T12:51:51.773525Z"
+    },
+    {
+      "details": {
+        "blocked_limits": [],
+        "critic_iteration": 1,
+        "decision_sequence": 1,
+        "evidence_sufficiency": "SUFFICIENT",
+        "gap_types": [],
+        "hard_recovery_feasible": null,
+        "input_tokens_used": 2594,
+        "llm_calls_remaining": 2,
+        "llm_calls_used": 3,
+        "output_tokens_used": 414,
+        "path_reserve_satisfied": null,
+        "policy_id": "b1-fixed-recovery-policy-v0.1",
+        "reason_code": "RELEASE_OK",
+        "recovery_iteration": 0,
+        "recovery_rule_version": null,
+        "release_ok": true,
+        "resource_reserve_rule_version": null,
+        "retries_remaining": 1,
+        "retries_used": 0,
+        "retrieval_calls_remaining": 1,
+        "retrieval_calls_used": 1,
+        "selected_action": "ACCEPT",
+        "selected_recovery_path": "NONE",
+        "support_status": "SUPPORTED",
+        "total_tokens_remaining": null,
+        "total_tokens_used": 3008,
+        "unresolved_conflict": false
+      },
+      "event_type": "policy_decision",
+      "sequence": 5,
+      "stage": null,
+      "timestamp": "2026-09-27T12:51:51.774286Z"
+    },
+    {
+      "details": null,
+      "event_type": "answer_accepted",
+      "sequence": 6,
+      "stage": null,
+      "timestamp": "2026-09-27T12:51:51.774962Z"
+    }
+  ],
+  "execution_mode": "engineering",
+  "experiment_id": "T5G3-SYNTHETIC-QUALIFICATION-A1",
+  "final_output": {
+    "abstained": false,
+    "answer": "Based on the provided document evidence, the following parties must be notified within the specified time limits for a suspected security incident affecting project data:\n\n1.  **Security Team**: Must be reported to within **one hour** of discovery.\n    *   *Source*: DOC904-S001 (\"A suspected security incident must be reported to the security team within one hour of discovery.\")\n2.  **Project Manager**: Must be informed within **four hours** of discovery.\n    *   *Source*: DOC904-S002 (\"If the incident affects a project system or project data, the project manager must be informed within four hours of discovery.\")",
+    "cited_chunk_ids": []
+  },
+  "finished_at": "2026-09-27T12:51:51.774981Z",
+  "model": {
+    "calls": [
+      {
+        "finish_reason": "stop",
+        "input_tokens": 59,
+        "latency_ms": 4110.725274,
+        "output_tokens": 187,
+        "provider_response_id": null,
+        "sequence": 1,
+        "status": "completed",
+        "total_tokens": 246
+      },
+      {
+        "finish_reason": "stop",
+        "input_tokens": 1047,
+        "latency_ms": 8850.500837,
+        "output_tokens": 139,
+        "provider_response_id": null,
+        "sequence": 2,
+        "status": "completed",
+        "total_tokens": 1186
+      },
+      {
+        "finish_reason": "stop",
+        "input_tokens": 1488,
+        "latency_ms": 2831.604577,
+        "output_tokens": 88,
+        "provider_response_id": null,
+        "sequence": 3,
+        "status": "completed",
+        "total_tokens": 1576
+      }
+    ]
+  },
+  "retrieval": {
+    "calls": [
+      {
+        "latency_ms": 3059.070522,
+        "query": "A suspected security incident affects project data. Who must be notified and within what time limits?",
+        "retrieved_chunks": [
+          {
+            "chunk_id": "DOC904-S002",
+            "document_id": "DOC904",
+            "page": null,
+            "rank": 1,
+            "retrieval_score": 0.7963820695877075,
+            "section": "Project notification"
+          },
+          {
+            "chunk_id": "DOC904-S001",
+            "document_id": "DOC904",
+            "page": null,
+            "rank": 2,
+            "retrieval_score": 0.7250767350196838,
+            "section": "Initial notification"
+          },
+          {
+            "chunk_id": "DOC904-S003",
+            "document_id": "DOC904",
+            "page": null,
+            "rank": 3,
+            "retrieval_score": 0.5452556610107422,
+            "section": "Documentation"
+          },
+          {
+            "chunk_id": "DOC902-S002",
+            "document_id": "DOC902",
+            "page": null,
+            "rank": 4,
+            "retrieval_score": 0.390024334192276,
+            "section": "Project decision records"
+          },
+          {
+            "chunk_id": "DOC903-S003",
+            "document_id": "DOC903",
+            "page": null,
+            "rank": 5,
+            "retrieval_score": 0.3857932686805725,
+            "section": "Privileged access"
+          },
+          {
+            "chunk_id": "DOC903-S002",
+            "document_id": "DOC903",
+            "page": null,
+            "rank": 6,
+            "retrieval_score": 0.3629269599914551,
+            "section": "Access review"
+          },
+          {
+            "chunk_id": "DOC903-S001",
+            "document_id": "DOC903",
+            "page": null,
+            "rank": 7,
+            "retrieval_score": 0.3454242944717407,
+            "section": "External collaborators"
+          },
+          {
+            "chunk_id": "DOC905-S001",
+            "document_id": "DOC905",
+            "page": null,
+            "rank": 8,
+            "retrieval_score": 0.26979225873947144,
+            "section": "High-risk destinations"
+          },
+          {
+            "chunk_id": "DOC905-S002",
+            "document_id": "DOC905",
+            "page": null,
+            "rank": 9,
+            "retrieval_score": 0.21426405012607574,
+            "section": "Relationship to general travel policy"
+          },
+          {
+            "chunk_id": "DOC901-S001",
+            "document_id": "DOC901",
+            "page": null,
+            "rank": 10,
+            "retrieval_score": 0.19432619214057922,
+            "section": "International travel"
+          }
+        ],
+        "sequence": 1,
+        "top_k": 10
+      }
+    ]
+  },
+  "run_id": "t5g3-a1-t906-b1",
+  "schema_version": "0.4",
+  "started_at": "2026-09-27T12:51:32.913182Z",
+  "status": "completed",
+  "task_id": "T906",
+  "timing": {
+    "end_to_end_ms": 18861.813462,
+    "llm_ms": 15792.830688,
+    "retrieval_ms": 3059.070522
+  },
+  "usage": {
+    "input_tokens": 2594,
+    "llm_calls": 3,
+    "output_tokens": 414,
+    "retries": 0,
+    "retrieval_calls": 1,
+    "tool_calls": 0,
+    "total_tokens": 3008
+  }
+}

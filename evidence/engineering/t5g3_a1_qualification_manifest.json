@@ -1,0 +1,94 @@
+{
+  "code_revision": "6fae07dc69f636acfc0aa88304c57423e0f3416e",
+  "primary_benchmark_started": false,
+  "qualification_audit_sha256": "b2d73760776450a5263eb296ffba4240ee19d50b5f44baf1cf9d5d405da30439",
+  "qualification_id": "T5G3-SYNTHETIC-QUALIFICATION-A1",
+  "record_count": 21,
+  "records": [
+    {
+      "file": "t5g3-a1-t901-b0.json",
+      "sha256": "6d8a65ed8598aa09dafc463ab919ea8ab1ae336458d2f38473eb78fb3ecb3cc6"
+    },
+    {
+      "file": "t5g3-a1-t901-b1.json",
+      "sha256": "2529d04c7a77f9e53e7b4fce079d8a15ec3d840586a93de912665e3a9d923590"
+    },
+    {
+      "file": "t5g3-a1-t901-g1.json",
+      "sha256": "9d51f01c6756bb2927cb1bebee9d0281fc8a1db805586ed92c6a5b54b5fc1e96"
+    },
+    {
+      "file": "t5g3-a1-t902-b0.json",
+      "sha256": "55d0f76b0624fc48102dd5d515ed7e66ec17f9b757d9d22458b6c4a23ceb2b37"
+    },
+    {
+      "file": "t5g3-a1-t902-b1.json",
+      "sha256": "b5cf3d39f6100c2382742ba20dab95b4954b2cb074d3c80ce8f829ebc021c0d1"
+    },
+    {
+      "file": "t5g3-a1-t902-g1.json",
+      "sha256": "208b012d61ffc1a8f9b3684b8e1810994ae6f95727bdc63ce12750a06c043e91"
+    },
+    {
+      "file": "t5g3-a1-t903-b0.json",
+      "sha256": "84c2e6f84adfc718573c00e084d0c72f569e3d66fd8c287e01287219649965cc"
+    },
+    {
+      "file": "t5g3-a1-t903-b1.json",
+      "sha256": "0c35edc7811d6883f830b19e32d30799ecdff05138928d507500f4224e6adbdf"
+    },
+    {
+      "file": "t5g3-a1-t903-g1.json",
+      "sha256": "2d1011d3ca0dcaebbe8e0430ab27c04782c52f17aef2f88a8d6a48e11535ed20"
+    },
+    {
+      "file": "t5g3-a1-t904-b0.json",
+      "sha256": "7098a9f6705d81227a5ecd2c3463a46ea092805767641914007d7912f61b8192"
+    },
+    {
+      "file": "t5g3-a1-t904-b1.json",
+      "sha256": "cf77228caba03c843794b7a404830cbb969eaa3d51607425a99af62fd4bbf086"
+    },
+    {
+      "file": "t5g3-a1-t904-g1.json",
+      "sha256": "b080eb4baf6572b152bd4e57f56c72883418f25aeaf742e29e7cf4bd76e7f0e5"
+    },
+    {
+      "file": "t5g3-a1-t905-b0.json",
+      "sha256": "b7e19d113e404033c742b724f7d0acc4d319d561d673ed4560b08d10c3c49cb9"
+    },
+    {
+      "file": "t5g3-a1-t905-b1.json",
+      "sha256": "9a8b51b6d085219de133fa7a8680fcd5e8e4f043d6f4c67879637a2152908e85"
+    },
+    {
+      "file": "t5g3-a1-t905-g1.json",
+      "sha256": "9af23eae52cb57299ac89d4bf93b5480144c979ca962c709125a57c8a1522472"
+    },
+    {
+      "file": "t5g3-a1-t906-b0.json",
+      "sha256": "d6b349adb1d51d6d569d75f61031a15441bb1bda0514e3fe24307171c3a3e33f"
+    },
+    {
+      "file": "t5g3-a1-t906-b1.json",
+      "sha256": "fd324fdaaf06c7be0b5ee3c775f2c2616b57c9bd1fdaf5c0927a5afc5f69b1b7"
+    },
+    {
+      "file": "t5g3-a1-t906-g1.json",
+      "sha256": "24b2e8a2901ca0536451e679d57fa2a585285ad65d27a9d89cbf4c7285751622"
+    },
+    {
+      "file": "t5g3-a1-t907-b0.json",
+      "sha256": "ebe094518b59beb7f4265383a1b8e65ee8a81e10cb0e92b2bcadf9392b87418e"
+    },
+    {
+      "file": "t5g3-a1-t907-b1.json",
+      "sha256": "6931a08ea4d239154da55ae28dcef97fd21b95b91919c4c79cd744424343ebfd"
+    },
+    {
+      "file": "t5g3-a1-t907-g1.json",
+      "sha256": "773e43c778346a9e44a5771e58c5e097b4050e17704fa665caa6069930f7d0c2"
+    }
+  ],
+  "result": "PASS"
+}

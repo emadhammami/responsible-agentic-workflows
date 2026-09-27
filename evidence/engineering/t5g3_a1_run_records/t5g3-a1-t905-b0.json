@@ -1,0 +1,151 @@
+{
+  "code_revision": "6fae07dc69f636acfc0aa88304c57423e0f3416e",
+  "condition": null,
+  "configuration": {
+    "max_output_tokens": 1024,
+    "model_config_id": "OLLAMA-QWEN38-27B-48K-v0.1",
+    "model_name": "qwen3.8-27b-48k:latest",
+    "model_provider": "ollama",
+    "model_version": "a68eeb5701b0a627f513a134f7ec029477a04b66a4605b32e27917ac93bd67a3",
+    "prompt_version": "b0-engineering-v0.1",
+    "random_seed": 20260912,
+    "retrieval_config_id": "T5G3-SYNTHETIC-QWEN3-EMBED4B-EXACT-COSINE-v0.1",
+    "temperature": 0,
+    "workflow_config_id": "b0-two-step-rag-v0.1"
+  },
+  "errors": [],
+  "events": [],
+  "execution_mode": "engineering",
+  "experiment_id": "T5G3-SYNTHETIC-QUALIFICATION-A1",
+  "final_output": {
+    "abstained": false,
+    "answer": "Expense receipts must be retained for five years after the end of the financial year in which the expense was recorded.",
+    "cited_chunk_ids": []
+  },
+  "finished_at": "2026-09-27T12:50:45.836438Z",
+  "model": {
+    "calls": [
+      {
+        "finish_reason": "stop",
+        "input_tokens": 628,
+        "latency_ms": 6626.463708,
+        "output_tokens": 23,
+        "provider_response_id": null,
+        "sequence": 1,
+        "status": "completed",
+        "total_tokens": 651
+      }
+    ]
+  },
+  "retrieval": {
+    "calls": [
+      {
+        "latency_ms": 3086.696638,
+        "query": "How long must expense receipts be retained?",
+        "retrieved_chunks": [
+          {
+            "chunk_id": "DOC902-S001",
+            "document_id": "DOC902",
+            "page": null,
+            "rank": 1,
+            "retrieval_score": 0.8409731388092041,
+            "section": "Expense records"
+          },
+          {
+            "chunk_id": "DOC901-S002",
+            "document_id": "DOC901",
+            "page": null,
+            "rank": 2,
+            "retrieval_score": 0.5802644491195679,
+            "section": "Expense documentation"
+          },
+          {
+            "chunk_id": "DOC902-S002",
+            "document_id": "DOC902",
+            "page": null,
+            "rank": 3,
+            "retrieval_score": 0.48884451389312744,
+            "section": "Project decision records"
+          },
+          {
+            "chunk_id": "DOC904-S003",
+            "document_id": "DOC904",
+            "page": null,
+            "rank": 4,
+            "retrieval_score": 0.3517700731754303,
+            "section": "Documentation"
+          },
+          {
+            "chunk_id": "DOC903-S002",
+            "document_id": "DOC903",
+            "page": null,
+            "rank": 5,
+            "retrieval_score": 0.32250291109085083,
+            "section": "Access review"
+          },
+          {
+            "chunk_id": "DOC901-S003",
+            "document_id": "DOC901",
+            "page": null,
+            "rank": 6,
+            "retrieval_score": 0.28956007957458496,
+            "section": "Scope"
+          },
+          {
+            "chunk_id": "DOC901-S001",
+            "document_id": "DOC901",
+            "page": null,
+            "rank": 7,
+            "retrieval_score": 0.2887747585773468,
+            "section": "International travel"
+          },
+          {
+            "chunk_id": "DOC904-S001",
+            "document_id": "DOC904",
+            "page": null,
+            "rank": 8,
+            "retrieval_score": 0.2726154923439026,
+            "section": "Initial notification"
+          },
+          {
+            "chunk_id": "DOC905-S002",
+            "document_id": "DOC905",
+            "page": null,
+            "rank": 9,
+            "retrieval_score": 0.263843834400177,
+            "section": "Relationship to general travel policy"
+          },
+          {
+            "chunk_id": "DOC903-S003",
+            "document_id": "DOC903",
+            "page": null,
+            "rank": 10,
+            "retrieval_score": 0.25531259179115295,
+            "section": "Privileged access"
+          }
+        ],
+        "sequence": 1,
+        "top_k": 10
+      }
+    ]
+  },
+  "run_id": "t5g3-a1-t905-b0",
+  "schema_version": "0.4",
+  "started_at": "2026-09-27T12:50:36.122520Z",
+  "status": "completed",
+  "task_id": "T905",
+  "timing": {
+    "end_to_end_ms": 9713.95378,
+    "llm_ms": 6626.463708,
+    "retrieval_ms": 3086.696638
+  },
+  "usage": {
+    "input_tokens": 628,
+    "llm_calls": 1,
+    "output_tokens": 23,
+    "retries": 0,
+    "retrieval_calls": 1,
+    "tool_calls": 0,
+    "total_tokens": 651
+  }
+}

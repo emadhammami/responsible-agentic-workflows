@@ -1,0 +1,151 @@
+{
+  "code_revision": "6fae07dc69f636acfc0aa88304c57423e0f3416e",
+  "condition": null,
+  "configuration": {
+    "max_output_tokens": 1024,
+    "model_config_id": "OLLAMA-QWEN38-27B-48K-v0.1",
+    "model_name": "qwen3.8-27b-48k:latest",
+    "model_provider": "ollama",
+    "model_version": "a68eeb5701b0a627f513a134f7ec029477a04b66a4605b32e27917ac93bd67a3",
+    "prompt_version": "b0-engineering-v0.1",
+    "random_seed": 20260912,
+    "retrieval_config_id": "T5G3-SYNTHETIC-QWEN3-EMBED4B-EXACT-COSINE-v0.1",
+    "temperature": 0,
+    "workflow_config_id": "b0-two-step-rag-v0.1"
+  },
+  "errors": [],
+  "events": [],
+  "execution_mode": "engineering",
+  "experiment_id": "T5G3-SYNTHETIC-QUALIFICATION-A1",
+  "final_output": {
+    "abstained": false,
+    "answer": "Based on the retrieved context, the following approvals are required:\n\n1.  **Project Owner Approval:** External collaborators require approval from the project owner before access is granted (DOC903-S001).\n2.  **System Owner Approval:** Temporary privileged access requires approval from the system owner in addition to normal project access requirements (DOC903-S003).\n3.  **Department Head Approval:** International business travel must be approved by the employee's department head before travel is booked (DOC901-S001).\n\n*Note: If the destination is classified as high risk, approval from the security officer is also required in addition to the department head (DOC905-S001).*",
+    "cited_chunk_ids": []
+  },
+  "finished_at": "2026-09-27T12:48:27.354631Z",
+  "model": {
+    "calls": [
+      {
+        "finish_reason": "stop",
+        "input_tokens": 663,
+        "latency_ms": 8903.644701,
+        "output_tokens": 151,
+        "provider_response_id": null,
+        "sequence": 1,
+        "status": "completed",
+        "total_tokens": 814
+      }
+    ]
+  },
+  "retrieval": {
+    "calls": [
+      {
+        "latency_ms": 3064.59782,
+        "query": "An external collaborator needs temporary privileged project access while travelling internationally. Which approvals are required by the available policies?",
+        "retrieved_chunks": [
+          {
+            "chunk_id": "DOC903-S003",
+            "document_id": "DOC903",
+            "page": null,
+            "rank": 1,
+            "retrieval_score": 0.766274094581604,
+            "section": "Privileged access"
+          },
+          {
+            "chunk_id": "DOC903-S001",
+            "document_id": "DOC903",
+            "page": null,
+            "rank": 2,
+            "retrieval_score": 0.6487101912498474,
+            "section": "External collaborators"
+          },
+          {
+            "chunk_id": "DOC903-S002",
+            "document_id": "DOC903",
+            "page": null,
+            "rank": 3,
+            "retrieval_score": 0.6381658315658569,
+            "section": "Access review"
+          },
+          {
+            "chunk_id": "DOC901-S001",
+            "document_id": "DOC901",
+            "page": null,
+            "rank": 4,
+            "retrieval_score": 0.5288956165313721,
+            "section": "International travel"
+          },
+          {
+            "chunk_id": "DOC905-S001",
+            "document_id": "DOC905",
+            "page": null,
+            "rank": 5,
+            "retrieval_score": 0.5280278921127319,
+            "section": "High-risk destinations"
+          },
+          {
+            "chunk_id": "DOC905-S002",
+            "document_id": "DOC905",
+            "page": null,
+            "rank": 6,
+            "retrieval_score": 0.4927383363246918,
+            "section": "Relationship to general travel policy"
+          },
+          {
+            "chunk_id": "DOC901-S003",
+            "document_id": "DOC901",
+            "page": null,
+            "rank": 7,
+            "retrieval_score": 0.4675735831260681,
+            "section": "Scope"
+          },
+          {
+            "chunk_id": "DOC904-S002",
+            "document_id": "DOC904",
+            "page": null,
+            "rank": 8,
+            "retrieval_score": 0.3880538046360016,
+            "section": "Project notification"
+          },
+          {
+            "chunk_id": "DOC904-S001",
+            "document_id": "DOC904",
+            "page": null,
+            "rank": 9,
+            "retrieval_score": 0.3817424774169922,
+            "section": "Initial notification"
+          },
+          {
+            "chunk_id": "DOC902-S002",
+            "document_id": "DOC902",
+            "page": null,
+            "rank": 10,
+            "retrieval_score": 0.3627236485481262,
+            "section": "Project decision records"
+          }
+        ],
+        "sequence": 1,
+        "top_k": 10
+      }
+    ]
+  },
+  "run_id": "t5g3-a1-t903-b0",
+  "schema_version": "0.4",
+  "started_at": "2026-09-27T12:48:15.385673Z",
+  "status": "completed",
+  "task_id": "T903",
+  "timing": {
+    "end_to_end_ms": 11969.005631,
+    "llm_ms": 8903.644701,
+    "retrieval_ms": 3064.59782
+  },
+  "usage": {
+    "input_tokens": 663,
+    "llm_calls": 1,
+    "output_tokens": 151,
+    "retries": 0,
+    "retrieval_calls": 1,
+    "tool_calls": 0,
+    "total_tokens": 814
+  }
+}
