@@ -1,18 +1,18 @@
 {
   "schema_version": "0.1",
   "task_id": "T005",
-  "question": "Why does Norway's Climate Action Plan argue that forest mitigation must include both near-term and long-term measures, and which existing measures are highlighted for increasing forest removals?",
+  "question": "According to Norway's Climate Action Plan for 2021-2030, what forest-management actions does the Government plan to use or consider to enhance CO2 removals, and what does the Plan say about how scaling up such measures would change the trajectory of net forest removals?",
   "task_type": "within_document_reasoning",
   "required_documents": [
     "DOC010"
   ],
-  "reference_answer": "The Plan explains that forests at high northerly latitudes grow slowly, so relatively few measures can produce measurable effects by 2030, while measures started now can have important effects from 2030 to 2050. It also notes that net forest removals have been declining and are expected to continue declining without stronger measures. Existing measures highlighted for increasing removals include grants for higher planting densities after harvesting, forest tree breeding, and targeted forest fertilisation. Scaling up forest mitigation measures is expected to help reverse the declining trend in removals.",
+  "reference_answer": "The Government plans to continue and consider strengthening existing forest mitigation measures and to consider new managed-forest measures, including improved tending of young-growth stands, treatment of stumps to control conifer root rot, choosing suitable tree species for restocking, minimum-age requirements for tree felling, and facilitating afforestation of new areas on the basis of clear environmental criteria. In the Plan's later assessment of overall effects, intensifying forest management is expected to reverse the declining trend in net removals; implementing more mitigation measures could raise annual removals further, and minimum-age requirements for tree felling may produce a clearer effect more rapidly.",
   "reference_evidence": [
     {
       "document_id": "DOC010",
-      "page": 155,
+      "page": 154,
       "section": null,
-      "chunk_id": "DOC010-P0155-C001"
+      "chunk_id": "DOC010-P0154-C001"
     },
     {
       "document_id": "DOC010",
@@ -22,6 +22,6 @@
     }
   ],
   "difficulty": "medium",
-  "notes": "Benchmark task requiring synthesis across multiple parts of one document. Human verified on 2026-09-12 and frozen on 2026-09-12 after final validation.",
+  "notes": "Benchmark task requiring materially non-redundant synthesis across two parts of one document. The original frozen T005 was found during pre-benchmark structural validation to contain redundant evidence. T005-R1 was explicitly researcher-approved on 2026-09-27 and re-frozen before benchmark execution.",
   "validation_status": "frozen"
 }

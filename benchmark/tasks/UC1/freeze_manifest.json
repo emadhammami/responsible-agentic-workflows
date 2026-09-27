@@ -1,10 +1,10 @@
 {
   "schema_version": "0.1",
-  "freeze_id": "UC1-BENCHMARK-TASKS-v0.1",
+  "freeze_id": "UC1-BENCHMARK-TASKS-v0.2",
   "use_case_id": "UC1",
   "status": "frozen_pre_benchmark",
-  "frozen_on": "2026-09-12",
-  "pre_freeze_source_commit": "b548c4371b42c4cd6299d4e46c375884dc1b40c6",
+  "frozen_on": "2026-09-27",
+  "pre_freeze_source_commit": "76c315d814781bb91534072f2a337766b0676f46",
   "task_count": 10,
   "task_ids": [
     "T001",
@@ -31,14 +31,14 @@
     "T002.json": "70df44f45004610ec0f3882f4382ae7c5851786dea3cad8282e400d1af4a1837",
     "T003.json": "6ca0a20f8736e9524004deaedbb3c08a3f6fc125bea79a252d85158b87cdcd87",
     "T004.json": "704fff83f51729448a0d7075daf5b5570d960cb3be07d125353ecf2300e30340",
-    "T005.json": "f2fb453ff006208b4b8384f78ece3f63e09c4e8ba48c0533d2ea4997e3885c23",
+    "T005.json": "91e3db7d666429ea576c3b725816218fe922c900c49d361bdc6231b9c8de5836",
     "T006.json": "aec0964d32042a8107a0d57aab3bd7871b710e58f48c0df6f2b3e301d692e340",
     "T007.json": "e8f784adfc8f0b24fb6b98ac85d44eb30ab8356fcb01da78e6d50a8fa3c2fa0d",
     "T008.json": "8ff3a00c053afb66e1b060d2a52faf65b4125fdff1b5a1d5e9d110b7a1627cb9",
     "T009.json": "a1f7bc496bf1f83b267e3e513b52d8fbf0437fae4f10f3e4d3f7aa896e78612a",
     "T010.json": "7aa9d9c5ee24678b41ba6361f3c80d39c7cc5a5bd2798cb8417136c0c0cf976b"
   },
-  "frozen_task_set_sha256": "28828661090b42ed452127d624312ffc47536bcbd7124a8fecac8271f8c47efb",
+  "frozen_task_set_sha256": "7f442f3417655c5508de37de2988fb1e7ba8d6d03e6b1b47e6d836ce7d1cc755",
   "foundation_sha256": {
     "benchmark_scope": "931c589775b3c3ef94cffbfdcfd2add259a3bafee5cdefa728a1af41171020e2",
     "chunking_config": "c94e14f20a38f539d1e6899051e141e2cf9b58509c132c5599581776919e3006",
@@ -58,5 +58,21 @@
     "uc1_retrieval_frozen_before_task_freeze": true,
     "post_freeze_result_driven_task_edits_allowed": false
   },
-  "scope_note": "This manifest freezes the ten UC1 benchmark tasks only. It does not freeze UC2, UC3, or the complete 30-task primary benchmark."
+  "scope_note": "This manifest freezes the ten UC1 benchmark tasks only. It does not freeze UC2, UC3, or the complete 30-task primary benchmark.",
+  "frozen_task_set_hash_method": "sha256_of_canonical_json_sorted_filename_to_file_sha256_map",
+  "amendment": {
+    "type": "prebenchmark_structural_task_repair",
+    "task_id": "T005",
+    "previous_freeze_id": "UC1-BENCHMARK-TASKS-v0.1",
+    "previous_manifest_sha256": "ba8e6c564d7d7c673ddbcc531bf08bb532d56e7860fd132878e61959902a90b9",
+    "previous_t005_sha256": "f2fb453ff006208b4b8384f78ece3f63e09c4e8ba48c0533d2ea4997e3885c23",
+    "previous_frozen_task_set_sha256": "28828661090b42ed452127d624312ffc47536bcbd7124a8fecac8271f8c47efb",
+    "full_uc1_audit_sha256": "076b4dc84ccdf0aef3c91888deedbc86d47f3434401d026630462f9157070c0c",
+    "repair_proposal_sha256": "a035894268c3e145eb8a8bf44757b61821d991238c5c15891c50d27af6b9d0fe",
+    "researcher_approval_candidate": "APPROVE UC1 T005-R1 PRE-BENCHMARK REPAIR",
+    "researcher_approval_reference_answer": "APPROVE UC1 T005-R1 SOURCE-COMPLETE REFERENCE ANSWER",
+    "benchmark_started": false,
+    "benchmark_result_used": false,
+    "result_driven_revision": false
+  }
 }
