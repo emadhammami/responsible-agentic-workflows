@@ -13,6 +13,9 @@ from responsible_agentic_workflows.benchmark import (
 
 ARCHIVED_SCHEMA_PATH = Path("benchmark/config/benchmark_config.schema.v0.1.json")
 PRIMARY_CONFIG_PATH = Path("benchmark/config/primary")
+PRIMARY_FREEZE_MANIFEST_PATH = (
+    PRIMARY_CONFIG_PATH / "primary_benchmark_config_freeze_manifest.json"
+)
 
 
 def _configuration(
@@ -205,7 +208,7 @@ def test_shared_model_and_retrieval_are_single_configuration_blocks() -> None:
         ("uc3", "UC3-PAGE-W450-O75-v0.1"),
     ],
 )
-def test_prospective_primary_configuration(
+def test_frozen_primary_configuration(
     use_case: str, chunking_config_id: str
 ) -> None:
     config_id = f"benchmark-config-primary-{use_case}-v0.2"
@@ -216,7 +219,7 @@ def test_prospective_primary_configuration(
     assert configuration == {
         "schema_version": "0.2",
         "config_id": config_id,
-        "status": "working",
+        "status": "frozen",
         "model": {
             "provider": "ollama",
             "model_name": "qwen3.8-27b-48k:latest",
@@ -260,5 +263,84 @@ def test_prospective_primary_configuration(
         },
     }
 
-    with pytest.raises(ValueError, match="requires a frozen configuration"):
-        require_frozen_benchmark_configuration(configuration)
+    assert configuration["prompts"]["b1_prompt_version"] == (
+        configuration["prompts"]["g1_prompt_version"]
+    )
+    require_frozen_benchmark_configuration(configuration)
+
+
+def test_primary_freeze_manifest_bindings_and_pending_execution() -> None:
+    manifest = json.loads(PRIMARY_FREEZE_MANIFEST_PATH.read_text(encoding="utf-8"))
+
+    assert manifest["schema_version"] == "0.1"
+    assert manifest["freeze_id"] == "PRIMARY-BENCHMARK-CONFIG-FREEZE-v0.1"
+    assert manifest["status"] == "frozen"
+    assert manifest["implementation_parent_head"] == (
+        "e3febd8fd0eb68dedf543519c7808d758132eedf"
+    )
+    assert manifest["benchmark_started"] is False
+    assert manifest["result_driven_revision"] is False
+    assert manifest["benchmark_ready_to_execute"] is False
+    assert manifest["execution_order_manifest_frozen"] is False
+    assert "NOT YET FROZEN" in manifest["execution_order_manifest_status"]
+    assert "pending" in manifest["execution_order_manifest_status"]
+    assert manifest["final_benchmark_execution_code_revision_frozen"] is False
+    assert "orchestration/harness qualification remains pending" in (
+        manifest["final_benchmark_execution_code_revision_status"]
+    )
+
+    expected_configs = {
+        uc: f"benchmark/config/primary/benchmark-config-primary-{uc.lower()}-v0.2.json"
+        for uc in ("UC1", "UC2", "UC3")
+    }
+    expected_artifacts = {
+        "canonical_v0_2_schema": "benchmark/config/benchmark_config.schema.json",
+        "archived_v0_1_schema": (
+            "benchmark/config/benchmark_config.schema.v0.1.json"
+        ),
+        "frozen_decision_artifact": (
+            "evidence/engineering/benchmark_configuration_decisions_v0.1_2026-09-27.md"
+        ),
+        "generation_model_configuration": (
+            "benchmark/config/model/OLLAMA-QWEN38-27B-48K-v0.1.json"
+        ),
+        "task_set_plan": "benchmark/task_set_plan.json",
+        "primary_30_task_freeze_manifest": (
+            "benchmark/tasks/primary_benchmark_freeze_manifest.json"
+        ),
+    }
+    expected_retrieval = {
+        uc: f"benchmark/config/retrieval/{uc}-QWEN3-EMBED4B-EXACT-COSINE-v0.1.json"
+        for uc in ("UC1", "UC2", "UC3")
+    }
+    expected_sources = {
+        f"src/responsible_agentic_workflows/workflow/{name}.py"
+        for name in (
+            "b0_baseline",
+            "agentic_execution",
+            "graph",
+            "agentic_nodes",
+            "agentic_runner",
+            "b1_policy",
+            "g1_policy",
+        )
+    }
+
+    for bindings, expected in (
+        (manifest["authoritative_configs"], expected_configs),
+        (manifest["artifact_bindings"], expected_artifacts),
+        (manifest["retrieval_configuration_bindings"], expected_retrieval),
+    ):
+        assert set(bindings) == set(expected)
+        for key, path in expected.items():
+            assert bindings[key] == {
+                "path": path,
+                "sha256": sha256(Path(path).read_bytes()).hexdigest(),
+            }
+
+    assert set(manifest["source_bindings"]) == expected_sources
+    for path in expected_sources:
+        assert manifest["source_bindings"][path] == {
+            "path": path,
+            "sha256": sha256(Path(path).read_bytes()).hexdigest(),
+        }

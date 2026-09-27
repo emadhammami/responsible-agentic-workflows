@@ -1,0 +1,97 @@
+{
+  "schema_version": "0.1",
+  "freeze_id": "PRIMARY-BENCHMARK-CONFIG-FREEZE-v0.1",
+  "status": "frozen",
+  "implementation_parent_head": "e3febd8fd0eb68dedf543519c7808d758132eedf",
+  "benchmark_started": false,
+  "result_driven_revision": false,
+  "benchmark_ready_to_execute": false,
+  "authoritative_configs": {
+    "UC1": {
+      "path": "benchmark/config/primary/benchmark-config-primary-uc1-v0.2.json",
+      "sha256": "c9c1ecd06cd74bb8bf53c13c050d127d8af9cd439dc1c45e49d1498b6679a767"
+    },
+    "UC2": {
+      "path": "benchmark/config/primary/benchmark-config-primary-uc2-v0.2.json",
+      "sha256": "770435ccbd835225e488a862e0abb51c1eb13e887e389ca82ef12df69c10627d"
+    },
+    "UC3": {
+      "path": "benchmark/config/primary/benchmark-config-primary-uc3-v0.2.json",
+      "sha256": "6d3a09fb938ce537b7054e658220ff84a2276739206bfc0100e27c095bdcaf99"
+    }
+  },
+  "artifact_bindings": {
+    "canonical_v0_2_schema": {
+      "path": "benchmark/config/benchmark_config.schema.json",
+      "sha256": "95659c0f3874bce28dba3c2fcd31c5afc83aa2e710e43aed6bb2c7a0862c2208"
+    },
+    "archived_v0_1_schema": {
+      "path": "benchmark/config/benchmark_config.schema.v0.1.json",
+      "sha256": "bf6935fb64198bcec87fbac837f05aec85d731c940cc4910973c3c8489db48a7"
+    },
+    "frozen_decision_artifact": {
+      "path": "evidence/engineering/benchmark_configuration_decisions_v0.1_2026-09-27.md",
+      "sha256": "d755850dde0d6c9f0ff3f623dc2cbb9065d0a6bf2478be7c14d931663dcce7e8"
+    },
+    "generation_model_configuration": {
+      "path": "benchmark/config/model/OLLAMA-QWEN38-27B-48K-v0.1.json",
+      "sha256": "f507c2d4270ad64a81ebaaef2c18a7236fba26dd30a99ed79ceed5d9b728b5e1"
+    },
+    "task_set_plan": {
+      "path": "benchmark/task_set_plan.json",
+      "sha256": "137bcef783e124e3410301f1fc89bead7f375b6b8bad94f3a0f0c04c1cce1958"
+    },
+    "primary_30_task_freeze_manifest": {
+      "path": "benchmark/tasks/primary_benchmark_freeze_manifest.json",
+      "sha256": "e50c694e70824e50cc8b7769ee9f5561fa8a6af839e7b92906bfd07b5ba3fe70"
+    }
+  },
+  "retrieval_configuration_bindings": {
+    "UC1": {
+      "path": "benchmark/config/retrieval/UC1-QWEN3-EMBED4B-EXACT-COSINE-v0.1.json",
+      "sha256": "b3feaf22eb7126751837c6dc1dade05afc5b289dd353155e7644cdd83557109c"
+    },
+    "UC2": {
+      "path": "benchmark/config/retrieval/UC2-QWEN3-EMBED4B-EXACT-COSINE-v0.1.json",
+      "sha256": "6df4b73e262261e907f8e6e227619be1b996ced6b688eca478c7f56748acc169"
+    },
+    "UC3": {
+      "path": "benchmark/config/retrieval/UC3-QWEN3-EMBED4B-EXACT-COSINE-v0.1.json",
+      "sha256": "cbc006fbab5623af240613e4348bccd17107943e0556a5746409130cd073bac1"
+    }
+  },
+  "source_bindings": {
+    "src/responsible_agentic_workflows/workflow/b0_baseline.py": {
+      "path": "src/responsible_agentic_workflows/workflow/b0_baseline.py",
+      "sha256": "ff65547eba4d39ff111806977acb9af9f2174c370daf804c70eb6833f30aaec3"
+    },
+    "src/responsible_agentic_workflows/workflow/agentic_execution.py": {
+      "path": "src/responsible_agentic_workflows/workflow/agentic_execution.py",
+      "sha256": "7371c264d37d5df08c9803dedad3caa67f66fe147f10eb5cf0f1903f45e7752f"
+    },
+    "src/responsible_agentic_workflows/workflow/graph.py": {
+      "path": "src/responsible_agentic_workflows/workflow/graph.py",
+      "sha256": "427817fba77ccbb2aad12b0a25094c6c597e7055eef5b79a9911bc80baab1c22"
+    },
+    "src/responsible_agentic_workflows/workflow/agentic_nodes.py": {
+      "path": "src/responsible_agentic_workflows/workflow/agentic_nodes.py",
+      "sha256": "09ed4297597315d755790f73611fa3da362ace17481d4073838e7565f36a5bd1"
+    },
+    "src/responsible_agentic_workflows/workflow/agentic_runner.py": {
+      "path": "src/responsible_agentic_workflows/workflow/agentic_runner.py",
+      "sha256": "f44c96002fc6bb3c5937e64e3619fc87c6f50c7a0294a4342ceac8942fc1f986"
+    },
+    "src/responsible_agentic_workflows/workflow/b1_policy.py": {
+      "path": "src/responsible_agentic_workflows/workflow/b1_policy.py",
+      "sha256": "22c4b377fd3f6c7987375523d3d1496cd20b9efb763d851f9d856704b261a5a1"
+    },
+    "src/responsible_agentic_workflows/workflow/g1_policy.py": {
+      "path": "src/responsible_agentic_workflows/workflow/g1_policy.py",
+      "sha256": "a0fbdf98d9ec37506c32810e59668baf4fabb2d8024d0a93904645bd59bafdba"
+    }
+  },
+  "execution_order_manifest_frozen": false,
+  "execution_order_manifest_status": "NOT YET FROZEN; final run order remains pending.",
+  "final_benchmark_execution_code_revision_frozen": false,
+  "final_benchmark_execution_code_revision_status": "NOT YET FROZEN because benchmark orchestration/harness qualification remains pending."
+}

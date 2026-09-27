@@ -1,7 +1,7 @@
 {
   "schema_version": "0.2",
   "config_id": "benchmark-config-primary-uc2-v0.2",
-  "status": "working",
+  "status": "frozen",
   "model": {
     "provider": "ollama",
     "model_name": "qwen3.8-27b-48k:latest",
