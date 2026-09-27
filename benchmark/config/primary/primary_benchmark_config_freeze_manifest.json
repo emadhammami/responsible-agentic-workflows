@@ -56,7 +56,7 @@
     },
     "src/responsible_agentic_workflows/benchmark/legacy_uc2.py": {
       "path": "src/responsible_agentic_workflows/benchmark/legacy_uc2.py",
-      "sha256": "abb363f893ef2e78be17a36e945db8fc5531033af1767d86b6fe5d12795e9576"
+      "sha256": "de85dbda2bf61bf3e58bcd82d86829b0218c9dca84652930de577a886a11206e"
     },
     "src/responsible_agentic_workflows/benchmark/orchestration.py": {
       "path": "src/responsible_agentic_workflows/benchmark/orchestration.py",
@@ -67,7 +67,7 @@
       "sha256": "5a86865cf4d70869e913aa402f71e1b8869d4fc31bf73d05a608dd9cc12a8884"
     }
   },
-  "final_benchmark_execution_code_revision": "fc5a631a7cee4d412d28f2dc06e99ac96c849475",
+  "final_benchmark_execution_code_revision": "58b9e656dd57e62a5fb8640c2d3c990e4c93e530",
   "final_benchmark_execution_code_revision_frozen": true,
   "final_benchmark_execution_code_revision_status": "FROZEN",
   "freeze_id": "PRIMARY-BENCHMARK-CONFIG-FREEZE-v0.1",

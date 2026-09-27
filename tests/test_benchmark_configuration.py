@@ -269,7 +269,7 @@ def test_frozen_primary_configuration(
     require_frozen_benchmark_configuration(configuration)
 
 
-def test_primary_freeze_manifest_bindings_and_pending_execution() -> None:
+def test_primary_freeze_manifest_bindings_and_ready_execution() -> None:
     manifest = json.loads(PRIMARY_FREEZE_MANIFEST_PATH.read_text(encoding="utf-8"))
 
     assert manifest["schema_version"] == "0.1"
@@ -280,13 +280,13 @@ def test_primary_freeze_manifest_bindings_and_pending_execution() -> None:
     )
     assert manifest["benchmark_started"] is False
     assert manifest["result_driven_revision"] is False
-    assert manifest["benchmark_ready_to_execute"] is False
-    assert manifest["execution_order_manifest_frozen"] is False
-    assert "NOT YET FROZEN" in manifest["execution_order_manifest_status"]
-    assert "pending" in manifest["execution_order_manifest_status"]
-    assert manifest["final_benchmark_execution_code_revision_frozen"] is False
-    assert "orchestration/harness qualification remains pending" in (
-        manifest["final_benchmark_execution_code_revision_status"]
+    assert manifest["benchmark_ready_to_execute"] is True
+    assert manifest["execution_order_manifest_frozen"] is True
+    assert manifest["execution_order_manifest_status"] == "FROZEN"
+    assert manifest["final_benchmark_execution_code_revision_frozen"] is True
+    assert manifest["final_benchmark_execution_code_revision_status"] == "FROZEN"
+    assert manifest["final_benchmark_execution_code_revision"] == (
+        "58b9e656dd57e62a5fb8640c2d3c990e4c93e530"
     )
 
     expected_configs = {
