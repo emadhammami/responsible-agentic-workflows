@@ -15,7 +15,7 @@ from responsible_agentic_workflows.benchmark.legacy_uc2 import (
 from responsible_agentic_workflows.ingestion import DocumentChunk
 
 
-def _fixture(tmp_path, *, change=None):
+def _fixture(tmp_path, *, change=None, chunking_config_id_mode="match"):
     artifact_directory = tmp_path / "artifacts"
     artifact_directory.mkdir()
     chunks_path = tmp_path / "chunks.jsonl"
@@ -57,13 +57,19 @@ def _fixture(tmp_path, *, change=None):
     chunks_path.write_text("".join(json.dumps(row) + "\n" for row in rows))
     np.save(artifact_directory / "embeddings.npy", matrix)
     ids_path = artifact_directory / "chunk_ids.json"
-    ids_path.write_text(json.dumps({
+    ids_payload = {
         "retrieval_config_id": config["retrieval_config_id"],
-        "chunking_config_id": config["chunking_config_id"],
         "use_case_id": "UC2",
         "chunk_count": 293,
         "chunk_ids": ids,
-    }))
+    }
+    if chunking_config_id_mode == "match":
+        ids_payload["chunking_config_id"] = config["chunking_config_id"]
+    elif chunking_config_id_mode == "wrong":
+        ids_payload["chunking_config_id"] = "WRONG-CHUNKING-ID"
+    elif chunking_config_id_mode != "missing":
+        raise ValueError("unsupported chunking_config_id_mode")
+    ids_path.write_text(json.dumps(ids_payload))
     source_inventory_path.write_text(inventory)
     bindings = LegacyUC2Bindings(
         chunks=_sha256(chunks_path),
@@ -115,6 +121,20 @@ def test_synthetic_success_and_exact_adaptation(tmp_path):
     assert chunks[-1].chunk_id == "C292"
     with pytest.raises(ValueError, match="SHA256 mismatch"):
         load_legacy_uc2_artifacts(**{k: v for k, v in paths.items() if k != "bindings"})
+
+
+def test_legacy_chunk_ids_may_omit_chunking_config_id(tmp_path):
+    paths = _fixture(tmp_path, chunking_config_id_mode="missing")
+    chunks, matrix, metadata = _load_legacy_uc2_artifacts(**paths)
+    assert len(chunks) == 293
+    assert matrix.shape == (293, 2560)
+    assert metadata["status"] == "frozen"
+
+
+def test_present_chunking_config_id_must_match(tmp_path):
+    paths = _fixture(tmp_path, chunking_config_id_mode="wrong")
+    with pytest.raises(ValueError, match="frozen retrieval identity mismatch"):
+        _load_legacy_uc2_artifacts(**paths)
 
 
 def test_hash_failure(tmp_path):

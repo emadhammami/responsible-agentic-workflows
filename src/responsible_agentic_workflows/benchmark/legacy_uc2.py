@@ -84,7 +84,10 @@ def _load_legacy_uc2_artifacts(
         or metadata.get("source_chunks_sha256") != bindings.chunks
         or metadata.get("chunk_ids_sha256") != bindings.chunk_ids
         or metadata.get("embeddings_sha256") != bindings.embeddings
-        or saved.get("chunking_config_id") != config.get("chunking_config_id")
+        or (
+            saved.get("chunking_config_id") is not None
+            and saved.get("chunking_config_id") != config.get("chunking_config_id")
+        )
         or metadata.get("embedding_model") != embedding.get("model_tag")
         or metadata.get("embedding_model_digest") != embedding.get("model_digest")
         or metadata.get("query_instruction") != embedding.get("query_instruction")
