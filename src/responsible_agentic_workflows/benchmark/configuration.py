@@ -4,7 +4,7 @@ import json
 from copy import deepcopy
 from pathlib import Path
 
-from jsonschema import Draft202012Validator, FormatChecker
+from jsonschema import Draft202012Validator, FormatChecker, ValidationError
 
 DEFAULT_BENCHMARK_CONFIG_SCHEMA = Path(
     "benchmark/config/benchmark_config.schema.json"
@@ -30,6 +30,12 @@ def validate_benchmark_configuration(
     )
 
     validator.validate(configuration)
+
+    prompts = configuration["prompts"]
+    if prompts["b1_prompt_version"] != prompts["g1_prompt_version"]:
+        raise ValidationError(
+            "prompts.b1_prompt_version must equal prompts.g1_prompt_version"
+        )
 
 
 def load_benchmark_configuration(

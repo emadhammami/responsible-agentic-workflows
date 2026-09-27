@@ -1,4 +1,5 @@
 import json
+from hashlib import sha256
 from pathlib import Path
 
 import pytest
@@ -10,14 +11,17 @@ from responsible_agentic_workflows.benchmark import (
     validate_benchmark_configuration,
 )
 
+ARCHIVED_SCHEMA_PATH = Path("benchmark/config/benchmark_config.schema.v0.1.json")
+PRIMARY_CONFIG_PATH = Path("benchmark/config/primary")
+
 
 def _configuration(
     *,
     status: str = "working",
 ) -> dict[str, object]:
     return {
-        "schema_version": "0.1",
-        "config_id": "benchmark-config-unit-test-v0.1",
+        "schema_version": "0.2",
+        "config_id": "benchmark-config-unit-test-v0.2",
         "status": status,
         "model": {
             "provider": "test-provider",
@@ -38,7 +42,7 @@ def _configuration(
         "prompts": {
             "b0_prompt_version": "b0-prompt-v0.1",
             "b1_prompt_version": "b1-prompt-v0.1",
-            "g1_prompt_version": "g1-prompt-v0.1",
+            "g1_prompt_version": "b1-prompt-v0.1",
         },
         "workflows": {
             "b0_config_id": "b0-workflow-v0.1",
@@ -50,12 +54,25 @@ def _configuration(
             "max_llm_calls_per_run": None,
             "max_retrieval_calls_per_run": None,
             "max_retries_per_run": 0,
+            "timeout_ms": None,
         },
         "execution": {
             "repetitions": 1,
             "random_seed": None,
         },
     }
+
+
+def test_archived_v01_schema_preserves_bytes_and_validates_v01() -> None:
+    archived_bytes = ARCHIVED_SCHEMA_PATH.read_bytes()
+    assert sha256(archived_bytes).hexdigest() == (
+        "bf6935fb64198bcec87fbac837f05aec85d731c940cc4910973c3c8489db48a7"
+    )
+
+    configuration = _configuration()
+    configuration["schema_version"] = "0.1"
+    del configuration["resource_limits"]["timeout_ms"]
+    validate_benchmark_configuration(configuration, schema_path=ARCHIVED_SCHEMA_PATH)
 
 
 def test_working_configuration_validates() -> None:
@@ -89,6 +106,42 @@ def test_invalid_top_k_is_rejected() -> None:
     configuration["retrieval"]["top_k"] = 0
 
     with pytest.raises(ValidationError):
+        validate_benchmark_configuration(configuration)
+
+
+def test_v02_requires_timeout_ms() -> None:
+    configuration = _configuration()
+    del configuration["resource_limits"]["timeout_ms"]
+
+    with pytest.raises(ValidationError, match="timeout_ms"):
+        validate_benchmark_configuration(configuration)
+
+
+@pytest.mark.parametrize("timeout_ms", [None, 1, 1.5])
+def test_valid_timeout_ms(timeout_ms: float | None) -> None:
+    configuration = _configuration()
+    configuration["resource_limits"]["timeout_ms"] = timeout_ms
+
+    validate_benchmark_configuration(configuration)
+
+
+@pytest.mark.parametrize("timeout_ms", [0, -1, -0.5])
+def test_nonpositive_timeout_ms_is_rejected(timeout_ms: float) -> None:
+    configuration = _configuration()
+    configuration["resource_limits"]["timeout_ms"] = timeout_ms
+
+    with pytest.raises(ValidationError, match="minimum"):
+        validate_benchmark_configuration(configuration)
+
+
+def test_b1_g1_prompt_mismatch_is_rejected() -> None:
+    configuration = _configuration()
+    configuration["prompts"]["g1_prompt_version"] = "different-prompt-v0.1"
+
+    with pytest.raises(
+        ValidationError,
+        match=r"prompts\.b1_prompt_version must equal prompts\.g1_prompt_version",
+    ):
         validate_benchmark_configuration(configuration)
 
 
@@ -142,3 +195,70 @@ def test_shared_model_and_retrieval_are_single_configuration_blocks() -> None:
         "chunking_config_id",
         "top_k",
     }
+
+
+@pytest.mark.parametrize(
+    ("use_case", "chunking_config_id"),
+    [
+        ("uc1", "UC1-PAGE-W450-O75-v0.1"),
+        ("uc2", "UC2-SOURCEUNIT-W450-O75-v0.1"),
+        ("uc3", "UC3-PAGE-W450-O75-v0.1"),
+    ],
+)
+def test_prospective_primary_configuration(
+    use_case: str, chunking_config_id: str
+) -> None:
+    config_id = f"benchmark-config-primary-{use_case}-v0.2"
+    configuration = load_benchmark_configuration(
+        PRIMARY_CONFIG_PATH / f"{config_id}.json"
+    )
+
+    assert configuration == {
+        "schema_version": "0.2",
+        "config_id": config_id,
+        "status": "working",
+        "model": {
+            "provider": "ollama",
+            "model_name": "qwen3.8-27b-48k:latest",
+            "model_config_id": "OLLAMA-QWEN38-27B-48K-v0.1",
+            "model_version": (
+                "a68eeb5701b0a627f513a134f7ec029477a04b66a4605b32e27917ac93bd67a3"
+            ),
+            "temperature": 0,
+            "max_output_tokens": 1024,
+        },
+        "retrieval": {
+            "retrieval_config_id": (
+                f"{use_case.upper()}-QWEN3-EMBED4B-EXACT-COSINE-v0.1"
+            ),
+            "backend": "dense-exact-cosine",
+            "embedding_model": "qwen3-embedding:4b-q4_K_M",
+            "vector_store": None,
+            "chunking_config_id": chunking_config_id,
+            "top_k": 10,
+        },
+        "prompts": {
+            "b0_prompt_version": "b0-engineering-v0.1",
+            "b1_prompt_version": "agentic-engineering-v0.1",
+            "g1_prompt_version": "agentic-engineering-v0.1",
+        },
+        "workflows": {
+            "b0_config_id": "b0-two-step-rag-v0.1",
+            "b1_config_id": "b1-agentic-fixed-recovery-v0.1",
+            "g1_config_id": "g1-agentic-ergr-v0.1",
+        },
+        "resource_limits": {
+            "max_total_tokens_per_run": None,
+            "max_llm_calls_per_run": 5,
+            "max_retrieval_calls_per_run": 2,
+            "max_retries_per_run": 1,
+            "timeout_ms": None,
+        },
+        "execution": {
+            "repetitions": 3,
+            "random_seed": 20260912,
+        },
+    }
+
+    with pytest.raises(ValueError, match="requires a frozen configuration"):
+        require_frozen_benchmark_configuration(configuration)

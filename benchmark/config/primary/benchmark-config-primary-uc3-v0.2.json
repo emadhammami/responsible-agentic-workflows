@@ -1,0 +1,42 @@
+{
+  "schema_version": "0.2",
+  "config_id": "benchmark-config-primary-uc3-v0.2",
+  "status": "working",
+  "model": {
+    "provider": "ollama",
+    "model_name": "qwen3.8-27b-48k:latest",
+    "model_config_id": "OLLAMA-QWEN38-27B-48K-v0.1",
+    "model_version": "a68eeb5701b0a627f513a134f7ec029477a04b66a4605b32e27917ac93bd67a3",
+    "temperature": 0,
+    "max_output_tokens": 1024
+  },
+  "retrieval": {
+    "retrieval_config_id": "UC3-QWEN3-EMBED4B-EXACT-COSINE-v0.1",
+    "backend": "dense-exact-cosine",
+    "embedding_model": "qwen3-embedding:4b-q4_K_M",
+    "vector_store": null,
+    "chunking_config_id": "UC3-PAGE-W450-O75-v0.1",
+    "top_k": 10
+  },
+  "prompts": {
+    "b0_prompt_version": "b0-engineering-v0.1",
+    "b1_prompt_version": "agentic-engineering-v0.1",
+    "g1_prompt_version": "agentic-engineering-v0.1"
+  },
+  "workflows": {
+    "b0_config_id": "b0-two-step-rag-v0.1",
+    "b1_config_id": "b1-agentic-fixed-recovery-v0.1",
+    "g1_config_id": "g1-agentic-ergr-v0.1"
+  },
+  "resource_limits": {
+    "max_total_tokens_per_run": null,
+    "max_llm_calls_per_run": 5,
+    "max_retrieval_calls_per_run": 2,
+    "max_retries_per_run": 1,
+    "timeout_ms": null
+  },
+  "execution": {
+    "repetitions": 3,
+    "random_seed": 20260912
+  }
+}
