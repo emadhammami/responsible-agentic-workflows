@@ -1,0 +1,243 @@
+{
+  "allocation": {
+    "UC1": {
+      "B0": 3,
+      "B1": 3,
+      "G1": 3
+    },
+    "UC2": {
+      "B0": 3,
+      "B1": 3,
+      "G1": 3
+    },
+    "UC3": {
+      "B0": 3,
+      "B1": 3,
+      "G1": 3
+    }
+  },
+  "purpose": "expert human validation of blinded LLM-judge scoring",
+  "schema_version": "human-validation-subset-v1.2",
+  "selected": [
+    {
+      "condition": "B0",
+      "evaluation_id": "E0144",
+      "repetition": 1,
+      "selection_hash": "044b0314cca40117d4f732e8544e65bb8127730533178c98678f2db5a256d7d8",
+      "task_id": "T006",
+      "use_case": "UC1"
+    },
+    {
+      "condition": "B0",
+      "evaluation_id": "E0093",
+      "repetition": 2,
+      "selection_hash": "04d946f7895600d129713c757b1c61a2f37ad1b1091dedc624f849b57a7fe68a",
+      "task_id": "T010",
+      "use_case": "UC1"
+    },
+    {
+      "condition": "B0",
+      "evaluation_id": "E0220",
+      "repetition": 3,
+      "selection_hash": "0c704ce3866ee3fe11ea0a696d44a42a00303224e5e4ab7d5a2c9a66c3d8e88e",
+      "task_id": "T010",
+      "use_case": "UC1"
+    },
+    {
+      "condition": "B1",
+      "evaluation_id": "E0258",
+      "repetition": 3,
+      "selection_hash": "066f757aa3eb5761e0fec8e1451d91a1a415d6f6eb53097fa29536d9b9ab8fb1",
+      "task_id": "T004",
+      "use_case": "UC1"
+    },
+    {
+      "condition": "B1",
+      "evaluation_id": "E0079",
+      "repetition": 1,
+      "selection_hash": "08a7836f566b1d27e221f6e797d26696a29db267c40b27c7afa46bf575dd0f71",
+      "task_id": "T005",
+      "use_case": "UC1"
+    },
+    {
+      "condition": "B1",
+      "evaluation_id": "E0229",
+      "repetition": 1,
+      "selection_hash": "0efe8aa1eaad667eebb3f613fc0020cb48cbd9acd793f9405afbae4750ff4e5b",
+      "task_id": "T007",
+      "use_case": "UC1"
+    },
+    {
+      "condition": "G1",
+      "evaluation_id": "E0140",
+      "repetition": 2,
+      "selection_hash": "02e9ab14d7f1813a26bf73612b92242fd35822af1b0f9016f31f37347184d06b",
+      "task_id": "T001",
+      "use_case": "UC1"
+    },
+    {
+      "condition": "G1",
+      "evaluation_id": "E0160",
+      "repetition": 3,
+      "selection_hash": "06c20776da38872bb8b468d9a042a8dace5733430bf8b08bee11e0f184b5bba2",
+      "task_id": "T007",
+      "use_case": "UC1"
+    },
+    {
+      "condition": "G1",
+      "evaluation_id": "E0006",
+      "repetition": 2,
+      "selection_hash": "0908e50bde48887a50afa86d35a5396d28ff14a8fe8be068a3cd058626ebffb2",
+      "task_id": "T010",
+      "use_case": "UC1"
+    },
+    {
+      "condition": "B0",
+      "evaluation_id": "E0242",
+      "repetition": 1,
+      "selection_hash": "0326193ea81788e4301e3f81485f2ac368458ddc1c084e6968798cfbb9e81bb0",
+      "task_id": "T017",
+      "use_case": "UC2"
+    },
+    {
+      "condition": "B0",
+      "evaluation_id": "E0126",
+      "repetition": 2,
+      "selection_hash": "05a0c7a9086bbbd4b4a8742baf3946e916e3bea54b012d93f203a54afe5fc75b",
+      "task_id": "T017",
+      "use_case": "UC2"
+    },
+    {
+      "condition": "B0",
+      "evaluation_id": "E0043",
+      "repetition": 3,
+      "selection_hash": "08fa27f27589000c74801a98c1291ded67b8de06f0749f8423063a149b07c531",
+      "task_id": "T014",
+      "use_case": "UC2"
+    },
+    {
+      "condition": "B1",
+      "evaluation_id": "E0188",
+      "repetition": 2,
+      "selection_hash": "0654aa634a90acfb954f9c89972fdf535f660c3c3d6ce62e36667f4d88c19801",
+      "task_id": "T018",
+      "use_case": "UC2"
+    },
+    {
+      "condition": "B1",
+      "evaluation_id": "E0263",
+      "repetition": 1,
+      "selection_hash": "083dcf34caf757023f628e27d690f131b55f21f692d7e2281fc6dbbc45e5aaec",
+      "task_id": "T012",
+      "use_case": "UC2"
+    },
+    {
+      "condition": "B1",
+      "evaluation_id": "E0056",
+      "repetition": 1,
+      "selection_hash": "172cffb015636a70b6fa9abbaefc814b2267c485e4eb9202c3a56985dbac5364",
+      "task_id": "T014",
+      "use_case": "UC2"
+    },
+    {
+      "condition": "G1",
+      "evaluation_id": "E0081",
+      "repetition": 1,
+      "selection_hash": "014b292fdd987a7f462592be262d18caf5ce6c384bdec92b4dc14f3212fed623",
+      "task_id": "T012",
+      "use_case": "UC2"
+    },
+    {
+      "condition": "G1",
+      "evaluation_id": "E0055",
+      "repetition": 2,
+      "selection_hash": "0cc4789176babfd4db7fffd4bbd09f5994f87ee618d306627ec9439de0dc90cd",
+      "task_id": "T018",
+      "use_case": "UC2"
+    },
+    {
+      "condition": "G1",
+      "evaluation_id": "E0171",
+      "repetition": 3,
+      "selection_hash": "0ddd569d26dc87f314afadd2f68dd9b10ec2382a37435e3a43cebeadd9aa4a89",
+      "task_id": "T018",
+      "use_case": "UC2"
+    },
+    {
+      "condition": "B0",
+      "evaluation_id": "E0227",
+      "repetition": 1,
+      "selection_hash": "06cea1360826693ed3b909891ad3db8b5379c2a4b3c569ef9732639e7c2cd339",
+      "task_id": "T024",
+      "use_case": "UC3"
+    },
+    {
+      "condition": "B0",
+      "evaluation_id": "E0128",
+      "repetition": 1,
+      "selection_hash": "134388996c162c17edc1f4788faa6da3e3a385c23fa5d02691bb2bf30033d87e",
+      "task_id": "T022",
+      "use_case": "UC3"
+    },
+    {
+      "condition": "B0",
+      "evaluation_id": "E0214",
+      "repetition": 3,
+      "selection_hash": "1fc2aa29c906a9d834d5103c4fddf8c2b8fceb8d25f68b558fb05713d9248734",
+      "task_id": "T028",
+      "use_case": "UC3"
+    },
+    {
+      "condition": "B1",
+      "evaluation_id": "E0241",
+      "repetition": 3,
+      "selection_hash": "0227dd2463aae8e1fdb36b3450f84a0266dbcaa14675df725ab5c5613912e223",
+      "task_id": "T028",
+      "use_case": "UC3"
+    },
+    {
+      "condition": "B1",
+      "evaluation_id": "E0018",
+      "repetition": 1,
+      "selection_hash": "07a5ba2701f91b1f0485d088b4aed75afe67617bfc28475146791f1c2d57073b",
+      "task_id": "T022",
+      "use_case": "UC3"
+    },
+    {
+      "condition": "B1",
+      "evaluation_id": "E0075",
+      "repetition": 2,
+      "selection_hash": "0f858813059819795db98cf8c21dfd137ffe265ec4c23aeec27689a4ebb8c723",
+      "task_id": "T029",
+      "use_case": "UC3"
+    },
+    {
+      "condition": "G1",
+      "evaluation_id": "E0236",
+      "repetition": 3,
+      "selection_hash": "079323fdae2d83ba6b24f5e3aa420408d63b1d6b8ddb244d815309597192feec",
+      "task_id": "T021",
+      "use_case": "UC3"
+    },
+    {
+      "condition": "G1",
+      "evaluation_id": "E0169",
+      "repetition": 2,
+      "selection_hash": "19ec27e5e53072fd92f2498de1e0d4640b784c4e972d4417b575209a1bebecf2",
+      "task_id": "T030",
+      "use_case": "UC3"
+    },
+    {
+      "condition": "G1",
+      "evaluation_id": "E0115",
+      "repetition": 1,
+      "selection_hash": "29d456ddda5c84f3774ff5932520068b492251a65e6c4eff72528fad932fe5a5",
+      "task_id": "T025",
+      "use_case": "UC3"
+    }
+  ],
+  "selection_method": "deterministic SHA256 rank within each use_case x condition stratum",
+  "selection_seed": "20261006-human-validation-v1.2",
+  "selection_timing": "before any LLM judge execution or statistical outcome analysis",
+  "target_n": 27
+}
