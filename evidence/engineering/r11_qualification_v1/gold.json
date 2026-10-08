@@ -1,0 +1,61 @@
+{
+  "Q01": [
+    2,
+    "not_applicable",
+    [
+      "SUPPORTED"
+    ]
+  ],
+  "Q02": [
+    0,
+    "incorrect_abstention",
+    []
+  ],
+  "Q03": [
+    0,
+    "not_applicable",
+    [
+      "CONTRADICTED"
+    ]
+  ],
+  "Q04": [
+    2,
+    "not_applicable",
+    [
+      "PARTIALLY_SUPPORTED"
+    ]
+  ],
+  "Q05": [
+    0,
+    "failed_to_abstain",
+    [
+      "UNSUPPORTED"
+    ]
+  ],
+  "Q06": [
+    1,
+    "not_applicable",
+    [
+      "PARTIALLY_SUPPORTED"
+    ]
+  ],
+  "Q07": [
+    2,
+    "correct_abstention",
+    []
+  ],
+  "Q08": [
+    2,
+    "not_applicable",
+    [
+      "UNSUPPORTED"
+    ]
+  ],
+  "Q09": [
+    2,
+    "not_applicable",
+    [
+      "CONTRADICTED"
+    ]
+  ]
+}

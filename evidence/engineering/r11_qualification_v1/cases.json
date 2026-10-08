@@ -1,0 +1,173 @@
+[
+  {
+    "evaluation_id": "Q01",
+    "question": "How many labeled specimen envelopes were counted during intake?",
+    "generated_output": {
+      "kind": "answer",
+      "answer": "Fifteen specimen envelopes were counted."
+    },
+    "reference_answer": "Fifteen specimen envelopes were counted.",
+    "reference_evidence": [
+      {
+        "text": "Intake tally: Staff counted three sleeves containing five labeled specimen envelopes each."
+      }
+    ],
+    "retrieved_evidence": [
+      {
+        "text": "Intake tally: Staff counted three sleeves containing five labeled specimen envelopes each."
+      }
+    ]
+  },
+  {
+    "evaluation_id": "Q02",
+    "question": "Which role signs off on the quarterly access roster?",
+    "generated_output": {
+      "kind": "abstention",
+      "answer": null
+    },
+    "reference_answer": "The records custodian signs off on the quarterly access roster.",
+    "reference_evidence": [
+      {
+        "text": "Access procedure: Every quarterly access roster is signed off by the records custodian."
+      }
+    ],
+    "retrieved_evidence": [
+      {
+        "text": "Access procedure: Every quarterly access roster is signed off by the records custodian."
+      }
+    ]
+  },
+  {
+    "evaluation_id": "Q03",
+    "question": "What temperature must the reagent cooler remain below?",
+    "generated_output": {
+      "kind": "answer",
+      "answer": "The reagent cooler must remain below 12 degrees Celsius."
+    },
+    "reference_answer": "The reagent cooler must remain below 8 degrees Celsius.",
+    "reference_evidence": [
+      {
+        "text": "Reagent storage directive: The cooler must stay below 8 degrees Celsius."
+      }
+    ],
+    "retrieved_evidence": [
+      {
+        "text": "Reagent storage directive: The cooler must stay below 8 degrees Celsius."
+      }
+    ]
+  },
+  {
+    "evaluation_id": "Q04",
+    "question": "Which of the East and West research annexes require weekly inventory logs?",
+    "generated_output": {
+      "kind": "answer",
+      "answer": "Both the East and West research annexes require weekly inventory logs."
+    },
+    "reference_answer": "Both annexes require weekly inventory logs.",
+    "reference_evidence": [
+      {
+        "text": "Current inventory directive: East and West research annexes must each maintain weekly inventory logs."
+      }
+    ],
+    "retrieved_evidence": [
+      {
+        "text": "East annex procedure: The East research annex maintains a weekly inventory log. This procedure says nothing about the West annex."
+      }
+    ]
+  },
+  {
+    "evaluation_id": "Q05",
+    "question": "What account code was finally allocated to the unreleased mapping study?",
+    "generated_output": {
+      "kind": "answer",
+      "answer": "The allocated account code was 7314."
+    },
+    "reference_answer": "The allocated account code is not established in the records.",
+    "reference_evidence": [
+      {
+        "text": "Project accounting note: The mapping study is pending approval. Its allocated-account-code field is blank."
+      }
+    ],
+    "retrieved_evidence": [
+      {
+        "text": "Project accounting note: The mapping study is proposed and no allocation code has been entered."
+      }
+    ]
+  },
+  {
+    "evaluation_id": "Q06",
+    "question": "What must be recorded on every sample transfer manifest?",
+    "generated_output": {
+      "kind": "answer",
+      "answer": "Every transfer manifest must record the collection location and delivery location."
+    },
+    "reference_answer": "A transfer manifest must record collection location, delivery location, and receiving officer signature.",
+    "reference_evidence": [
+      {
+        "text": "Transfer policy: Each sample transfer manifest must include collection location, delivery location, and receiving officer signature."
+      }
+    ],
+    "retrieved_evidence": [
+      {
+        "text": "Manifest instructions: Every transfer manifest must record the collection location. No other required fields are stated in this excerpt."
+      }
+    ]
+  },
+  {
+    "evaluation_id": "Q07",
+    "question": "What is the confirmed explanation for last Friday’s test-bench interruption?",
+    "generated_output": {
+      "kind": "abstention",
+      "answer": null
+    },
+    "reference_answer": "The explanation has not yet been confirmed.",
+    "reference_evidence": [
+      {
+        "text": "Investigation summary: The reason for Friday’s test-bench interruption is still unconfirmed."
+      }
+    ],
+    "retrieved_evidence": [
+      {
+        "text": "Maintenance note: Friday’s test bench stopped for 19 minutes. Its cause remains under investigation."
+      }
+    ]
+  },
+  {
+    "evaluation_id": "Q08",
+    "question": "For how many months must pilot feedback forms be archived?",
+    "generated_output": {
+      "kind": "answer",
+      "answer": "Pilot feedback forms must be archived for thirty months."
+    },
+    "reference_answer": "Pilot feedback forms must be archived for thirty months.",
+    "reference_evidence": [
+      {
+        "text": "Retention schedule: Pilot feedback forms have a retention period of thirty months."
+      }
+    ],
+    "retrieved_evidence": [
+      {
+        "text": "Filing instructions: Pilot feedback forms are stored in a restricted folder with a project identifier. No retention duration appears in this extract."
+      }
+    ]
+  },
+  {
+    "evaluation_id": "Q09",
+    "question": "Which valve indicator color requires immediate isolation under the current protocol?",
+    "generated_output": {
+      "kind": "answer",
+      "answer": "The amber valve indicator requires immediate isolation."
+    },
+    "reference_answer": "The amber indicator requires immediate isolation.",
+    "reference_evidence": [
+      {
+        "text": "Current revision 4: Amber valve indicator requires immediate isolation; red is an advisory status."
+      }
+    ],
+    "retrieved_evidence": [
+      {
+        "text": "Superseded revision 2: Red valve indicator requires immediate isolation; amber is only advisory."
+      }
+    ]
+  }
+]
