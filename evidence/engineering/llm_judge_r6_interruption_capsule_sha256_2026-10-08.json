@@ -1,0 +1,253 @@
+{
+  "capsule": "/home/emadh/primary-benchmark-results/LLM-JUDGE-R6-QUALIFICATION-2026-10-07",
+  "files": [
+    {
+      "path": "C01/before_inference.json",
+      "sha256": "8750167c4408be6b870967f1a4f5091a07eaf0d53628a2444ba2edb96e9bea62",
+      "size_bytes": 105454
+    },
+    {
+      "path": "C01/evidence_sha256.json",
+      "sha256": "792ffffe2c4ec26aa88a15db6adcaea087487fadb961a715c35aeee6cd45b401",
+      "size_bytes": 560
+    },
+    {
+      "path": "C01/first_call_placement.json",
+      "sha256": "1fe62ca0da3309279e1d868c6dd72936c28463152660d28f381729b0585337a5",
+      "size_bytes": 560
+    },
+    {
+      "path": "C01/parsed_judgments.jsonl",
+      "sha256": "981671703329da76ab821df39476474538acb96c60ac6700f9958cefe094bff1",
+      "size_bytes": 11088
+    },
+    {
+      "path": "C01/raw_responses.jsonl",
+      "sha256": "933ad4c84afe17093a028edbd536cfc7b84e1ece9f59348be5cb7acdad71d64f",
+      "size_bytes": 413159
+    },
+    {
+      "path": "C01/requests.jsonl",
+      "sha256": "e3da5e0423f35025fca6faeac760343b384e87f28a6c4748fe6bf11cbf4f698d",
+      "size_bytes": 51837
+    },
+    {
+      "path": "C01/summary.json",
+      "sha256": "5cb8620299b925ebaa53b6655b07698a5790968828a00ff5e8f8b216cc4816e4",
+      "size_bytes": 668
+    },
+    {
+      "path": "C02/before_inference.json",
+      "sha256": "bd001567067e3ad2d662257b65040bcf4449525e2b55a23e2a945fedb7417522",
+      "size_bytes": 129055
+    },
+    {
+      "path": "C02/download.jsonl",
+      "sha256": "c2cb6363c5707291737e8a88a2dd077df39f91bbc266900bf647592b6a2149d4",
+      "size_bytes": 9854180
+    },
+    {
+      "path": "C02/evidence_sha256.json",
+      "sha256": "ea71acffafc1000ff4ffbab307c5b1797ba4a3f48c4762e4a659253f572c4e36",
+      "size_bytes": 648
+    },
+    {
+      "path": "C02/failed_model_removed.json",
+      "sha256": "de78b30dfab2b9ced6957a6fec233430a0bb52af1cbb60915c5d6f354cd1caa8",
+      "size_bytes": 115
+    },
+    {
+      "path": "C02/first_call_placement.json",
+      "sha256": "99b4c87fd71a404704da32a79d2fd55ac685f761035f2b942ae954bdc486f98b",
+      "size_bytes": 589
+    },
+    {
+      "path": "C02/parsed_judgments.jsonl",
+      "sha256": "0795239805d499cf899614d3c971ea7f6ebbb73893b180a68416f9a4cb22deff",
+      "size_bytes": 12006
+    },
+    {
+      "path": "C02/raw_responses.jsonl",
+      "sha256": "5deaf3558dc87828dbcad1e26f8c01d8ce86ecac14d0db251a089642b37049d8",
+      "size_bytes": 84836
+    },
+    {
+      "path": "C02/requests.jsonl",
+      "sha256": "ea1325cb111f6d17f15ea0196730d6af330e8229feaf44dfb10b583bc8c72225",
+      "size_bytes": 51963
+    },
+    {
+      "path": "C02/summary.json",
+      "sha256": "9630c0e66c4f9fcef5d2318dd6774366570dfb21cbc247e98c92c30ad443f766",
+      "size_bytes": 671
+    },
+    {
+      "path": "C03/before_inference.json",
+      "sha256": "8f309928984b0a441e234019fba961d8afd5cc2f03b2eed2ecf684bd39c572f4",
+      "size_bytes": 44952
+    },
+    {
+      "path": "C03/download.jsonl",
+      "sha256": "da118eb58fca0ec76e0e91da3d62790af0af2ebe1b190606a063c37abc23b529",
+      "size_bytes": 9127427
+    },
+    {
+      "path": "C03/evidence_sha256.json",
+      "sha256": "5ccab3672c8c5fca99295318770a17a90d2db75834c793a00d67faa0e65678d0",
+      "size_bytes": 648
+    },
+    {
+      "path": "C03/failed_model_removed.json",
+      "sha256": "5f0a59b29aacca1d949292041389412141bc0b1280f99abc42f5dffd4055c15e",
+      "size_bytes": 122
+    },
+    {
+      "path": "C03/first_call_placement.json",
+      "sha256": "71b5430f5f32ab49f14894129e64b44ea287bcd570de70075ae1054491af2588",
+      "size_bytes": 589
+    },
+    {
+      "path": "C03/parsed_judgments.jsonl",
+      "sha256": "231aee3f292d582cb03339413475fc9a130d9e4ccb16da65b9123f7c6f0ea099",
+      "size_bytes": 13130
+    },
+    {
+      "path": "C03/raw_responses.jsonl",
+      "sha256": "5890f9e479c464320a1279e45ce45f9d156a96c3fc604e08ff95f9318ee74747",
+      "size_bytes": 21032
+    },
+    {
+      "path": "C03/requests.jsonl",
+      "sha256": "3584a3601acbe4d4f962c50c8b2b44205a906c25c2911981a29952394c172cb5",
+      "size_bytes": 52106
+    },
+    {
+      "path": "C03/summary.json",
+      "sha256": "f01e20400dc31c66e658b95902465aab88e0741767d2400de99573606fda2893",
+      "size_bytes": 682
+    },
+    {
+      "path": "C04/before_inference.json",
+      "sha256": "1a95313055ce07364fd0c08fc20f734df35733a14fdc2211c2404f817088c54b",
+      "size_bytes": 167721
+    },
+    {
+      "path": "C04/download.jsonl",
+      "sha256": "3797d66a41dec3e82234a81b64e482fb70a6a6b1d724e849ad7a9231265f28a6",
+      "size_bytes": 9541893
+    },
+    {
+      "path": "C04/evidence_sha256.json",
+      "sha256": "3c4f9e99f3843786c6df7e85145a26729e7f7094df0031e898db5d49598e7c00",
+      "size_bytes": 648
+    },
+    {
+      "path": "C04/failed_model_removed.json",
+      "sha256": "a852d487b2ae858c8318a2097cce6830a6b3d31825da06c440a9e18538abbd6a",
+      "size_bytes": 120
+    },
+    {
+      "path": "C04/first_call_placement.json",
+      "sha256": "dd22caf9e5f074e61c1213a4805c496828eb01f8c2522fcbaf04e70692020075",
+      "size_bytes": 587
+    },
+    {
+      "path": "C04/parsed_judgments.jsonl",
+      "sha256": "0e7dd19ccd9d099635cef3aada4e6ec938540e3179ab6c48430519ae80417e06",
+      "size_bytes": 12407
+    },
+    {
+      "path": "C04/raw_responses.jsonl",
+      "sha256": "c0721f66ce3e7994b68ce4f0f0305b7b52f7bf52ad7d8645a066ab189a66cef0",
+      "size_bytes": 66227
+    },
+    {
+      "path": "C04/requests.jsonl",
+      "sha256": "eb3f0474854a256eadebc131cf9ddcb0c45f4db4ba166f6b4ba250c32278d4ca",
+      "size_bytes": 52035
+    },
+    {
+      "path": "C04/summary.json",
+      "sha256": "4d22bc59a87fed518da769009c648e109ed2bc3003f20652c53cbaf1ecc502c8",
+      "size_bytes": 679
+    },
+    {
+      "path": "C05/download.jsonl",
+      "sha256": "778d5b60013f06d33f95f4978209b3d42a9b7b487565abb51120434b768fbb88",
+      "size_bytes": 2133937
+    },
+    {
+      "path": "execution_start.json",
+      "sha256": "bd52d2837129e46d4302277220f4e597ccff7746917c4c8c3bc765ebbdd3a4e9",
+      "size_bytes": 182
+    },
+    {
+      "path": "hardware_before.txt",
+      "sha256": "b0f8421fa0cf131d5f5eeec22411ed5939ad7ea607a5fb85220cc5b48a8cc54d",
+      "size_bytes": 99
+    },
+    {
+      "path": "harness_freeze.json",
+      "sha256": "dd4359b1d53324f7ccca1bb25412c865b583e049d3c2e415bfd3174d661bf8f5",
+      "size_bytes": 1106
+    },
+    {
+      "path": "harness_review.json",
+      "sha256": "2d8cd1f5ee5b775b22df5150d4823c7ebf4ca365c5f268f576e2551e0a4d0fb9",
+      "size_bytes": 365
+    },
+    {
+      "path": "inputs/cases.json",
+      "sha256": "b3b1548c5e53d876fde24f48e95eb9ebd114f5291f7c22e98b29545e2a1e7de2",
+      "size_bytes": 2956
+    },
+    {
+      "path": "inputs/llm_judge_r6_candidate_search_2026-10-07.md",
+      "sha256": "b7e56744e0d0cf8b16e9f65e676fdfe58a29faf8f12bc6cbf7cafa0dad65e4e9",
+      "size_bytes": 9966
+    },
+    {
+      "path": "inputs/llm_judge_r6_qualification_contract_2026-10-07.md",
+      "sha256": "9d026fb0172b4e79036fa399f02da1e96ef4f519abc67fc70700e1bb3964f5cf",
+      "size_bytes": 12348
+    },
+    {
+      "path": "inputs/prompt.txt",
+      "sha256": "c57ad42fcef1e6382dd2b72572898a6fd21ae780bd2e9189467d6512dfeb913c",
+      "size_bytes": 1125
+    },
+    {
+      "path": "prospective_freeze.json",
+      "sha256": "3a6e458a0a6717bca2acb90195dc3bb27ffe4c4b379f5fc22234260b2003077b",
+      "size_bytes": 9219
+    },
+    {
+      "path": "protected_metadata_before.json",
+      "sha256": "6c0f2d7bfa0592452757cc7c1453d352ff5c389e99d41a36d224dbb5eac2773d",
+      "size_bytes": 686558
+    },
+    {
+      "path": "registry_manifests.json",
+      "sha256": "1737cb05345604e8baf0f76399ea644136a40ac4830ea2dd201f9aa98570451e",
+      "size_bytes": 6921
+    },
+    {
+      "path": "scripts/__pycache__/run_r6.cpython-314.pyc",
+      "sha256": "1a1a2a76123355b208550a6d10ab0600ffdf30de99642b2e789da668f746e3b3",
+      "size_bytes": 30340
+    },
+    {
+      "path": "scripts/frozen_validator.py",
+      "sha256": "925891d326cc3138f74fe2198a7786df21b1bf2de8a4c9d62984c2aae72527fd",
+      "size_bytes": 856
+    },
+    {
+      "path": "scripts/run_r6.py",
+      "sha256": "6d6264a02330ee9d34d4a0fe197c81c1addd770d7155556c03d8b24997c26ab9",
+      "size_bytes": 15760
+    }
+  ],
+  "final_pair_status": "NOT_DETERMINED_INTERRUPTED",
+  "primary_llm_judge_runs": 0,
+  "snapshot_type": "R6_INTERRUPTION_CAPSULE"
+}
