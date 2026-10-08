@@ -1,0 +1,11 @@
+{
+  "N01": [2, "not_applicable", ["SUPPORTED"]],
+  "N02": [0, "incorrect_abstention", []],
+  "N03": [0, "not_applicable", ["CONTRADICTED"]],
+  "N04": [2, "not_applicable", ["PARTIALLY_SUPPORTED"]],
+  "N05": [0, "failed_to_abstain", ["UNSUPPORTED"]],
+  "N06": [1, "not_applicable", ["SUPPORTED"]],
+  "N07": [2, "correct_abstention", []],
+  "N08": [2, "not_applicable", ["UNSUPPORTED"]],
+  "N09": [2, "not_applicable", ["CONTRADICTED"]]
+}

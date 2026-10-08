@@ -1,0 +1,74 @@
+[
+  {
+    "evaluation_id": "N01",
+    "question": "Two sealed boxes contain eight sterile vials each. How many vials were inspected?",
+    "generated_output": {"kind": "answer", "answer": "Sixteen vials were inspected."},
+    "reference_answer": "Sixteen vials were inspected.",
+    "reference_evidence": [{"text": "Inspection log: The technician inspected two boxes, with eight sterile vials in each box."}],
+    "retrieved_evidence": [{"text": "Inspection log: The technician inspected two boxes, with eight sterile vials in each box."}]
+  },
+  {
+    "evaluation_id": "N02",
+    "question": "Who must countersign an equipment incident report?",
+    "generated_output": {"kind": "abstention", "answer": null},
+    "reference_answer": "The shift lead must countersign an equipment incident report.",
+    "reference_evidence": [{"text": "Incident procedure: The shift lead countersigns every equipment incident report."}],
+    "retrieved_evidence": [{"text": "Incident procedure: The shift lead countersigns every equipment incident report."}]
+  },
+  {
+    "evaluation_id": "N03",
+    "question": "Within how many hours must a field incident be reported?",
+    "generated_output": {"kind": "answer", "answer": "A field incident must be reported within 72 hours."},
+    "reference_answer": "A field incident must be reported within 24 hours.",
+    "reference_evidence": [{"text": "Field procedure: Report incidents no later than 24 hours after discovery."}],
+    "retrieved_evidence": [{"text": "Field procedure: Report incidents no later than 24 hours after discovery."}]
+  },
+  {
+    "evaluation_id": "N04",
+    "question": "Which remote administrator sessions require multifactor authentication?",
+    "generated_output": {"kind": "answer", "answer": "Every remote administrator session requires multifactor authentication."},
+    "reference_answer": "Every remote administrator session requires multifactor authentication.",
+    "reference_evidence": [{"text": "Security policy: All remote administrator sessions require multifactor authentication, regardless of employee or contractor status."}],
+    "retrieved_evidence": [{"text": "Contractor guide: Remote administrator sessions initiated by contractors require multifactor authentication. This guide does not address employee sessions."}]
+  },
+  {
+    "evaluation_id": "N05",
+    "question": "What total amount was approved for the planned emergency generator purchase?",
+    "generated_output": {"kind": "answer", "answer": "The approved amount was 18,000 euros."},
+    "reference_answer": "The available evidence does not specify an approved amount for the generator purchase.",
+    "reference_evidence": [{"text": "Purchase request: Generator purchase is planned; the approved-total field is empty."}],
+    "retrieved_evidence": [{"text": "Purchase request: An emergency generator purchase is being planned; no approved budget figure is recorded."}]
+  },
+  {
+    "evaluation_id": "N06",
+    "question": "Which two safeguards are mandatory on loaned field tablets?",
+    "generated_output": {"kind": "answer", "answer": "Disk encryption is mandatory on loaned field tablets."},
+    "reference_answer": "Disk encryption and remote wipe are both mandatory on loaned field tablets.",
+    "reference_evidence": [{"text": "Tablet standard: Every loaned field tablet must use disk encryption and remote wipe."}],
+    "retrieved_evidence": [{"text": "Tablet onboarding sheet: Disk encryption is mandatory for loaned field tablets."}]
+  },
+  {
+    "evaluation_id": "N07",
+    "question": "What was the verified root cause of the April service outage?",
+    "generated_output": {"kind": "abstention", "answer": null},
+    "reference_answer": "The verified root cause is not yet available.",
+    "reference_evidence": [{"text": "April outage report: Root-cause investigation remains open; no cause has been verified."}],
+    "retrieved_evidence": [{"text": "Operations note: The April service outage lasted 47 minutes. The root-cause investigation remains open."}]
+  },
+  {
+    "evaluation_id": "N08",
+    "question": "How long must archive notices be retained?",
+    "generated_output": {"kind": "answer", "answer": "Archive notices must be retained for six years."},
+    "reference_answer": "Archive notices must be retained for six years.",
+    "reference_evidence": [{"text": "Records schedule: Retain archive notices for six years."}],
+    "retrieved_evidence": [{"text": "Archives guide: Store archive notices on the encrypted document server and index them by department. The guide gives no retention period."}]
+  },
+  {
+    "evaluation_id": "N09",
+    "question": "At what time does the current room-booking window close?",
+    "generated_output": {"kind": "answer", "answer": "The room-booking window closes at 16:00."},
+    "reference_answer": "The current room-booking window closes at 16:00.",
+    "reference_evidence": [{"text": "Current booking schedule: The room-booking window closes at 16:00."}],
+    "retrieved_evidence": [{"text": "Earlier booking schedule: The room-booking window closes at 15:00."}]
+  }
+]
