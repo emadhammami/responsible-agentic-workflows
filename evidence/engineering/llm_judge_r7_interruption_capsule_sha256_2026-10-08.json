@@ -1,0 +1,70 @@
+{
+  "capsule": "/home/emadh/primary-benchmark-results/LLM-JUDGE-R7-QUALIFICATION-2026-10-08",
+  "files": [
+    {
+      "path": "J1/parsed_judgments.jsonl",
+      "sha256": "3584e8d1330f93ee609f374a8b7e33c4f35c8b967ce7b4f2a8d72531ae6cfd6e",
+      "size_bytes": 615
+    },
+    {
+      "path": "J1/raw_responses.jsonl",
+      "sha256": "bae4c36d38e46ccdbfe376a6774b1d07b6323441eece03d6c9ad011d842f30bf",
+      "size_bytes": 5272
+    },
+    {
+      "path": "J1/requests.jsonl",
+      "sha256": "76f448d788de4153c3f2d6ee08396af5bef0c66dc3a18a8ffc7a8208f7a2d443",
+      "size_bytes": 6283
+    },
+    {
+      "path": "harness_freeze.json",
+      "sha256": "1b9767a11ace544bbbe8211d03840d659e9989facc450404bd3ce88f9162a204",
+      "size_bytes": 861
+    },
+    {
+      "path": "inputs/cases.json",
+      "sha256": "b3b1548c5e53d876fde24f48e95eb9ebd114f5291f7c22e98b29545e2a1e7de2",
+      "size_bytes": 2956
+    },
+    {
+      "path": "inputs/llm_judge_r7_hosted_qualification_contract_2026-10-08.md",
+      "sha256": "3a43967dda1848c66641673c50cfc90f96d923565300df5f6d411f09e68c90ca",
+      "size_bytes": 4741
+    },
+    {
+      "path": "inputs/prompt.txt",
+      "sha256": "c57ad42fcef1e6382dd2b72572898a6fd21ae780bd2e9189467d6512dfeb913c",
+      "size_bytes": 1125
+    },
+    {
+      "path": "run_started.json",
+      "sha256": "59059241ec109062b1e44dc2b69135ad050cc30560b247ff7e5472140080c2bf",
+      "size_bytes": 122
+    },
+    {
+      "path": "run_status.json",
+      "sha256": "49347604cb9e41f3ab31bc14bf5b65a667ed48a27619b38f7cc6de7ff1f891a6",
+      "size_bytes": 210
+    },
+    {
+      "path": "scripts/__pycache__/frozen_validator.cpython-314.pyc",
+      "sha256": "6a2221f75496aa0e406c68f03b355dd7932b2803098c7952e5e5639d38000255",
+      "size_bytes": 1718
+    },
+    {
+      "path": "scripts/frozen_validator.py",
+      "sha256": "925891d326cc3138f74fe2198a7786df21b1bf2de8a4c9d62984c2aae72527fd",
+      "size_bytes": 856
+    },
+    {
+      "path": "scripts/r7_hosted_qualification.py",
+      "sha256": "dcfe9e4edb4e62706a9102270d31143bb54b202a26529f436b3dd6985dd8e672",
+      "size_bytes": 18454
+    }
+  ],
+  "j1_recorded_slots": 3,
+  "j2_started": false,
+  "status": "INCOMPLETE_TRANSPORT_OR_QUOTA",
+  "stop_reason": "HTTP_ERROR_503",
+  "type": "R7_INTERRUPTION_SNAPSHOT"
+}
