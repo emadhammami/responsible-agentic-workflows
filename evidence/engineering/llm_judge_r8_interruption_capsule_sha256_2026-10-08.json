@@ -1,0 +1,81 @@
+{
+  "capsule": "/home/emadh/primary-benchmark-results/LLM-JUDGE-R8-QUALIFICATION-2026-10-08",
+  "files": [
+    {
+      "path": "J1/attempt_results.jsonl",
+      "sha256": "cc8c2f4d047de7eba40c6d1dee6b22f6022960b699b2bd48bdeeb420a7626046",
+      "size_bytes": 578
+    },
+    {
+      "path": "J1/attempts.jsonl",
+      "sha256": "8a96778178976729aa2ef08db737f08d0a32ff7651431c60d3326f06153536b8",
+      "size_bytes": 784
+    },
+    {
+      "path": "J1/parsed_judgments.jsonl",
+      "sha256": "dd83079e966f6a2c0c89865e3c1cf2c86d968efa877150cd3b1764131e6783be",
+      "size_bytes": 720
+    },
+    {
+      "path": "J1/raw_responses.jsonl",
+      "sha256": "83191a8658829f2e3bbe595698ec356bfcae7497f218af4f1eac7c2707b52406",
+      "size_bytes": 2037
+    },
+    {
+      "path": "J1/requests.jsonl",
+      "sha256": "74113154a186db0b26c4a6f5dc0423fc314d611fe94fa1e31d65fd897158e5b8",
+      "size_bytes": 4179
+    },
+    {
+      "path": "harness_freeze.json",
+      "sha256": "f67aea05caa0d17522351b50f75ce4484d8da53af757c3a0c07a2e93a628434d",
+      "size_bytes": 933
+    },
+    {
+      "path": "inputs/cases.json",
+      "sha256": "b3b1548c5e53d876fde24f48e95eb9ebd114f5291f7c22e98b29545e2a1e7de2",
+      "size_bytes": 2956
+    },
+    {
+      "path": "inputs/llm_judge_r8_hosted_qualification_contract_2026-10-08.md",
+      "sha256": "7cbf56cf66e9bdff7cb46f1de170e66ffc4d72c67136f86c7ec6a68688ca9754",
+      "size_bytes": 6612
+    },
+    {
+      "path": "inputs/prompt.txt",
+      "sha256": "c57ad42fcef1e6382dd2b72572898a6fd21ae780bd2e9189467d6512dfeb913c",
+      "size_bytes": 1125
+    },
+    {
+      "path": "run_started.json",
+      "sha256": "32da5f1a703eedad2366fc63fd2c1f729ada1c3c8624a23d9fa5c20943bd5f93",
+      "size_bytes": 122
+    },
+    {
+      "path": "run_status.json",
+      "sha256": "23bcbb4e89eb4153d0d99b1a41854d5d366e72f4aa8307009e09455280a1b377",
+      "size_bytes": 210
+    },
+    {
+      "path": "scripts/__pycache__/frozen_validator.cpython-314.pyc",
+      "sha256": "58c064069b4b1ed4ebe3f0bb464fc369b9f99b61448835cb72692f95d89ba603",
+      "size_bytes": 1718
+    },
+    {
+      "path": "scripts/frozen_validator.py",
+      "sha256": "925891d326cc3138f74fe2198a7786df21b1bf2de8a4c9d62984c2aae72527fd",
+      "size_bytes": 856
+    },
+    {
+      "path": "scripts/r8_hosted_qualification.py",
+      "sha256": "4a1155f485c3e5021cd7b8fff88c5747632ce7f65f30c0dc7ca5b54f1abd015d",
+      "size_bytes": 23565
+    }
+  ],
+  "http_attempts": 4,
+  "j1_logical_slots": 2,
+  "j2_started": false,
+  "status": "INCOMPLETE_TRANSPORT_OR_QUOTA",
+  "stop_reason": "HTTP_ERROR_503",
+  "type": "R8_INTERRUPTION_SNAPSHOT"
+}
