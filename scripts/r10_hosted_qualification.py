@@ -104,7 +104,7 @@ def repo_guard():
         raise RuntimeError("Dirty worktree")
     if sha(Path(PROTOCOL_PATH).read_bytes()) != PROTOCOL_SHA256:
         raise RuntimeError("R10 contract mismatch")
-    expected = [MATERIAL_DIR / n for n in PINN] + [Path("scripts/r10_hosted_qualification.py")]
+    expected = [MATERIAL_DIR / n for n in PINNED] + [Path("scripts/r10_hosted_qualification.py")]
     for path in expected:
         if not path.is_file() or not git("ls-files", "--error-unmatch", str(path)):
             raise RuntimeError("R10 file not committed: " + str(path))
