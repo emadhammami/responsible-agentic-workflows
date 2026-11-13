@@ -1,4 +1,4 @@
-# Scoring Protocol v1.2 — Supervisor-Agreed Evaluation Amendment
+# Scoring Protocol v1.2 — Evaluation Amendment
 
 **Date:** 2026-10-06  
 **Status:** To be frozen before new judging or statistical outcome analysis  
@@ -6,7 +6,7 @@
 
 ## 1. Reason for amendment
 
-The original scoring protocol assigned one human evaluator to all 270 benchmark outputs, with a second independent human evaluator on a subset. After implementing and piloting the blinded evaluation workflow, full manual review of all 270 outputs was judged impractical. This feasibility issue was discussed with the supervisor before statistical outcome analysis.
+The original scoring protocol assigned one human evaluator to all 270 benchmark outputs, with a second independent human evaluator on a subset. After implementing and piloting the blinded evaluation workflow, full manual review of all 270 outputs was judged impractical. This feasibility issue motivated the documented amendment before statistical outcome analysis.
 
 The revised design replaces the planned 270-output manual review with two independent blinded LLM judges, while retaining independent expert human validation on a pre-specified 27-output subset.
 
@@ -84,7 +84,7 @@ A **27-output blinded validation set** will be frozen before inspecting new judg
 
 Within each UC, the selection should be balanced across B0/B1/G1 as closely and cleanly as possible (target: 3 outputs per condition) and preserve coverage of the main task types. Selection must be deterministic/random within pre-defined strata and must not depend on judge scores or benchmark outcomes.
 
-The supervisor will help assign domain-relevant expert validators for the three use cases. The experts will evaluate a simple blinded package using the same core correctness/abstention/grounding semantics needed for validation.
+Domain-relevant expert validators for the three use cases will evaluate a simple blinded package using the same core correctness/abstention/grounding semantics needed for validation.
 
 Expert validators are **different people from the interview participants**.
 

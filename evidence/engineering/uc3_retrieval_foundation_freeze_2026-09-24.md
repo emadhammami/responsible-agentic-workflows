@@ -2,6 +2,12 @@
 
 Date: 2026-09-24
 
+> Public presentation note: nontechnical source-attribution wording was removed
+> from this display copy. The unchanged frozen-manifest SHA-256 refers to the
+> historical original recorded at commit `420627c6fba47d0eef93ad6ca7779021dfaa32f3`. The original
+> remains accessible in Git history; underlying scientific settings, artifact
+> identities and reported measurements were not modified.
+
 ## Purpose
 
 This record defines the pre-benchmark freeze boundary for the UC3 retrieval
@@ -64,15 +70,14 @@ unchanged.
 
 ## Provenance wording correction (POST-4B4)
 
-The pre-frozen benchmark scope note (notes[0]) described the nine documents as
-"a supervisor-provided, independently verified authoritative public set." The
-pre-retrieval records do not support the "supervisor-provided" attribution:
+The pre-frozen benchmark scope note (notes[0]) included a source-attribution
+claim that was not supported by the pre-retrieval records.
 `source_selection.tsv` lists all nine documents with public source URLs (EC JRC,
-CoE, EU EUR-Lex, UNESCO), and `eligibility_review.tsv` records every document's
-runtime-independence basis (criterion G) as an "independently public" source —
-no record states that the documents were "supervisor-provided."
+CoE, EU EUR-Lex, UNESCO), and `eligibility_review.tsv` records the
+runtime-independence basis (criterion G) as an independently public source.
+The unsupported attribution was corrected using those records.
 
-`SUPERVISOR_PROVIDED_WORDING_SUPPORTED=NO`
+`UNSUPPORTED_SOURCE_ATTRIBUTION_CORRECTED=YES`
 
 Only notes[0] was corrected to be faithful to the corroborating records; all
 membership, `source_groups`, `controls`, and `benchmark_scope_rule` fields were
@@ -177,9 +182,8 @@ Only documentary/provenance fields were synchronized:
 
 - the UC3 use-case note was updated from pre-adjudication/pre-freeze wording
   to the established post-4B4 state;
-- DOC032-DOC040 `discovered_via` wording was changed from the unsupported
-  "Supervisor-provided UC3 source selection" attribution to the neutral
-  "UC3 curation/source-identification process";
+- DOC032-DOC040 `discovered_via` wording was corrected to the neutral
+  "UC3 curation/source-identification process" following provenance review;
 - the file's missing final newline was normalized.
 
 No document ID, membership, accepted/excluded status, source organization,
