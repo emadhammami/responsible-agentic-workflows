@@ -1,0 +1,79 @@
+panel,condition,metric,task_id,UC,plotted_value,unit,denominator_runs,n_repetitions_per_task,analysis_unit
+a,B1,recovery_attempt_count,,ALL,24,runs,90,,"raw execution incidence, descriptive"
+a,B1,recovery_retrieval_count,,ALL,21,runs,90,,"raw execution incidence, descriptive"
+a,B1,pre_recovery_abstention,,ALL,0,runs,90,,"raw execution incidence, descriptive"
+a,B1,final_abstention,,ALL,21,runs,90,,"raw execution incidence, descriptive"
+a,B1,resource_stop,,ALL,0,runs,90,,"raw execution incidence, descriptive"
+b,B1,verification_calls,T001,UC1,1.0,calls per run,3,3,task mean of 3 repetitions
+b,B1,verification_calls,T002,UC1,1.0,calls per run,3,3,task mean of 3 repetitions
+b,B1,verification_calls,T003,UC1,1.0,calls per run,3,3,task mean of 3 repetitions
+b,B1,verification_calls,T004,UC1,1.0,calls per run,3,3,task mean of 3 repetitions
+b,B1,verification_calls,T005,UC1,1.0,calls per run,3,3,task mean of 3 repetitions
+b,B1,verification_calls,T006,UC1,1.0,calls per run,3,3,task mean of 3 repetitions
+b,B1,verification_calls,T007,UC1,1.0,calls per run,3,3,task mean of 3 repetitions
+b,B1,verification_calls,T008,UC1,1.0,calls per run,3,3,task mean of 3 repetitions
+b,B1,verification_calls,T009,UC1,2.0,calls per run,3,3,task mean of 3 repetitions
+b,B1,verification_calls,T010,UC1,2.0,calls per run,3,3,task mean of 3 repetitions
+b,B1,verification_calls,T011,UC2,1.0,calls per run,3,3,task mean of 3 repetitions
+b,B1,verification_calls,T012,UC2,1.0,calls per run,3,3,task mean of 3 repetitions
+b,B1,verification_calls,T013,UC2,1.0,calls per run,3,3,task mean of 3 repetitions
+b,B1,verification_calls,T014,UC2,1.0,calls per run,3,3,task mean of 3 repetitions
+b,B1,verification_calls,T015,UC2,1.0,calls per run,3,3,task mean of 3 repetitions
+b,B1,verification_calls,T016,UC2,1.0,calls per run,3,3,task mean of 3 repetitions
+b,B1,verification_calls,T017,UC2,2.0,calls per run,3,3,task mean of 3 repetitions
+b,B1,verification_calls,T018,UC2,2.0,calls per run,3,3,task mean of 3 repetitions
+b,B1,verification_calls,T019,UC2,2.0,calls per run,3,3,task mean of 3 repetitions
+b,B1,verification_calls,T020,UC2,2.0,calls per run,3,3,task mean of 3 repetitions
+b,B1,verification_calls,T021,UC3,1.0,calls per run,3,3,task mean of 3 repetitions
+b,B1,verification_calls,T022,UC3,1.0,calls per run,3,3,task mean of 3 repetitions
+b,B1,verification_calls,T023,UC3,1.0,calls per run,3,3,task mean of 3 repetitions
+b,B1,verification_calls,T024,UC3,1.0,calls per run,3,3,task mean of 3 repetitions
+b,B1,verification_calls,T025,UC3,1.0,calls per run,3,3,task mean of 3 repetitions
+b,B1,verification_calls,T026,UC3,2.0,calls per run,3,3,task mean of 3 repetitions
+b,B1,verification_calls,T027,UC3,1.0,calls per run,3,3,task mean of 3 repetitions
+b,B1,verification_calls,T028,UC3,1.0,calls per run,3,3,task mean of 3 repetitions
+b,B1,verification_calls,T029,UC3,1.0,calls per run,3,3,task mean of 3 repetitions
+b,B1,verification_calls,T030,UC3,2.0,calls per run,3,3,task mean of 3 repetitions
+c,B1,ACCEPT,,ALL,66,runs,90,,"raw execution policy actions, descriptive"
+c,B1,REVISE_ONLY,,ALL,3,runs,90,,"raw execution policy actions, descriptive"
+c,B1,RERETRIEVE_REVISE,,ALL,21,runs,90,,"raw execution policy actions, descriptive"
+c,B1,ABSTAIN,,ALL,0,runs,90,,"raw execution policy actions, descriptive"
+a,G1,recovery_attempt_count,,ALL,21,runs,90,,"raw execution incidence, descriptive"
+a,G1,recovery_retrieval_count,,ALL,18,runs,90,,"raw execution incidence, descriptive"
+a,G1,pre_recovery_abstention,,ALL,3,runs,90,,"raw execution incidence, descriptive"
+a,G1,final_abstention,,ALL,21,runs,90,,"raw execution incidence, descriptive"
+a,G1,resource_stop,,ALL,0,runs,90,,"raw execution incidence, descriptive"
+b,G1,verification_calls,T001,UC1,1.0,calls per run,3,3,task mean of 3 repetitions
+b,G1,verification_calls,T002,UC1,1.0,calls per run,3,3,task mean of 3 repetitions
+b,G1,verification_calls,T003,UC1,1.0,calls per run,3,3,task mean of 3 repetitions
+b,G1,verification_calls,T004,UC1,1.0,calls per run,3,3,task mean of 3 repetitions
+b,G1,verification_calls,T005,UC1,1.0,calls per run,3,3,task mean of 3 repetitions
+b,G1,verification_calls,T006,UC1,1.0,calls per run,3,3,task mean of 3 repetitions
+b,G1,verification_calls,T007,UC1,1.0,calls per run,3,3,task mean of 3 repetitions
+b,G1,verification_calls,T008,UC1,1.0,calls per run,3,3,task mean of 3 repetitions
+b,G1,verification_calls,T009,UC1,2.0,calls per run,3,3,task mean of 3 repetitions
+b,G1,verification_calls,T010,UC1,2.0,calls per run,3,3,task mean of 3 repetitions
+b,G1,verification_calls,T011,UC2,1.0,calls per run,3,3,task mean of 3 repetitions
+b,G1,verification_calls,T012,UC2,1.0,calls per run,3,3,task mean of 3 repetitions
+b,G1,verification_calls,T013,UC2,1.0,calls per run,3,3,task mean of 3 repetitions
+b,G1,verification_calls,T014,UC2,1.0,calls per run,3,3,task mean of 3 repetitions
+b,G1,verification_calls,T015,UC2,1.0,calls per run,3,3,task mean of 3 repetitions
+b,G1,verification_calls,T016,UC2,1.0,calls per run,3,3,task mean of 3 repetitions
+b,G1,verification_calls,T017,UC2,1.0,calls per run,3,3,task mean of 3 repetitions
+b,G1,verification_calls,T018,UC2,2.0,calls per run,3,3,task mean of 3 repetitions
+b,G1,verification_calls,T019,UC2,2.0,calls per run,3,3,task mean of 3 repetitions
+b,G1,verification_calls,T020,UC2,2.0,calls per run,3,3,task mean of 3 repetitions
+b,G1,verification_calls,T021,UC3,1.0,calls per run,3,3,task mean of 3 repetitions
+b,G1,verification_calls,T022,UC3,1.0,calls per run,3,3,task mean of 3 repetitions
+b,G1,verification_calls,T023,UC3,1.0,calls per run,3,3,task mean of 3 repetitions
+b,G1,verification_calls,T024,UC3,1.0,calls per run,3,3,task mean of 3 repetitions
+b,G1,verification_calls,T025,UC3,1.0,calls per run,3,3,task mean of 3 repetitions
+b,G1,verification_calls,T026,UC3,2.0,calls per run,3,3,task mean of 3 repetitions
+b,G1,verification_calls,T027,UC3,1.0,calls per run,3,3,task mean of 3 repetitions
+b,G1,verification_calls,T028,UC3,1.0,calls per run,3,3,task mean of 3 repetitions
+b,G1,verification_calls,T029,UC3,1.0,calls per run,3,3,task mean of 3 repetitions
+b,G1,verification_calls,T030,UC3,2.0,calls per run,3,3,task mean of 3 repetitions
+c,G1,ACCEPT,,ALL,66,runs,90,,"raw execution policy actions, descriptive"
+c,G1,REVISE_ONLY,,ALL,3,runs,90,,"raw execution policy actions, descriptive"
+c,G1,RERETRIEVE_REVISE,,ALL,18,runs,90,,"raw execution policy actions, descriptive"
+c,G1,ABSTAIN,,ALL,3,runs,90,,"raw execution policy actions, descriptive"

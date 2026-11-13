@@ -1,0 +1,9 @@
+{
+  "experiment_id": "PRIMARY-BENCHMARK-V1",
+  "final_execution_code_revision": "58b9e656dd57e62a5fb8640c2d3c990e4c93e530",
+  "generation_seed": 20260912,
+  "primary_order_sha256": "f027a367684cb69120379c627a16003ebf5c07927e091e3879dd149c911cef79",
+  "repository_head": "872f8de38c79a78e4e016cedf5597bc21323a374",
+  "run_count": 270,
+  "runner_sha256": "f051353934005cd1acbe98eef16bc9104aa75073f249f08158eaac077595162c"
+}

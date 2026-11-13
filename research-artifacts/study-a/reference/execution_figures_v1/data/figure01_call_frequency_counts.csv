@@ -1,0 +1,11 @@
+condition,metric,call_count,run_frequency,denominator_runs
+B0,llm_calls,1,90,90
+B0,retrieval_calls,1,90,90
+B1,llm_calls,3,66,90
+B1,llm_calls,5,24,90
+B1,retrieval_calls,1,69,90
+B1,retrieval_calls,2,21,90
+G1,llm_calls,3,69,90
+G1,llm_calls,5,21,90
+G1,retrieval_calls,1,72,90
+G1,retrieval_calls,2,18,90

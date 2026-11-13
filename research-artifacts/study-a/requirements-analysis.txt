@@ -1,0 +1,7 @@
+# Versions used to verify this public reconstruction adapter.
+# This is not a lock of the original inference environment.
+numpy==2.5.3
+matplotlib==3.11.2
+pandas==3.0.6
+pillow==12.3.0
+jsonschema==4.26.0

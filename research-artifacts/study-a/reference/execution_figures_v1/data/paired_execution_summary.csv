@@ -1,0 +1,121 @@
+UC,metric,unit,analysis_unit,difference,n_paired_tasks,mean_difference,median_difference,min_difference,max_difference
+ALL,input_tokens,tokens,"paired task, mean of 3 repetitions per condition",G1 - B1,30,-591.3,0.0,-17739.0,0.0
+ALL,output_tokens,tokens,"paired task, mean of 3 repetitions per condition",G1 - B1,30,-49.36666666666667,0.0,-1481.0,0.0
+ALL,total_tokens,tokens,"paired task, mean of 3 repetitions per condition",G1 - B1,30,-640.6666666666666,0.0,-19220.0,0.0
+ALL,llm_calls,calls,"paired task, mean of 3 repetitions per condition",G1 - B1,30,-0.06666666666666667,0.0,-2.0,0.0
+ALL,retrieval_calls,calls,"paired task, mean of 3 repetitions per condition",G1 - B1,30,-0.03333333333333333,0.0,-1.0,0.0
+ALL,tool_calls,calls,"paired task, mean of 3 repetitions per condition",G1 - B1,30,0.0,0.0,0.0,0.0
+ALL,retries,recovery cycles,"paired task, mean of 3 repetitions per condition",G1 - B1,30,-0.03333333333333333,0.0,-1.0,0.0
+ALL,end_to_end_ms,ms,"paired task, mean of 3 repetitions per condition",G1 - B1,30,-1735.0276651666675,-126.35239366667156,-47067.281916,1599.970079000006
+ALL,llm_ms,ms,"paired task, mean of 3 repetitions per condition",G1 - B1,30,-1642.0488599222217,-152.33315999999832,-43000.407102333316,1373.39347333333
+ALL,retrieval_ms,ms,"paired task, mean of 3 repetitions per condition",G1 - B1,30,-96.09145006666677,37.01374233333331,-4063.541938000001,362.9206766666657
+ALL,error_count,errors,"paired task, mean of 3 repetitions per condition",G1 - B1,30,0.0,0.0,0.0,0.0
+ALL,completed_execution,0/1 per run,"paired task, mean of 3 repetitions per condition",G1 - B1,30,0.0,0.0,0.0,0.0
+ALL,resource_stop,0/1 per run,"paired task, mean of 3 repetitions per condition",G1 - B1,30,0.0,0.0,0.0,0.0
+ALL,final_abstention,0/1 per run,"paired task, mean of 3 repetitions per condition",G1 - B1,30,0.0,0.0,0.0,0.0
+ALL,recovery_trigger_count,triggers,"paired task, mean of 3 repetitions per condition",G1 - B1,30,-0.03333333333333333,0.0,-1.0,0.0
+ALL,recovery_attempt_count,starts,"paired task, mean of 3 repetitions per condition",G1 - B1,30,-0.03333333333333333,0.0,-1.0,0.0
+ALL,recovery_retrieval_count,completed stages,"paired task, mean of 3 repetitions per condition",G1 - B1,30,-0.03333333333333333,0.0,-1.0,0.0
+ALL,revision_completed_count,completed stages,"paired task, mean of 3 repetitions per condition",G1 - B1,30,-0.03333333333333333,0.0,-1.0,0.0
+ALL,post_recovery_verification_count,completed calls,"paired task, mean of 3 repetitions per condition",G1 - B1,30,-0.03333333333333333,0.0,-1.0,0.0
+ALL,verification_calls,completed calls,"paired task, mean of 3 repetitions per condition",G1 - B1,30,-0.03333333333333333,0.0,-1.0,0.0
+ALL,abstention_event_count,events,"paired task, mean of 3 repetitions per condition",G1 - B1,30,0.0,0.0,0.0,0.0
+ALL,policy_decision_count,decisions,"paired task, mean of 3 repetitions per condition",G1 - B1,30,0.0,0.0,0.0,0.0
+ALL,pre_recovery_abstention,0/1 per run,"paired task, mean of 3 repetitions per condition",G1 - B1,30,0.03333333333333333,0.0,0.0,1.0
+ALL,recovery_finalized,0/1 per run,"paired task, mean of 3 repetitions per condition",G1 - B1,30,-0.03333333333333333,0.0,-1.0,0.0
+ALL,prepolicy_input_tokens,tokens,"paired task, mean of 3 repetitions per condition",G1 - B1,30,0.0,0.0,0.0,0.0
+ALL,prepolicy_output_tokens,tokens,"paired task, mean of 3 repetitions per condition",G1 - B1,30,0.0,0.0,0.0,0.0
+ALL,prepolicy_total_tokens,tokens,"paired task, mean of 3 repetitions per condition",G1 - B1,30,0.0,0.0,0.0,0.0
+ALL,prepolicy_llm_calls,calls,"paired task, mean of 3 repetitions per condition",G1 - B1,30,0.0,0.0,0.0,0.0
+ALL,prepolicy_retrieval_calls,calls,"paired task, mean of 3 repetitions per condition",G1 - B1,30,0.0,0.0,0.0,0.0
+ALL,prepolicy_retries,recovery cycles,"paired task, mean of 3 repetitions per condition",G1 - B1,30,0.0,0.0,0.0,0.0
+UC1,input_tokens,tokens,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC1,output_tokens,tokens,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC1,total_tokens,tokens,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC1,llm_calls,calls,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC1,retrieval_calls,calls,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC1,tool_calls,calls,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC1,retries,recovery cycles,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC1,end_to_end_ms,ms,"paired task, mean of 3 repetitions per condition",G1 - B1,10,-509.3400731666676,-54.129811500006326,-5364.616748666664,727.5525560000024
+UC1,llm_ms,ms,"paired task, mean of 3 repetitions per condition",G1 - B1,10,-578.7947028666658,9.428227666663588,-5095.694221333328,399.18827600000077
+UC1,retrieval_ms,ms,"paired task, mean of 3 repetitions per condition",G1 - B1,10,68.14826399999984,54.430656333333445,-276.27818633333345,362.9206766666657
+UC1,error_count,errors,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC1,completed_execution,0/1 per run,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC1,resource_stop,0/1 per run,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC1,final_abstention,0/1 per run,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC1,recovery_trigger_count,triggers,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC1,recovery_attempt_count,starts,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC1,recovery_retrieval_count,completed stages,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC1,revision_completed_count,completed stages,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC1,post_recovery_verification_count,completed calls,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC1,verification_calls,completed calls,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC1,abstention_event_count,events,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC1,policy_decision_count,decisions,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC1,pre_recovery_abstention,0/1 per run,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC1,recovery_finalized,0/1 per run,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC1,prepolicy_input_tokens,tokens,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC1,prepolicy_output_tokens,tokens,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC1,prepolicy_total_tokens,tokens,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC1,prepolicy_llm_calls,calls,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC1,prepolicy_retrieval_calls,calls,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC1,prepolicy_retries,recovery cycles,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC2,input_tokens,tokens,"paired task, mean of 3 repetitions per condition",G1 - B1,10,-1773.9,0.0,-17739.0,0.0
+UC2,output_tokens,tokens,"paired task, mean of 3 repetitions per condition",G1 - B1,10,-148.1,0.0,-1481.0,0.0
+UC2,total_tokens,tokens,"paired task, mean of 3 repetitions per condition",G1 - B1,10,-1922.0,0.0,-19220.0,0.0
+UC2,llm_calls,calls,"paired task, mean of 3 repetitions per condition",G1 - B1,10,-0.2,0.0,-2.0,0.0
+UC2,retrieval_calls,calls,"paired task, mean of 3 repetitions per condition",G1 - B1,10,-0.1,0.0,-1.0,0.0
+UC2,tool_calls,calls,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC2,retries,recovery cycles,"paired task, mean of 3 repetitions per condition",G1 - B1,10,-0.1,0.0,-1.0,0.0
+UC2,end_to_end_ms,ms,"paired task, mean of 3 repetitions per condition",G1 - B1,10,-4663.971993000002,-159.91713683334092,-47067.281916,1599.970079000006
+UC2,llm_ms,ms,"paired task, mean of 3 repetitions per condition",G1 - B1,10,-4317.326609266665,-333.4038278333319,-43000.407102333316,1373.39347333333
+UC2,retrieval_ms,ms,"paired task, mean of 3 repetitions per condition",G1 - B1,10,-346.55161606666684,55.962986666666666,-4063.541938000001,254.55070066666667
+UC2,error_count,errors,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC2,completed_execution,0/1 per run,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC2,resource_stop,0/1 per run,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC2,final_abstention,0/1 per run,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC2,recovery_trigger_count,triggers,"paired task, mean of 3 repetitions per condition",G1 - B1,10,-0.1,0.0,-1.0,0.0
+UC2,recovery_attempt_count,starts,"paired task, mean of 3 repetitions per condition",G1 - B1,10,-0.1,0.0,-1.0,0.0
+UC2,recovery_retrieval_count,completed stages,"paired task, mean of 3 repetitions per condition",G1 - B1,10,-0.1,0.0,-1.0,0.0
+UC2,revision_completed_count,completed stages,"paired task, mean of 3 repetitions per condition",G1 - B1,10,-0.1,0.0,-1.0,0.0
+UC2,post_recovery_verification_count,completed calls,"paired task, mean of 3 repetitions per condition",G1 - B1,10,-0.1,0.0,-1.0,0.0
+UC2,verification_calls,completed calls,"paired task, mean of 3 repetitions per condition",G1 - B1,10,-0.1,0.0,-1.0,0.0
+UC2,abstention_event_count,events,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC2,policy_decision_count,decisions,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC2,pre_recovery_abstention,0/1 per run,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.1,0.0,0.0,1.0
+UC2,recovery_finalized,0/1 per run,"paired task, mean of 3 repetitions per condition",G1 - B1,10,-0.1,0.0,-1.0,0.0
+UC2,prepolicy_input_tokens,tokens,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC2,prepolicy_output_tokens,tokens,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC2,prepolicy_total_tokens,tokens,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC2,prepolicy_llm_calls,calls,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC2,prepolicy_retrieval_calls,calls,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC2,prepolicy_retries,recovery cycles,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC3,input_tokens,tokens,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC3,output_tokens,tokens,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC3,total_tokens,tokens,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC3,llm_calls,calls,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC3,retrieval_calls,calls,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC3,tool_calls,calls,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC3,retries,recovery cycles,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC3,end_to_end_ms,ms,"paired task, mean of 3 repetitions per condition",G1 - B1,10,-31.770929333333335,-95.4603368333319,-734.0025920000044,1077.025845000011
+UC3,llm_ms,ms,"paired task, mean of 3 repetitions per condition",G1 - B1,10,-30.025267633333716,-152.33315999999832,-565.5271200000025,1049.414982666669
+UC3,retrieval_ms,ms,"paired task, mean of 3 repetitions per condition",G1 - B1,10,-9.870998133333297,15.389856166666505,-169.05677833333357,101.89410133333422
+UC3,error_count,errors,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC3,completed_execution,0/1 per run,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC3,resource_stop,0/1 per run,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC3,final_abstention,0/1 per run,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC3,recovery_trigger_count,triggers,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC3,recovery_attempt_count,starts,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC3,recovery_retrieval_count,completed stages,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC3,revision_completed_count,completed stages,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC3,post_recovery_verification_count,completed calls,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC3,verification_calls,completed calls,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC3,abstention_event_count,events,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC3,policy_decision_count,decisions,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC3,pre_recovery_abstention,0/1 per run,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC3,recovery_finalized,0/1 per run,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC3,prepolicy_input_tokens,tokens,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC3,prepolicy_output_tokens,tokens,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC3,prepolicy_total_tokens,tokens,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC3,prepolicy_llm_calls,calls,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC3,prepolicy_retrieval_calls,calls,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0
+UC3,prepolicy_retries,recovery cycles,"paired task, mean of 3 repetitions per condition",G1 - B1,10,0.0,0.0,0.0,0.0

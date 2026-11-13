@@ -1,0 +1,9 @@
+UC,metric,analysis_unit,n_paired_tasks,n_paired_repetitions,mean,median,min,max
+ALL,action_divergence_fraction,paired task; fraction of 3 paired repetitions,30,90,0.03333333333333333,0.0,0.0,1.0
+ALL,event_trace_divergence_fraction,paired task; fraction of 3 paired repetitions,30,90,0.03333333333333333,0.0,0.0,1.0
+UC1,action_divergence_fraction,paired task; fraction of 3 paired repetitions,10,30,0.0,0.0,0.0,0.0
+UC1,event_trace_divergence_fraction,paired task; fraction of 3 paired repetitions,10,30,0.0,0.0,0.0,0.0
+UC2,action_divergence_fraction,paired task; fraction of 3 paired repetitions,10,30,0.1,0.0,0.0,1.0
+UC2,event_trace_divergence_fraction,paired task; fraction of 3 paired repetitions,10,30,0.1,0.0,0.0,1.0
+UC3,action_divergence_fraction,paired task; fraction of 3 paired repetitions,10,30,0.0,0.0,0.0,0.0
+UC3,event_trace_divergence_fraction,paired task; fraction of 3 paired repetitions,10,30,0.0,0.0,0.0,0.0

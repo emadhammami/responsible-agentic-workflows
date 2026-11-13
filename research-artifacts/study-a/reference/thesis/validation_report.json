@@ -1,0 +1,112 @@
+{
+  "status": "PASS",
+  "raw_records": 270,
+  "task_clusters": 30,
+  "repetitions_per_task_condition": 3,
+  "paired_final_outputs_identical": 90,
+  "structurally_divergent_tasks": [
+    "T017"
+  ],
+  "raw_bundle_sha256": "cd6299e13820a22eaad7e6737102972b268f844af82795272b642c23574ca073",
+  "source_files_checked": 319,
+  "summary_means": {
+    "B0": {
+      "input_tokens": 5792.533333333334,
+      "output_tokens": 440.6666666666667,
+      "total_tokens": 6233.2,
+      "llm_calls": 1,
+      "retrieval_calls": 1,
+      "seconds": 20.78924649003333
+    },
+    "B1": {
+      "input_tokens": 17241.766666666666,
+      "output_tokens": 1078.5,
+      "total_tokens": 18320.266666666666,
+      "llm_calls": 3.533333333333333,
+      "retrieval_calls": 1.2333333333333334,
+      "seconds": 44.76220703841111
+    },
+    "G1": {
+      "input_tokens": 16650.466666666667,
+      "output_tokens": 1029.1333333333334,
+      "total_tokens": 17679.6,
+      "llm_calls": 3.466666666666667,
+      "retrieval_calls": 1.2,
+      "seconds": 43.027179373244444
+    }
+  },
+  "summary_task_medians": {
+    "B0": {
+      "total_tokens": 6283.0,
+      "seconds": 19.617386674333332
+    },
+    "B1": {
+      "total_tokens": 15251.5,
+      "seconds": 41.04445482633333
+    },
+    "G1": {
+      "total_tokens": 15251.5,
+      "seconds": 41.64389162933333
+    }
+  },
+  "paired_mean": {
+    "input_tokens": -591.3,
+    "output_tokens": -49.36666666666667,
+    "total_tokens": -640.6666666666666,
+    "llm_calls": -0.06666666666666667,
+    "retrieval_calls": -0.03333333333333333,
+    "seconds": -1.7350276651666676
+  },
+  "paired_median": {
+    "input_tokens": 0.0,
+    "output_tokens": 0.0,
+    "total_tokens": 0.0,
+    "llm_calls": 0.0,
+    "retrieval_calls": 0.0,
+    "seconds": -0.12635239366666795
+  },
+  "parity_tables": [
+    "execution-overall",
+    "execution-control",
+    "logged-abstention",
+    "per-task-execution",
+    "execution-use-case",
+    "task-type-results (execution columns only)",
+    "paired-execution (means, medians and existing intervals)"
+  ],
+  "dependencies": {
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.3",
+    "jsonschema": "4.26.0"
+  },
+  "script_sha256": "277f6c4a73ef80a5d14726448963829b584633759270dae8ef3a52a1048d5094",
+  "run_schema_note": "Observed schema hash recorded; no schema hash binding is supplied by the raw freeze.",
+  "excluded_records": 0,
+  "uncertainty_intervals_created": 0,
+  "existing_interval_reproduction": {
+    "resamples": 10000,
+    "seed": 20260912,
+    "rng": "Python random.Random.choices",
+    "quantile_method": "numpy.quantile default linear",
+    "metrics": [
+      "total_tokens",
+      "llm_calls",
+      "retrieval_calls",
+      "seconds"
+    ],
+    "bounds": [
+      [
+        -1922.0,
+        -0.2,
+        -0.1,
+        -5.088660353759999
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.09978236973555409
+      ]
+    ]
+  }
+}

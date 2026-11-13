@@ -1,0 +1,152 @@
+{
+  "input_tokens": {
+    "unit": "tokens",
+    "definition": "usage.input_tokens; verified sum of model.calls[].input_tokens",
+    "scope": "all"
+  },
+  "output_tokens": {
+    "unit": "tokens",
+    "definition": "usage.output_tokens; verified sum of model.calls[].output_tokens",
+    "scope": "all"
+  },
+  "total_tokens": {
+    "unit": "tokens",
+    "definition": "usage.total_tokens; input_tokens + output_tokens",
+    "scope": "all"
+  },
+  "llm_calls": {
+    "unit": "calls",
+    "definition": "usage.llm_calls; verified len(model.calls)",
+    "scope": "all"
+  },
+  "retrieval_calls": {
+    "unit": "calls",
+    "definition": "usage.retrieval_calls; verified len(retrieval.calls)",
+    "scope": "all"
+  },
+  "tool_calls": {
+    "unit": "calls",
+    "definition": "usage.tool_calls; separate from retrieval_calls, always 0",
+    "scope": "all"
+  },
+  "retries": {
+    "unit": "recovery cycles",
+    "definition": "usage.retries; frozen AgenticRunner supplies recovery_iteration, not transport retries",
+    "scope": "all"
+  },
+  "end_to_end_ms": {
+    "unit": "ms",
+    "definition": "timing.end_to_end_ms; recorder elapsed monotonic milliseconds",
+    "scope": "all"
+  },
+  "llm_ms": {
+    "unit": "ms",
+    "definition": "timing.llm_ms; verified sum of model-call latency_ms",
+    "scope": "all"
+  },
+  "retrieval_ms": {
+    "unit": "ms",
+    "definition": "timing.retrieval_ms; verified sum of retrieval-call latency_ms",
+    "scope": "all"
+  },
+  "error_count": {
+    "unit": "errors",
+    "definition": "len(errors); not an outcome score",
+    "scope": "all"
+  },
+  "completed_execution": {
+    "unit": "0/1 per run",
+    "definition": "status in {completed, completed_after_recovery}",
+    "scope": "all"
+  },
+  "resource_stop": {
+    "unit": "0/1 per run",
+    "definition": "status == resource_stopped",
+    "scope": "all"
+  },
+  "final_abstention": {
+    "unit": "0/1 per run",
+    "definition": "final_output.abstained; logged action, not correct/incorrect abstention",
+    "scope": "all"
+  },
+  "recovery_trigger_count": {
+    "unit": "triggers",
+    "definition": "policy_decision.details.selected_action in {REVISE_ONLY, RERETRIEVE_REVISE}",
+    "scope": "B1/G1"
+  },
+  "recovery_attempt_count": {
+    "unit": "starts",
+    "definition": "count(events[].event_type == recovery_started)",
+    "scope": "B1/G1"
+  },
+  "recovery_retrieval_count": {
+    "unit": "completed stages",
+    "definition": "count(recovery_retrieval_completed events)",
+    "scope": "B1/G1"
+  },
+  "revision_completed_count": {
+    "unit": "completed stages",
+    "definition": "count(revision_completed events)",
+    "scope": "B1/G1"
+  },
+  "post_recovery_verification_count": {
+    "unit": "completed calls",
+    "definition": "count(post_recovery_critic_completed events); frozen node executes one model call",
+    "scope": "B1/G1"
+  },
+  "verification_calls": {
+    "unit": "completed calls",
+    "definition": "count(initial_critic_completed) + count(post_recovery_critic_completed); no critic assessment labels used",
+    "scope": "B1/G1"
+  },
+  "abstention_event_count": {
+    "unit": "events",
+    "definition": "count(abstained events)",
+    "scope": "B1/G1"
+  },
+  "policy_decision_count": {
+    "unit": "decisions",
+    "definition": "count(policy_decision events)",
+    "scope": "B1/G1"
+  },
+  "pre_recovery_abstention": {
+    "unit": "0/1 per run",
+    "definition": "selected_action == ABSTAIN at the logged policy decision",
+    "scope": "B1/G1"
+  },
+  "recovery_finalized": {
+    "unit": "0/1 per run",
+    "definition": "status == completed_after_recovery; also checked revision and post-recovery verification events",
+    "scope": "B1/G1"
+  },
+  "prepolicy_input_tokens": {
+    "unit": "tokens",
+    "definition": "policy_decision.details.input_tokens_used; direct pre-decision usage snapshot",
+    "scope": "B1/G1"
+  },
+  "prepolicy_output_tokens": {
+    "unit": "tokens",
+    "definition": "policy_decision.details.output_tokens_used; direct pre-decision usage snapshot",
+    "scope": "B1/G1"
+  },
+  "prepolicy_total_tokens": {
+    "unit": "tokens",
+    "definition": "policy_decision.details.total_tokens_used; direct pre-decision usage snapshot",
+    "scope": "B1/G1"
+  },
+  "prepolicy_llm_calls": {
+    "unit": "calls",
+    "definition": "policy_decision.details.llm_calls_used; direct pre-decision usage snapshot",
+    "scope": "B1/G1"
+  },
+  "prepolicy_retrieval_calls": {
+    "unit": "calls",
+    "definition": "policy_decision.details.retrieval_calls_used; direct pre-decision usage snapshot",
+    "scope": "B1/G1"
+  },
+  "prepolicy_retries": {
+    "unit": "recovery cycles",
+    "definition": "policy_decision.details.retries_used; direct pre-decision usage snapshot",
+    "scope": "B1/G1"
+  }
+}

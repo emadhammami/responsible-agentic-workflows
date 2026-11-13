@@ -1,0 +1,481 @@
+grouping,condition,UC,metric,unit,analysis_unit,n,n_total_runs,n_structurally_not_applicable,mean,median,std,min,max,Q1,Q3
+overall,ALL,ALL,input_tokens,tokens,raw execution (descriptive only),270,270,0,13228.255555555555,13012.0,7361.438101825867,4140,31744,6275.0,15016.0
+overall,ALL,ALL,output_tokens,tokens,raw execution (descriptive only),270,270,0,849.4333333333333,795.5,583.2019751905603,67,3485,414.0,1147.0
+overall,ALL,ALL,total_tokens,tokens,raw execution (descriptive only),270,270,0,14077.68888888889,13571.0,7777.688761794262,4257,35229,6813.0,16215.0
+overall,ALL,ALL,llm_calls,calls,raw execution (descriptive only),270,270,0,2.6666666666666665,3.0,1.3769207604902851,1,5,1.0,3.0
+overall,ALL,ALL,retrieval_calls,calls,raw execution (descriptive only),270,270,0,1.1444444444444444,1.0,0.35219263626023695,1,2,1.0,1.0
+overall,ALL,ALL,tool_calls,calls,raw execution (descriptive only),270,270,0,0.0,0.0,0.0,0,0,0.0,0.0
+overall,ALL,ALL,retries,recovery cycles,raw execution (descriptive only),270,270,0,0.16666666666666666,0.0,0.3733700636914622,0,1,0.0,0.0
+overall,ALL,ALL,end_to_end_ms,ms,raw execution (descriptive only),270,270,0,36192.8776338963,30659.961650999998,16987.845511442447,13618.617841,105587.943364,23532.81741425,44489.03038875
+overall,ALL,ALL,llm_ms,ms,raw execution (descriptive only),270,270,0,32581.057439951855,27514.6343795,16181.598886537253,10633.58707,97051.165596,20421.12515775,41306.96706475
+overall,ALL,ALL,retrieval_ms,ms,raw execution (descriptive only),270,270,0,3601.3971571407405,3113.9353645,1153.63914964582,2943.218956,8520.320218,3042.8824325,3299.86619
+overall,ALL,ALL,error_count,errors,raw execution (descriptive only),270,270,0,0.0,0.0,0.0,0,0,0.0,0.0
+overall,ALL,ALL,completed_execution,0/1 per run,raw execution (descriptive only),270,270,0,1.0,1.0,0.0,1,1,1.0,1.0
+overall,ALL,ALL,resource_stop,0/1 per run,raw execution (descriptive only),270,270,0,0.0,0.0,0.0,0,0,0.0,0.0
+overall,ALL,ALL,final_abstention,0/1 per run,raw execution (descriptive only),270,270,0,0.15555555555555556,0.0,0.36310651947569006,0,1,0.0,0.0
+overall,ALL,ALL,recovery_trigger_count,triggers,raw execution (descriptive only),180,270,90,0.25,0.0,0.4342205499898865,0,1,0.0,0.25
+overall,ALL,ALL,recovery_attempt_count,starts,raw execution (descriptive only),180,270,90,0.25,0.0,0.4342205499898865,0,1,0.0,0.25
+overall,ALL,ALL,recovery_retrieval_count,completed stages,raw execution (descriptive only),180,270,90,0.21666666666666667,0.0,0.41312273123304716,0,1,0.0,0.0
+overall,ALL,ALL,revision_completed_count,completed stages,raw execution (descriptive only),180,270,90,0.25,0.0,0.4342205499898865,0,1,0.0,0.25
+overall,ALL,ALL,post_recovery_verification_count,completed calls,raw execution (descriptive only),180,270,90,0.25,0.0,0.4342205499898865,0,1,0.0,0.25
+overall,ALL,ALL,verification_calls,completed calls,raw execution (descriptive only),180,270,90,1.25,1.0,0.4342205499898865,1,2,1.0,1.25
+overall,ALL,ALL,abstention_event_count,events,raw execution (descriptive only),180,270,90,0.23333333333333334,0.0,0.4241323710310551,0,1,0.0,0.0
+overall,ALL,ALL,policy_decision_count,decisions,raw execution (descriptive only),180,270,90,1.0,1.0,0.0,1,1,1.0,1.0
+overall,ALL,ALL,pre_recovery_abstention,0/1 per run,raw execution (descriptive only),180,270,90,0.016666666666666666,0.0,0.12837619299299347,0,1,0.0,0.0
+overall,ALL,ALL,recovery_finalized,0/1 per run,raw execution (descriptive only),180,270,90,0.25,0.0,0.4342205499898865,0,1,0.0,0.25
+overall,ALL,ALL,prepolicy_input_tokens,tokens,raw execution (descriptive only),180,270,90,13311.6,13275.5,1669.9767756723195,9491,17114,12213.0,14309.0
+overall,ALL,ALL,prepolicy_output_tokens,tokens,raw execution (descriptive only),180,270,90,883.9333333333333,827.5,408.71576497159106,289,2004,569.0,1147.0
+overall,ALL,ALL,prepolicy_total_tokens,tokens,raw execution (descriptive only),180,270,90,14195.533333333333,14255.0,1812.3648811897212,9809,17982,13003.0,15441.0
+overall,ALL,ALL,prepolicy_llm_calls,calls,raw execution (descriptive only),180,270,90,3.0,3.0,0.0,3,3,3.0,3.0
+overall,ALL,ALL,prepolicy_retrieval_calls,calls,raw execution (descriptive only),180,270,90,1.0,1.0,0.0,1,1,1.0,1.0
+overall,ALL,ALL,prepolicy_retries,recovery cycles,raw execution (descriptive only),180,270,90,0.0,0.0,0.0,0,0,0.0,0.0
+condition,B0,ALL,input_tokens,tokens,raw execution (descriptive only),90,90,0,5792.533333333334,5817.0,802.4759046401891,4140,7660,5333.0,6275.0
+condition,B0,ALL,output_tokens,tokens,raw execution (descriptive only),90,90,0,440.6666666666667,348.5,292.9679585195301,67,1024,200.0,746.0
+condition,B0,ALL,total_tokens,tokens,raw execution (descriptive only),90,90,0,6233.2,6283.0,886.9815903236288,4257,8184,5669.0,6813.0
+condition,B0,ALL,llm_calls,calls,raw execution (descriptive only),90,90,0,1.0,1.0,0.0,1,1,1.0,1.0
+condition,B0,ALL,retrieval_calls,calls,raw execution (descriptive only),90,90,0,1.0,1.0,0.0,1,1,1.0,1.0
+condition,B0,ALL,tool_calls,calls,raw execution (descriptive only),90,90,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition,B0,ALL,retries,recovery cycles,raw execution (descriptive only),90,90,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition,B0,ALL,end_to_end_ms,ms,raw execution (descriptive only),90,90,0,20789.246490033333,19134.866324000002,4818.719591891876,13618.617841,30973.575591,16935.0402895,25198.27290425
+condition,B0,ALL,llm_ms,ms,raw execution (descriptive only),90,90,0,17655.1163108,15991.455858000001,4802.866516314119,10633.58707,27935.724913,13857.374059,22136.41392875
+condition,B0,ALL,retrieval_ms,ms,raw execution (descriptive only),90,90,0,3132.884299777778,3074.6828754999997,233.1502607876674,2960.735087,4968.199766,3027.19169975,3156.0707439999996
+condition,B0,ALL,error_count,errors,raw execution (descriptive only),90,90,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition,B0,ALL,completed_execution,0/1 per run,raw execution (descriptive only),90,90,0,1.0,1.0,0.0,1,1,1.0,1.0
+condition,B0,ALL,resource_stop,0/1 per run,raw execution (descriptive only),90,90,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition,B0,ALL,final_abstention,0/1 per run,raw execution (descriptive only),90,90,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition,B0,ALL,recovery_trigger_count,triggers,raw execution (descriptive only),0,90,90,,,,,,,
+condition,B0,ALL,recovery_attempt_count,starts,raw execution (descriptive only),0,90,90,,,,,,,
+condition,B0,ALL,recovery_retrieval_count,completed stages,raw execution (descriptive only),0,90,90,,,,,,,
+condition,B0,ALL,revision_completed_count,completed stages,raw execution (descriptive only),0,90,90,,,,,,,
+condition,B0,ALL,post_recovery_verification_count,completed calls,raw execution (descriptive only),0,90,90,,,,,,,
+condition,B0,ALL,verification_calls,completed calls,raw execution (descriptive only),0,90,90,,,,,,,
+condition,B0,ALL,abstention_event_count,events,raw execution (descriptive only),0,90,90,,,,,,,
+condition,B0,ALL,policy_decision_count,decisions,raw execution (descriptive only),0,90,90,,,,,,,
+condition,B0,ALL,pre_recovery_abstention,0/1 per run,raw execution (descriptive only),0,90,90,,,,,,,
+condition,B0,ALL,recovery_finalized,0/1 per run,raw execution (descriptive only),0,90,90,,,,,,,
+condition,B0,ALL,prepolicy_input_tokens,tokens,raw execution (descriptive only),0,90,90,,,,,,,
+condition,B0,ALL,prepolicy_output_tokens,tokens,raw execution (descriptive only),0,90,90,,,,,,,
+condition,B0,ALL,prepolicy_total_tokens,tokens,raw execution (descriptive only),0,90,90,,,,,,,
+condition,B0,ALL,prepolicy_llm_calls,calls,raw execution (descriptive only),0,90,90,,,,,,,
+condition,B0,ALL,prepolicy_retrieval_calls,calls,raw execution (descriptive only),0,90,90,,,,,,,
+condition,B0,ALL,prepolicy_retries,recovery cycles,raw execution (descriptive only),0,90,90,,,,,,,
+condition,B1,ALL,input_tokens,tokens,raw execution (descriptive only),90,90,0,17241.766666666666,14453.0,6564.762478994802,9491,31744,13012.0,21742.0
+condition,B1,ALL,output_tokens,tokens,raw execution (descriptive only),90,90,0,1078.5,1083.5,654.3337850418477,289,3485,602.0,1301.0
+condition,B1,ALL,total_tokens,tokens,raw execution (descriptive only),90,90,0,18320.266666666666,15251.5,7013.328818692385,9809,35229,13571.0,22824.0
+condition,B1,ALL,llm_calls,calls,raw execution (descriptive only),90,90,0,3.533333333333333,3.0,0.8893881244738183,3,5,3.0,5.0
+condition,B1,ALL,retrieval_calls,calls,raw execution (descriptive only),90,90,0,1.2333333333333334,1.0,0.4253220854887439,1,2,1.0,1.0
+condition,B1,ALL,tool_calls,calls,raw execution (descriptive only),90,90,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition,B1,ALL,retries,recovery cycles,raw execution (descriptive only),90,90,0,0.26666666666666666,0.0,0.44469406223690916,0,1,0.0,1.0
+condition,B1,ALL,end_to_end_ms,ms,raw execution (descriptive only),90,90,0,44762.20703841111,41221.9608235,17248.910126538365,22741.60974,105587.943364,30940.98172825,56238.39831925
+condition,B1,ALL,llm_ms,ms,raw execution (descriptive only),90,90,0,40865.05243448889,38122.327925499994,16188.155938770462,19599.981048999998,97051.165596,27596.118480750003,49981.768314
+condition,B1,ALL,retrieval_ms,ms,raw execution (descriptive only),90,90,0,3883.6993108555557,3131.048786,1402.5251244690332,2964.941268,8520.320218,3044.8267015,3424.65073575
+condition,B1,ALL,error_count,errors,raw execution (descriptive only),90,90,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition,B1,ALL,completed_execution,0/1 per run,raw execution (descriptive only),90,90,0,1.0,1.0,0.0,1,1,1.0,1.0
+condition,B1,ALL,resource_stop,0/1 per run,raw execution (descriptive only),90,90,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition,B1,ALL,final_abstention,0/1 per run,raw execution (descriptive only),90,90,0,0.23333333333333334,0.0,0.4253220854887439,0,1,0.0,0.0
+condition,B1,ALL,recovery_trigger_count,triggers,raw execution (descriptive only),90,90,0,0.26666666666666666,0.0,0.44469406223690916,0,1,0.0,1.0
+condition,B1,ALL,recovery_attempt_count,starts,raw execution (descriptive only),90,90,0,0.26666666666666666,0.0,0.44469406223690916,0,1,0.0,1.0
+condition,B1,ALL,recovery_retrieval_count,completed stages,raw execution (descriptive only),90,90,0,0.23333333333333334,0.0,0.4253220854887439,0,1,0.0,0.0
+condition,B1,ALL,revision_completed_count,completed stages,raw execution (descriptive only),90,90,0,0.26666666666666666,0.0,0.44469406223690916,0,1,0.0,1.0
+condition,B1,ALL,post_recovery_verification_count,completed calls,raw execution (descriptive only),90,90,0,0.26666666666666666,0.0,0.44469406223690916,0,1,0.0,1.0
+condition,B1,ALL,verification_calls,completed calls,raw execution (descriptive only),90,90,0,1.2666666666666666,1.0,0.44469406223690916,1,2,1.0,2.0
+condition,B1,ALL,abstention_event_count,events,raw execution (descriptive only),90,90,0,0.23333333333333334,0.0,0.4253220854887439,0,1,0.0,0.0
+condition,B1,ALL,policy_decision_count,decisions,raw execution (descriptive only),90,90,0,1.0,1.0,0.0,1,1,1.0,1.0
+condition,B1,ALL,pre_recovery_abstention,0/1 per run,raw execution (descriptive only),90,90,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition,B1,ALL,recovery_finalized,0/1 per run,raw execution (descriptive only),90,90,0,0.26666666666666666,0.0,0.44469406223690916,0,1,0.0,1.0
+condition,B1,ALL,prepolicy_input_tokens,tokens,raw execution (descriptive only),90,90,0,13311.6,13275.5,1674.661151706132,9491,17114,12213.0,14309.0
+condition,B1,ALL,prepolicy_output_tokens,tokens,raw execution (descriptive only),90,90,0,883.9333333333333,827.5,409.86223500756114,289,2004,569.0,1147.0
+condition,B1,ALL,prepolicy_total_tokens,tokens,raw execution (descriptive only),90,90,0,14195.533333333333,14255.0,1817.448663633672,9809,17982,13003.0,15441.0
+condition,B1,ALL,prepolicy_llm_calls,calls,raw execution (descriptive only),90,90,0,3.0,3.0,0.0,3,3,3.0,3.0
+condition,B1,ALL,prepolicy_retrieval_calls,calls,raw execution (descriptive only),90,90,0,1.0,1.0,0.0,1,1,1.0,1.0
+condition,B1,ALL,prepolicy_retries,recovery cycles,raw execution (descriptive only),90,90,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition,G1,ALL,input_tokens,tokens,raw execution (descriptive only),90,90,0,16650.466666666667,14157.0,6000.535480224928,9491,31257,13012.0,17114.0
+condition,G1,ALL,output_tokens,tokens,raw execution (descriptive only),90,90,0,1029.1333333333334,1083.5,509.26448835661375,289,2601,602.0,1301.0
+condition,G1,ALL,total_tokens,tokens,raw execution (descriptive only),90,90,0,17679.6,15251.5,6270.129607821229,9809,32418,13571.0,17982.0
+condition,G1,ALL,llm_calls,calls,raw execution (descriptive only),90,90,0,3.466666666666667,3.0,0.8506441709774878,3,5,3.0,3.0
+condition,G1,ALL,retrieval_calls,calls,raw execution (descriptive only),90,90,0,1.2,1.0,0.4022409138923945,1,2,1.0,1.0
+condition,G1,ALL,tool_calls,calls,raw execution (descriptive only),90,90,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition,G1,ALL,retries,recovery cycles,raw execution (descriptive only),90,90,0,0.23333333333333334,0.0,0.4253220854887439,0,1,0.0,0.0
+condition,G1,ALL,end_to_end_ms,ms,raw execution (descriptive only),90,90,0,43027.17937324444,41462.6831425,13786.660590069147,22812.249442,76188.34535,30337.695375,55434.02641775
+condition,G1,ALL,llm_ms,ms,raw execution (descriptive only),90,90,0,39223.00357456667,38288.608093500006,12922.808377336918,19670.647849999998,72578.415718,27242.71159725,50249.26613325
+condition,G1,ALL,retrieval_ms,ms,raw execution (descriptive only),90,90,0,3787.6078607888885,3131.6523385,1289.7662459766732,2943.218956,6669.933899,3070.500226,3407.84800525
+condition,G1,ALL,error_count,errors,raw execution (descriptive only),90,90,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition,G1,ALL,completed_execution,0/1 per run,raw execution (descriptive only),90,90,0,1.0,1.0,0.0,1,1,1.0,1.0
+condition,G1,ALL,resource_stop,0/1 per run,raw execution (descriptive only),90,90,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition,G1,ALL,final_abstention,0/1 per run,raw execution (descriptive only),90,90,0,0.23333333333333334,0.0,0.4253220854887439,0,1,0.0,0.0
+condition,G1,ALL,recovery_trigger_count,triggers,raw execution (descriptive only),90,90,0,0.23333333333333334,0.0,0.4253220854887439,0,1,0.0,0.0
+condition,G1,ALL,recovery_attempt_count,starts,raw execution (descriptive only),90,90,0,0.23333333333333334,0.0,0.4253220854887439,0,1,0.0,0.0
+condition,G1,ALL,recovery_retrieval_count,completed stages,raw execution (descriptive only),90,90,0,0.2,0.0,0.4022409138923945,0,1,0.0,0.0
+condition,G1,ALL,revision_completed_count,completed stages,raw execution (descriptive only),90,90,0,0.23333333333333334,0.0,0.4253220854887439,0,1,0.0,0.0
+condition,G1,ALL,post_recovery_verification_count,completed calls,raw execution (descriptive only),90,90,0,0.23333333333333334,0.0,0.4253220854887439,0,1,0.0,0.0
+condition,G1,ALL,verification_calls,completed calls,raw execution (descriptive only),90,90,0,1.2333333333333334,1.0,0.4253220854887439,1,2,1.0,1.0
+condition,G1,ALL,abstention_event_count,events,raw execution (descriptive only),90,90,0,0.23333333333333334,0.0,0.4253220854887439,0,1,0.0,0.0
+condition,G1,ALL,policy_decision_count,decisions,raw execution (descriptive only),90,90,0,1.0,1.0,0.0,1,1,1.0,1.0
+condition,G1,ALL,pre_recovery_abstention,0/1 per run,raw execution (descriptive only),90,90,0,0.03333333333333333,0.0,0.18051113445691197,0,1,0.0,0.0
+condition,G1,ALL,recovery_finalized,0/1 per run,raw execution (descriptive only),90,90,0,0.23333333333333334,0.0,0.4253220854887439,0,1,0.0,0.0
+condition,G1,ALL,prepolicy_input_tokens,tokens,raw execution (descriptive only),90,90,0,13311.6,13275.5,1674.661151706132,9491,17114,12213.0,14309.0
+condition,G1,ALL,prepolicy_output_tokens,tokens,raw execution (descriptive only),90,90,0,883.9333333333333,827.5,409.86223500756114,289,2004,569.0,1147.0
+condition,G1,ALL,prepolicy_total_tokens,tokens,raw execution (descriptive only),90,90,0,14195.533333333333,14255.0,1817.448663633672,9809,17982,13003.0,15441.0
+condition,G1,ALL,prepolicy_llm_calls,calls,raw execution (descriptive only),90,90,0,3.0,3.0,0.0,3,3,3.0,3.0
+condition,G1,ALL,prepolicy_retrieval_calls,calls,raw execution (descriptive only),90,90,0,1.0,1.0,0.0,1,1,1.0,1.0
+condition,G1,ALL,prepolicy_retries,recovery cycles,raw execution (descriptive only),90,90,0,0.0,0.0,0.0,0,0,0.0,0.0
+UC,ALL,UC1,input_tokens,tokens,raw execution (descriptive only),90,90,0,13147.133333333333,13143.0,6781.1845377361215,4607,31257,6804.0,15661.0
+UC,ALL,UC1,output_tokens,tokens,raw execution (descriptive only),90,90,0,687.9,635.0,362.6856146253664,113,1238,414.0,1082.0
+UC,ALL,UC1,total_tokens,tokens,raw execution (descriptive only),90,90,0,13835.033333333333,14158.0,7016.38666002105,4793,32418,7028.0,16808.0
+UC,ALL,UC1,llm_calls,calls,raw execution (descriptive only),90,90,0,2.6,3.0,1.313713323609536,1,5,1.0,3.0
+UC,ALL,UC1,retrieval_calls,calls,raw execution (descriptive only),90,90,0,1.1333333333333333,1.0,0.34183904485045247,1,2,1.0,1.0
+UC,ALL,UC1,tool_calls,calls,raw execution (descriptive only),90,90,0,0.0,0.0,0.0,0,0,0.0,0.0
+UC,ALL,UC1,retries,recovery cycles,raw execution (descriptive only),90,90,0,0.13333333333333333,0.0,0.34183904485045247,0,1,0.0,0.0
+UC,ALL,UC1,end_to_end_ms,ms,raw execution (descriptive only),90,90,0,33664.8896101,30162.1915205,13690.74039405388,15494.844743,65795.296911,23324.048378,41279.162335249996
+UC,ALL,UC1,llm_ms,ms,raw execution (descriptive only),90,90,0,30075.267876222224,27040.201235499997,12857.63403695794,12526.895075,59298.333451,20055.5714965,38130.28342875
+UC,ALL,UC1,retrieval_ms,ms,raw execution (descriptive only),90,90,0,3580.077658011111,3124.3750405,1096.510789725968,2960.735087,6669.933899,3052.937455,3268.805119
+UC,ALL,UC1,error_count,errors,raw execution (descriptive only),90,90,0,0.0,0.0,0.0,0,0,0.0,0.0
+UC,ALL,UC1,completed_execution,0/1 per run,raw execution (descriptive only),90,90,0,1.0,1.0,0.0,1,1,1.0,1.0
+UC,ALL,UC1,resource_stop,0/1 per run,raw execution (descriptive only),90,90,0,0.0,0.0,0.0,0,0,0.0,0.0
+UC,ALL,UC1,final_abstention,0/1 per run,raw execution (descriptive only),90,90,0,0.13333333333333333,0.0,0.34183904485045247,0,1,0.0,0.0
+UC,ALL,UC1,recovery_trigger_count,triggers,raw execution (descriptive only),60,90,30,0.2,0.0,0.4033755872716886,0,1,0.0,0.0
+UC,ALL,UC1,recovery_attempt_count,starts,raw execution (descriptive only),60,90,30,0.2,0.0,0.4033755872716886,0,1,0.0,0.0
+UC,ALL,UC1,recovery_retrieval_count,completed stages,raw execution (descriptive only),60,90,30,0.2,0.0,0.4033755872716886,0,1,0.0,0.0
+UC,ALL,UC1,revision_completed_count,completed stages,raw execution (descriptive only),60,90,30,0.2,0.0,0.4033755872716886,0,1,0.0,0.0
+UC,ALL,UC1,post_recovery_verification_count,completed calls,raw execution (descriptive only),60,90,30,0.2,0.0,0.4033755872716886,0,1,0.0,0.0
+UC,ALL,UC1,verification_calls,completed calls,raw execution (descriptive only),60,90,30,1.2,1.0,0.4033755872716886,1,2,1.0,1.0
+UC,ALL,UC1,abstention_event_count,events,raw execution (descriptive only),60,90,30,0.2,0.0,0.4033755872716886,0,1,0.0,0.0
+UC,ALL,UC1,policy_decision_count,decisions,raw execution (descriptive only),60,90,30,1.0,1.0,0.0,1,1,1.0,1.0
+UC,ALL,UC1,pre_recovery_abstention,0/1 per run,raw execution (descriptive only),60,90,30,0.0,0.0,0.0,0,0,0.0,0.0
+UC,ALL,UC1,recovery_finalized,0/1 per run,raw execution (descriptive only),60,90,30,0.2,0.0,0.4033755872716886,0,1,0.0,0.0
+UC,ALL,UC1,prepolicy_input_tokens,tokens,raw execution (descriptive only),60,90,30,13797.3,13452.5,1755.1580574921625,10600,17114,13012.0,15016.0
+UC,ALL,UC1,prepolicy_output_tokens,tokens,raw execution (descriptive only),60,90,30,738.8,695.5,281.70189797378697,414,1238,428.0,873.0
+UC,ALL,UC1,prepolicy_total_tokens,tokens,raw execution (descriptive only),60,90,30,14536.1,14313.0,1832.5854728372801,11204,17982,13571.0,15441.0
+UC,ALL,UC1,prepolicy_llm_calls,calls,raw execution (descriptive only),60,90,30,3.0,3.0,0.0,3,3,3.0,3.0
+UC,ALL,UC1,prepolicy_retrieval_calls,calls,raw execution (descriptive only),60,90,30,1.0,1.0,0.0,1,1,1.0,1.0
+UC,ALL,UC1,prepolicy_retries,recovery cycles,raw execution (descriptive only),60,90,30,0.0,0.0,0.0,0,0,0.0,0.0
+UC,ALL,UC2,input_tokens,tokens,raw execution (descriptive only),90,90,0,14834.3,13971.0,8456.477153803999,5569,31744,6275.0,14902.0
+UC,ALL,UC2,output_tokens,tokens,raw execution (descriptive only),90,90,0,1059.2,946.0,783.3884653480989,67,3485,534.0,1392.0
+UC,ALL,UC2,total_tokens,tokens,raw execution (descriptive only),90,90,0,15893.5,14664.0,9034.909161479145,5764,35229,6906.0,16215.0
+UC,ALL,UC2,llm_calls,calls,raw execution (descriptive only),90,90,0,2.8,3.0,1.5005616925866216,1,5,1.0,3.0
+UC,ALL,UC2,retrieval_calls,calls,raw execution (descriptive only),90,90,0,1.1666666666666667,1.0,0.3747658444979307,1,2,1.0,1.0
+UC,ALL,UC2,tool_calls,calls,raw execution (descriptive only),90,90,0,0.0,0.0,0.0,0,0,0.0,0.0
+UC,ALL,UC2,retries,recovery cycles,raw execution (descriptive only),90,90,0,0.23333333333333334,0.0,0.4253220854887439,0,1,0.0,0.0
+UC,ALL,UC2,end_to_end_ms,ms,raw execution (descriptive only),90,90,0,40864.6246239,34172.440524000005,20706.609098023364,15106.130539,105587.943364,26003.43419825,55434.02641775
+UC,ALL,UC2,llm_ms,ms,raw execution (descriptive only),90,90,0,37173.94248162222,31003.106966,19890.134735763455,12002.78029,97051.165596,22923.9019195,52411.923918
+UC,ALL,UC2,retrieval_ms,ms,raw execution (descriptive only),90,90,0,3681.3041545222222,3119.804489,1277.1036239341015,2968.958574,8520.320218,3038.64563,3299.86619
+UC,ALL,UC2,error_count,errors,raw execution (descriptive only),90,90,0,0.0,0.0,0.0,0,0,0.0,0.0
+UC,ALL,UC2,completed_execution,0/1 per run,raw execution (descriptive only),90,90,0,1.0,1.0,0.0,1,1,1.0,1.0
+UC,ALL,UC2,resource_stop,0/1 per run,raw execution (descriptive only),90,90,0,0.0,0.0,0.0,0,0,0.0,0.0
+UC,ALL,UC2,final_abstention,0/1 per run,raw execution (descriptive only),90,90,0,0.2,0.0,0.4022409138923945,0,1,0.0,0.0
+UC,ALL,UC2,recovery_trigger_count,triggers,raw execution (descriptive only),60,90,30,0.35,0.0,0.4809947319913076,0,1,0.0,1.0
+UC,ALL,UC2,recovery_attempt_count,starts,raw execution (descriptive only),60,90,30,0.35,0.0,0.4809947319913076,0,1,0.0,1.0
+UC,ALL,UC2,recovery_retrieval_count,completed stages,raw execution (descriptive only),60,90,30,0.25,0.0,0.4366668823046865,0,1,0.0,0.25
+UC,ALL,UC2,revision_completed_count,completed stages,raw execution (descriptive only),60,90,30,0.35,0.0,0.4809947319913076,0,1,0.0,1.0
+UC,ALL,UC2,post_recovery_verification_count,completed calls,raw execution (descriptive only),60,90,30,0.35,0.0,0.4809947319913076,0,1,0.0,1.0
+UC,ALL,UC2,verification_calls,completed calls,raw execution (descriptive only),60,90,30,1.35,1.0,0.4809947319913076,1,2,1.0,2.0
+UC,ALL,UC2,abstention_event_count,events,raw execution (descriptive only),60,90,30,0.3,0.0,0.4621247905424446,0,1,0.0,1.0
+UC,ALL,UC2,policy_decision_count,decisions,raw execution (descriptive only),60,90,30,1.0,1.0,0.0,1,1,1.0,1.0
+UC,ALL,UC2,pre_recovery_abstention,0/1 per run,raw execution (descriptive only),60,90,30,0.05,0.0,0.21978417765108277,0,1,0.0,0.0
+UC,ALL,UC2,recovery_finalized,0/1 per run,raw execution (descriptive only),60,90,30,0.35,0.0,0.4809947319913076,0,1,0.0,1.0
+UC,ALL,UC2,prepolicy_input_tokens,tokens,raw execution (descriptive only),60,90,30,13931.3,13988.0,745.268471703489,12600,14902,13266.0,14597.0
+UC,ALL,UC2,prepolicy_output_tokens,tokens,raw execution (descriptive only),60,90,30,1033.1,956.0,518.4552250088556,289,2004,569.0,1441.0
+UC,ALL,UC2,prepolicy_total_tokens,tokens,raw execution (descriptive only),60,90,30,14964.4,15050.0,1029.3169892733627,13301,16215,14260.0,16009.0
+UC,ALL,UC2,prepolicy_llm_calls,calls,raw execution (descriptive only),60,90,30,3.0,3.0,0.0,3,3,3.0,3.0
+UC,ALL,UC2,prepolicy_retrieval_calls,calls,raw execution (descriptive only),60,90,30,1.0,1.0,0.0,1,1,1.0,1.0
+UC,ALL,UC2,prepolicy_retries,recovery cycles,raw execution (descriptive only),60,90,30,0.0,0.0,0.0,0,0,0.0,0.0
+UC,ALL,UC3,input_tokens,tokens,raw execution (descriptive only),90,90,0,11703.333333333334,11298.0,6428.614336864114,4140,25700,5542.0,13822.0
+UC,ALL,UC3,output_tokens,tokens,raw execution (descriptive only),90,90,0,801.2,792.0,457.7589817723497,117,1550,356.0,1245.0
+UC,ALL,UC3,total_tokens,tokens,raw execution (descriptive only),90,90,0,12504.533333333333,12603.0,6788.302978678624,4257,27055,5820.0,15067.0
+UC,ALL,UC3,llm_calls,calls,raw execution (descriptive only),90,90,0,2.6,3.0,1.313713323609536,1,5,1.0,3.0
+UC,ALL,UC3,retrieval_calls,calls,raw execution (descriptive only),90,90,0,1.1333333333333333,1.0,0.34183904485045247,1,2,1.0,1.0
+UC,ALL,UC3,tool_calls,calls,raw execution (descriptive only),90,90,0,0.0,0.0,0.0,0,0,0.0,0.0
+UC,ALL,UC3,retries,recovery cycles,raw execution (descriptive only),90,90,0,0.13333333333333333,0.0,0.34183904485045247,0,1,0.0,0.0
+UC,ALL,UC3,end_to_end_ms,ms,raw execution (descriptive only),90,90,0,34049.11866768889,29559.2138255,14928.678279811431,13618.617841,64631.55452,21463.4504775,41978.49800125
+UC,ALL,UC3,llm_ms,ms,raw execution (descriptive only),90,90,0,30493.96196201111,26447.416219500003,14085.251122689455,10633.58707,58460.683038999996,18343.8339545,38669.178703
+UC,ALL,UC3,retrieval_ms,ms,raw execution (descriptive only),90,90,0,3542.8096588888893,3102.339107,1085.7440824469106,2943.218956,6578.527864,3039.237044,3304.17697525
+UC,ALL,UC3,error_count,errors,raw execution (descriptive only),90,90,0,0.0,0.0,0.0,0,0,0.0,0.0
+UC,ALL,UC3,completed_execution,0/1 per run,raw execution (descriptive only),90,90,0,1.0,1.0,0.0,1,1,1.0,1.0
+UC,ALL,UC3,resource_stop,0/1 per run,raw execution (descriptive only),90,90,0,0.0,0.0,0.0,0,0,0.0,0.0
+UC,ALL,UC3,final_abstention,0/1 per run,raw execution (descriptive only),90,90,0,0.13333333333333333,0.0,0.34183904485045247,0,1,0.0,0.0
+UC,ALL,UC3,recovery_trigger_count,triggers,raw execution (descriptive only),60,90,30,0.2,0.0,0.4033755872716886,0,1,0.0,0.0
+UC,ALL,UC3,recovery_attempt_count,starts,raw execution (descriptive only),60,90,30,0.2,0.0,0.4033755872716886,0,1,0.0,0.0
+UC,ALL,UC3,recovery_retrieval_count,completed stages,raw execution (descriptive only),60,90,30,0.2,0.0,0.4033755872716886,0,1,0.0,0.0
+UC,ALL,UC3,revision_completed_count,completed stages,raw execution (descriptive only),60,90,30,0.2,0.0,0.4033755872716886,0,1,0.0,0.0
+UC,ALL,UC3,post_recovery_verification_count,completed calls,raw execution (descriptive only),60,90,30,0.2,0.0,0.4033755872716886,0,1,0.0,0.0
+UC,ALL,UC3,verification_calls,completed calls,raw execution (descriptive only),60,90,30,1.2,1.0,0.4033755872716886,1,2,1.0,1.0
+UC,ALL,UC3,abstention_event_count,events,raw execution (descriptive only),60,90,30,0.2,0.0,0.4033755872716886,0,1,0.0,0.0
+UC,ALL,UC3,policy_decision_count,decisions,raw execution (descriptive only),60,90,30,1.0,1.0,0.0,1,1,1.0,1.0
+UC,ALL,UC3,pre_recovery_abstention,0/1 per run,raw execution (descriptive only),60,90,30,0.0,0.0,0.0,0,0,0.0,0.0
+UC,ALL,UC3,recovery_finalized,0/1 per run,raw execution (descriptive only),60,90,30,0.2,0.0,0.4033755872716886,0,1,0.0,0.0
+UC,ALL,UC3,prepolicy_input_tokens,tokens,raw execution (descriptive only),60,90,30,12206.2,12094.0,1718.1208773402825,9491,16147,11116.0,12476.0
+UC,ALL,UC3,prepolicy_output_tokens,tokens,raw execution (descriptive only),60,90,30,879.9,901.0,338.51373554487026,318,1487,602.0,1085.0
+UC,ALL,UC3,prepolicy_total_tokens,tokens,raw execution (descriptive only),60,90,30,13086.1,12979.0,1891.2033000272336,9809,17232,11900.0,13367.0
+UC,ALL,UC3,prepolicy_llm_calls,calls,raw execution (descriptive only),60,90,30,3.0,3.0,0.0,3,3,3.0,3.0
+UC,ALL,UC3,prepolicy_retrieval_calls,calls,raw execution (descriptive only),60,90,30,1.0,1.0,0.0,1,1,1.0,1.0
+UC,ALL,UC3,prepolicy_retries,recovery cycles,raw execution (descriptive only),60,90,30,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,B0,UC1,input_tokens,tokens,raw execution (descriptive only),30,30,0,6091.0,5981.0,852.2679277607806,4607,7660,5441.0,6804.0
+condition_x_UC,B0,UC1,output_tokens,tokens,raw execution (descriptive only),30,30,0,409.5,291.5,284.0422200283273,113,1024,193.0,524.0
+condition_x_UC,B0,UC1,total_tokens,tokens,raw execution (descriptive only),30,30,0,6500.5,6283.0,955.3422838492729,4793,8184,6120.0,7028.0
+condition_x_UC,B0,UC1,llm_calls,calls,raw execution (descriptive only),30,30,0,1.0,1.0,0.0,1,1,1.0,1.0
+condition_x_UC,B0,UC1,retrieval_calls,calls,raw execution (descriptive only),30,30,0,1.0,1.0,0.0,1,1,1.0,1.0
+condition_x_UC,B0,UC1,tool_calls,calls,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,B0,UC1,retries,recovery cycles,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,B0,UC1,end_to_end_ms,ms,raw execution (descriptive only),30,30,0,20509.049071200003,18617.6064355,4776.603155810088,15494.844743,30973.575591,16812.37892125,23172.36217575
+condition_x_UC,B0,UC1,llm_ms,ms,raw execution (descriptive only),30,30,0,17355.2750942,15491.121245,4780.3595576794805,12526.895075,27935.724913,13659.0443005,19902.864465749997
+condition_x_UC,B0,UC1,retrieval_ms,ms,raw execution (descriptive only),30,30,0,3152.5580113666665,3081.3995035,356.54499750619226,2960.735087,4968.199766,3036.7890022499996,3124.1146790000003
+condition_x_UC,B0,UC1,error_count,errors,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,B0,UC1,completed_execution,0/1 per run,raw execution (descriptive only),30,30,0,1.0,1.0,0.0,1,1,1.0,1.0
+condition_x_UC,B0,UC1,resource_stop,0/1 per run,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,B0,UC1,final_abstention,0/1 per run,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,B0,UC1,recovery_trigger_count,triggers,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC1,recovery_attempt_count,starts,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC1,recovery_retrieval_count,completed stages,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC1,revision_completed_count,completed stages,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC1,post_recovery_verification_count,completed calls,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC1,verification_calls,completed calls,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC1,abstention_event_count,events,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC1,policy_decision_count,decisions,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC1,pre_recovery_abstention,0/1 per run,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC1,recovery_finalized,0/1 per run,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC1,prepolicy_input_tokens,tokens,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC1,prepolicy_output_tokens,tokens,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC1,prepolicy_total_tokens,tokens,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC1,prepolicy_llm_calls,calls,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC1,prepolicy_retrieval_calls,calls,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC1,prepolicy_retries,recovery cycles,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC2,input_tokens,tokens,raw execution (descriptive only),30,30,0,6055.0,6070.5,348.54030588668826,5569,6746,5804.0,6275.0
+condition_x_UC,B0,UC2,output_tokens,tokens,raw execution (descriptive only),30,30,0,515.3,570.0,350.6932198984728,67,1024,195.0,804.0
+condition_x_UC,B0,UC2,total_tokens,tokens,raw execution (descriptive only),30,30,0,6570.3,6549.0,411.7191166735919,5764,7079,6468.0,6906.0
+condition_x_UC,B0,UC2,llm_calls,calls,raw execution (descriptive only),30,30,0,1.0,1.0,0.0,1,1,1.0,1.0
+condition_x_UC,B0,UC2,retrieval_calls,calls,raw execution (descriptive only),30,30,0,1.0,1.0,0.0,1,1,1.0,1.0
+condition_x_UC,B0,UC2,tool_calls,calls,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,B0,UC2,retries,recovery cycles,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,B0,UC2,end_to_end_ms,ms,raw execution (descriptive only),30,30,0,22010.304082566665,22522.8581425,5343.0848296516315,15106.130539,29822.389835,17053.47180675,27084.96351375
+condition_x_UC,B0,UC2,llm_ms,ms,raw execution (descriptive only),30,30,0,18903.120756,19475.414605500002,5328.131066353595,12002.78029,26593.638356,13956.7344945,24020.72203125
+condition_x_UC,B0,UC2,retrieval_ms,ms,raw execution (descriptive only),30,30,0,3106.1861018333334,3071.798605,91.68526589905429,2987.654543,3291.112244,3027.19169975,3190.04731425
+condition_x_UC,B0,UC2,error_count,errors,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,B0,UC2,completed_execution,0/1 per run,raw execution (descriptive only),30,30,0,1.0,1.0,0.0,1,1,1.0,1.0
+condition_x_UC,B0,UC2,resource_stop,0/1 per run,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,B0,UC2,final_abstention,0/1 per run,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,B0,UC2,recovery_trigger_count,triggers,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC2,recovery_attempt_count,starts,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC2,recovery_retrieval_count,completed stages,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC2,revision_completed_count,completed stages,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC2,post_recovery_verification_count,completed calls,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC2,verification_calls,completed calls,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC2,abstention_event_count,events,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC2,policy_decision_count,decisions,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC2,pre_recovery_abstention,0/1 per run,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC2,recovery_finalized,0/1 per run,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC2,prepolicy_input_tokens,tokens,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC2,prepolicy_output_tokens,tokens,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC2,prepolicy_total_tokens,tokens,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC2,prepolicy_llm_calls,calls,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC2,prepolicy_retrieval_calls,calls,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC2,prepolicy_retries,recovery cycles,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC3,input_tokens,tokens,raw execution (descriptive only),30,30,0,5231.6,5166.0,799.7242455781351,4140,7085,4785.0,5542.0
+condition_x_UC,B0,UC3,output_tokens,tokens,raw execution (descriptive only),30,30,0,397.2,348.5,225.88208703077655,117,861,229.0,487.0
+condition_x_UC,B0,UC3,total_tokens,tokens,raw execution (descriptive only),30,30,0,5628.8,5514.5,873.447959486445,4257,7459,5091.0,5820.0
+condition_x_UC,B0,UC3,llm_calls,calls,raw execution (descriptive only),30,30,0,1.0,1.0,0.0,1,1,1.0,1.0
+condition_x_UC,B0,UC3,retrieval_calls,calls,raw execution (descriptive only),30,30,0,1.0,1.0,0.0,1,1,1.0,1.0
+condition_x_UC,B0,UC3,tool_calls,calls,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,B0,UC3,retries,recovery cycles,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,B0,UC3,end_to_end_ms,ms,raw execution (descriptive only),30,30,0,19848.386316333334,18940.5666665,4166.258558445881,13618.617841,29094.942966,16894.97609575,21211.277210499997
+condition_x_UC,B0,UC3,llm_ms,ms,raw execution (descriptive only),30,30,0,16706.9530822,15890.0435325,4113.196405442559,10633.58707,25562.329663,13865.11486675,18204.87892175
+condition_x_UC,B0,UC3,retrieval_ms,ms,raw execution (descriptive only),30,30,0,3139.9087861333333,3072.973881,173.51279277339373,2966.872322,3531.601627,3025.00667,3216.408293
+condition_x_UC,B0,UC3,error_count,errors,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,B0,UC3,completed_execution,0/1 per run,raw execution (descriptive only),30,30,0,1.0,1.0,0.0,1,1,1.0,1.0
+condition_x_UC,B0,UC3,resource_stop,0/1 per run,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,B0,UC3,final_abstention,0/1 per run,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,B0,UC3,recovery_trigger_count,triggers,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC3,recovery_attempt_count,starts,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC3,recovery_retrieval_count,completed stages,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC3,revision_completed_count,completed stages,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC3,post_recovery_verification_count,completed calls,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC3,verification_calls,completed calls,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC3,abstention_event_count,events,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC3,policy_decision_count,decisions,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC3,pre_recovery_abstention,0/1 per run,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC3,recovery_finalized,0/1 per run,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC3,prepolicy_input_tokens,tokens,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC3,prepolicy_output_tokens,tokens,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC3,prepolicy_total_tokens,tokens,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC3,prepolicy_llm_calls,calls,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC3,prepolicy_retrieval_calls,calls,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B0,UC3,prepolicy_retries,recovery cycles,raw execution (descriptive only),0,30,30,,,,,,,
+condition_x_UC,B1,UC1,input_tokens,tokens,raw execution (descriptive only),30,30,0,16675.2,14662.5,5618.698802612822,12213,31257,13143.0,17114.0
+condition_x_UC,B1,UC1,output_tokens,tokens,raw execution (descriptive only),30,30,0,827.1,870.5,318.39092756958496,414,1238,428.0,1147.0
+condition_x_UC,B1,UC1,total_tokens,tokens,raw execution (descriptive only),30,30,0,17502.3,15082.0,5774.769624603338,12848,32418,14158.0,17982.0
+condition_x_UC,B1,UC1,llm_calls,calls,raw execution (descriptive only),30,30,0,3.4,3.0,0.8136762043449725,3,5,3.0,3.0
+condition_x_UC,B1,UC1,retrieval_calls,calls,raw execution (descriptive only),30,30,0,1.2,1.0,0.4068381021724862,1,2,1.0,1.0
+condition_x_UC,B1,UC1,tool_calls,calls,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,B1,UC1,retries,recovery cycles,raw execution (descriptive only),30,30,0,0.2,0.0,0.4068381021724862,0,1,0.0,0.0
+condition_x_UC,B1,UC1,end_to_end_ms,ms,raw execution (descriptive only),30,30,0,40497.479916133336,38498.0000205,11738.570160347337,27969.728255,64754.189738,30192.41579125,44587.33532775
+condition_x_UC,B1,UC1,llm_ms,ms,raw execution (descriptive only),30,30,0,36724.66161866667,35428.154857999994,10662.189842530946,24938.989211,58705.590861000004,27076.77484725,41256.278917250005
+condition_x_UC,B1,UC1,retrieval_ms,ms,raw execution (descriptive only),30,30,0,3759.7633493333333,3129.056652,1229.0631384879382,2964.941268,6316.392648,3045.5562255,3423.0261735
+condition_x_UC,B1,UC1,error_count,errors,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,B1,UC1,completed_execution,0/1 per run,raw execution (descriptive only),30,30,0,1.0,1.0,0.0,1,1,1.0,1.0
+condition_x_UC,B1,UC1,resource_stop,0/1 per run,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,B1,UC1,final_abstention,0/1 per run,raw execution (descriptive only),30,30,0,0.2,0.0,0.4068381021724862,0,1,0.0,0.0
+condition_x_UC,B1,UC1,recovery_trigger_count,triggers,raw execution (descriptive only),30,30,0,0.2,0.0,0.4068381021724862,0,1,0.0,0.0
+condition_x_UC,B1,UC1,recovery_attempt_count,starts,raw execution (descriptive only),30,30,0,0.2,0.0,0.4068381021724862,0,1,0.0,0.0
+condition_x_UC,B1,UC1,recovery_retrieval_count,completed stages,raw execution (descriptive only),30,30,0,0.2,0.0,0.4068381021724862,0,1,0.0,0.0
+condition_x_UC,B1,UC1,revision_completed_count,completed stages,raw execution (descriptive only),30,30,0,0.2,0.0,0.4068381021724862,0,1,0.0,0.0
+condition_x_UC,B1,UC1,post_recovery_verification_count,completed calls,raw execution (descriptive only),30,30,0,0.2,0.0,0.4068381021724862,0,1,0.0,0.0
+condition_x_UC,B1,UC1,verification_calls,completed calls,raw execution (descriptive only),30,30,0,1.2,1.0,0.4068381021724862,1,2,1.0,1.0
+condition_x_UC,B1,UC1,abstention_event_count,events,raw execution (descriptive only),30,30,0,0.2,0.0,0.4068381021724862,0,1,0.0,0.0
+condition_x_UC,B1,UC1,policy_decision_count,decisions,raw execution (descriptive only),30,30,0,1.0,1.0,0.0,1,1,1.0,1.0
+condition_x_UC,B1,UC1,pre_recovery_abstention,0/1 per run,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,B1,UC1,recovery_finalized,0/1 per run,raw execution (descriptive only),30,30,0,0.2,0.0,0.4068381021724862,0,1,0.0,0.0
+condition_x_UC,B1,UC1,prepolicy_input_tokens,tokens,raw execution (descriptive only),30,30,0,13797.3,13452.5,1770.2240682253018,10600,17114,13012.0,15016.0
+condition_x_UC,B1,UC1,prepolicy_output_tokens,tokens,raw execution (descriptive only),30,30,0,738.8,695.5,284.1199843679451,414,1238,428.0,873.0
+condition_x_UC,B1,UC1,prepolicy_total_tokens,tokens,raw execution (descriptive only),30,30,0,14536.1,14313.0,1848.3161087679332,11204,17982,13571.0,15441.0
+condition_x_UC,B1,UC1,prepolicy_llm_calls,calls,raw execution (descriptive only),30,30,0,3.0,3.0,0.0,3,3,3.0,3.0
+condition_x_UC,B1,UC1,prepolicy_retrieval_calls,calls,raw execution (descriptive only),30,30,0,1.0,1.0,0.0,1,1,1.0,1.0
+condition_x_UC,B1,UC1,prepolicy_retries,recovery cycles,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,B1,UC2,input_tokens,tokens,raw execution (descriptive only),30,30,0,20110.9,14862.5,7467.12626415461,13266,31744,13971.0,28697.0
+condition_x_UC,B1,UC2,output_tokens,tokens,raw execution (descriptive only),30,30,0,1405.2,1213.0,928.200795755627,289,3485,787.0,1441.0
+condition_x_UC,B1,UC2,total_tokens,tokens,raw execution (descriptive only),30,30,0,21516.1,16126.5,8176.06065817805,14260,35229,14664.0,29794.0
+condition_x_UC,B1,UC2,llm_calls,calls,raw execution (descriptive only),30,30,0,3.8,3.0,0.9965457582448797,3,5,3.0,5.0
+condition_x_UC,B1,UC2,retrieval_calls,calls,raw execution (descriptive only),30,30,0,1.3,1.0,0.466091599699399,1,2,1.0,2.0
+condition_x_UC,B1,UC2,tool_calls,calls,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,B1,UC2,retries,recovery cycles,raw execution (descriptive only),30,30,0,0.4,0.0,0.49827287912243984,0,1,0.0,1.0
+condition_x_UC,B1,UC2,end_to_end_ms,ms,raw execution (descriptive only),30,30,0,52623.77089106666,46934.879997,22414.099154419408,26253.944439,105587.943364,34171.1047845,60501.11711825
+condition_x_UC,B1,UC2,llm_ms,ms,raw execution (descriptive only),30,30,0,48468.01664906667,43793.1442995,21264.68230659508,23219.262416999998,97051.165596,31044.82654275,54247.032752
+condition_x_UC,B1,UC2,retrieval_ms,ms,raw execution (descriptive only),30,30,0,4142.1389889,3145.5939565,1661.9677232397635,2968.958574,8520.320218,3035.0431847500004,6175.2766885
+condition_x_UC,B1,UC2,error_count,errors,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,B1,UC2,completed_execution,0/1 per run,raw execution (descriptive only),30,30,0,1.0,1.0,0.0,1,1,1.0,1.0
+condition_x_UC,B1,UC2,resource_stop,0/1 per run,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,B1,UC2,final_abstention,0/1 per run,raw execution (descriptive only),30,30,0,0.3,0.0,0.466091599699399,0,1,0.0,1.0
+condition_x_UC,B1,UC2,recovery_trigger_count,triggers,raw execution (descriptive only),30,30,0,0.4,0.0,0.49827287912243984,0,1,0.0,1.0
+condition_x_UC,B1,UC2,recovery_attempt_count,starts,raw execution (descriptive only),30,30,0,0.4,0.0,0.49827287912243984,0,1,0.0,1.0
+condition_x_UC,B1,UC2,recovery_retrieval_count,completed stages,raw execution (descriptive only),30,30,0,0.3,0.0,0.466091599699399,0,1,0.0,1.0
+condition_x_UC,B1,UC2,revision_completed_count,completed stages,raw execution (descriptive only),30,30,0,0.4,0.0,0.49827287912243984,0,1,0.0,1.0
+condition_x_UC,B1,UC2,post_recovery_verification_count,completed calls,raw execution (descriptive only),30,30,0,0.4,0.0,0.49827287912243984,0,1,0.0,1.0
+condition_x_UC,B1,UC2,verification_calls,completed calls,raw execution (descriptive only),30,30,0,1.4,1.0,0.49827287912243984,1,2,1.0,2.0
+condition_x_UC,B1,UC2,abstention_event_count,events,raw execution (descriptive only),30,30,0,0.3,0.0,0.466091599699399,0,1,0.0,1.0
+condition_x_UC,B1,UC2,policy_decision_count,decisions,raw execution (descriptive only),30,30,0,1.0,1.0,0.0,1,1,1.0,1.0
+condition_x_UC,B1,UC2,pre_recovery_abstention,0/1 per run,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,B1,UC2,recovery_finalized,0/1 per run,raw execution (descriptive only),30,30,0,0.4,0.0,0.49827287912243984,0,1,0.0,1.0
+condition_x_UC,B1,UC2,prepolicy_input_tokens,tokens,raw execution (descriptive only),30,30,0,13931.3,13988.0,751.6657433029474,12600,14902,13266.0,14597.0
+condition_x_UC,B1,UC2,prepolicy_output_tokens,tokens,raw execution (descriptive only),30,30,0,1033.1,956.0,522.9055660771672,289,2004,569.0,1441.0
+condition_x_UC,B1,UC2,prepolicy_total_tokens,tokens,raw execution (descriptive only),30,30,0,14964.4,15050.0,1038.1524902939107,13301,16215,14260.0,16009.0
+condition_x_UC,B1,UC2,prepolicy_llm_calls,calls,raw execution (descriptive only),30,30,0,3.0,3.0,0.0,3,3,3.0,3.0
+condition_x_UC,B1,UC2,prepolicy_retrieval_calls,calls,raw execution (descriptive only),30,30,0,1.0,1.0,0.0,1,1,1.0,1.0
+condition_x_UC,B1,UC2,prepolicy_retries,recovery cycles,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,B1,UC3,input_tokens,tokens,raw execution (descriptive only),30,30,0,14939.2,12470.5,5531.747185486511,9491,25700,11298.0,16147.0
+condition_x_UC,B1,UC3,output_tokens,tokens,raw execution (descriptive only),30,30,0,1003.2,1047.0,411.5775705158435,318,1550,602.0,1355.0
+condition_x_UC,B1,UC3,total_tokens,tokens,raw execution (descriptive only),30,30,0,15942.4,13185.0,5800.83640580361,9809,27055,12603.0,17232.0
+condition_x_UC,B1,UC3,llm_calls,calls,raw execution (descriptive only),30,30,0,3.4,3.0,0.8136762043449725,3,5,3.0,3.0
+condition_x_UC,B1,UC3,retrieval_calls,calls,raw execution (descriptive only),30,30,0,1.2,1.0,0.4068381021724862,1,2,1.0,1.0
+condition_x_UC,B1,UC3,tool_calls,calls,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,B1,UC3,retries,recovery cycles,raw execution (descriptive only),30,30,0,0.2,0.0,0.4068381021724862,0,1,0.0,0.0
+condition_x_UC,B1,UC3,end_to_end_ms,ms,raw execution (descriptive only),30,30,0,41165.37030803333,39495.052311499996,13295.6388586163,22741.60974,64631.55452,29559.669746749998,44502.586466249995
+condition_x_UC,B1,UC3,llm_ms,ms,raw execution (descriptive only),30,30,0,37402.47903573333,36260.052246499996,12183.508236997366,19599.981048999998,58460.683038999996,26441.386028,41445.3998875
+condition_x_UC,B1,UC3,retrieval_ms,ms,raw execution (descriptive only),30,30,0,3749.1955943333332,3123.999527,1288.587851583139,2987.299514,6578.527864,3056.86631675,3351.23159225
+condition_x_UC,B1,UC3,error_count,errors,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,B1,UC3,completed_execution,0/1 per run,raw execution (descriptive only),30,30,0,1.0,1.0,0.0,1,1,1.0,1.0
+condition_x_UC,B1,UC3,resource_stop,0/1 per run,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,B1,UC3,final_abstention,0/1 per run,raw execution (descriptive only),30,30,0,0.2,0.0,0.4068381021724862,0,1,0.0,0.0
+condition_x_UC,B1,UC3,recovery_trigger_count,triggers,raw execution (descriptive only),30,30,0,0.2,0.0,0.4068381021724862,0,1,0.0,0.0
+condition_x_UC,B1,UC3,recovery_attempt_count,starts,raw execution (descriptive only),30,30,0,0.2,0.0,0.4068381021724862,0,1,0.0,0.0
+condition_x_UC,B1,UC3,recovery_retrieval_count,completed stages,raw execution (descriptive only),30,30,0,0.2,0.0,0.4068381021724862,0,1,0.0,0.0
+condition_x_UC,B1,UC3,revision_completed_count,completed stages,raw execution (descriptive only),30,30,0,0.2,0.0,0.4068381021724862,0,1,0.0,0.0
+condition_x_UC,B1,UC3,post_recovery_verification_count,completed calls,raw execution (descriptive only),30,30,0,0.2,0.0,0.4068381021724862,0,1,0.0,0.0
+condition_x_UC,B1,UC3,verification_calls,completed calls,raw execution (descriptive only),30,30,0,1.2,1.0,0.4068381021724862,1,2,1.0,1.0
+condition_x_UC,B1,UC3,abstention_event_count,events,raw execution (descriptive only),30,30,0,0.2,0.0,0.4068381021724862,0,1,0.0,0.0
+condition_x_UC,B1,UC3,policy_decision_count,decisions,raw execution (descriptive only),30,30,0,1.0,1.0,0.0,1,1,1.0,1.0
+condition_x_UC,B1,UC3,pre_recovery_abstention,0/1 per run,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,B1,UC3,recovery_finalized,0/1 per run,raw execution (descriptive only),30,30,0,0.2,0.0,0.4068381021724862,0,1,0.0,0.0
+condition_x_UC,B1,UC3,prepolicy_input_tokens,tokens,raw execution (descriptive only),30,30,0,12206.2,12094.0,1732.8689665327884,9491,16147,11116.0,12476.0
+condition_x_UC,B1,UC3,prepolicy_output_tokens,tokens,raw execution (descriptive only),30,30,0,879.9,901.0,341.4194861416691,318,1487,602.0,1085.0
+condition_x_UC,B1,UC3,prepolicy_total_tokens,tokens,raw execution (descriptive only),30,30,0,13086.1,12979.0,1907.4371025016787,9809,17232,11900.0,13367.0
+condition_x_UC,B1,UC3,prepolicy_llm_calls,calls,raw execution (descriptive only),30,30,0,3.0,3.0,0.0,3,3,3.0,3.0
+condition_x_UC,B1,UC3,prepolicy_retrieval_calls,calls,raw execution (descriptive only),30,30,0,1.0,1.0,0.0,1,1,1.0,1.0
+condition_x_UC,B1,UC3,prepolicy_retries,recovery cycles,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,G1,UC1,input_tokens,tokens,raw execution (descriptive only),30,30,0,16675.2,14662.5,5618.698802612822,12213,31257,13143.0,17114.0
+condition_x_UC,G1,UC1,output_tokens,tokens,raw execution (descriptive only),30,30,0,827.1,870.5,318.39092756958496,414,1238,428.0,1147.0
+condition_x_UC,G1,UC1,total_tokens,tokens,raw execution (descriptive only),30,30,0,17502.3,15082.0,5774.769624603338,12848,32418,14158.0,17982.0
+condition_x_UC,G1,UC1,llm_calls,calls,raw execution (descriptive only),30,30,0,3.4,3.0,0.8136762043449725,3,5,3.0,3.0
+condition_x_UC,G1,UC1,retrieval_calls,calls,raw execution (descriptive only),30,30,0,1.2,1.0,0.4068381021724862,1,2,1.0,1.0
+condition_x_UC,G1,UC1,tool_calls,calls,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,G1,UC1,retries,recovery cycles,raw execution (descriptive only),30,30,0,0.2,0.0,0.4068381021724862,0,1,0.0,0.0
+condition_x_UC,G1,UC1,end_to_end_ms,ms,raw execution (descriptive only),30,30,0,39988.139842966666,37270.383541,12079.949741480325,27689.607744,65795.296911,29771.771607,43889.0375135
+condition_x_UC,G1,UC1,llm_ms,ms,raw execution (descriptive only),30,30,0,36145.866915800005,34086.5527685,10935.44453886102,24638.984137,59298.333451,26690.248562,40820.12838675
+condition_x_UC,G1,UC1,retrieval_ms,ms,raw execution (descriptive only),30,30,0,3827.911613333333,3177.053241,1328.981340920619,3023.941001,6669.933899,3087.5257794999998,3453.92311125
+condition_x_UC,G1,UC1,error_count,errors,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,G1,UC1,completed_execution,0/1 per run,raw execution (descriptive only),30,30,0,1.0,1.0,0.0,1,1,1.0,1.0
+condition_x_UC,G1,UC1,resource_stop,0/1 per run,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,G1,UC1,final_abstention,0/1 per run,raw execution (descriptive only),30,30,0,0.2,0.0,0.4068381021724862,0,1,0.0,0.0
+condition_x_UC,G1,UC1,recovery_trigger_count,triggers,raw execution (descriptive only),30,30,0,0.2,0.0,0.4068381021724862,0,1,0.0,0.0
+condition_x_UC,G1,UC1,recovery_attempt_count,starts,raw execution (descriptive only),30,30,0,0.2,0.0,0.4068381021724862,0,1,0.0,0.0
+condition_x_UC,G1,UC1,recovery_retrieval_count,completed stages,raw execution (descriptive only),30,30,0,0.2,0.0,0.4068381021724862,0,1,0.0,0.0
+condition_x_UC,G1,UC1,revision_completed_count,completed stages,raw execution (descriptive only),30,30,0,0.2,0.0,0.4068381021724862,0,1,0.0,0.0
+condition_x_UC,G1,UC1,post_recovery_verification_count,completed calls,raw execution (descriptive only),30,30,0,0.2,0.0,0.4068381021724862,0,1,0.0,0.0
+condition_x_UC,G1,UC1,verification_calls,completed calls,raw execution (descriptive only),30,30,0,1.2,1.0,0.4068381021724862,1,2,1.0,1.0
+condition_x_UC,G1,UC1,abstention_event_count,events,raw execution (descriptive only),30,30,0,0.2,0.0,0.4068381021724862,0,1,0.0,0.0
+condition_x_UC,G1,UC1,policy_decision_count,decisions,raw execution (descriptive only),30,30,0,1.0,1.0,0.0,1,1,1.0,1.0
+condition_x_UC,G1,UC1,pre_recovery_abstention,0/1 per run,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,G1,UC1,recovery_finalized,0/1 per run,raw execution (descriptive only),30,30,0,0.2,0.0,0.4068381021724862,0,1,0.0,0.0
+condition_x_UC,G1,UC1,prepolicy_input_tokens,tokens,raw execution (descriptive only),30,30,0,13797.3,13452.5,1770.2240682253018,10600,17114,13012.0,15016.0
+condition_x_UC,G1,UC1,prepolicy_output_tokens,tokens,raw execution (descriptive only),30,30,0,738.8,695.5,284.1199843679451,414,1238,428.0,873.0
+condition_x_UC,G1,UC1,prepolicy_total_tokens,tokens,raw execution (descriptive only),30,30,0,14536.1,14313.0,1848.3161087679332,11204,17982,13571.0,15441.0
+condition_x_UC,G1,UC1,prepolicy_llm_calls,calls,raw execution (descriptive only),30,30,0,3.0,3.0,0.0,3,3,3.0,3.0
+condition_x_UC,G1,UC1,prepolicy_retrieval_calls,calls,raw execution (descriptive only),30,30,0,1.0,1.0,0.0,1,1,1.0,1.0
+condition_x_UC,G1,UC1,prepolicy_retries,recovery cycles,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,G1,UC2,input_tokens,tokens,raw execution (descriptive only),30,30,0,18337.0,14710.0,6508.452398280997,13266,29663,13971.0,25569.0
+condition_x_UC,G1,UC2,output_tokens,tokens,raw execution (descriptive only),30,30,0,1257.1,1213.0,654.5890182080819,289,2601,787.0,1441.0
+condition_x_UC,G1,UC2,total_tokens,tokens,raw execution (descriptive only),30,30,0,19594.1,16023.5,6834.552480619695,14260,32264,14664.0,26870.0
+condition_x_UC,G1,UC2,llm_calls,calls,raw execution (descriptive only),30,30,0,3.6,3.0,0.932183199398798,3,5,3.0,5.0
+condition_x_UC,G1,UC2,retrieval_calls,calls,raw execution (descriptive only),30,30,0,1.2,1.0,0.4068381021724862,1,2,1.0,1.0
+condition_x_UC,G1,UC2,tool_calls,calls,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,G1,UC2,retries,recovery cycles,raw execution (descriptive only),30,30,0,0.3,0.0,0.466091599699399,0,1,0.0,1.0
+condition_x_UC,G1,UC2,end_to_end_ms,ms,raw execution (descriptive only),30,30,0,47959.79889806666,46787.980583,14901.47136315492,25801.156621,76188.34535,34380.29289975,60181.983223
+condition_x_UC,G1,UC2,llm_ms,ms,raw execution (descriptive only),30,30,0,44150.6900398,43701.3407325,14349.861779528796,22714.241522,72578.415718,31139.45298425,53816.755902749996
+condition_x_UC,G1,UC2,retrieval_ms,ms,raw execution (descriptive only),30,30,0,3795.587372833333,3140.44128,1288.2357218135144,2979.065685,6630.264574000001,3075.977745,3396.658465
+condition_x_UC,G1,UC2,error_count,errors,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,G1,UC2,completed_execution,0/1 per run,raw execution (descriptive only),30,30,0,1.0,1.0,0.0,1,1,1.0,1.0
+condition_x_UC,G1,UC2,resource_stop,0/1 per run,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,G1,UC2,final_abstention,0/1 per run,raw execution (descriptive only),30,30,0,0.3,0.0,0.466091599699399,0,1,0.0,1.0
+condition_x_UC,G1,UC2,recovery_trigger_count,triggers,raw execution (descriptive only),30,30,0,0.3,0.0,0.466091599699399,0,1,0.0,1.0
+condition_x_UC,G1,UC2,recovery_attempt_count,starts,raw execution (descriptive only),30,30,0,0.3,0.0,0.466091599699399,0,1,0.0,1.0
+condition_x_UC,G1,UC2,recovery_retrieval_count,completed stages,raw execution (descriptive only),30,30,0,0.2,0.0,0.4068381021724862,0,1,0.0,0.0
+condition_x_UC,G1,UC2,revision_completed_count,completed stages,raw execution (descriptive only),30,30,0,0.3,0.0,0.466091599699399,0,1,0.0,1.0
+condition_x_UC,G1,UC2,post_recovery_verification_count,completed calls,raw execution (descriptive only),30,30,0,0.3,0.0,0.466091599699399,0,1,0.0,1.0
+condition_x_UC,G1,UC2,verification_calls,completed calls,raw execution (descriptive only),30,30,0,1.3,1.0,0.466091599699399,1,2,1.0,2.0
+condition_x_UC,G1,UC2,abstention_event_count,events,raw execution (descriptive only),30,30,0,0.3,0.0,0.466091599699399,0,1,0.0,1.0
+condition_x_UC,G1,UC2,policy_decision_count,decisions,raw execution (descriptive only),30,30,0,1.0,1.0,0.0,1,1,1.0,1.0
+condition_x_UC,G1,UC2,pre_recovery_abstention,0/1 per run,raw execution (descriptive only),30,30,0,0.1,0.0,0.30512857662936466,0,1,0.0,0.0
+condition_x_UC,G1,UC2,recovery_finalized,0/1 per run,raw execution (descriptive only),30,30,0,0.3,0.0,0.466091599699399,0,1,0.0,1.0
+condition_x_UC,G1,UC2,prepolicy_input_tokens,tokens,raw execution (descriptive only),30,30,0,13931.3,13988.0,751.6657433029474,12600,14902,13266.0,14597.0
+condition_x_UC,G1,UC2,prepolicy_output_tokens,tokens,raw execution (descriptive only),30,30,0,1033.1,956.0,522.9055660771672,289,2004,569.0,1441.0
+condition_x_UC,G1,UC2,prepolicy_total_tokens,tokens,raw execution (descriptive only),30,30,0,14964.4,15050.0,1038.1524902939107,13301,16215,14260.0,16009.0
+condition_x_UC,G1,UC2,prepolicy_llm_calls,calls,raw execution (descriptive only),30,30,0,3.0,3.0,0.0,3,3,3.0,3.0
+condition_x_UC,G1,UC2,prepolicy_retrieval_calls,calls,raw execution (descriptive only),30,30,0,1.0,1.0,0.0,1,1,1.0,1.0
+condition_x_UC,G1,UC2,prepolicy_retries,recovery cycles,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,G1,UC3,input_tokens,tokens,raw execution (descriptive only),30,30,0,14939.2,12470.5,5531.747185486511,9491,25700,11298.0,16147.0
+condition_x_UC,G1,UC3,output_tokens,tokens,raw execution (descriptive only),30,30,0,1003.2,1047.0,411.5775705158435,318,1550,602.0,1355.0
+condition_x_UC,G1,UC3,total_tokens,tokens,raw execution (descriptive only),30,30,0,15942.4,13185.0,5800.83640580361,9809,27055,12603.0,17232.0
+condition_x_UC,G1,UC3,llm_calls,calls,raw execution (descriptive only),30,30,0,3.4,3.0,0.8136762043449725,3,5,3.0,3.0
+condition_x_UC,G1,UC3,retrieval_calls,calls,raw execution (descriptive only),30,30,0,1.2,1.0,0.4068381021724862,1,2,1.0,1.0
+condition_x_UC,G1,UC3,tool_calls,calls,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,G1,UC3,retries,recovery cycles,raw execution (descriptive only),30,30,0,0.2,0.0,0.4068381021724862,0,1,0.0,0.0
+condition_x_UC,G1,UC3,end_to_end_ms,ms,raw execution (descriptive only),30,30,0,41133.599378700004,39765.4890845,13300.833073674237,22812.249442,64451.393479,29744.621928,44752.481832749996
+condition_x_UC,G1,UC3,llm_ms,ms,raw execution (descriptive only),30,30,0,37372.4537681,36460.044717,12188.285798483399,19670.647849999998,58137.099488,26661.25620875,41659.813763
+condition_x_UC,G1,UC3,retrieval_ms,ms,raw execution (descriptive only),30,30,0,3739.3245962,3104.0266395,1294.3392988769754,2943.218956,6397.41894,3047.94739425,3345.191979
+condition_x_UC,G1,UC3,error_count,errors,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,G1,UC3,completed_execution,0/1 per run,raw execution (descriptive only),30,30,0,1.0,1.0,0.0,1,1,1.0,1.0
+condition_x_UC,G1,UC3,resource_stop,0/1 per run,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,G1,UC3,final_abstention,0/1 per run,raw execution (descriptive only),30,30,0,0.2,0.0,0.4068381021724862,0,1,0.0,0.0
+condition_x_UC,G1,UC3,recovery_trigger_count,triggers,raw execution (descriptive only),30,30,0,0.2,0.0,0.4068381021724862,0,1,0.0,0.0
+condition_x_UC,G1,UC3,recovery_attempt_count,starts,raw execution (descriptive only),30,30,0,0.2,0.0,0.4068381021724862,0,1,0.0,0.0
+condition_x_UC,G1,UC3,recovery_retrieval_count,completed stages,raw execution (descriptive only),30,30,0,0.2,0.0,0.4068381021724862,0,1,0.0,0.0
+condition_x_UC,G1,UC3,revision_completed_count,completed stages,raw execution (descriptive only),30,30,0,0.2,0.0,0.4068381021724862,0,1,0.0,0.0
+condition_x_UC,G1,UC3,post_recovery_verification_count,completed calls,raw execution (descriptive only),30,30,0,0.2,0.0,0.4068381021724862,0,1,0.0,0.0
+condition_x_UC,G1,UC3,verification_calls,completed calls,raw execution (descriptive only),30,30,0,1.2,1.0,0.4068381021724862,1,2,1.0,1.0
+condition_x_UC,G1,UC3,abstention_event_count,events,raw execution (descriptive only),30,30,0,0.2,0.0,0.4068381021724862,0,1,0.0,0.0
+condition_x_UC,G1,UC3,policy_decision_count,decisions,raw execution (descriptive only),30,30,0,1.0,1.0,0.0,1,1,1.0,1.0
+condition_x_UC,G1,UC3,pre_recovery_abstention,0/1 per run,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0
+condition_x_UC,G1,UC3,recovery_finalized,0/1 per run,raw execution (descriptive only),30,30,0,0.2,0.0,0.4068381021724862,0,1,0.0,0.0
+condition_x_UC,G1,UC3,prepolicy_input_tokens,tokens,raw execution (descriptive only),30,30,0,12206.2,12094.0,1732.8689665327884,9491,16147,11116.0,12476.0
+condition_x_UC,G1,UC3,prepolicy_output_tokens,tokens,raw execution (descriptive only),30,30,0,879.9,901.0,341.4194861416691,318,1487,602.0,1085.0
+condition_x_UC,G1,UC3,prepolicy_total_tokens,tokens,raw execution (descriptive only),30,30,0,13086.1,12979.0,1907.4371025016787,9809,17232,11900.0,13367.0
+condition_x_UC,G1,UC3,prepolicy_llm_calls,calls,raw execution (descriptive only),30,30,0,3.0,3.0,0.0,3,3,3.0,3.0
+condition_x_UC,G1,UC3,prepolicy_retrieval_calls,calls,raw execution (descriptive only),30,30,0,1.0,1.0,0.0,1,1,1.0,1.0
+condition_x_UC,G1,UC3,prepolicy_retries,recovery cycles,raw execution (descriptive only),30,30,0,0.0,0.0,0.0,0,0,0.0,0.0

@@ -1,0 +1,22 @@
+{
+  "schema_version": "0.1",
+  "artifact_type": "dense_embedding_index",
+  "status": "frozen",
+  "retrieval_config_id": "UC3-QWEN3-EMBED4B-EXACT-COSINE-v0.1",
+  "chunking_config_id": "UC3-PAGE-W450-O75-v0.1",
+  "chunk_count": 850,
+  "dimensions": 2560,
+  "dtype": "float32",
+  "batch_size": 32,
+  "embedding_model": "qwen3-embedding:4b-q4_K_M",
+  "embedding_model_digest": "df5bd2e3c74cd8d069d21dc038f1b359fcdc9458fce1c99bd43c9eb1518ff907",
+  "embedding_provider": "ollama",
+  "embedding_provider_version": "0.34.0",
+  "truncate": false,
+  "source_chunk_index_sha256": "a89d618882c5ffe44ca852e0cc07f1730916cbd01ec464a3eecd22d5063e026e",
+  "source_chunk_artifacts_sha256": "ea846ed576b7b4435d67182897a7fee6f9d17f533dc13290b34d2bae33d38563",
+  "source_chunk_artifact_count": 9,
+  "retrieval_config_sha256": "cbc006fbab5623af240613e4348bccd17107943e0556a5746409130cd073bac1",
+  "embeddings_sha256": "7c7cdbd63f3fd1d2fded22b35407309d7ad41b0b41b8a0a2ce198f6b385e2450",
+  "chunk_ids_sha256": "7ee115260ad10f5fb89a42e34262261197dfe9b31229e7b3e532a1e28a186a62"
+}

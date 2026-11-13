@@ -1,0 +1,42 @@
+{
+  "analysis_started_at_freeze": false,
+  "condition_counts": {
+    "B0": 90,
+    "B1": 90,
+    "G1": 90
+  },
+  "execution_log_sha256": "3cfdffa352392625931d6cbc609ea49c652af7a84c56ac6d8b211ad5d4929ddf",
+  "execution_order": {
+    "generation_seed": 20260912,
+    "run_count": 270,
+    "sha256": "f027a367684cb69120379c627a16003ebf5c07927e091e3879dd149c911cef79"
+  },
+  "execution_repository_head": "872f8de38c79a78e4e016cedf5597bc21323a374",
+  "execution_status_counts": {
+    "completed": 225,
+    "completed_after_recovery": 45
+  },
+  "final_execution_code_revision": "58b9e656dd57e62a5fb8640c2d3c990e4c93e530",
+  "freeze_id": "PRIMARY-BENCHMARK-V1-RAW-RESULT-FREEZE",
+  "integrity_audit": {
+    "output_sha256": "09f5aa541ce0bde4a7bd13fa9a822849be77e47e8c5786208ed39ca5d8b6f02f",
+    "result": "PASS"
+  },
+  "launch_manifest_sha256": "33b57d129aa41d470dd6d6e0561e30f9208ef1639fbf4b24c2da9c1c656913ef",
+  "primary_execution_complete": true,
+  "primary_run_count": 270,
+  "raw_record_bundle_sha256": "cd6299e13820a22eaad7e6737102972b268f844af82795272b642c23574ca073",
+  "raw_records_policy": "Read-only scientific source data after this freeze; analysis must derive new artifacts without modifying primary records.",
+  "record_hash_inventory": {
+    "path": "RAW_RECORD_SHA256SUMS.txt",
+    "sha256": "1b0bb2565fe950884ad036f82fa54292d1bae57170bf53184653bf309e4cf617"
+  },
+  "runner_sha256": "f051353934005cd1acbe98eef16bc9104aa75073f249f08158eaac077595162c",
+  "schema_version": "0.1",
+  "status": "frozen",
+  "use_case_counts": {
+    "UC1": 90,
+    "UC2": 90,
+    "UC3": 90
+  }
+}

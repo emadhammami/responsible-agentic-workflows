@@ -1,0 +1,138 @@
+{
+  "status": "PASS",
+  "scope": "Released telemetry and numeric annotation reconstruction; no inference or independent semantic/human evaluation.",
+  "raw_records_released": false,
+  "projected_records": 270,
+  "original_hash_match_is_not_raw_access": true,
+  "existing_table_files_compared": 22,
+  "compared_tables": [
+    "reference/execution_figures_v1/data/b1_g1_operational_divergence.csv",
+    "reference/execution_figures_v1/data/execution_summary.csv",
+    "reference/execution_figures_v1/data/figure01_call_frequency_counts.csv",
+    "reference/execution_figures_v1/data/figure01_overall_resource_profile.csv",
+    "reference/execution_figures_v1/data/figure02_b1_g1_paired_differences.csv",
+    "reference/execution_figures_v1/data/figure03_use_case_resource.csv",
+    "reference/execution_figures_v1/data/figure04_control_behavior.csv",
+    "reference/execution_figures_v1/data/figure04_control_behavior_runs.csv",
+    "reference/execution_figures_v1/data/figure05_latency_distribution.csv",
+    "reference/execution_figures_v1/data/figureS01_token_decomposition.csv",
+    "reference/execution_figures_v1/data/figureS02_repetition_variability.csv",
+    "reference/execution_figures_v1/data/operational_categorical_counts.csv",
+    "reference/execution_figures_v1/data/operational_divergence_summary.csv",
+    "reference/execution_figures_v1/data/operational_divergence_task_means.csv",
+    "reference/execution_figures_v1/data/paired_execution_summary.csv",
+    "reference/execution_figures_v1/data/raw_execution_metrics_270.csv",
+    "reference/execution_figures_v1/data/task_condition_means.csv",
+    "reference/thesis/data/validated_execution_metrics.csv",
+    "reference/thesis/data/task_resource_means.csv",
+    "reference/thesis/data/paired_task_differences.csv",
+    "reference/thesis/data/recovery_abstention_by_type.csv"
+  ],
+  "numeric_tolerance": {
+    "relative": 1e-12,
+    "absolute": 1e-09
+  },
+  "composition": {
+    "original_valid": 485,
+    "hybrid_claims_only": 25,
+    "recovered_full": 29,
+    "alias_normalized": 1
+  },
+  "composite_agreement": {
+    "n": 270,
+    "exact": 226,
+    "agreement": 0.837037037037037,
+    "unweighted_kappa": 0.45544554455445535,
+    "quadratic_weighted_kappa": 0.6927374301675977
+  },
+  "original_valid_pair_agreement": {
+    "n": 216,
+    "exact": 181,
+    "agreement": 0.8379629629629629,
+    "unweighted_kappa": 0.4769613947696137,
+    "quadratic_weighted_kappa": 0.7283311772315654
+  },
+  "paired_statistics": [
+    {
+      "metric": "total_tokens",
+      "mean": -640.6666666666666,
+      "median": 0.0,
+      "lower": -1922.0,
+      "upper": 0.0
+    },
+    {
+      "metric": "llm_calls",
+      "mean": -0.06666666666666667,
+      "median": 0.0,
+      "lower": -0.2,
+      "upper": 0.0
+    },
+    {
+      "metric": "retrieval_calls",
+      "mean": -0.03333333333333333,
+      "median": 0.0,
+      "lower": -0.1,
+      "upper": 0.0
+    },
+    {
+      "metric": "seconds",
+      "mean": -1.7350276651666676,
+      "median": -0.12635239366666795,
+      "lower": -5.088660353759999,
+      "upper": 0.09978236973555409
+    }
+  ],
+  "figures": "14 resource-v1 layouts, three thesis execution figures, provisional LLM matrix, and frozen IEEE resource Figure 1 rendered; numeric companions checked. Font/library differences can change bytes.",
+  "withheld": "answer text; retrieval query text; rights-held source originals; original processed retrieval passages; human/expert data; full judge reasons/responses; model weights and vectors",
+  "software_tests": {
+    "passed": 648,
+    "environment": "existing project Python 3.14 virtual environment; no clean installation attempted"
+  },
+  "saved_judge_source_audit": {
+    "source_files_checked": 294,
+    "expert_data_read": false,
+    "scope": "Local reconstruction of saved LLM composite and exact comparison to existing numeric exports; not independent semantic assessment."
+  },
+  "retrieval_metadata_checks": {
+    "UC1": [
+      2853,
+      2560
+    ],
+    "UC2": [
+      293,
+      2560
+    ],
+    "UC3": [
+      850,
+      2560
+    ],
+    "dtype": "float32",
+    "metadata_index_hashes_match": true,
+    "vectors_released": false,
+    "active_sources": 56
+  },
+  "final_review_amendment": {
+    "reason": "Excluded the full archived evaluation script because it encodes withheld expert participation metadata. A separate module retains only unchanged numeric agreement and plotting functions.",
+    "derived_module": "adapters/provisional_agreement_plot.py",
+    "targeted_checks": [
+      "function AST equivalence to original source",
+      "agreement coefficients unchanged",
+      "replacement module import and PDF/PNG rendering"
+    ],
+    "full_test_suite_repeated": false,
+    "historical_verification_retained": true
+  },
+  "source_corpus_extension": {
+    "logical_documents_in_benchmark": 56,
+    "physical_files_in_benchmark": 64,
+    "approved_original_documents": 41,
+    "approved_original_files": 49,
+    "official_link_only_documents": 15,
+    "exact_original_hashes_checked": 64,
+    "membership_matches_frozen_scopes_and_index_document_ids": true,
+    "full_56_document_public_corpus": false,
+    "original_documents_modified": false,
+    "numerical_tests_repeated": false,
+    "doc051_aggregate_note": "Historical bundle digest retained; original encoding not recovered. All nine physical components independently match acquisition hashes."
+  }
+}

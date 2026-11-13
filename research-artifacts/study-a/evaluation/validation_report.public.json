@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "matrix_rows": "Cohere J1",
+  "matrix_columns": "Gemini J2",
+  "matrix": [
+    [
+      12,
+      0,
+      0
+    ],
+    [
+      1,
+      10,
+      43
+    ],
+    [
+      0,
+      0,
+      204
+    ]
+  ],
+  "composite_agreement": {
+    "n": 270,
+    "exact": 226,
+    "agreement": 0.837037037037037,
+    "unweighted_kappa": 0.45544554455445535,
+    "quadratic_weighted_kappa": 0.6927374301675977
+  },
+  "original_agreement": {
+    "n": 216,
+    "exact": 181,
+    "agreement": 0.8379629629629629,
+    "unweighted_kappa": 0.4769613947696137,
+    "quadratic_weighted_kappa": 0.7283311772315654
+  },
+  "composition": {
+    "original_valid": 485,
+    "recovered_full": 29,
+    "hybrid_claims_only": 25,
+    "alias_normalized": 1
+  },
+  "original_invalid_preserved": 55,
+  "repeated_groups_with_variation": {
+    "count": 21,
+    "denominator": 180
+  },
+  "matched_output_identity": {
+    "count": 90,
+    "denominator": 90
+  },
+  "matched_score_disagreement": {
+    "count": 14,
+    "denominator": 180
+  },
+  "context_comparisons": {
+    "identical_context_output_pairs": 87,
+    "different_context_output_pairs": 3
+  },
+  "same_context_score_disagreement": {
+    "count": 14,
+    "denominator": 174
+  },
+  "different_context_score_disagreement": {
+    "count": 0,
+    "denominator": 6
+  },
+  "sources_checked": 355,
+  "script_sha256": "4fb02bd0c90ac24d23b5dd29a2b9cb3918f1c66915cf9106aaa99f6197dc890d",
+  "dependencies": {
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.3",
+    "jsonschema": "4.26.0"
+  },
+  "supplement_hash_note": "Final26 results have no bundle hash in the prospective freeze. All 25 raw-response digests and parsed-response links independently verified; observed file hashes recorded.",
+  "excluded_records": 0
+}

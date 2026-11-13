@@ -1,0 +1,3725 @@
+[
+  {
+    "source_file": "primary-t008-b1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t002-b1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t008-b0-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t030-b0-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t010-g1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "retrieval.calls[1].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp",
+      "events[9].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t010-g1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "retrieval.calls[1].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp",
+      "events[9].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t027-g1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t011-b0-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t001-g1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t023-b0-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t013-g1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t021-b0-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t014-g1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t030-g1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "retrieval.calls[1].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp",
+      "events[9].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t001-b0-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t029-g1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t012-b1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t022-b1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t030-b1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "retrieval.calls[1].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp",
+      "events[9].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t024-b0-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t001-b0-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t015-g1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t017-g1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t008-g1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t016-b1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t015-g1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t017-b1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "retrieval.calls[1].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp",
+      "events[9].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t009-g1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "retrieval.calls[1].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp",
+      "events[9].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t019-g1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "retrieval.calls[1].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp",
+      "events[9].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t015-b0-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t021-b0-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t001-b1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t010-g1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "retrieval.calls[1].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp",
+      "events[9].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t013-g1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t011-b1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t003-b1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t011-b0-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t025-g1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t015-b1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t025-b0-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t022-b1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t006-b1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t014-b0-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t008-g1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t025-b1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t029-b1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t029-g1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t012-g1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t009-b1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "retrieval.calls[1].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp",
+      "events[9].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t018-b1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t016-g1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t030-b1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "retrieval.calls[1].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp",
+      "events[9].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t014-g1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t020-g1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "retrieval.calls[1].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp",
+      "events[9].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t018-g1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t014-b1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t003-g1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t020-b1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "retrieval.calls[1].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp",
+      "events[9].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t012-b1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t020-b0-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t001-b0-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t012-b0-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t003-b0-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t004-g1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t019-b1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "retrieval.calls[1].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp",
+      "events[9].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t024-g1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t021-b0-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t027-b0-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t008-b1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t001-b1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t018-b0-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t017-g1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t024-g1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t009-b1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "retrieval.calls[1].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp",
+      "events[9].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t029-b1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t016-b1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t001-g1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t024-g1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t005-b1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t017-b1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "retrieval.calls[1].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp",
+      "events[9].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t012-g1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t006-b0-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t013-b1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t027-b0-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t017-g1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t007-b0-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t001-b1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t023-g1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t018-b0-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t008-b1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t006-b0-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t011-g1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t010-b0-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t026-b1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "retrieval.calls[1].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp",
+      "events[9].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t012-b0-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t002-b0-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t025-b0-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t019-b1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "retrieval.calls[1].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp",
+      "events[9].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t015-b0-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t026-g1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "retrieval.calls[1].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp",
+      "events[9].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t022-b0-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t027-b1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t009-b0-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t016-b1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t006-g1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t022-b1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t023-b1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t024-b1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t019-b0-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t009-g1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "retrieval.calls[1].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp",
+      "events[9].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t006-g1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t016-b0-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t005-b0-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t003-g1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t025-g1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t030-g1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "retrieval.calls[1].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp",
+      "events[9].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t023-g1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t013-b1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t020-g1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "retrieval.calls[1].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp",
+      "events[9].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t027-b1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t025-b1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t024-b1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t007-g1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t019-g1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "retrieval.calls[1].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp",
+      "events[9].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t016-g1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t017-b0-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t004-b0-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t022-b0-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t009-b0-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t023-g1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t025-b0-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t028-g1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t018-b1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t003-b0-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t016-g1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t030-b0-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t020-b0-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t023-b1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t014-b0-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t001-g1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t023-b0-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t030-b1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "retrieval.calls[1].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp",
+      "events[9].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t022-g1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t006-b0-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t022-g1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t021-b1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t014-b1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t009-b0-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t027-b0-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t016-b0-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t019-b0-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t019-b0-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t011-g1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t018-b0-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t025-g1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t026-b0-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t017-b0-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t014-g1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t002-b1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t007-g1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t012-b0-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t022-b0-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t010-b1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "retrieval.calls[1].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp",
+      "events[9].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t004-g1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t011-g1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t021-b1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t028-b1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t009-b1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "retrieval.calls[1].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp",
+      "events[9].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t030-g1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "retrieval.calls[1].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp",
+      "events[9].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t028-b1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t018-g1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t005-g1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t011-b1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t021-g1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t016-b0-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t015-b1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t019-b1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "retrieval.calls[1].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp",
+      "events[9].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t026-b1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "retrieval.calls[1].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp",
+      "events[9].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t011-b1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t010-b1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "retrieval.calls[1].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp",
+      "events[9].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t020-b1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "retrieval.calls[1].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp",
+      "events[9].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t004-b1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t003-g1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t008-b0-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t015-b0-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t017-b1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "retrieval.calls[1].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp",
+      "events[9].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t007-b0-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t018-b1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t018-g1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t024-b0-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t002-g1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t020-g1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "retrieval.calls[1].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp",
+      "events[9].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t029-b0-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t026-b0-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t023-b1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t006-g1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t003-b1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t024-b1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t011-b0-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t006-b1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t006-b1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t003-b1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t026-b0-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t012-g1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t013-b0-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t020-b0-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t007-b0-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t003-b0-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t027-g1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t022-g1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t005-g1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t005-b0-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t028-b0-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t028-b0-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t014-b0-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t013-b0-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t027-b1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t021-g1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t029-g1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t010-b0-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t002-b0-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t002-b1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t009-g1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "retrieval.calls[1].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp",
+      "events[9].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t008-g1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t026-g1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "retrieval.calls[1].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp",
+      "events[9].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t029-b0-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t024-b0-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t015-g1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t007-b1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t020-b1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "retrieval.calls[1].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp",
+      "events[9].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t005-g1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t028-g1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t004-g1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t021-b1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t010-b0-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t021-g1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t030-b0-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t010-b1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "retrieval.calls[1].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp",
+      "events[9].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t008-b0-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t007-b1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t028-b1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t017-b0-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t029-b1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t007-b1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t005-b0-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t002-g1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t013-b1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t014-b1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t004-b0-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t015-b1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t027-g1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t026-g1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "retrieval.calls[1].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp",
+      "events[9].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t013-g1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t002-b0-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t023-b0-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t029-b0-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t019-g1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "retrieval.calls[1].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp",
+      "events[9].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t004-b1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t004-b0-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t026-b1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "retrieval.calls[1].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp",
+      "events[6].timestamp",
+      "events[7].timestamp",
+      "events[8].timestamp",
+      "events[9].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t028-g1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t005-b1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t012-b1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t005-b1-r3.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t028-b0-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t002-g1-r1.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t007-g1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t013-b0-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query"
+    ]
+  },
+  {
+    "source_file": "primary-t025-b1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  },
+  {
+    "source_file": "primary-t004-b1-r2.json",
+    "removed_fields": [
+      "started_at",
+      "finished_at",
+      "final_output.answer",
+      "retrieval.calls[0].query",
+      "events[0].timestamp",
+      "events[1].timestamp",
+      "events[2].timestamp",
+      "events[3].timestamp",
+      "events[4].timestamp",
+      "events[5].timestamp"
+    ]
+  }
+]
