@@ -7,12 +7,11 @@ recorded hashes; their complete original files require further rights
 confirmation or permission. The released subset is not a replacement benchmark
 corpus and must not be presented as the complete 56-document retrieval input.
 
-The supervisor has confirmed public availability and no academic objection to
-publication. Redistribution decisions additionally use the publisher terms
-and copyright notices applicable to each frozen file. Academic clearance does
-not replace a rights-holder's permission. Earlier rights notes in the frozen
-source catalog remain historical provenance; this directory records the
-current redistribution assessment without editing those notes.
+Redistribution decisions use the publisher terms and copyright notices
+applicable to each frozen file. Public availability does not itself establish
+permission to redistribute. Earlier rights notes in the frozen source catalog
+remain historical provenance; this directory records the current
+redistribution assessment without editing those notes.
 
 - [DOCUMENT_RIGHTS.tsv](DOCUMENT_RIGHTS.tsv) identifies every document, publisher,
   original location, official link, recorded hash and individual decision.

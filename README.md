@@ -189,9 +189,8 @@ public access alone is not treated as permission.
 The repository supports inspection and engineering checks; it does not provide
 self-contained reproduction of the full study.
 
-The [supervisor-agreed scoring amendment](evidence/engineering/scoring_protocol_v1_2_supervisor_agreed_amendment_2026-10-06.md)
-replaced planned full manual scoring with LLM judges and a specified expert
-subset. The later [Option C amendment](evidence/engineering/option_c_primary_amendment_2026-10-08.md)
+The scoring protocol was amended to replace planned full manual scoring
+with LLM judges and a specified expert subset. The later [Option C amendment](evidence/engineering/option_c_primary_amendment_2026-10-08.md)
 records qualification limitations and treats automated quality scores as
 provisional. LLM assessments are not independent human validation. Protocols
 and qualification records do not establish complete human coverage, final
