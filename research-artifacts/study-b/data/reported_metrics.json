@@ -1,0 +1,58 @@
+{
+  "decision_divergence_family_ids_reported": [
+    "MAIN-08",
+    "MAIN-16",
+    "MAIN-24"
+  ],
+  "families": 24,
+  "limitations": [
+    "Controlled staged-evidence fixtures, not real dense retrieval",
+    "AI-assisted case-level grading, not independently human-adjudicated",
+    "Resources and task-success results are reported aggregates; original native workflow records are not distributed"
+  ],
+  "outcomes_reported": {
+    "B1_answerable_supported": 13,
+    "B1_success_families": 21,
+    "B1_unanswerable_correct_withholding": 8,
+    "G1_answerable_supported": 13,
+    "G1_success_families": 21,
+    "G1_unanswerable_correct_withholding": 8,
+    "answerable": 15,
+    "denominator_families": 24,
+    "failures_shared": [
+      "MAIN-12",
+      "MAIN-13",
+      "MAIN-20"
+    ],
+    "recoverable_families": 6,
+    "recoverable_success_per_policy": 4,
+    "unanswerable": 9,
+    "unsupported_released_answer_per_policy": 1
+  },
+  "paired_final_output_identity_reported": 72,
+  "repetitions_per_policy": 3,
+  "resources_reported": {
+    "B1_input_tokens_total": 123082,
+    "B1_llm_calls": 264,
+    "B1_mean_latency_s": 9.577,
+    "B1_output_tokens_total": 32619,
+    "B1_retrieval_fixture_calls": 96,
+    "B1_tokens_total": 155701,
+    "G1_input_tokens_total": 107969,
+    "G1_llm_calls": 246,
+    "G1_mean_latency_s": 8.709,
+    "G1_output_tokens_total": 29293,
+    "G1_retrieval_fixture_calls": 87,
+    "G1_tokens_total": 137262,
+    "token_savings_pct": 11.84
+  },
+  "source_sha256": {
+    "synthetic/RESULTS.md": "ab6f8a4444d344bbdc335986cb2f2da1b91f653c6e59a236639366615794f354",
+    "synthetic/VALIDATION_REPORT.md": "fe9a5f2b43210aa9210fdb1393c457647bac4b51874c2c6d56755a87fdfe6454",
+    "synthetic/main_independent_verification.json": "80ac81aad6c49a918f687b4ebcd3f044a843a8eb9269870f53241c966c268827",
+    "synthetic/scored_main_technical_report.json": "fe8429c49c4762858018e5196ef474c69165491328fd4ac1e4d6907006906080",
+    "unified/USN_MIS500_Unified_Evidence_Data_2026-11-01.json": "97558856c30887af0adfa0829d3611344a289248923e98ab7332bb22d51cd11d"
+  },
+  "status": "transcribed_reported_aggregates_not_run_level_recomputed",
+  "study": "Study B — synthetic mechanism"
+}

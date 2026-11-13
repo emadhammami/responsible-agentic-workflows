@@ -1,0 +1,56 @@
+{
+  "latency_reported": {
+    "G1_minus_B1_ms": 14017.201,
+    "task_paired_95pct_interval_ms": [
+      -9749.471432907309,
+      41558.66985730868
+    ]
+  },
+  "limitations": [
+    "Full task text, reference/source passages and full responses excluded pending rights and content review",
+    "Published numerical scores are not independently human-adjudicated",
+    "Operational resource totals cannot be reconstructed from these derived task scores",
+    "Source chunk hashes establish identities, not independent factual correctness"
+  ],
+  "means_reported": {
+    "B1": {
+      "input_tokens": 17238.167,
+      "latency_ms": 62228.784,
+      "llm_calls": 3.444,
+      "output_tokens": 960.278,
+      "retrieval_calls": 1.222,
+      "total_tokens": 18198.444
+    },
+    "G1": {
+      "input_tokens": 17238.167,
+      "latency_ms": 76245.984,
+      "llm_calls": 3.444,
+      "output_tokens": 960.278,
+      "retrieval_calls": 1.222,
+      "total_tokens": 18198.444
+    }
+  },
+  "paired_final_output_identity_reported": 54,
+  "paired_structural_differences_reported": {
+    "paired_llm_call_difference": 0,
+    "paired_retrieval_call_difference": 0,
+    "paired_token_difference": 0
+  },
+  "repetitions_per_policy": 3,
+  "reported_operational_replacement": "T21008/G1/R2; operational replacement preserved separately, zero recorded tokens in original technical error never analyzed as savings",
+  "reported_paired_runs": 54,
+  "reported_usable_outcomes": 108,
+  "semantic_evaluation_provenance": {
+    "rubric": "0 = incorrect or unjustified withholding; 1 = materially incomplete/imprecise; 2 = complete core answer or correct withholding",
+    "scoring_unit": "18 distinct tasks; do not treat 108 outcomes as independent semantic judgments",
+    "status": "researcher-accepted AI-assisted post-hoc secondary rating"
+  },
+  "source_sha256": {
+    "real_retrieval/USN_RR_Semantic_Researcher_Approval_2026-11-01.json": "81402491ec36e5f184da281b788df6e6d7206185a75c986b347f0a75e96a238f",
+    "real_retrieval/usn_rr_semantic_review_packet.json": "a581eb6bd68a5d99cd9777145f13348f27664b9416638e4be7da2170c17b2a98",
+    "unified/USN_MIS500_Unified_Evidence_Data_2026-11-01.json": "97558856c30887af0adfa0829d3611344a289248923e98ab7332bb22d51cd11d"
+  },
+  "status": "reported_operational_aggregates_and_derived_secondary_scores",
+  "study": "Study C — real-retrieval supplement",
+  "tasks": 18
+}

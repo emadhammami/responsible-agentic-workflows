@@ -35,10 +35,12 @@ the research archive.
 The thesis also reports Study B (24 synthetic task families, 144 executions),
 a separate resource-boundary substudy (six families, 36 executions), and
 Study C (18 real-retrieval tasks, 108 usable scored outcomes). Their evidence
-streams and denominators are separate from Study A. The public companion
-package currently supports numerical reconstruction for Study A; equivalent
-public reconstruction packages for Studies B and C and the resource-boundary
-substudy are not claimed here. Human research responses are not bundled.
+streams and denominators are separate from Study A. The public companion package supports measurement reconstruction for Study A.
+Separate derived-data packages for Study B, the resource-boundary substudy, and
+Study C provide documented checks of recorded integrity flags, numeric scores,
+and source-reported resource arithmetic. Original native execution records
+for these supplemental studies are not publicly bundled, so the packages
+do not independently re-execute experiments. Human responses are not bundled.
 
 ## Implementation scope
 
@@ -163,6 +165,20 @@ bindings, tested dependencies and numerical checks. Original answers, recovery
 query text, full judge responses and expert records are retained separately.
 The released data support measurement reconstruction; their checksums alone
 cannot establish independent correctness or full inference reproducibility.
+
+## Supplementary studies: derived-data checks
+
+For the 144-run Study B mechanism evaluation, 36-run resource-boundary substudy,
+and 108-outcome Study C real-retrieval supplement, see
+[the supplementary reproducibility guide](research-artifacts/SUPPLEMENTARY.md).
+The packages are separate from Study A and preserve their distinct denominators.
+
+```bash
+python3 research-artifacts/reproduce_supplementary.py --output /tmp/usn-supplementary-results
+```
+
+Use a new output directory. This command runs local Python-only checks of
+released derived data; it does not perform original model inference.
 
 ## Source-document availability
 
