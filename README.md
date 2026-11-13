@@ -1,14 +1,16 @@
 # Responsible Agentic Workflows
 
-Research software supporting the 30-ECTS MIS500 master's thesis in Digital
+**Evidence-Gated Recovery, Reliability, and Resource Efficiency in LLM-Based Knowledge Work**
+
+Research software for evaluating bounded agentic workflows in document-based
+knowledge work. The project examines task quality, reliability, latency, and
+computational resource use. B1 versus G1 is the primary policy comparison;
+B0 provides baseline context.
+
+The research was conducted for the 30-ECTS MIS500 master's thesis in Digital
 Transformation at the University of South-Eastern Norway (USN):
-
-**Guardrails and Resource Efficiency in LLM-Based Agentic Workflows: An Empirical
-Study of Responsible Adoption in Document-Based Knowledge Work**
-
-The study examines task quality, reliability, latency, and resource use in
-LLM-based agentic workflows for document-based knowledge work. The primary
-technical comparison is B1 versus G1; B0 provides supporting baseline context.
+*Guardrails and Resource Efficiency in LLM-Based Agentic Workflows: An Empirical
+Study of Responsible Adoption in Document-Based Knowledge Work*.
 
 ## Study design
 
@@ -28,20 +30,29 @@ and teacher competence frameworks. Study A comprises 30 tasks (10 per use case),
 three conditions, and three repetitions: 270 recorded executions retained in
 the research archive.
 
-## Branch scope
+## Thesis research and released evidence
 
-`research/b1-g1-real-execution-wiring` contains the B0 implementation, shared
-B1/G1 execution runtime, recovery policies, dense retrieval integration, frozen
-primary configurations, and the complete three-use-case task definitions.
+The thesis also reports Study B (24 synthetic task families, 144 executions),
+a separate resource-boundary substudy (six families, 36 executions), and
+Study C (18 real-retrieval tasks, 108 usable scored outcomes). Their evidence
+streams and denominators are separate from Study A. The public companion
+package currently supports numerical reconstruction for Study A; equivalent
+public reconstruction packages for Studies B and C and the resource-boundary
+substudy are not claimed here. Human research responses are not bundled.
+
+## Implementation scope
+
+The principal implementation contains the B0 baseline, shared B1/G1 execution
+runtime, recovery policies, dense retrieval integration, frozen primary
+configurations, and the complete three-use-case task definitions.
 It also retains later scoring protocols and continuation scripts. It is a
 research implementation, not a complete public archive of thesis evidence.
 
 The [prospective paper/thesis scope decision](evidence/engineering/paper_thesis_scope_separation_v0.1_2026-09-27.md)
 was recorded before primary execution. The planned paper uses UC1 only:
 T001–T010 × B0/B1/G1 × three repetitions = 90 executions. The thesis retains
-all 270 executions and the broader cross-use-case scope. This branch's name
-and paper association do not narrow its implementation to UC1 or establish
-publication status.
+all 270 executions and the broader cross-use-case scope. The separate UC1-only paper scope does not narrow the thesis implementation
+or establish publication status for that paper.
 
 ## Implementation and materials
 

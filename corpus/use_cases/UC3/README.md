@@ -1,6 +1,14 @@
 # UC3 — Digital Competences for Democratic Participation
 
-Status: frozen (Phase 4B4 retrieval foundation freeze complete; benchmark NOT started)
+**Current study status:** UC3 was included in the completed three-use-case
+primary benchmark: nine frozen retrieval-active documents and tasks T021–T030.
+See the [frozen source scope](benchmark_scope.json),
+[primary tasks](../../../benchmark/tasks/UC3/) and
+[corpus overview](../../README.md).
+
+**Historical checkpoint:** The sections below document the earlier Phase 4A/4B4
+retrieval-foundation and task-planning stages. Assertions about benchmark work
+not yet having started refer to those stages only, not the final thesis study.
 
 ## Source context
 
@@ -66,9 +74,9 @@ note. Raw PDFs are gitignored and retained under `raw/`. Processed chunking
 and embedding materialization are complete, and the corpus is frozen
 (Phase 4B4).
 
-## Scientific boundary
+## Scientific boundary at the earlier checkpoint
 
-- No benchmark task is constructed yet.
+- At this earlier checkpoint, primary tasks had not yet been constructed.
 - No document is accepted merely because it appears in this candidate list.
 - Each source must be downloaded from an authoritative public source.
 - Each source must pass provenance, readability, relevance and rights review.
@@ -83,9 +91,9 @@ all nine documents (`DOC032`-`DOC040`) are accepted and retrieval-active. Chunki
 embedding materialization are complete. The frozen identity diagnostic was
 completed as descriptive engineering evidence, while the frozen semantic
 diagnostic passed its pre-specified retrieval-configuration qualification gate.
-The benchmark task has NOT been started.
+At the time of this Phase 4B4 freeze, benchmark task construction had not begun. It was completed later.
 
 See `evidence/engineering/uc3_retrieval_foundation_freeze_2026-09-24.md` for the
 freeze record and SHA256 bindings.
 
-BENCHMARK_STARTED=NO
+Historical Phase 4B4 marker: `BENCHMARK_STARTED=NO` (not the current state)
