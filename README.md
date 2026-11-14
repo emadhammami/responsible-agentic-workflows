@@ -9,8 +9,8 @@ B0 provides baseline context.
 
 The research was conducted for the 30-ECTS MIS500 master's thesis in Digital
 Transformation at the University of South-Eastern Norway (USN):
-*Guardrails and Resource Efficiency in LLM-Based Agentic Workflows: An Empirical
-Study of Responsible Adoption in Document-Based Knowledge Work*.
+*Responsible Adoption of LLM-Based Agentic Workflows in Document-Based Knowledge
+Work: An Empirical Study of Guardrails, Reliability, and Resource Efficiency*.
 
 ## Study design
 
